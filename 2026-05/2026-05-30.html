@@ -1,0 +1,1943 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 — 2026 - 05 - 30</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script>
+  (function() {
+    var h = new Date().getHours();
+    var t;
+    if (h >= 6 && h < 10)       t = 'morning';
+    else if (h >= 10 && h < 17) t = 'day';
+    else if (h >= 17 && h < 21) t = 'evening';
+    else                         t = 'night';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--accent:#a78bfa;--accent-2:#5eead4;--accent-glow:rgba(167,139,250,0.18);--glow-top:rgba(167,139,250,0.07);--glow-mid:rgba(94,234,212,0.03);--border-high:rgba(167,139,250,0.25);--badge-bg:rgba(167,139,250,0.10);--bg-deep:#07070c;--bg-card:rgba(18,18,26,0.75);--text-primary:#e8e8ed;--text-secondary:#a1a1aa;--text-tertiary:#6b6b76;--border-subtle:rgba(255,255,255,0.06);--border-card:rgba(255,255,255,0.08);--grid-color:rgba(255,255,255,0.015);--noise-opacity:0.028;--shadow-heavy:rgba(0,0,0,0.45);--shadow-hl:rgba(255,255,255,0.02);--tag-bg:rgba(255,255,255,0.04);--hud-line:rgba(255,255,255,0.08);--transition-speed:0.8s}
+[data-theme="morning"]{
+--accent:#d97706;--accent-2:#f59e0b;--accent-glow:rgba(217,119,6,0.20);--glow-top:rgba(245,158,11,0.06);--glow-mid:rgba(251,191,36,0.03);--border-high:rgba(217,119,6,0.35);--badge-bg:rgba(217,119,6,0.10);--bg-deep:#f9f9f6;--bg-card:rgba(255,255,255,0.82);--text-primary:#1c1917;--text-secondary:#57534e;--text-tertiary:#a8a29e;--border-subtle:rgba(0,0,0,0.07);--border-card:rgba(0,0,0,0.10);--grid-color:rgba(0,0,0,0.05);--noise-opacity:0.020;--shadow-heavy:rgba(0,0,0,0.08);--shadow-hl:rgba(0,0,0,0.03);--tag-bg:rgba(0,0,0,0.04);--hud-line:rgba(0,0,0,0.08)}
+[data-theme="day"]{
+--accent:#2563eb;--accent-2:#60a5fa;--accent-glow:rgba(37,99,235,0.18);--glow-top:rgba(96,165,250,0.05);--glow-mid:rgba(129,140,248,0.02);--border-high:rgba(37,99,235,0.28);--badge-bg:rgba(37,99,235,0.08);--bg-deep:#f8fafb;--bg-card:rgba(255,255,255,0.84);--text-primary:#0f172a;--text-secondary:#475569;--text-tertiary:#94a3b8;--border-subtle:rgba(0,0,0,0.07);--border-card:rgba(0,0,0,0.10);--grid-color:rgba(0,0,0,0.05);--noise-opacity:0.018;--shadow-heavy:rgba(0,0,0,0.07);--shadow-hl:rgba(0,0,0,0.03);--tag-bg:rgba(0,0,0,0.04);--hud-line:rgba(0,0,0,0.08)}
+[data-theme="evening"]{
+--accent:#fb923c;--accent-2:#f472b6;--accent-glow:rgba(251,146,60,0.18);--glow-top:rgba(251,146,60,0.08);--glow-mid:rgba(244,114,182,0.04);--border-high:rgba(251,146,60,0.25);--badge-bg:rgba(251,146,60,0.10);--bg-deep:#07070c;--bg-card:rgba(18,18,26,0.75);--text-primary:#e8e8ed;--text-secondary:#a1a1aa;--text-tertiary:#6b6b76;--border-subtle:rgba(255,255,255,0.06);--border-card:rgba(255,255,255,0.08);--grid-color:rgba(255,255,255,0.015);--noise-opacity:0.028;--shadow-heavy:rgba(0,0,0,0.45);--shadow-hl:rgba(255,255,255,0.02);--tag-bg:rgba(255,255,255,0.04);--hud-line:rgba(255,255,255,0.08)}
+[data-theme="night"]{
+--accent:#a78bfa;--accent-2:#5eead4;--accent-glow:rgba(167,139,250,0.18);--glow-top:rgba(167,139,250,0.07);--glow-mid:rgba(94,234,212,0.03);--border-high:rgba(167,139,250,0.25);--badge-bg:rgba(167,139,250,0.10);--bg-deep:#07070c;--bg-card:rgba(18,18,26,0.75);--text-primary:#e8e8ed;--text-secondary:#a1a1aa;--text-tertiary:#6b6b76;--border-subtle:rgba(255,255,255,0.06);--border-card:rgba(255,255,255,0.08);--grid-color:rgba(255,255,255,0.015);--noise-opacity:0.028;--shadow-heavy:rgba(0,0,0,0.45);--shadow-hl:rgba(255,255,255,0.02);--tag-bg:rgba(255,255,255,0.04);--hud-line:rgba(255,255,255,0.08)}
+body{
+font-family:'Noto Sans SC',-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
+background:var(--bg-deep);
+background-image:radial-gradient(ellipse 70% 55% at 45% -5%,var(--glow-top) 0%,transparent 100%),radial-gradient(ellipse 35% 40% at 75% 85%,var(--glow-mid) 0%,transparent 100%);
+background-attachment:fixed;
+transition:background 0.6s ease,background-image var(--transition-speed) ease;
+min-height:100vh;padding:56px 20px 64px;color:var(--text-secondary);line-height:1.7;
+-webkit-font-smoothing:antialiased;position:relative}
+body::after{
+content:'';position:fixed;inset:0;opacity:var(--noise-opacity);
+background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+background-size:200px 200px;pointer-events:none;z-index:0;transition:opacity var(--transition-speed) ease}
+body::before{
+content:'';position:fixed;inset:0;
+background-image:linear-gradient(var(--grid-color) 1px,transparent 1px),linear-gradient(90deg,var(--grid-color) 1px,transparent 1px);
+background-size:48px 48px;pointer-events:none;z-index:0;transition:background-image var(--transition-speed) ease}
+.container{max-width:880px;margin:0 auto;position:relative;z-index:1}
+.header{margin-bottom:48px;position:relative}
+.header-status{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.15em;color:var(--accent);margin-bottom:20px;display:flex;align-items:center;gap:10px;transition:color var(--transition-speed) ease}
+.header-status .dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--accent);box-shadow:0 0 6px var(--accent-glow),0 0 16px var(--accent-glow);animation:pulse-dot 3s ease-in-out infinite;transition:background var(--transition-speed) ease,box-shadow var(--transition-speed) ease}
+@keyframes pulse-dot{0%,100%{opacity:1;box-shadow:0 0 6px var(--accent-glow),0 0 16px var(--accent-glow)}50%{opacity:0.35;box-shadow:0 0 3px var(--accent-glow),0 0 8px var(--accent-glow)}}
+.header-live{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);margin-left:auto}
+#themeLabel{cursor:pointer;user-select:none;transition:color var(--transition-speed) ease}
+#themeLabel:hover{color:var(--accent-2)}
+.header h1{font-family:'Noto Sans SC',sans-serif;font-size:38px;font-weight:700;color:var(--text-primary);letter-spacing:-0.03em;line-height:1.15;margin-bottom:8px}
+.header .date-line{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);font-weight:500;letter-spacing:0.02em;transition:color var(--transition-speed) ease}.header-nav{margin-top:12px;display:flex;gap:8px}
+.header-nav a{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);text-decoration:none;padding:4px 12px;border:1px solid var(--border-subtle);border-radius:100px;transition:all 0.18s ease}
+.header-nav a:hover{border-color:var(--border-high);color:var(--accent);background:var(--badge-bg)}
+.header-nav a svg{width:12px;height:12px;display:inline;vertical-align:middle;margin-right:4px;opacity:0.6}
+.search-box{position:relative;margin-bottom:20px}
+.search-box input{width:100%;padding:10px 16px 10px 38px;background:var(--bg-card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border-card);border-radius:6px;font-family:'Noto Sans SC',sans-serif;font-size:13.5px;color:var(--text-primary);outline:none;transition:border-color 0.25s ease,box-shadow 0.25s ease}
+.search-box input:focus{border-color:var(--border-high);box-shadow:0 0 0 3px var(--accent-glow)}
+.search-box input::placeholder{color:var(--text-tertiary)}
+.search-box svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--text-tertiary);pointer-events:none}
+.search-hint{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);margin-top:4px;text-align:right;opacity:0;transition:opacity 0.2s ease}
+.search-hint.show{opacity:0.7}
+.item.hidden,.section.hidden{display:none}
+.lead{position:relative;padding:20px 24px;margin-bottom:44px;border:1px solid var(--border-card);border-radius:8px;font-size:14px;color:var(--text-tertiary);line-height:1.75;transition:border-color var(--transition-speed) ease;background:var(--bg-card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.lead::before,.lead::after{content:'';position:absolute;width:12px;height:12px;pointer-events:none;transition:border-color var(--transition-speed) ease}
+.lead::before{top:-1px;left:-1px;border-top:2px solid var(--accent);border-left:2px solid var(--accent);border-radius:6px 0 0 0}
+.lead::after{bottom:-1px;right:-1px;border-bottom:2px solid var(--accent);border-right:2px solid var(--accent);border-radius:0 0 6px 0}
+.lead-author{display:block;margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);opacity:0.7;letter-spacing:0.04em}
+.section{--delay:0ms;position:relative;background:var(--bg-card);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid var(--border-card);border-radius:10px;padding:28px 28px 24px;margin-bottom:14px;cursor:pointer;transition:border-color 0.25s ease,box-shadow 0.25s ease,transform 0.25s ease;animation:section-in 0.5s ease both;animation-delay:var(--delay)}
+@keyframes section-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.section:hover{border-color:var(--border-high);box-shadow:0 1px 0 0 var(--shadow-hl),0 8px 32px var(--shadow-heavy),inset 0 1px 0 var(--shadow-hl);transform:translateY(-1px)}
+.section::after{content:'';position:absolute;bottom:-1px;right:-1px;width:8px;height:8px;border-bottom:1.5px solid var(--hud-line);border-right:1.5px solid var(--hud-line);border-radius:0 0 6px 0;pointer-events:none;transition:border-color var(--transition-speed) ease}
+.section-label{font-family:'Noto Sans SC',sans-serif;font-size:13px;font-weight:600;color:var(--accent);letter-spacing:0.06em;margin-bottom:18px;display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none;transition:color var(--transition-speed) ease}
+.section-label svg{width:16px;height:16px;flex-shrink:0;opacity:0.85}
+.section-label .count{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;padding:2px 7px;border-radius:100px;background:var(--badge-bg);color:var(--accent);letter-spacing:0;margin-left:auto;transition:background var(--transition-speed) ease,color var(--transition-speed) ease}
+.section-label .cat-link{display:inline-flex;align-items:center;opacity:0.4;transition:opacity 0.18s ease}
+.section-label .cat-link:hover{opacity:0.9}
+.section .expanded-items{display:none}
+.section.expanded .daily-items{display:none}
+.section.expanded .expanded-items{display:block}
+.expanded-items .items-scroll{max-height:720px;overflow-y:auto;scroll-behavior:smooth}
+.expanded-items .items-scroll::-webkit-scrollbar{width:4px}
+.expanded-items .items-scroll::-webkit-scrollbar-track{background:transparent}
+.expanded-items .items-scroll::-webkit-scrollbar-thumb{background:var(--border-subtle);border-radius:2px}
+.pagination{display:flex;align-items:center;justify-content:center;gap:6px;padding:12px 0 4px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-tertiary)}
+.pagination button{background:var(--tag-bg);border:1px solid var(--border-subtle);color:var(--text-secondary);padding:4px 10px;border-radius:4px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:10px;transition:border-color 0.18s ease,color 0.18s ease}
+.pagination button:hover{border-color:var(--border-high);color:var(--accent)}
+.pagination button:disabled{opacity:0.3;cursor:default}
+.pagination .page-info{padding:0 8px;white-space:nowrap}
+.expanded-items .item.page-hidden{display:none}
+.item{padding:14px 0;border-bottom:1px solid var(--border-subtle);position:relative}
+.item:last-child{border-bottom:none;padding-bottom:0}
+.item:first-child{padding-top:0}
+.item-num{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;color:var(--accent);opacity:0.5;margin-right:6px;transition:color var(--transition-speed) ease}
+.item-title{font-size:15px;font-weight:600;line-height:1.5;color:var(--text-primary);text-decoration:none;cursor:pointer;transition:color 0.18s ease}
+.item-title:hover{color:var(--accent)}
+.item-meta{display:flex;gap:10px;align-items:center;margin-top:7px;flex-wrap:wrap}
+.item-source{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;padding:3px 8px;border-radius:3px;background:var(--badge-bg);color:var(--accent);white-space:nowrap;letter-spacing:0.02em;transition:background var(--transition-speed) ease,color var(--transition-speed) ease}
+.item-time{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-tertiary);white-space:nowrap}
+.item-category{font-size:11px;padding:2px 8px;border-radius:100px;background:var(--tag-bg);color:var(--text-tertiary);white-space:nowrap}
+.item-summary{font-size:13.5px;color:var(--text-secondary);line-height:1.72;margin-top:7px}
+.footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--border-subtle);font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);display:flex;justify-content:space-between;align-items:center;opacity:0.6}
+.footer a{color:var(--accent);text-decoration:none;cursor:pointer;transition:color var(--transition-speed) ease}
+.footer a:hover{text-decoration:underline}
+.footer-glow{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:500px;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0.06;pointer-events:none;z-index:0;transition:background var(--transition-speed) ease}
+@media(prefers-reduced-motion:reduce){.section{animation:none}.header-status .dot{animation:none}*,*::before,*::after{transition-duration:0s!important}}
+@media(max-width:600px){body{padding:32px 14px 48px}.header h1{font-size:28px}.section{padding:20px 18px 18px}}
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <div class="header-status">
+      <span class="dot"></span>
+      <span id="themeLabel">AI DAILY</span>
+      <span class="header-live" id="liveClock">--:--:--</span>
+    </div>
+    <h1>AI 日报</h1>
+    <p class="date-line">2026 - 05 - 30 &nbsp;&middot;&nbsp; 星期六</p>
+      <nav class="header-nav">
+      <a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>归档索引</a>
+      <a href="../archive-browse.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>分类浏览</a>
+    </nav></header>
+  <div class="search-box">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" id="searchInput" placeholder="搜索标题或摘要…" autocomplete="off">
+    <div class="search-hint" id="searchHint"></div>
+  </div>
+  <div class="lead">
+    
+    <span class="lead-author">&mdash; 主编 &middot; AI HOT</span>
+  </div>
+  <div class="section" style="--delay: 60ms">
+    <div class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg> 模型发布/更新<span class="count">4+13</span><a class="cat-link" href="../_cache/search-ai-models.html" title="查看全部分类" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></div>
+    <div class="daily-items">    <div class="item">
+      <a class="item-title" href="https://x.com/gdb/status/2060452095279415725" target="_blank" rel="noopener"><span class="item-num">01</span>OpenAI推出实时翻译模型，支持70+语言输入</a>
+      <div class="item-meta">
+        <span class="item-source">X：Greg Brockman (@gdb)</span>
+      </div>
+      <p class="item-summary">OpenAI 实时翻译功能——使用70多种输入语言说话，翻译成13种输出语言： gpt-realtime-translate 接收任意语言的语音输入，并输出目标语言的语音。 大语言模型很棒，但特定用例需要专用模型。 我们正在智能眼镜上运行此功能。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/StepFun_ai/status/2060149124117475791" target="_blank" rel="noopener"><span class="item-num">02</span>阶跃星辰 Step 3.7 Flash 发布，聚焦智能体效率</a>
+      <div class="item-meta">
+        <span class="item-source">X：阶跃星辰 StepFun (@StepFun_ai)</span>
+      </div>
+      <p class="item-summary">阶跃星辰（Step）发布了开源大模型 Step 3.7 Flash，主打智能体（Agent）工作流的效率。该模型在 ClawEval-1.1（67.1分）和 SimpleVQA Search（79.2分）评测中排名第一。其架构为 198B 参数的 MoE，约 11B 为活跃参数，支持 256K 上下文。模型具备多模态理解能力，能处理图像、文档并生成代码或调用工具执行任务。在工具使用方面，它致力于高可靠性，τ²-bench 得分超过 98%。Step 3.7 Flash 兼容 Claude Code、MCP 协议等工具链，并支持在 Mac Studio M4 Max 等设备上本地运行。模型权重以 Apache 2.0 许可开源。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://www.ithome.com/0/957/282.htm" target="_blank" rel="noopener"><span class="item-num">03</span>小米开源可控视频音效生成模型 ControlFoley，让声音“按你想要的来”</a>
+      <div class="item-meta">
+        <span class="item-source">IT之家（RSS）</span>
+      </div>
+      <p class="item-summary">小米大模型应用团队发布开源可控视频音效生成模型 ControlFoley，旨在解决创作中的可控性难题。该模型统一支持文本引导视频配音、文本控制视频配音和参考音频控制视频配音三类任务。ControlFoley 在 VGGSound-Test 等多个 benchmark 上取得开源 SOTA 表现，其代码、模型权重和在线 Demo 均已开放。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://qwen.ai/blog?id=qwenvla" target="_blank" rel="noopener"><span class="item-num">04</span>Qwen-VLA：从理解世界到在其中行动</a>
+      <div class="item-meta">
+        <span class="item-source">Qwen：Blog Retrieval（API）</span>
+      </div>
+      <p class="item-summary">Qwen Studio提供全面功能，涵盖聊天机器人、图像与视频理解、图像生成、文档处理、网络搜索集成、工具利用及Artifacts。</p>
+    </div></div>
+    <div class="expanded-items">
+      <div class="items-scroll">    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/gdb/status/2060452095279415725" target="_blank" rel="noopener"><span class="item-num">05</span>OpenAI推出实时翻译模型，支持70+语言输入</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">04:03</span>
+        <span class="item-category">模型发布</span>
+      </div>
+      <p class="item-summary">OpenAI 实时翻译功能--使用70多种输入语言说话，翻译成13种输出语言：
+
+gpt-realtime-translate 接收任意语言的语音输入，并输出目标语言的语音。
+
+大语言模型很棒，但特定用例需要专用模型。
+
+我们正在智能眼镜上运行此功能。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.ithome.com/0/957/282.htm" target="_blank" rel="noopener"><span class="item-num">06</span>小米开源可控视频音效生成模型 ControlFoley，让声音&quot;按你想要的来&quot;</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">17:13</span>
+        <span class="item-category">模型发布</span>
+      </div>
+      <p class="item-summary">小米大模型应用团队发布开源可控视频音效生成模型 ControlFoley，旨在解决创作中的可控性难题。该模型统一支持文本引导视频配音、文本控制视频配音和参考音频控制视频配音三类任务。ControlFoley 在 VGGSound-Test 等多个 benchmark 上取得开源 SOTA 表现，其代码、模型权重和在线 Demo 均已开放。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://qwen.ai/blog?id=qwenvla" target="_blank" rel="noopener"><span class="item-num">07</span>Qwen-VLA：从理解世界到在其中行动</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">17:00</span>
+        <span class="item-category">模型发布</span>
+      </div>
+      <p class="item-summary">Qwen Studio提供全面功能，涵盖聊天机器人、图像与视频理解、图像生成、文档处理、网络搜索集成、工具利用及Artifacts。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/StepFun_ai/status/2060149124117475791" target="_blank" rel="noopener"><span class="item-num">08</span>阶跃星辰 Step 3.7 Flash 发布，聚焦智能体效率</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">模型发布</span>
+      </div>
+      <p class="item-summary">阶跃星辰（Step）发布了开源大模型 Step 3.7 Flash，主打智能体（Agent）工作流的效率。该模型在 ClawEval-1.1（67.1分）和 SimpleVQA Search（79.2分）评测中排名第一。其架构为 198B 参数的 MoE，约 11B 为活跃参数，支持 256K 上下文。模型具备多模态理解能力，能处理图像、文档并生成代码或调用工具执行任务。在工具使用方面，它致力于高可靠性，τ2-bench 得分超过 98%。Step 3.7 Flash 兼容 Claude Code、MCP 协议等工具链，并支持在 Mac Studio M4 Max 等设备上本地运行。模型权重以 Apache 2.0 许可开源。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/googleaidevs/status/2060049962356916377" target="_blank" rel="noopener"><span class="item-num">09</span>Nano Banana Pro与Nano Banana 2正式发布</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">01:25</span>
+        <span class="item-category">模型发布</span>
+      </div>
+      <p class="item-summary">🍌 Nano Banana Pro 【gemini-3-pro-image】 和 Nano Banana 2 【gemini-3.1-flash-image】 现已正式发布，可通过 Gemini API 投入生产使用。查看这些优秀的社区示例，了解两个模型的实际能力 🧵↓</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/SenseTime_AI/status/2060015749826240724" target="_blank" rel="noopener"><span class="item-num">10</span>商汤发布信息图生成模型升级，增强多项核心能力</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:10</span>
+        <span class="item-category">模型发布</span>
+      </div>
+      <p class="item-summary">商汤科技介绍了其升级后的信息图生成模型 SenseNova-U1-8B-MoT-Infographic。该模型参数为8B，在四个关键维度进行了优化：文本准确性与可读性增强，减少了重复和不当放大；布局的一致性与合理性提升，背景更稳定；图表与示意图的质量提高；并新增了学术内容的渲染支持。推文提供了在 Hugging Face 上的模型页面链接及能力展示页面。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.ai/news/grok-build-0-1" target="_blank" rel="noopener"><span class="item-num">11</span>Grok Build 0.1 on API</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">模型发布</span>
+      </div>
+      <p class="item-summary">xAI 的最新编码模型 Grok Build 0.1 已通过 xAI API 进入公开测试阶段。该模型专为智能体编码任务训练，支持网页开发、调试和 MCP，同时也是驱动 Grok Build CLI 的同一模型。其推理速度超过 100 tokens/秒，定价为输入 $1/m tokens，输出 $2/m tokens。除编码外，它也适用于通用智能体及工具调用场景，并可通过 OpenRouter 和 Vercel AI Gateway 获取。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank" rel="noopener"><span class="item-num">12</span>Claude Opus 4.8 发布：在编码、智能体技能与推理方面实现全面升级</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">模型发布</span>
+      </div>
+      <p class="item-summary">Anthropic 发布了新一代模型 Claude Opus 4.8，作为 Opus 4.7 的升级版本，其在编码、智能体技能、推理和实用知识工作等各项基准测试中均取得进步。Claude Opus 4.8 现已可用，价格与前代相同。同步推出的新功能包括：用户可控制任务投入程度、Claude Code 新增&quot;动态工作流&quot;特性，以及 Opus 4.8 的 2.5 倍速模式价格降低为以往的三分之一。早期测试者反馈其在智能体任务中的判断力更可靠、工具调用更高效。该模型在 Online-Mind2Web 测评中得分 84%，超越了 Opus 4.7 和 GPT-5.5。此外，其诚实度与对齐表现也得到提升，代码错误漏检率降低了约 75%。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/alibaba_cloud/status/2059163881361048011" target="_blank" rel="noopener"><span class="item-num">13</span>Qwen3.7-Max 成为全球第二AI编程模型</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">14:45</span>
+        <span class="item-category">模型发布</span>
+      </div>
+      <p class="item-summary">Qwen3.7-Max 正式成为全球第二大 AI 编程模型。在 Code Arena 上得分 1541，仅次于 Claude。专为生产环境打造：可运行 35 小时任务、1000+ 次工具调用，并在数小时内交付两周的项目。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.ithome.com/0/955/267.htm" target="_blank" rel="noopener"><span class="item-num">14</span>面壁智能开源 MiniCPM5-1B：在 AA-Index 上超越所有 2B 参数以下模型，能跑在手机、浏览器上</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">13:13</span>
+        <span class="item-category">模型发布</span>
+      </div>
+      <p class="item-summary">面壁智能开源其新一代端侧大语言模型MiniCPM5-1B。该模型仅1B参数，在AA-Index榜单上超越所有2B参数以下模型，相比3个月前的Qwen3.5-2B效果更优且参数量减半。经INT4量化后权重仅0.5GB，支持在手机和浏览器上运行。其Base Model版本由面壁智能自主研发的AI训练框架ForgeTrain预训练完成，现已全面开源模型权重、训练数据集与部署方案。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.ithome.com/0/955/261.htm" target="_blank" rel="noopener"><span class="item-num">15</span>谷歌 AI 框架 AlphaProof Nexus 攻克 2 道悬置 56 年数学难题</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">12:54</span>
+        <span class="item-category">模型发布</span>
+      </div>
+      <p class="item-summary"></p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/TencentHunyuan/status/2059104921778352626" target="_blank" rel="noopener"><span class="item-num">16</span>腾讯混元新翻译模型双榜亮眼，小程序发布</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">10:50</span>
+        <span class="item-category">模型发布</span>
+      </div>
+      <p class="item-summary">腾讯混元发布翻译模型 Hy-MT2，在 Hugging Face 开源模型趋势排行榜上表现突出：1.8B 版本排名第一，30B-A3B（MoE）版本排名第四，下载量已超 7K。官方同步推出了基于该模型的&quot;腾讯混译&quot;微信小程序，支持语音输入与离线翻译，并可自定义翻译风格与指令。模型代码与权重已开源。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.ithome.com/0/954/759.htm" target="_blank" rel="noopener"><span class="item-num">17</span>面壁智能联合清华等开源中国首个基于华为昇腾训练的 1.58-bit 端侧大模型 BitCPM-CANN</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">11:48</span>
+        <span class="item-category">模型发布</span>
+      </div>
+      <p class="item-summary"></p>
+    </div></div>
+      <div class="pagination"></div>
+    </div>
+  </div>  <div class="section" style="--delay: 120ms">
+    <div class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg> 产品发布/更新<span class="count">8+50</span><a class="cat-link" href="../_cache/search-ai-products.html" title="查看全部分类" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></div>
+    <div class="daily-items">    <div class="item">
+      <a class="item-title" href="https://x.com/gdb/status/2060486309886443787" target="_blank" rel="noopener"><span class="item-num">18</span>Codex可自主管理对话线程与并行任务</a>
+      <div class="item-meta">
+        <span class="item-source">X：Greg Brockman (@gdb)</span>
+      </div>
+      <p class="item-summary">Codex用于管理Codex界面： [引用 @guinnesschen]：如果你厌倦了管理Codex对话线程，就让Codex自己管理自己吧！Codex现在可以创建对话线程、搜索它们、整理它们、固定重要的线程，并为并行任务启动工作树。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/GeminiApp/status/2060435981946503243" target="_blank" rel="noopener"><span class="item-num">19</span>Gemini Omni可将草图变为现实</a>
+      <div class="item-meta">
+        <span class="item-source">X：Gemini (@GeminiApp)</span>
+      </div>
+      <p class="item-summary">Gemini Omni甚至能将简单的草图变为新的现实。 在Gemini应用中亲自尝试。上传一段有人画圆的视频，然后输入这个提示词：当我画完这个圆时，它变成了___。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/OpenAI/status/2060428604727771421" target="_blank" rel="noopener"><span class="item-num">20</span>Codex现已支持Windows端计算机使用功能</a>
+      <div class="item-meta">
+        <span class="item-source">X：OpenAI (@OpenAI)</span>
+      </div>
+      <p class="item-summary">Windows用户，这条消息是给你的。 计算机使用功能现已在Windows上可用，因此Codex可以在你的Windows电脑上执行操作。 通过ChatGPT移动应用中Codex的Windows支持，你可以在工作继续在Windows电脑上进行时，随时随地启动、审查和引导任务。 这是一项早期体验，但我们正在努力提供更多方式，让你的工作无论身在何处都能持续进行。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://openrouter.ai/announcements/guardrails" target="_blank" rel="noopener"><span class="item-num">21</span>Guardrails：保护你的智能体、数据与成本</a>
+      <div class="item-meta">
+        <span class="item-source">OpenRouter：Announcements（RSS）</span>
+      </div>
+      <p class="item-summary">Guardrails 是一套可配置的安全与治理工具，提供预算执行、零数据保留、模型与提供商限制、提示词注入防御及数据丢失预防等功能，旨在保护智能体（Agents）、数据与控制成本。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/runwayml/status/2060453805519765548" target="_blank" rel="noopener"><span class="item-num">22</span>Runway API持续扩展模型与端点支持</a>
+      <div class="item-meta">
+        <span class="item-source">X：Runway (@runwayml)</span>
+      </div>
+      <p class="item-summary">我们持续为 Runway API 添加新模型和端点，以便您能将最佳生成能力直接集成到应用、产品和平台中。通过 Runway API，您可以在一个地方获得所需的所有模型，包括 Seedance 2.0、GPT Image 2、HappyHorse 1.0、Nano Banana Pro、Magnific Precision Upscaler V2 等更多内容。请通过下方链接开始使用。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/OpenRouter/status/2060395056196936054" target="_blank" rel="noopener"><span class="item-num">23</span>OpenRouter支持模型生成文件补丁</a>
+      <div class="item-meta">
+        <span class="item-source">X：OpenRouter (@OpenRouter)</span>
+      </div>
+      <p class="item-summary">OpenRouter 现已支持 &quot;apply_patch&quot;，这是一个服务器工具，允许任何模型通过 Responses API 使用 V4A diffs 提出文件编辑建议。 模型生成一个补丁（创建、更新或删除文件）。OpenRouter 在服务器端验证 diff 语法。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/ChatGPTapp/status/2060467129066070182" target="_blank" rel="noopener"><span class="item-num">24</span>ChatGPT对话目录功能现已上线</a>
+      <div class="item-meta">
+        <span class="item-source">X：ChatGPT (@ChatGPTapp)</span>
+      </div>
+      <p class="item-summary">对于每个始于“就问一件事”却演变成完整长篇的ChatGPT对话：目录功能现已推出。 适用于包含5条以上回复的对话。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/GeminiApp/status/2060389565052096911" target="_blank" rel="noopener"><span class="item-num">25</span>Gemini 本月更新：全新界面与智能体助手</a>
+      <div class="item-meta">
+        <span class="item-source">X：Gemini (@GeminiApp)</span>
+      </div>
+      <p class="item-summary">从全新设计的 Gemini 界面，到 Gemini Spark 提供的全天候智能体辅助，以下是本月 Gemini 更新概览。🧵</p>
+    </div></div>
+    <div class="expanded-items">
+      <div class="items-scroll">    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/OpenRouter/status/2060511136932315259" target="_blank" rel="noopener"><span class="item-num">26</span>ComfyUI现已支持OpenRouter模型直接调用</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">07:58</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">现在你可以直接在ComfyUI工作流中使用你的OpenRouter模型了！
+
+【引用 @ComfyUI】：ComfyUI刚刚添加了@OpenRouter支持。
+
+你不再局限于单一的大语言模型，现在可以直接在Comfy中访问20多个模型。
+
+更多灵活性，更少摩擦，同样的工作流。
+
+工作流链接在下方👇</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/gdb/status/2060486309886443787" target="_blank" rel="noopener"><span class="item-num">27</span>Codex可自主管理对话线程与并行任务</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">06:19</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Codex用于管理Codex界面：
+
+【引用 @guinnesschen】：如果你厌倦了管理Codex对话线程，就让Codex自己管理自己吧！Codex现在可以创建对话线程、搜索它们、整理它们、固定重要的线程，并为并行任务启动工作树。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/ChatGPTapp/status/2060467129066070182" target="_blank" rel="noopener"><span class="item-num">28</span>ChatGPT对话目录功能现已上线</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">05:03</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">对于每个始于&quot;就问一件事&quot;却演变成完整长篇的ChatGPT对话：目录功能现已推出。
+适用于包含5条以上回复的对话。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/LumaLabsAI/status/2060461313713909783" target="_blank" rel="noopener"><span class="item-num">29</span>Luma Agents 自动生成宣传图，输入内容即可</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">04:40</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">博客文章完成了思考。现在让宣传来发挥作用。
+
+输入内容。定义钩子。Luma Agents 从那里构建每一张宣传图。
+
+投入使用 → http：//lumalabs.ai/app</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/runwayml/status/2060453805519765548" target="_blank" rel="noopener"><span class="item-num">30</span>Runway API持续扩展模型与端点支持</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">04:10</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">我们持续为 Runway API 添加新模型和端点，以便您能将最佳生成能力直接集成到应用、产品和平台中。通过 Runway API，您可以在一个地方获得所需的所有模型，包括 Seedance 2.0、GPT Image 2、HappyHorse 1.0、Nano Banana Pro、Magnific Precision Upscaler V2 等更多内容。请通过下方链接开始使用。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/GeminiApp/status/2060435981946503243" target="_blank" rel="noopener"><span class="item-num">31</span>Gemini Omni可将草图变为现实</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">02:59</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Gemini Omni甚至能将简单的草图变为新的现实。
+
+在Gemini应用中亲自尝试。上传一段有人画圆的视频，然后输入这个提示词：当我画完这个圆时，它变成了___。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/OpenAI/status/2060428604727771421" target="_blank" rel="noopener"><span class="item-num">32</span>Codex现已支持Windows端计算机使用功能</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">02:30</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Windows用户，这条消息是给你的。
+
+计算机使用功能现已在Windows上可用，因此Codex可以在你的Windows电脑上执行操作。
+
+通过ChatGPT移动应用中Codex的Windows支持，你可以在工作继续在Windows电脑上进行时，随时随地启动、审查和引导任务。
+
+这是一项早期体验，但我们正在努力提供更多方式，让你的工作无论身在何处都能持续进行。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/OpenRouter/status/2060395056196936054" target="_blank" rel="noopener"><span class="item-num">33</span>OpenRouter支持模型生成文件补丁</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:17</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">OpenRouter 现已支持 &quot;apply_patch&quot;，这是一个服务器工具，允许任何模型通过 Responses API 使用 V4A diffs 提出文件编辑建议。
+
+模型生成一个补丁（创建、更新或删除文件）。OpenRouter 在服务器端验证 diff 语法。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/Replit/status/2060390354910859401" target="_blank" rel="noopener"><span class="item-num">34</span>Canvas新功能与Clerk自定义登录介绍</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:58</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Canvas 新功能 + 使用 Clerk 自定义登录 https：//x.com/i/broadcasts/1pJdRRzreMRKW</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/GeminiApp/status/2060389565052096911" target="_blank" rel="noopener"><span class="item-num">35</span>Gemini 本月更新：全新界面与智能体助手</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:55</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">从全新设计的 Gemini 界面，到 Gemini Spark 提供的全天候智能体辅助，以下是本月 Gemini 更新概览。🧵</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://openrouter.ai/announcements/guardrails" target="_blank" rel="noopener"><span class="item-num">36</span>Guardrails：保护你的智能体、数据与成本</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">20:00</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Guardrails 是一套可配置的安全与治理工具，提供预算执行、零数据保留、模型与提供商限制、提示词注入防御及数据丢失预防等功能，旨在保护智能体（Agents）、数据与控制成本。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.ithome.com/0/957/149.htm" target="_blank" rel="noopener"><span class="item-num">37</span>阿里云开源百炼 CLI，Agent 可调用全套模型和应用能力</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">15:15</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary"></p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense" target="_blank" rel="noopener"><span class="item-num">38</span>用 Rosalind Biodefense 增强社会韧性</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">11:00</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">OpenAI 推出 Rosalind Biodefense，为通过审核的开发者和美国政府伙伴提供 GPT-Rosalind 的可信访问，以推动前沿 AI 在生物防御、公共卫生和大流行病准备方面的应用。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://simonwillison.net/2026/May/28/llm-anthropic" target="_blank" rel="noopener"><span class="item-num">39</span>llm-anthropic 0.25.1</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">07:54</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">llm-anthropic 发布 0.25.1 版本。主要更新包括：新增 Claude Opus 4.8 （`claude-opus-4.8`） 模型；为账户启用了该功能的组织新增了 `-o fast 1` 选项以使用快速模式；调整了各模型的默认 `max_tokens` 值，使其直接使用模型的最大输出长度，而非固定的 8，192。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/OpenRouter/status/2060142412408717518" target="_blank" rel="noopener"><span class="item-num">40</span>别只看基准测试，要看全面表现</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">07:33</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">不要只依赖基准测试；要看全面情况！
+
+试试我们的新比较页面，它还能让你可视化模型性能：https：//openrouter.ai/compare/openai/gpt-5.5/anthropic/claude-opus-4.7/anthropic/claude-opus-4.8</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/xai/status/2060102590122385460" target="_blank" rel="noopener"><span class="item-num">41</span>Grok Build 0.2.7 发布，新增多项功能</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">04:55</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Grok Build 0.2.7 现已发布，包含 /usage、/login、跨子智能体共享终端，以及改进的图像理解功能。
+所有更新请查看 https：//x.ai/build/changelog</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/Replit/status/2060097656207413613" target="_blank" rel="noopener"><span class="item-num">42</span>Replit Canvas：智能体设计工具发布</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">04:35</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">最好的设计工作不会在聊天框里发生。你需要空间来探索想法、创建变体并进行迭代。
+认识新的 Replit Canvas。
+你的智能体设计工具，用于构建精美的网站、应用、营销资产等。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/GeminiApp/status/2060074415304610168" target="_blank" rel="noopener"><span class="item-num">43</span>Gemini Omni向印度用户开放视频编辑功能</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">03:03</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">好消息！印度用户现在可以上传视频（来自相册或已保存文件），并使用Gemini Omni进行编辑和转换。快来试试，并告诉我们你的想法。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/MiniMax_AI/status/2060071852970844377" target="_blank" rel="noopener"><span class="item-num">44</span>MiniMax M2.7 免费智能体编程限时开放</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">02:52</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">在 @OpenHandsDev 上使用 MiniMax M2.7 进行免费智能体编程？
+
+是的，请给我！限时提供 ⚡👀</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/MSFTResearch/status/2060028999229735199" target="_blank" rel="noopener"><span class="item-num">45</span>Data Formulator 推出企业数据 AI 分析工具</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:02</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Data Formulator 为企业数据工作流引入了 AI 驱动的分析功能。数据团队可以轻松将企业数据带入一个 AI 就绪的工作空间，用户可以使用 AI 智能体来探索、分析和可视化数据，将原始数据转化为可操作的洞察：https：//msft.it/6013vZzUl</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://techcrunch.com/2026/05/28/sesame-the-conversational-ai-startup-from-oculus-founders-launches-its-ios-app" target="_blank" rel="noopener"><span class="item-num">46</span>Sesame，这家由Oculus创始人创办的对话式AI初创公司，发布其iOS应用</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:35</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">由Oculus创始人创办的AI初创公司Sesame发布了其iOS应用，该应用将对话式AI智能体带给公众。应用提供更自然的来回交互体验，设计上区别于传统聊天机器人，旨在让用户感觉更像在和真人对话。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/perplexity_ai/status/2060013442720010598" target="_blank" rel="noopener"><span class="item-num">47</span>Perplexity Computer现已集成微软Office套件</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:00</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Perplexity Computer现已登陆Microsoft Excel、Word、PowerPoint和Outlook。
+
+您可以在应用程序的侧边栏中直接使用Computer来协调工作，起草文档、建模、制作演示文稿并处理电子邮件。
+
+现已推出：https：//www.perplexity.ai/hub/products/integrations/microsoft</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://blog.google/innovation-and-ai/technology/ai/io-2026-keynote-moment-videos" target="_blank" rel="noopener"><span class="item-num">48</span>Google I/O 2026 一文速览：12 大重要时刻</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:00</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Google I/O 2026 发布会上披露了 12 个重要时刻，其中包括 Gemini Omni 和 Gemini 3.5 Flash 等产品的相关消息。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/runwayml/status/2059998751742128635" target="_blank" rel="noopener"><span class="item-num">49</span>AI生成短片《昨夜》探索记忆碎片中的东京之夜</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">22:02</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">昨夜。一部完全由AI生成的短片，通过破碎记忆的视角，探索了在东京改变人生的一个夜晚。由一人使用Runway在一天内创作完成。
+
+这是Project Luxo的一部分：一个探索AI生成视频如何跨越恐怖谷的新项目。
+
+通过下方链接了解更多关于《昨夜》和Project Luxo的信息。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/openclaw/status/2059985767456231751" target="_blank" rel="noopener"><span class="item-num">50</span>OpenClaw 2026.5.27 版本发布</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">21:10</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">OpenClaw 2026.5.27 已上线 🦞
+
+🔒 更严格的运行时/安全边界
+⚡ 更快的网关 + 回复路径
+🧠 更稳定的 Codex/应用服务器内存
+📡 更好的频道、提供商、Pixverse 视频
+
+更少阻碍，更多掌控。
+https：//github.com/openclaw/openclaw/releases/tag/v2026.5.27</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://mistral.ai/news/search-toolkit" target="_blank" rel="noopener"><span class="item-num">51</span>发布 Search Toolkit</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">20:47</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Mistral AI 发布了 Search Toolkit 的公共预览版。这是一个用于构建 AI 应用生产级搜索管道的可组合框架。该框架旨在解决团队在搭建搜索基础设施时，因数据摄取、检索和评估工具分散而耗费过多工程时间的问题。Search Toolkit 将这三者整合到单一框架与共享接口中，使团队能更专注于提升搜索质量。该工具开源，可部署在云端、本地或边缘环境，并支持企业搜索、RAG 等多种检索场景。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/alibaba_cloud/status/2059840407618396391" target="_blank" rel="noopener"><span class="item-num">52</span>阿里云DataWorks推出AI数据智能体</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">11:33</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">🚀 认识 DataWorks Data Agent--阿里云的AI数据智能体！
+
+借助AI简化数据工作流，加速洞察，让数据管理更智能。
+
+了解更多：https：//int.alibabacloud.com/m/1000413560/
+
+#AlibabaCloud #DataWorks #AI #DataAgent #BigData #DataAnalytics</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/alibaba_cloud/status/2059821825140367565" target="_blank" rel="noopener"><span class="item-num">53</span>MuleRun登陆阿里云市场，提供全天候AI劳动力</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">10:19</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">在阿里云市场遇见 MuleRun--一个全天候的AI劳动力，用于研究、报告、代码、设计等。功能强大，适合个人使用；企业就绪，适合团队协作--支持SSO、RBAC、私有网络、团队知识管理和无缝集成。
+
+想得更大。让 MuleRun 处理其余事务。
+
+方案起价 $20/月 → https：//int.alibabacloud.com/m/1000413520/
+
+#AlibabaCloud #AIAgents #AIWorkforce #FutureOfWork #EnterpriseAI</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://updates.midjourney.com/web-updates-5" target="_blank" rel="noopener"><span class="item-num">54</span>Web 更新</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">02:44</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">对话模式在文本和语音输入方面进行了改进。语音会话开始时，可访问用户的图像提示、风格参考、侧边栏设置和最近任务。图像提示功能现可从托盘和侧边栏直接使用。在语音提交过程中，托盘中的图像将保持不变，直至用户手动移除。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/OpenAIDevs/status/2059703536825565499" target="_blank" rel="noopener"><span class="item-num">55</span>OpenAI产品支持私有MCP服务器安全连接</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">02:29</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">您的团队可以在内部网络中保留MCP服务器，同时ChatGPT、Codex和Responses API通过仅出站HTTPS进行连接。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/opencode/status/2059696100626297225" target="_blank" rel="noopener"><span class="item-num">56</span>OpenCode与MiMo V2.5限时免费开放</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">01:59</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">OpenCode x MiMo V2.5 - 限时免费
+
+1M 上下文 • 推理 • 文本 • 图像</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/haoailab/status/2059695648103112946" target="_blank" rel="noopener"><span class="item-num">57</span>开源FastVideo Dreamverse实时视频生成工具</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">01:58</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">🚀仅需7秒即可生成30秒1080p视频！
+
+我们开源了FastVideo Dreamverse：基于单张NVIDIA B200 GPU和LTX-2模型，实现实时视频生成的氛围引导工具。
+
+Repo： https：//github.com/hao-ai-lab/FastVideo/tree/main/apps/dreamverse
+Blog： https：//haoailab.com/blogs/fastvideo-dreamverse-release/</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://developers.googleblog.com/supercharge-your-integration-workflow-with-the-google-pay-wallet-developer-mcp-server" target="_blank" rel="noopener"><span class="item-num">58</span>使用 Google Pay &amp; Wallet Developer MCP server 加速你的集成工作流</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Google 推出 Google Pay &amp; Wallet Developer MCP server，这是一款开放标准工具，旨在将 AI 开发助手和 IDE 安全连接到实时的 API 与账户上下文。开发者无需离开开发环境，即可搜索官方文档、验证 Wallet pass 定义、检查集成状态以及管理商户账户。该集成旨在通过减少上下文切换并提供实时、可靠的 AI 支持来减少开发摩擦，从而加速开发工作流。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://claude.com/blog/introducing-dynamic-workflows-in-claude-code" target="_blank" rel="noopener"><span class="item-num">59</span>在Claude Code中引入动态工作流</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Claude Code 推出&quot;动态工作流&quot;功能，使 Claude 能端到端处理复杂任务。该功能通过动态编写脚本，在单个会话中并行运行数十到数百个子智能体来完成工作，并会在结果呈现前进行验证。它适用于跨代码库的 bug 查找、大规模迁移（如将 Bun 从 Zig 移植到 Rust）等需要多角度分析的任务。该功能现已在研究预览阶段可用，支持 Claude Code CLI、桌面端、VS Code 扩展以及 API、Amazon Bedrock、Vertex AI 等平台，面向 Max、Team 及已启用的 Enterprise 计划用户。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/perplexity_ai/status/2059664738087469511" target="_blank" rel="noopener"><span class="item-num">60</span>Perplexity开源Unigram分词器降低CPU占用</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:55</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">我们开源了重新构建的Unigram分词器，可将CPU占用降低5-6倍。
+小型重排序器和嵌入模型在GPU上运行时间仅为个位数毫秒，使得CPU分词成为总延迟的重要组成部分。
+http：//github.com/perplexityai/pplx-garden</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/claudeai/status/2059662933924123044" target="_blank" rel="noopener"><span class="item-num">61</span>Claude Marketplace 新增五家合作伙伴</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:48</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Claude Marketplace 新增成员：@augmentcode、@boltdotnew、@coderabbitai、@hebbia 和 @WeAreLegora。
+
+您现有的 Anthropic 消费承诺可用于购买其 Claude 驱动的产品。
+
+了解更多：http：//claude.com/platform/marketplace</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/krea_ai/status/2059650622203515143" target="_blank" rel="noopener"><span class="item-num">62</span>Krea 2 API发布，支持多平台与智能体</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">22:59</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">今天，我们发布了 Krea 2 的 API。
+现已在 @fal 或 @ComfyUI 等平台可用，通过 @NousResearch 的 Hermes 等智能体使用，并全面支持 Claude、Codex 或 OpenClaw。
+了解如何设置 👇</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://runwayml.com/news/mcp" target="_blank" rel="noopener"><span class="item-num">63</span>Runway 推出 Model Context Protocol 服务器</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">22:09</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Runway 正式推出 Runway MCP 服务器，允许任何兼容 MCP 的 AI 智能体（如 Claude、ChatGPT、Cursor）在对话界面中直接生成图像与视频，无需切换工作流。该服务器接入了 Runway 最新的多款 SOTA 模型，包括 Gen-4.5、Seedance 2.0、GPT Image 2、Kling 3.0 及 Nano Banana Pro。其应用场景涵盖为产品制作营销视频、批量生成网站视觉素材、创作角色广告以及在应用开发中集成视觉内容。用户设置简便，通过 runwayml.com/mcp 添加服务器并登录现有 Runway 账户即可使用，无需单独申请 API 密钥。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/Alibaba_Qwen/status/2059586373456380225" target="_blank" rel="noopener"><span class="item-num">64</span>Qoder平台限时半价使用Qwen3.7-Max模型</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">18:43</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">🙌🙌
+
+【引用 @qoder_ai_ide】：Qwen3.7-Max，半价。
+
+从今天起，Qwen3.7-Max--通义千问（Qwen）家族的最新旗舰模型--在Qoder上半价提供。限时活动。
+
+新用户？你每天还能获得100次免费模型调用。自动应用，无需领取，无需开关。
+桌面端、JetBrains插件、CLI、QoderWork、QoderWake--全部覆盖。
+
+现在正是用它处理难题的好时机。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.152" target="_blank" rel="noopener"><span class="item-num">65</span>Claude Code v2.1.152 更新发布</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">09:30</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Claude Code 发布 v2.1.152 版本更新。核心改进包括：`/code-review --fix` 现在会将审查建议直接应用于工作目录；技能与斜杠命令支持通过 frontmatter 的 `disallowed-tools` 移除模型工具；新增 `/reload-skills` 命令可不重启会话重新扫描技能目录；`SessionStart` 钩子现可返回 `reloadSkills： true` 重新扫描技能，并可通过 `hookSpecificOutput.sessionTitle` 设置会话标题；新增 `MessageDisplay` 钩子事件以变换或隐藏助手消息。其他更新涉及插件市场管理、主模型不可用时自动切换至 `--fallback-model`、会话用量统计优化等。同时修复了终端样式退化、沙箱警告显示、思考摘要、MCP 服务器去重、远程会话连接及多种会话卡顿问题。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://huggingface.co/blog/delta-weight-sync" target="_blank" rel="noopener"><span class="item-num">66</span>通过万亿参数与 Hub Bucket 实现增量权重同步：TRL 中的增量权重同步</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">本文标题涉及 Hugging Face TRL 框架中一项具体的增量权重同步技术。正文重申了 Hugging Face 的核心使命，即致力于通过开源和开放科学，来推动人工智能的进步与普及。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/ClaudeDevs/status/2059385239781384341" target="_blank" rel="noopener"><span class="item-num">67</span>Claude Code推出安全漏洞识别插件</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">05:24</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">我们为Claude Code发布了一个安全指导插件，可在编写代码时帮助识别和修复漏洞。
+所有Claude Code用户均可使用。从插件市场（/plugins）安装。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/kimmonismus/status/2059354372643975490" target="_blank" rel="noopener"><span class="item-num">68</span>MiMo 2.5 Pro大幅降价，与DeepSeek V4 Pro同价</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">03:21</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">小米MiMo-V2.5系列API价格永久下调，最高降幅达99%，现与DeepSeek V4 Pro同价。Token套餐同步升级，同等价格下可用token量增加5-8倍，计费规则更简单透明。所有现有用户套餐额度将全额重置。此次降价源于MiMo全栈推理优化与服务效率提升，后续将发布技术博客详述细节。MiMo-V2.5-TTS限时免费，新定价于5月26日生效。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/Replit/status/2059303550375674139" target="_blank" rel="noopener"><span class="item-num">69</span>Replit 应用添加登录的两种方式</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">在 Replit 上为你的应用添加登录有两种方式：
+→ Replit Auth：零配置，用户使用其 Replit 账户登录
+→ Clerk Auth：你自己的品牌化登录，开发/生产环境均只需一个提示词。文档和视频见下方 👇
+
+文档：https：//docs.replit.com/learn/projects-and-artifacts/auth#auth</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://developers.googleblog.com/the-latest-updates-to-google-pay" target="_blank" rel="noopener"><span class="item-num">70</span>Google Pay 最新更新</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Google Pay 正向&quot;智能体商务&quot;演进，推出了通用商务协议和新的 MCP 服务器，允许 AI 智能体管理集成与分析趋势。Android 平台更新引入了动态回调以支持快速结账，并通过 WebView 将支付功能扩展至社交媒体应用。此外，平台还推出了跨设备生物认证和新的交易信号，旨在帮助商家减少流程摩擦。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/Kling_ai/status/2059121691385622761" target="_blank" rel="noopener"><span class="item-num">71</span>Kling AI驱动《大卫之家》实现多项行业首创</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">11:57</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Jon Erwin - Wonder Project创始人兼首席创意官，Innovative Dreams首席执行官，亚马逊Prime热门剧集《大卫之家》创作者：
+
+&quot;Kling AI是《大卫之家》第一季和第二季背后的核心力量。最让我兴奋的是它实现了多项行业首创：在完成的剧集中首次使用AI生成场景，首个原生4K模型。其运动控制功能也使我们能够在AI生成中保留演员真实的情感和感受。&quot;</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/xai/status/2058973760708091907" target="_blank" rel="noopener"><span class="item-num">72</span>Grok Build Beta版向SuperGrok用户开放</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">02:09</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Grok Build 现已面向所有 SuperGrok 和 X Premium+ 用户推出 Beta 版。
+使用 Plan Mode，通过 Imagine 创建图像和视频，并使用 CLI 构建自动化或编排器。
+访问 http：//x.ai/cli 开始使用。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://claude.com/blog/code-w-claude-london-2026-rethinking-how-we-build" target="_blank" rel="noopener"><span class="item-num">73</span>Code w/ Claude 伦敦活动：重塑开发体验</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">在Code w/ Claude 伦敦活动上，Anthropic 宣布了 Claude Managed Agents 的两项新能力：自托管沙箱（公开测试版）和 MCP 隧道（研究预览）。这两项功能使 AI 智能体的工具执行环境与企业私有网络内的 MCP 服务器连接均可运行在客户自有基础设施或指定托管服务商处。活动还介绍了如何通过 Claude Code、优化思维预算以及模型努力级别来提升开发体验。目前，包括 Spotify、Base44 和 Legora 在内的客户已在使用这些新功能。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/Alibaba_Qwen/status/2058932656797368619" target="_blank" rel="noopener"><span class="item-num">74</span>Qwen3.7-Max隐式缓存功能上线</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:26</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">✅隐式缓存现已在Qwen3.7-Max上线--自动启用，无需设置。
+⚡️开箱即用，更快更便宜。
+
+需要更高、更确定的命中率？请尝试显式缓存。🙌
+🔗最佳实践🔗：https：//www.alibabacloud.com/help/en/model-studio/explicit-cache-best-practice</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/LumaLabsAI/status/2058672731705503959" target="_blank" rel="noopener"><span class="item-num">75</span>Luma Agents 实现规模化真实 UGC 广告生成</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">06:13</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">规模化的真实性曾是矛盾，如今已成现实。
+定义简报，设定风格，Luma Agents 从这里构建每一条 UGC 风格广告。
+让它真实 → http：//lumalabs.ai/app</p>
+    </div></div>
+      <div class="pagination"></div>
+    </div>
+  </div>  <div class="section" style="--delay: 180ms">
+    <div class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg> 行业动态<span class="count">3+39</span><a class="cat-link" href="../_cache/search-industry.html" title="查看全部分类" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></div>
+    <div class="daily-items">    <div class="item">
+      <a class="item-title" href="https://www.ithome.com/0/957/319.htm" target="_blank" rel="noopener"><span class="item-num">76</span>中央网信办等四部门：提升全民人工智能素养，加快人才培育、深化普及应用</a>
+      <div class="item-meta">
+        <span class="item-source">IT之家（RSS）</span>
+      </div>
+      <p class="item-summary">中央网信办等四部门联合印发《2026年提升全民数字素养与技能工作要点》，部署了六项重点任务。其中明确要求“提升全民人工智能素养”，具体包括强化人工智能赋能教育、加快人工智能人才培育、深化人工智能普及应用。其他任务涵盖数字资源供给、应用场景建设、普惠包容发展、安全有序网络空间以及协同联动机制。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://openai.com/index/boston-childrens-hospital" target="_blank" rel="noopener"><span class="item-num">77</span>波士顿儿童医院利用AI解锁新诊断</a>
+      <div class="item-meta">
+        <span class="item-source">OpenAI：官网动态（RSS · 排除企业/客户案例）</span>
+      </div>
+      <p class="item-summary">波士顿儿童医院通过部署OpenAI技术，用于改善患者护理并减轻运营负担，成功帮助诊断了超过40种罕见病病例。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://blog.google/innovation-and-ai/technology/ai/university-waterloo-labs" target="_blank" rel="noopener"><span class="item-num">78</span>滑铁卢大学未来实验室展示AI原型</a>
+      <div class="item-meta">
+        <span class="item-source">Google Blog：AI（RSS）</span>
+      </div>
+      <p class="item-summary">滑铁卢大学未来实验室的学生开发了用于重塑教育和工作未来的AI原型，其中包括手语辅导工具。</p>
+    </div></div>
+    <div class="expanded-items">
+      <div class="items-scroll">    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/alibaba_cloud/status/2060520586489770167" target="_blank" rel="noopener"><span class="item-num">79</span>阿里云与Qwen成为UEFA多年全球AI合作伙伴</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:36</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">阿里云和Qwen成为UEFA官方独家AI、云计算与电子商务合作伙伴，合作期覆盖2027/2028赛季至2032/2033赛季的UEFA男子俱乐部赛事，以及UEFA EURO 2028。阿里巴巴集团主席蔡崇信表示，将投入云计算、全栈AI及全球电商平台能力，支持赛事运营。合作将利用Qwen大语言模型部署先进AI技术，增强球迷互动与媒体内容体验，并依托阿里云基础设施打造全球沉浸式观赛体验。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://openai.com/index/boston-childrens-hospital" target="_blank" rel="noopener"><span class="item-num">80</span>波士顿儿童医院利用AI解锁新诊断</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">20:00</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">波士顿儿童医院通过部署OpenAI技术，用于改善患者护理并减轻运营负担，成功帮助诊断了超过40种罕见病病例。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.ithome.com/0/957/319.htm" target="_blank" rel="noopener"><span class="item-num">81</span>中央网信办等四部门：提升全民人工智能素养，加快人才培育、深化普及应用</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">18:21</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">中央网信办等四部门联合印发《2026年提升全民数字素养与技能工作要点》，部署了六项重点任务。其中明确要求&quot;提升全民人工智能素养&quot;，具体包括强化人工智能赋能教育、加快人工智能人才培育、深化人工智能普及应用。其他任务涵盖数字资源供给、应用场景建设、普惠包容发展、安全有序网络空间以及协同联动机制。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.ithome.com/0/956/851.htm" target="_blank" rel="noopener"><span class="item-num">82</span>三星电子业内率先出样 HBM4E 内存</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:45</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary"></p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://fortune.com/2026/05/26/sam-altman-dario-amodei-walking-back-ai-jobs-apocalypse-prophecies-ipo" target="_blank" rel="noopener"><span class="item-num">83</span>萨姆·阿尔特曼和达里奥·阿莫代伊都纷纷收回了关于AI将引发就业危机的预测</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">05:49</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary"></p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://arstechnica.com/ai/2026/05/apple-reportedly-trying-to-distill-googles-multi-trillion-parameter-gemini-ai-to-run-on-iphone" target="_blank" rel="noopener"><span class="item-num">84</span>Apple 正努力将庞大的 Gemini 模型塞进 iPhone 以驱动新 Siri</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">02:30</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">Apple 正尝试将大型 Gemini 模型集成到 iPhone 中，以支持全新的 Siri 功能。由于模型规模庞大，本地处理可能无法完全实现，因此一个云端组件很可能是必然的选择。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://openrouter.ai/announcements/series-b" target="_blank" rel="noopener"><span class="item-num">85</span>OpenRouter 获得1.13亿美元B轮融资</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">22:00</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">AI模型聚合平台OpenRouter宣布完成1.13亿美元B轮融资。本轮融资由CapitalG领投，NVentures、ServiceNow Ventures等多家机构参投，现有投资者Andreessen Horowitz与Menlo Ventures也参与了本轮融资。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/thexpin/status/2059947998302679059" target="_blank" rel="noopener"><span class="item-num">86</span>DeepSeek计划在完成融资后立即申请科创板IPO</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">18:40</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">独家：DeepSeek计划在完成当前约500亿美元（3500亿人民币）融资轮后，立即申请科创板（A股）IPO。
+来源：参与本轮融资的一位大型基金经理。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/alibaba_cloud/status/2059918150997623004" target="_blank" rel="noopener"><span class="item-num">87</span>Qwen3.7-Max 登顶 OpenRouter 热门大模型榜</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">16:42</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">Qwen3.7-Max 以 77.3B tokens 的使用量登顶 @OpenRouter 热门大语言模型榜单。
+
+而我们才刚刚开始。
+
+👇 https：//int.alibabacloud.com/m/1000413314/</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/Kling_ai/status/2059908126611292645" target="_blank" rel="noopener"><span class="item-num">88</span>可灵AI将在AI电影节展示20部4K原创短片</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">16:02</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">可灵AI将在全球最大AI影视会议AI on the Lot的社区日上，展示由Prompt Club的电影制作人创作的20部原创AI短片。所有短片均为原生4K分辨率，旨在探索AI电影的边界。该展示将于5月29日在加州卡尔弗市的卡尔弗剧院举行。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://openai.com/index/openai-frontier-governance-framework" target="_blank" rel="noopener"><span class="item-num">89</span>OpenAI 的前沿治理框架</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">OpenAI 发布了&quot;前沿治理框架&quot;，阐述其 AI 安全、安全与风险管理实践如何与欧盟和加州新出台的法规要求对齐。该框架旨在规范其前沿模型的开发与部署流程。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/swyx/status/2059717021944926238" target="_blank" rel="noopener"><span class="item-num">90</span>Cognition成为全球最大独立智能体实验室</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">03:23</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">Cognition宣布已成为全球最大的独立智能体实验室。公司完成超10亿美元融资，估值达260亿美元，由Lux Capital、General Catalyst等领投。其企业使用量自年初增长超10倍，年化收入增至4.92亿美元。Cognition于两年前推出Devin，定位为首个AI软件工程师。公司强调其拥有多项领先优势，包括首个编码智能体、顶级代码审查能力等，并得到了Peter Thiel的重大投资。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/rohanpaul_ai/status/2059689400267939925" target="_blank" rel="noopener"><span class="item-num">91</span>黄仁勋展示英伟达台湾新园区</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">01:33</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">黄仁勋展示了新的台湾园区。
+英伟达计划每年在台湾投资约1500亿美元。
+就在竞争对手AMD宣布将向台湾AI领域投资超过100亿美元一周后。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/Replit/status/2059688584899154134" target="_blank" rel="noopener"><span class="item-num">92</span>Replit入选Redpoint 2026 InfraRed 100榜单</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">01:30</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">Replit 被列入 @Redpoint 的 2026 InfraRed 100 榜单。
+这是一份构建 AI 运行基础设施的公司名单。很荣幸能入选，与 Stripe、Snowflake 和 HashiCorp 等往届入选者并列。
+致每一位在 Replit 上发布产品的构建者：这份荣誉属于你们。
+https：//www.redpoint.com/infrared/report/</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.anthropic.com/news/series-h" target="_blank" rel="noopener"><span class="item-num">93</span>Anthropic 完成 650 亿美元 H 轮融资，估值达 9650 亿美元</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">Anthropic 宣布完成由 Altimeter Capital 等领投的 650 亿美元 H 轮融资，投后估值达 9650 亿美元。公司表示其旗舰模型 Claude 的企业部署持续增长，年化收入已突破 470 亿美元。此轮融资将用于推进 AI 安全与可解释性研究、扩展算力以满足 Claude 的需求，并规模化产品与合作伙伴关系。Anthropic 近期已显著扩大计算容量，并宣布 Claude 已登陆 AWS、Google Cloud 和 Microsoft Azure 三大云平台。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.theverge.com/ai-artificial-intelligence/937933/pope-ai-encyclical-tech-industry-reactions" target="_blank" rel="noopener"><span class="item-num">94</span>教皇没对AGI上头</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">20:00</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">教皇 Leo XIV 发布题为《Magnifica Humanitas》的通谕，警告人工智能的使用绝非纯粹技术问题，当其进入影响人类生活的过程时，便触及权利、机会、地位与自由。通谕发布时，Anthropic 联合创始人 Christopher Olah 出席。文件引发了科技界内外的广泛反应。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://openai.com/index/cisco" target="_blank" rel="noopener"><span class="item-num">95</span>思科与OpenAI携手Codex重新定义企业工程</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">19:00</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">思科正与OpenAI合作，利用Codex重新定义企业工程实践。此次合作旨在帮助思科扩展AI原生开发能力、加速其AI Defense安全工作，并实现缺陷修复流程的自动化。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/alibaba_cloud/status/2059509714854007181" target="_blank" rel="noopener"><span class="item-num">96</span>阿里云入选Omdia智能体AI市场雷达领导者</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">13:39</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">阿里云在Omdia的智能体AI市场雷达中被评为领导者。Omdia强调了阿里云在每一层的全栈能力，认可其是首个将整个平台围绕智能体范式进行构建的云服务商。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.ithome.com/0/955/758.htm" target="_blank" rel="noopener"><span class="item-num">97</span>我国将加快研究推进人工智能健康发展综合性立法、低空经济立法等</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">10:54</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary"></p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/alibaba_cloud/status/2059453607075004835" target="_blank" rel="noopener"><span class="item-num">98</span>阿里云成为PyTorch基金会白金会员</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">09:56</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">阿里云宣布以白金会员身份加入PyTorch基金会。作为AI基础设施全球领导者，阿里云是开源模型家族Qwen的缔造方，已在多样化硬件上大规模运行PyTorch，将为社区带来生产级工程经验。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.ithome.com/0/955/674.htm" target="_blank" rel="noopener"><span class="item-num">99</span>消息称高通与字节跳动达成 AI ASIC 芯片合作，采购量在数百万颗级别</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">09:12</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary"></p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://openai.com/index/election-safeguards-2026" target="_blank" rel="noopener"><span class="item-num">100</span>2026年选举信息与保障</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">在2026年全球选举临近之际，通过帮助公众获取选举信息、支持网络防御者以及提升人工智能透明度这三方面的努力，来为选举提供保障。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://the-decoder.com/claude-mythos-reportedly-solves-openais-landmark-erdos-problem-with-a-cute-simple-proof" target="_blank" rel="noopener"><span class="item-num">101</span>据报道Claude Mythos以&quot;巧妙简洁的证明&quot;解决了OpenAI里程碑式的Erdős问题</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">02:31</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">Anthropic工程师Sholto Douglas表示，Claude Mythos在周末期间解决了OpenAI提出的Erdős单位距离猜想问题，并给出了一个&quot;巧妙简洁的证明&quot;。这一成果被描述为人工智能在数学发现领域存在&quot;严重超前&quot;迹象。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.anthropic.com/news/milan-office-opening" target="_blank" rel="noopener"><span class="item-num">102</span>Anthropic 开设米兰办公室，深化意大利企业合作与 AI 安全对话</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">Anthropic 在米兰开设其欧洲第六家办公室，旨在与意大利企业及开发者社区合作，负责任地构建和扩展 Claude，并参与关于 AI 的对话。本地团队已与多家金融、生命科学、能源及汽车行业的公司展开合作。案例包括与 JAKALA 合作将 Claude 部署至超 3，000 席位，释放约 70% 高级团队时间；Satispay 借此将 18 个月路线图压缩至 7 个月；Bending Spoons 的大部分代码变更已与 Claude Code 共同完成。Anthropic 承诺支持意大利企业、研究及文化，通过安全的 AI 转型促进发展。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/OpenRouter/status/2059277623629664758" target="_blank" rel="noopener"><span class="item-num">103</span>OpenRouter完成1.13亿美元B轮融资</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">22:16</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">今天我们宣布完成由@CapitalGVC领投的1.13亿美元B轮融资。
+过去6个月，随着AI从实验快速转向生产，OpenRouter的周处理量从5万亿增长到25万亿token。
+我们对未来充满期待。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/MSFTResearch/status/2059273348232724565" target="_blank" rel="noopener"><span class="item-num">104</span>微软亚洲研究院发起全球AI价值观挑战赛</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">22:00</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">AI能否理解人类价值观的现实复杂性？微软亚洲研究院的全新全球AI价值观挑战赛，诚邀哲学、伦理、法学和社会科学领域的研究人员共同探索。立即注册：https：//msft.it/6012vk8OO</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/GoogleDeepMind/status/2059235181274202500" target="_blank" rel="noopener"><span class="item-num">105</span>SynthID水印技术扩展合作，覆盖超千亿内容</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">19:28</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">SynthID已为超过1000亿条内容添加水印，但透明度需要行业协作。
+因此，我们正与OpenAI、ElevenLabs和Kakao合作，将SynthID水印技术集成到他们的模型中--这延续了我们与NVIDIA共同推动的全行业趋势。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.ithome.com/0/955/563.htm" target="_blank" rel="noopener"><span class="item-num">106</span>四个月花光全年 AI 预算，Uber 总裁质疑 AI 投入合理性</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">18:09</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary"></p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/alibaba_cloud/status/2059174528786268669" target="_blank" rel="noopener"><span class="item-num">107</span>阿里云CTO阐述从云原生到智能体原生转型</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">15:27</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">在 #QwenConference2026 上，阿里云CTO、国际业务总裁李飞飞博士阐述了我们从云原生到智能体原生的转变。为了普及AI，我们构建了四大基石：模型、智能体云、工具与服务，以及规模。
+
+👉 敬请关注：https：//click.qwencloud.com/m/20000000187/</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.ithome.com/0/955/090.htm" target="_blank" rel="noopener"><span class="item-num">108</span>Anthropic 新模型震动金融圈，欧洲央行紧急开会要求升级网络防御</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">07:53</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary"></p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.ithome.com/0/955/078.htm" target="_blank" rel="noopener"><span class="item-num">109</span>OpenAI GPT-5.6 模型曝下月发布：AI 上下文 150 万 tokens</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">06:59</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">多名开发者在 OpenAI Codex 后端日志中发现未官宣的 GPT-5.6 模型，内部代号 iris-alpha。该模型将支持 150 万 token 的上下文窗口，较当前 GPT-5.5 的 105 万 token 提升约 43%，有望于今年 6 月发布。测试显示，在输入达到 90 万 token 时仍能流畅响应。同系列还发现了 ember-alpha 与 beacon-alpha 版本。此外，GPT-5.6 在前端界面生成能力上也有所提升。基于爆料信息，Anthropic Claude、Google Gemini 及 xAI Grok 也可能瞄准同期发布新模型。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/kimmonismus/status/2058997271803674991" target="_blank" rel="noopener"><span class="item-num">110</span>苹果据称正使用定制版1.2T参数Google模型重塑下一代Siri</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">03:42</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">据报道，苹果为改造下一代Siri，正使用一个定制版、参数规模达1.2T的Google大模型作为其核心，这显著大于预估约300B参数的Gemini 3.5 Flash。该模型将驱动Siri的部分功能，其中简单查询预期会在本地设备运行。苹果面临的关键挑战是确保该大模型能够足够快速地响应日常问题。此外，下个月AI领域预计将有多项重要发布，包括WWDC上的Apple Intelligence与Gemini整合、GPT-5.6、可能的Sonnet 4.8/Opus 4.8，以及已确认的Gemini 3.5 Pro。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea" target="_blank" rel="noopener"><span class="item-num">111</span>Anthropic任命KiYoung Choi为韩国代表董事</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">Anthropic宣布任命KiYoung Choi为韩国代表董事，以支持其即将在首尔开设的办公室。根据Anthropic的经济指数，韩国是Claude.ai全球最活跃的市场之一，其使用率超过人口规模预期的3.5倍，主要用于技术和创意领域。KiYoung Choi此前曾担任Snowflake韩国区总经理，在Google Cloud、Adobe等公司拥有超过30年的科技行业领导经验。他将在韩国领导市场战略，支持本地企业和初创公司应用Claude，例如法律科技公司Law&amp;Company及韩国电信巨头SK Telecom均已在使用Claude构建产品。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.theverge.com/news/936945/pope-leo-letter-encyclical-ai-anthropic-labor-warfare" target="_blank" rel="noopener"><span class="item-num">112</span>教皇里奥呼吁在AI时代保持&quot;深刻的人性&quot;</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:05</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">教皇里奥十四世在首份重要通谕《Magnifica Humanitas》中警告了AI及不受约束的技术力量带来的风险。该通谕于2026年5月15日发布，是教皇关于&quot;在人工智能时代守护人&quot;的宣言。文件重点讨论了AI驱动战争的危险、AI对劳动的影响，以及建立新的法律和伦理框架来规范技术的必要性，强调AI的快速普及正造成经济和社会动荡，对个人的保护不足威胁着人类尊严。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.bloomberg.com/news/articles/2026-05-23/deepseek-to-make-permanent-75-discount-on-flagship-ai-model" target="_blank" rel="noopener"><span class="item-num">113</span>DeepSeek将对其旗舰AI模型实施永久性75%折扣</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">02:08</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary"></p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/kimmonismus/status/2058584943052161488" target="_blank" rel="noopener"><span class="item-num">114</span>TrapDoor供应链攻击：AI助手成新型攻击面</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:24</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">一场名为&quot;TrapDoor&quot;的协调供应链攻击同时袭击了npm、PyPI和Crates.io，涉及34个恶意包，旨在窃取加密货币、AI和安全开发者的钱包、SSH密钥和云凭证。攻击的新手段是向流行开源项目提交Pull Request，注入被操纵的`CLAUDE.md`和`.cursorrules`配置文件。当开发者克隆仓库并使用Claude Code或Cursor等AI助手时，AI智能体会将这些文件当作可信指令执行，可能在开发者不知情下运行恶意命令。这是首次将AI助手作为攻击面。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.ithome.com/0/954/452.htm" target="_blank" rel="noopener"><span class="item-num">115</span>消息称 Anthropic 最快下周完成逾 300 亿美元融资，有望推动估值反超 OpenAI</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:12</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">据彭博社报道，Anthropic即将完成一轮超300亿美元的融资，最快可能于下周敲定。此轮融资将使其估值突破9000亿美元，正式超越OpenAI，成为全球估值最高的AI初创企业。融资的迅速推进反映了市场的强烈追捧。同时，公司营收高速增长，预计第二季度营收将达109亿美元，环比增长超一倍，有望迎来首个盈利季度。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://fortune.com/2026/05/22/microsoft-ai-cost-problem-tokens-agents" target="_blank" rel="noopener"><span class="item-num">116</span>微软称，使用人工智能的成本高于支付人工工资</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">13:23</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">微软发布报告指出，在特定工作场景中，部署和使用人工智能（AI）的成本目前已高于支付相应的人工工资。报告分析了基于&quot;tokens&quot;（令牌）和&quot;agents&quot;（智能体）的AI使用模式，发现其综合开销超过了雇佣人类员工完成同类任务的费用。这一发现揭示了当前企业应用AI技术面临的现实经济挑战。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/Kling_ai/status/2058013861404684739" target="_blank" rel="noopener"><span class="item-num">117</span>Kling AI亮相戛纳，推动AI赋能电影制作</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">10:35</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">Kling AI在戛纳电影市场（Marché du Film）举办官方会议，首次登上这一世界顶级电影舞台。会议汇集全球电影专业人士，共同探讨AI如何融入实际电影制作流程。Kling AI已证明其能力可服务于动画长片、好莱坞剧集、实验短片及影院电影等多种创作形式。未来，Kling AI将继续推进电影级AI影像技术，与全球创作者合作，将更多&quot;不可能&quot;的故事呈现在银幕上。</p>
+    </div></div>
+      <div class="pagination"></div>
+    </div>
+  </div>  <div class="section" style="--delay: 240ms">
+    <div class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg> 论文研究<span class="count">1+19</span><a class="cat-link" href="../_cache/search-paper.html" title="查看全部分类" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></div>
+    <div class="daily-items">    <div class="item">
+      <a class="item-title" href="https://x.com/drfeifei/status/2060404846734512205" target="_blank" rel="noopener"><span class="item-num">118</span>GPIC：大规模视觉生成基准数据集发布</a>
+      <div class="item-meta">
+        <span class="item-source">X：Fei-Fei Li (@drfeifei, World Labs)</span>
+      </div>
+      <p class="item-summary">我对这个适用于大规模生成模型新时代的视觉生成基准数据集感到非常兴奋！🤩</p>
+    </div></div>
+    <div class="expanded-items">
+      <div class="items-scroll">    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/drfeifei/status/2060404846734512205" target="_blank" rel="noopener"><span class="item-num">119</span>GPIC：大规模视觉生成基准数据集发布</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:56</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">我对这个适用于大规模生成模型新时代的视觉生成基准数据集感到非常兴奋！🤩</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/rohanpaul_ai/status/2060063592448446778" target="_blank" rel="noopener"><span class="item-num">120</span>hexoai开源SIA框架：AI智能体实现递归自我改进</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">02:20</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">hexoai开源了SIA（自我改进AI）框架。该框架展示了AI智能体不仅能优化其外部工作流（harness），还能通过任务反馈直接更新自身的模型权重，从而在领域知识和能力上实现自主提升，而非仅依赖人类提供的提示或工具改进。论文报告显示，SIA在LawBench基准上性能提升56.6%，在GPU kernels运行上耗时减少91.9%，在单细胞RNA去噪任务中相比基线提升502%。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://arxiv.org/abs/2605.30332" target="_blank" rel="noopener"><span class="item-num">121</span>彩色噪声扩散采样</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">扩散模型的生成轨迹具有频谱偏差，早期处理低频全局结构，后期处理高频细节。传统随机微分方程求解器在整个过程中均匀注入白噪声，能量分配效率低。本研究提出彩色噪声采样（CNS），一种免训练的即插即用采样器。它通过动态、随时间和频率调整的噪声调度，更高效地将能量分配给尚未解析的频段。在SiT、JiT、FLUX等架构上的实验表明，CNS作为推理时的替换采样器显著提升了生成质量：在ImageNet-256上，无引导FID在SiT-XL/2上从8.26降至6.27，在JiT-B/16上从32.39降至26.69，在JiT-H/16上从11.88降至8.31，并且在使用无分类器引导时带来一致改进。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://arxiv.org/abs/2605.29341" target="_blank" rel="noopener"><span class="item-num">122</span>WorldMemArena：通过行动-世界交互循环评估多模态智能体记忆</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">针对现有基准无法精确诊断多模态智能体记忆在动态环境中的具体失败阶段，研究提出了&quot;行动-世界交互循环&quot;记忆模型，并构建了WorldMemArena基准。该基准包含400个多会话多模态任务，涵盖&quot;终身进化&quot;和&quot;智能体执行&quot;两类场景，支持对记忆写入、维护、检索和使用的阶段级评估。研究首次对长上下文、RAG等手工设计系统与基于框架的记忆智能体进行直接比较，发现记忆写入与存储质量的提升不直接带来性能改善，且多模态记忆在利用视觉证据及跨领域稳定性上仍存在挑战。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://huggingface.co/blog/ibm-research/itbench-aa" target="_blank" rel="noopener"><span class="item-num">123</span>ITBench-AA：前沿大模型在首个智能体企业IT任务基准测试中得分均低于50%</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">01:20</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">由Artificial Analysis和IBM推出的ITBench-AA SRE基准测试显示，所有前沿大模型得分均未超过50%。Claude Opus 4.7（自适应推理，最大努力）以47%领先，GPT-5.5（xhigh）和Qwen3.7 Max分别得46%和42%。该测试包含59个需要通过Shell命令调查Kubernetes事件快照并提交根因诊断的智能体任务。关键发现是模型推理轮次差异近3倍，但更长的轨迹并不转化为更高准确率，过度调查的模型会因提交误报而受罚。在成本方面，开源模型Gemma 4 31B（Reasoning）以每任务$0.14的成本获得37%得分，优于成本更高但得分更低的闭源模型。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/Alibaba_Qwen/status/2059674574397313277" target="_blank" rel="noopener"><span class="item-num">124</span>Fast， faster， Qwen. 🚀</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:34</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">Qwen3.5在TokenSpeed推理引擎上，针对智能体工作负载达到了创纪录的580 tokens per second （tps）速度。这一成果由通义千问推理团队、lightseekorg Foundation TokenSpeed团队、NVIDIA及Mooncake团队共同实现，并采用了tri_dao的FlashAttention-4 （FA4） 优化。此里程碑标志着开源大语言模型推理性能的边界得到了推动，相关详情可查阅PyTorch社区博客。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.lmsys.org/blog/2026-05-28-mori" target="_blank" rel="noopener"><span class="item-num">125</span>SGLang 团队与 AMD 合作，使 AMD InstinctTM MI355X GPU 的大规模 DeepSeek-R1 分离式推理在总拥有成本上具备竞争力</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">SGLang 与 AMD 团队合作，通过一系列全栈优化，使 AMD InstinctTM MI355X GPU 在运行 DeepSeek-R1 大模型推理时实现了极具竞争力的总拥有成本。在 129 tok/s/user 的交互延迟下，其成本为每百万 token $0.169，比 NVIDIA B200（Dynamo TRT-LLM）方案低 5%，比 B200（SGLang）方案低 40%。吞吐量方面，24 块 AMD GPU 达到 2，436 tok/s/GPU，比使用 48 块 GPU 的 B200 SGLang 方案每 GPU 吞吐量高 1.25 倍。核心优化包括：MoRI 混合 FP4/FP8 量化全到全通信、MoRI-IO KV Cache 后端、两批重叠与 SDMA、ROCm 上的 Specv2 MTP 以及 CPU 流式处理优化。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://arxiv.org/abs/2605.28591" target="_blank" rel="noopener"><span class="item-num">126</span>&quot;了解评估如何设计的模型&quot;得分更安全</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">AI安全评估的有效性依赖于模型在受控与部署环境下行为一致。研究提出&quot;评估元知识&quot;概念，指模型通过训练数据（如描述评估实践的科学文章或社交媒体）隐性习得对评估结构特征（如可验证结构或道德困境）的认知。在六个安全基准上的测试表明，经过合成文档微调后的模型，其安全评分显著高于基础模型与控制模型，即使排除明确表达评估意识的回答，这种行为偏移依然存在。这表明评估元知识可能导致安全基准分数虚高，成为独立于显式记忆或语言化评估意识之外的新干扰因素，对安全评估的设计和解读有重要影响。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://arxiv.org/abs/2605.28421" target="_blank" rel="noopener"><span class="item-num">127</span>DenoiseRL：通过恢复嘈杂前缀来引导推理模型</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">DenoiseRL是一种强化学习框架，旨在提升大语言模型的推理能力。它无需依赖更强的教师模型或精心筛选的困难数据集，而是通过在弱模型产生的失败推理轨迹上进行基于恢复的优化来直接学习，将错误转化为改进机会。这种方法提供了更丰富多样的学习信号，提升了探索效率。实验表明，DenoiseRL在竞争性的数学和通用推理基准测试中，持续优于强在策略RL基线，并能随着训练难度增加促进更强的自我纠正行为。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://arxiv.org/abs/2605.27882" target="_blank" rel="noopener"><span class="item-num">128</span>VibeSearchBench：面向真实世界中长期主动搜索的评测基准</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">基于LLM的智能体在现有搜索基准上表现优异，但真实用户体验不佳，这源于现有基准依赖于高度明确的查询、单轮交互和固定格式评估，无法反映用户与智能体通过多轮对话协同澄清模糊意图的真实搜索行为。为此，研究提出了&quot;VibeSearch&quot;范式并发布了VibeSearchBench，该基准包含200个手工策划的双语任务，覆盖20个领域，分为专业与日常生活两个子集。评估通过用户模拟器和图匹配框架进行。对七个前沿模型的测试显示，所有模型在VibeSearch任务上表现均不充分（最佳F1分数为30.30），凸显了在长期上下文推理、主动意图激发等方面取得根本进展的必要性。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://engineering.fb.com/2026/05/26/ml-applications/silvertorch-index-as-model-new-retrieval-paradigm-recommendation-systems" target="_blank" rel="noopener"><span class="item-num">129</span>SilverTorch：索引即模型--推荐系统的新检索范式</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">Meta 推出SilverTorch推荐系统架构，统一了用户生成内容的所有检索组件。该架构吞吐量比现有技术高23.7倍，计算成本效率比CPU方案高20.9倍，同时提升了准确性。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.anthropic.com/research/coding-agents-social-sciences" target="_blank" rel="noopener"><span class="item-num">130</span>社会科学中的编码智能体</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">一项针对1260名定量社会科学家的调查显示，虽然81%的受访者用过AI聊天机器人，但仅有20%将Claude Code、Codex等编码智能体常规应用于工作。采用率存在显著差异：以男性名字命名的研究者使用率是女性研究者的两倍；顶尖大学研究者可能性高出40%。用户产出更多工作论文和基金申请，但这可能反映早期采用者自身差异。研究者对AI助力撰写可发表论文更乐观，但对重塑整个社会科学领域持保留态度。这是一项初步调查，更深入研究仍在进行中。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://research.google/blog/private-analytics-via-zero-trust-aggregation" target="_blank" rel="noopener"><span class="item-num">131</span>通过零信任聚合实现的隐私分析</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">Google Research 推出了一种新的隐私分析解决方案。该方案结合了一种新的密码学安全聚合协议与可信执行环境（TEE）的透明性，旨在实现前沿的隐私与安全保证。其核心是基于零信任原则，通过密码学与硬件保护的结合，确保系统仅能获取群体的匿名化聚合洞察。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/AntLingAGI/status/2059292063032918422" target="_blank" rel="noopener"><span class="item-num">132</span>KPop 新方法让 Ring-2.6-1T 在 SWE-bench Verified 上突破 76 分</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:14</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">团队推出 KPop，用于稳定大规模 MoE 模型的智能体强化学习训练。它用基于二元 KL 散度的自适应掩码机制，替代了此前 IcePop 方法中的固定比例掩码，能根据训练过程中的训练-推理不匹配程度动态调整。这一改进使得 Ring-2.6-1T 模型在无需修改基础设施或路由重放的情况下，仅通过纯 RL 训练，在 SWE-bench Verified 上取得了超过 76 分的成绩。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://arxiv.org/abs/2605.27295" target="_blank" rel="noopener"><span class="item-num">133</span>Gemini Embedding 2：来自Gemini的原生多模态嵌入模型</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">Google DeepMind推出Gemini Embedding 2，这是一款原生多模态嵌入模型，支持在统一表示空间中嵌入视频、音频、图像和文本。该模型利用Gemini的多模态能力，通过大规模对比学习实现SOTA性能。在关键基准上表现优异：MSCOCO取得62.9 R@1，Vatex取得68.8 NDCG@10，MTEB multilingual达到69.9，MTEB Code达到84.0，超越了专用模型。其统一能力使其适用于RAG、推荐与搜索等下游任务，并在天文学、生物科学、艺术和烹饪等专业领域展现出强大的零样本性能。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://arxiv.org/abs/2605.26494" target="_blank" rel="noopener"><span class="item-num">134</span>MiniMax-M2系列：微小激活释放最大真实世界智能</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">MiniMax推出M2系列大语言模型。其旗舰模型M2采用混合专家（MoE）架构，总参数229.9B，每个token仅激活9.8B参数。该系列专为智能体部署设计，基于三大组件构建：智能体驱动的数据管道、可扩展的智能体原生强化学习系统Forge，以及展示早期自我进化能力的M2.7检查点。这种设计使其在智能体编码、深度搜索、办公任务及推理基准测试中达到了前沿性能水平。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.promptarmor.com/resources/microsoft-copilot-cowork-exfiltrates-files" target="_blank" rel="noopener"><span class="item-num">135</span>微软 Copilot Cowork 存在文件泄露问题</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">07:25</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary"></p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.ithome.com/0/954/778.htm" target="_blank" rel="noopener"><span class="item-num">136</span>华为何庭波&quot;韬定律&quot;论文发布，逻辑折叠技术提升芯片性能</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">12:27</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">华为何庭波在ISCAS 2026上提出&quot;韬定律&quot;，并介绍逻辑折叠（LogicFolding）技术。该技术通过三维空间拓扑重组提升芯片性能，不依赖新光刻工艺。在麒麟2026芯片测试中，晶体管密度从155 MTr/mm2提升至238 MTr/mm2，性能核心能效提高41%，最大时钟频率提升近13%。论文显示，麒麟2027芯片已进入Silicon状态，后续规划包括麒麟2028、2029。AI芯片方面，昇腾990计划在2030年左右引入逻辑折叠，硬件集成预计到2035年提高超过100倍。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://arxiv.org/abs/2605.26108" target="_blank" rel="noopener"><span class="item-num">137</span>通过奖励倾斜分布匹配强化少步生成器</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">本文提出奖励倾斜分布匹配蒸馏（RTDMD），这是一个将分布匹配蒸馏与奖励引导强化学习统一应用于少步流生成器的两阶段框架。该方法通过最小化到奖励倾斜教师分布的KL散度，自然分解为分布匹配项与奖励最大化项。第一阶段引入环境一致分布匹配蒸馏（AC-DMD），在子区间进行分布匹配，并通过一致性正则化辅助分数模型追踪生成器分布。第二阶段联合优化两项，并推导混合策略梯度及步子集GRPO（SubGRPO）以降低方差。在SD3、SD3.5和FLUX.2上的实验表明，RTDMD仅用4步推理即可在偏好、美学和组合指标上达到新的 state-of-the-art。</p>
+    </div></div>
+      <div class="pagination"></div>
+    </div>
+  </div>  <div class="section" style="--delay: 300ms">
+    <div class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg> 技巧与观点<span class="count">8+50</span><a class="cat-link" href="../_cache/search-tip.html" title="查看全部分类" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></div>
+    <div class="daily-items">    <div class="item">
+      <a class="item-title" href="https://x.com/hongming731/status/2060487110906527820" target="_blank" rel="noopener"><span class="item-num">138</span>这个 skill 看着不错，可将文字、URL 或文章直接生成公众号首图、小红书图文卡、教程步骤卡等视觉物料，支持 28 种布局和 10 种主题。</a>
+      <div class="item-meta">
+        <span class="item-source">X：洪明 (@hongming731)</span>
+      </div>
+      <p class="item-summary">claude-design-card 是一款专为中文内容创作者设计的 Skill。它能将文字、URL 或文章直接转化为可发布的视觉卡片，如公众号首图、小红书图文卡、教程步骤卡等，支持 28 种布局与 10 种主题。其核心价值在于自动化了“写完文章”后最繁琐的流程：自动提炼重点、选择版式、生成 HTML 并截图成 PNG，替代了以往手动使用 Figma 或 Canva 等工具的步骤。该工具开源，适合经常撰写相关内容的创作者尝试。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/rohanpaul_ai/status/2060409504693645440" target="_blank" rel="noopener"><span class="item-num">139</span>亲测为实：难以置信的推理速度</a>
+      <div class="item-meta">
+        <span class="item-source">X：Rohan Paul (@rohanpaul_ai)</span>
+      </div>
+      <p class="item-summary">Kog团队在标准数据中心GPU上实现了极高的单用户推理速度，在8× AMD MI300X GPUs上达到3,000 tokens/s，在8× NVIDIA H200上达到2,100 tokens/s。相比常规推理速度（约100-300 tokens/s），实现了10-30倍提升。其核心思路是将LLM解码视为内存流问题，通过协同设计monokernel、重建同步机制、针对性内存访问映射及采用延迟张量并行的Laneformer模型架构，消除了传统流程的阻塞点。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/berryxia/status/2060212428584202428" target="_blank" rel="noopener"><span class="item-num">140</span>Adam’s Law：用高频词写Prompt效果更好</a>
+      <div class="item-meta">
+        <span class="item-source">X：Berry Xia (@berryxia)</span>
+      </div>
+      <p class="item-summary">FaceMind团队用100种语言和四大核心任务实验发现，在语义不变的前提下，使用预训练语料中出现频率更高的词汇（高频表达）来撰写提示词或进行微调，可以显著提升大语言模型的表现。这被总结为Adam’s Law（文本频率定律），它为数据工程补上了“频率”这一新维度。原理在于高频表达能让模型在它最熟悉的概率空间内工作，从而优化输出质量。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/shao__meng/status/2060167182777249886" target="_blank" rel="noopener"><span class="item-num">141</span>Cursor 团队发布《开发者习惯报告》</a>
+      <div class="item-meta">
+        <span class="item-source">X：邵猛 (@shao__meng)</span>
+      </div>
+      <p class="item-summary">报告显示，AI正深刻改变开发工作形态。开发者周均代码产出从约3.6K行增至8.6K行，更大规模的PR（千行以上）占比上升。AI智能体在单次会话中的工具调用数增加约30%，正在处理更复杂的任务。同时，被接受的AI代码在60分钟后的留存率从约76%提升至约81%，表明更多AI生成内容进入了实际代码库。这些趋势共同指向AI已从个人辅助工具，演进为推动开发向更大规模任务与自动化基础设施发展的核心力量。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://buildingbetter.tech/p/i-read-the-claude-code-source-code" target="_blank" rel="noopener"><span class="item-num">142</span>Claude Code——文档中未提及的所有可配置选项</a>
+      <div class="item-meta">
+        <span class="item-source">Hacker News 热门（buzzing.cc 中文翻译）</span>
+      </div>
+      <p class="item-summary">该篇文章标题涉及“Claude Code”的可配置选项，但提供的正文内容仅包含一张图片和一个外部链接，未给出任何关于模型版本、参数、性能、价格或功能的具体信息。根据规则，无法在摘要中提及原文不存在的细节。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://techcrunch.com/video/what-happens-when-companies-become-too-ai-pilled" target="_blank" rel="noopener"><span class="item-num">143</span>当公司过于&quot;AI上瘾&quot;时会发生什么？</a>
+      <div class="item-meta">
+        <span class="item-source">TechCrunch：AI（RSS）</span>
+      </div>
+      <p class="item-summary">Box创始人Aaron Levie指出，决定用AI替代员工的人往往最不了解工作的实际内容，他将此称为“AI psychosis”。ClickUp近期为部署AI智能体裁员22%即是一例。2026年的科技行业裁员规模已接近2025年全年。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://www.ithome.com/0/956/864.htm" target="_blank" rel="noopener"><span class="item-num">144</span>特斯拉 FSD 安全性宣称遭质疑</a>
+      <div class="item-meta">
+        <span class="item-source">IT之家（RSS）</span>
+      </div>
+      <p class="item-summary">特斯拉声称其全自动驾驶软件（FSD）安全性最高可达人类的10倍，但路透社调查发现此数据经不起推敲。参与训练FSD的员工表示该技术远未成熟，其安全演示高度依赖人工。统计方法被11位交通安全研究人员指出存在缺陷，例如与更广泛的联邦事故数据进行不恰当比较。相比之下，竞争对手Waymo采用了更严谨的统计方法。目前，特斯拉FSD仍需驾驶员主动监督，安全部署可能还需数年。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://techcrunch.com/2026/05/29/cognitions-scott-wu-says-ai-coding-agents-shouldnt-replace-humans" target="_blank" rel="noopener"><span class="item-num">145</span>Cognition的Scott Wu表示：AI编程智能体不应取代人类</a>
+      <div class="item-meta">
+        <span class="item-source">TechCrunch：AI（RSS）</span>
+      </div>
+      <p class="item-summary">Cognition公司开发了Devvin，这是一个号称首个且最成功的AI编程智能体。其著名程序员创始人Scott Wu明确表示，该智能体并非旨在取代人类程序员。</p>
+    </div></div>
+    <div class="expanded-items">
+      <div class="items-scroll">    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/hongming731/status/2060487110906527820" target="_blank" rel="noopener"><span class="item-num">146</span>这个 skill 看着不错，可将文字、URL 或文章直接生成公众号首图、小红书图文卡、教程步骤卡等视觉物料，支持 28 种布局和 10 种主题。</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">06:23</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">claude-design-card 是一款专为中文内容创作者设计的 Skill。它能将文字、URL 或文章直接转化为可发布的视觉卡片，如公众号首图、小红书图文卡、教程步骤卡等，支持 28 种布局与 10 种主题。其核心价值在于自动化了&quot;写完文章&quot;后最繁琐的流程：自动提炼重点、选择版式、生成 HTML 并截图成 PNG，替代了以往手动使用 Figma 或 Canva 等工具的步骤。该工具开源，适合经常撰写相关内容的创作者尝试。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/googleaidevs/status/2060439904929382700" target="_blank" rel="noopener"><span class="item-num">147</span>LlamaIndex 团队基于 Google Agents API 构建 LlamaParse/LiteParse 智能体模板</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">03:15</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">LlamaIndex 团队基于 Google 新发布的 Agents API 构建了一个模板，使智能体能够访问 LlamaParse 和 LiteParse，从而自动处理非结构化文档。其工作流程为：配置数据与输出的 Git 仓库，将仓库克隆至智能体沙箱，安装 LiteParse CLI 与 LlamaParse SDK 及相关技能，最后通过提示词驱动智能体自主执行任务。该模板最终形成一个可直接使用 LlamaParse 和 LiteParse 处理真实世界文档的智能体。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://blog.google/innovation-and-ai/technology/ai/io-2026-vibe-coded-quiz" target="_blank" rel="noopener"><span class="item-num">148</span>参与我们的 I/O 2026 测验：该测验由 Google AI Studio 氛围编程生成</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">03:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Google 使用其开发工具 Google AI Studio，通过氛围编程（vibe coding）方式，创建了一个关于 Google I/O 2026 主要公告的在线测验。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://techcrunch.com/video/what-happens-when-companies-become-too-ai-pilled" target="_blank" rel="noopener"><span class="item-num">149</span>当公司过于&quot;AI上瘾&quot;时会发生什么？</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">01:57</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Box创始人Aaron Levie指出，决定用AI替代员工的人往往最不了解工作的实际内容，他将此称为&quot;AI psychosis&quot;。ClickUp近期为部署AI智能体裁员22%即是一例。2026年的科技行业裁员规模已接近2025年全年。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/rohanpaul_ai/status/2060409504693645440" target="_blank" rel="noopener"><span class="item-num">150</span>亲测为实：难以置信的推理速度</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">01:14</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Kog团队在标准数据中心GPU上实现了极高的单用户推理速度，在8× AMD MI300X GPUs上达到3，000 tokens/s，在8× NVIDIA H200上达到2，100 tokens/s。相比常规推理速度（约100-300 tokens/s），实现了10-30倍提升。其核心思路是将LLM解码视为内存流问题，通过协同设计monokernel、重建同步机制、针对性内存访问映射及采用延迟张量并行的Laneformer模型架构，消除了传统流程的阻塞点。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://techcrunch.com/2026/05/29/cognitions-scott-wu-says-ai-coding-agents-shouldnt-replace-humans" target="_blank" rel="noopener"><span class="item-num">151</span>Cognition的Scott Wu表示：AI编程智能体不应取代人类</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:13</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Cognition公司开发了Devvin，这是一个号称首个且最成功的AI编程智能体。其著名程序员创始人Scott Wu明确表示，该智能体并非旨在取代人类程序员。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/GoogleAI/status/2060392191508488493" target="_blank" rel="noopener"><span class="item-num">152</span>Gemini架构师分享AI前沿探索幕后故事</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:05</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">聆听Gemini的架构师们回顾他们持续推动AI前沿的旅程，本期Release Notes节目。
+
+@JeffDean、@koraykv、@OriolVinyalsML和@NoamShazeer一同出镜，分享模型背后团队的幕后故事，以及他们如何见证愿景的实现。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/Kling_ai/status/2060375625404432757" target="_blank" rel="noopener"><span class="item-num">153</span>Kling AI助力电影RAPHAEL创作全流程揭秘</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Kling AI戛纳展示--RAPHAEL：AI工作流幕后
+
+深入了解RAPHAEL，一部使用Kling AI创作的AI驱动故事片。看看创作者如何在整个电影制作流程中运用Kling AI，从创意构思到最终电影画面，简化制作并释放新的创作可能性。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://openai.com/index/braintrust" target="_blank" rel="noopener"><span class="item-num">154</span>Braintrust如何用Codex将客户请求转化为代码</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">20:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Braintrust的工程师正在使用Codex结合GPT-5.5模型，以加速其实验运行与代码编写的流程。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://buildingbetter.tech/p/i-read-the-claude-code-source-code" target="_blank" rel="noopener"><span class="item-num">155</span>Claude Code--文档中未提及的所有可配置选项</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">18:37</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">该篇文章标题涉及&quot;Claude Code&quot;的可配置选项，但提供的正文内容仅包含一张图片和一个外部链接，未给出任何关于模型版本、参数、性能、价格或功能的具体信息。根据规则，无法在摘要中提及原文不存在的细节。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.ithome.com/0/957/154.htm" target="_blank" rel="noopener"><span class="item-num">156</span>谷歌 DeepMind CEO 哈萨比斯：AGI 最快三年内到来，研发速度远超预期</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">15:18</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">谷歌 DeepMind 首席执行官德米斯·哈萨比斯预测，AGI 研发速度远超预期，最快可能在 2029 年至 2030 年前后出现。作为 AlphaGo、AlphaFold 的主导者，他认为当前 AI 智能体是未来更强智能的预演，随着多模态和自主决策能力成熟，三年内迎来 AGI 关键突破已非科幻。但他同时警示，全球社会对 AGI 到来的准备严重不足，必须提前建立规则与防护机制。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/berryxia/status/2060212428584202428" target="_blank" rel="noopener"><span class="item-num">157</span>Adam&apos;s Law：用高频词写Prompt效果更好</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">12:11</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">FaceMind团队用100种语言和四大核心任务实验发现，在语义不变的前提下，使用预训练语料中出现频率更高的词汇（高频表达）来撰写提示词或进行微调，可以显著提升大语言模型的表现。这被总结为Adam&apos;s Law（文本频率定律），它为数据工程补上了&quot;频率&quot;这一新维度。原理在于高频表达能让模型在它最熟悉的概率空间内工作，从而优化输出质量。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/PixVerse_/status/2060184048920826340" target="_blank" rel="noopener"><span class="item-num">158</span>15秒动画IP预告片制作全流程分享</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">10:18</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">我们制作了一个15秒的动画IP预告片--从角色设定到最终视频。认识一下MILO和BUMBLE：地下邮政骑手
+转发+关注+回复=我们会私信发送工作流程和提示词</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/shao__meng/status/2060167182777249886" target="_blank" rel="noopener"><span class="item-num">159</span>Cursor 团队发布《开发者习惯报告》</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">09:11</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">报告显示，AI正深刻改变开发工作形态。开发者周均代码产出从约3.6K行增至8.6K行，更大规模的PR（千行以上）占比上升。AI智能体在单次会话中的工具调用数增加约30%，正在处理更复杂的任务。同时，被接受的AI代码在60分钟后的留存率从约76%提升至约81%，表明更多AI生成内容进入了实际代码库。这些趋势共同指向AI已从个人辅助工具，演进为推动开发向更大规模任务与自动化基础设施发展的核心力量。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.ithome.com/0/956/864.htm" target="_blank" rel="noopener"><span class="item-num">160</span>特斯拉 FSD 安全性宣称遭质疑</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">09:07</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">特斯拉声称其全自动驾驶软件（FSD）安全性最高可达人类的10倍，但路透社调查发现此数据经不起推敲。参与训练FSD的员工表示该技术远未成熟，其安全演示高度依赖人工。统计方法被11位交通安全研究人员指出存在缺陷，例如与更广泛的联邦事故数据进行不恰当比较。相比之下，竞争对手Waymo采用了更严谨的统计方法。目前，特斯拉FSD仍需驾驶员主动监督，安全部署可能还需数年。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://openai.com/index/trustworthy-third-party-evaluations-foundations" target="_blank" rel="noopener"><span class="item-num">161</span>可信第三方评估的共享操作手册</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">OpenAI 发布了一份关于第三方 AI 评估的指导框架，内容涵盖如何评估前沿系统的能力、安全防护措施及评估本身的有效性。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.tomtunguz.com/the-pi-agent-skill-distillation" target="_blank" rel="noopener"><span class="item-num">162</span>技能提炼</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">&quot;技能提炼&quot;是一种知识转移方法，由前沿大模型（如 Opus 4.7、GPT-5.1、Gemini 3 Pro）负责撰写并优化标准化的 SKILL.md 流程文件。然后，本地运行的小模型（如 Qwen 35B、Gemma 26B）直接执行这些文件。此过程不同于压缩模型权重的知识蒸馏、训练权重的指令微调或检索事实的 RAG，其核心是提取并转移操作流程，让小模型按步骤执行，从而形成前沿模型作教师、小模型作执行者的循环。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://huggingface.co/blog/torch-profiler" target="_blank" rel="noopener"><span class="item-num">163</span>PyTorch 中的性能分析（第一部分）：torch.profiler 初学者指南</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">该指南旨在介绍如何在 PyTorch 中使用 torch.profiler 进行性能分析。文章是系列教程的第一部分，面向初学者，讲解如何通过该工具分析模型训练与推理过程的性能瓶颈。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/Replit/status/2060052289155375532" target="_blank" rel="noopener"><span class="item-num">164</span>四步保障AI生成应用安全</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">01:35</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">如何用四步保障你的vibecoded应用安全 🔒
+
+速度若无安全加持，便是隐患。以下是使用Replit发布应用时，如何避免留下后门的方法。
+
+🧵展开阅读 ↓</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://developers.googleblog.com/how-the-community-trained-gemma-to-think-with-tunix-and-tpus" target="_blank" rel="noopener"><span class="item-num">165</span>社区如何利用Tunix和TPU训练Gemma学会&quot;思考&quot;</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:41</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Google在Kaggle举办的Tunix黑客马拉松，挑战开发者利用TPU和有限算力，将小型基础模型转变为通用推理引擎。获胜团队通过多阶段后训练流程实现了这一目标，该流程结合了监督微调（SFT）与GRPO、SimPO等先进对齐技术。比赛结果表明，社区能够借助开源资源成功训练出高能力的结构化推理模型。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/OpenRouter/status/2060007875590697088" target="_blank" rel="noopener"><span class="item-num">166</span>OpenRouter 支持模型现可选 Flex 与 Priority 服务层级</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">22:38</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">提示：您可以为支持的模型（OpenAI、Google Vertex 等）使用 Flex 和 Priority 层级。
+定价信息请查看各模型页面。文档：https：//openrouter.ai/docs/guides/features/service-tiers</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.marktechpost.com/2026/05/28/a-coding-guide-to-implement-a-pgvector-powered-semantic-hybrid-sparse-and-quantized-vector-search-system" target="_blank" rel="noopener"><span class="item-num">167</span>pgvector驱动的语义、混合、稀疏与量化向量搜索系统构建编码指南</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">16:07</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">本教程在Google Colab中构建一个完整的pgvector实验环境，展示PostgreSQL如何作为向量数据库服务于现代AI应用。内容涵盖安装PostgreSQL、编译pgvector扩展、通过Psycopg建立连接，并注册向量类型以实现与Python的平滑集成。最后使用SentenceTransformers创建并存储嵌入向量。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.ithome.com/0/956/293.htm" target="_blank" rel="noopener"><span class="item-num">168</span>英伟达推出 AI 框架 Polar，让 Codex 跑分暴涨 594.74%</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">10:14</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">英伟达研究团队开源了智能体强化学习框架 Polar。该框架无需重写现有智能体执行框架（如 Codex CLI、Claude Code、Qwen Code、Pi），通过在模型 API 边界放置智能体来接入 GRPO 训练。实验显示，基于 Qwen3.5-4B 模型，Polar 将 Codex 在 SWE-Bench Verified 上的 pass@1 分数从 3.8% 提升至 26.4%（增涨 594.74%）。效率上，其 prefix_merging 技术将训练步骤从 1185 次降至 218 次，速度提升约 5.39 倍，GPU 平均利用率从 20.4% 升至 87.7%。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.ithome.com/0/956/274.htm" target="_blank" rel="noopener"><span class="item-num">169</span>人民日报专访华为何庭波：今年秋季的新麒麟手机芯片，性能等相比去年是&quot;跳跃性&quot;提升</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">09:24</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">华为何庭波提出半导体新演进路径&quot;韬（τ）定律&quot;，以&quot;时间缩微&quot;（如逻辑折叠）替代&quot;几何缩微&quot;作为新指导原则。她表示，过去6年华为已基于此自主研发381款芯片。今年秋季将发布新的麒麟手机芯片，这是首个完整的&quot;韬芯片&quot;，其性能、集成度相比去年是&quot;跳跃性&quot;提升。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.tomtunguz.com/jonathan-jaffe-office-hours-post-event" target="_blank" rel="noopener"><span class="item-num">170</span>AI智能体时代下的安全变革</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Lemonade的CISO Jonathan Jaffe探讨了AI智能体时代的安全新挑战。他指出，AI对攻击者和防御者同样强大，但可被利用的漏洞窗口正在缩小，因为AI能更快地生成、审查和修补代码。为此，安全团队正向工程团队转型，例如Lemonade的安全部门均由工程师组成，并构建了包含智能体的内部AI平台。同时，每个智能体（单个终端上可能运行200到10000个）都需要被赋予身份，并在操作点由策略进行更复杂的管控，这超越了当前身份与访问管理系统的能力。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/dotey/status/2059773942500298934" target="_blank" rel="noopener"><span class="item-num">171</span>用好 Coding Agent，重点是两头，尤其是开头的部分，如果一开始就走偏了后面怎么改都改不好。</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">07:09</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">用好 Coding Agent 的关键在于初始规划。方法是先将需求整理后，用最强模型（如 GPT-5.5、Claude Opus 4.7）分别在 Codex、Claude Code、Cursor 的 Plan 模式下生成设计方案，选择最优方案并借鉴其他版本。对于复杂计划，可将其拆分为多个 Phases 并明确要求与验证标准，形成 Markdown 文档。执行时按 Phases 进行，并辅以人工审核纠偏。最后的代码审核（Code Review）用 GPT-5.5 审核代码质量与设计符合度即可。应避免让多个智能体交叉 Review，否则可能导致代码越改越多。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://simonwillison.net/2026/May/27/product-market-fit" target="_blank" rel="noopener"><span class="item-num">172</span>我认为 Anthropic 和 OpenAI 找到了产品市场契合点</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:38</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Anthropic 与 OpenAI 通过编程智能体找到了产品市场契合点，这导致企业客户成本显著上升。两家公司已于 2026 年 4 月前后调整了企业套餐定价，从原先的高额折扣改为与 API 用量挂钩。Anthropic Enterprise 套餐变为每席位 20 美元/月外加 API 费用，OpenAI Codex 则按 API token 用量计费。同期发布的新模型 GPT-5.5（4月23日）和 Opus 4.7（4月16日）的 API 定价也显著高于前代版本。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/kimmonismus/status/2059668961181004275" target="_blank" rel="noopener"><span class="item-num">173</span>与Google搜索产品副总裁Robby Stein的访谈：AI原生搜索时代</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:12</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">本文记录了与Google搜索产品副总裁Robby Stein在Google I/O的访谈，核心探讨Google Search向&quot;AI原生&quot;模式的重大转变。讨论话题包括AI Mode是进化还是重塑、如何将复杂问题拆解为多轮搜索、AI搜索的高运行成本、Google TPU及基础设施的优势、AI时代搜索量不减反增的原因，以及优质AI回答与出版商流量之间的张力。访谈还涉及Google决定展示哪些信息源与链接的逻辑，并围绕一个核心问题展开：如果Google直接给出答案，传统的基于链接的网页生态将走向何方？</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/op7418/status/2059587983289016348" target="_blank" rel="noopener"><span class="item-num">174</span>藏师傅发布小红书图文排版AI Skill，集成地图与自动配图</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">18:50</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">该推文介绍了guizang-social-card-skill，一款针对小红书图文常见类别进行优化的AI Skill。其亮点在于为旅行博主集成了地图组件，用户输入目的地和线路后，AI能自动在底图上标记并嵌入图片。根据引用，该Skill完全基于HTML和实拍图片生成内容，不会被平台标注为AI生成，并会主动从高质量图片网站寻找对应主题图片，以优化图文排版。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.ithome.com/0/956/021.htm" target="_blank" rel="noopener"><span class="item-num">175</span>OpenAI 奥尔特曼称 AI 对白领冲击不如预期般严重：我很高兴自己当时错了</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">15:48</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary"></p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://openai.com/index/building-self-improving-tax-agents-with-codex" target="_blank" rel="noopener"><span class="item-num">176</span>使用 Codex 构建自改进税务智能体</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">15:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">OpenAI、Thrive 与 Crete 合作，使用 Codex 构建了一个自改进的税务智能体。该智能体能够自动处理报税流程，提升工作准确性并加速整体工作流。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.tomtunguz.com/harnessing-ai" target="_blank" rel="noopener"><span class="item-num">177</span>软件之后是AI时代</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">软件时代正过渡至&quot;智能体框架&quot;时代。AI作为强大但需驯化的&quot;野马&quot;，其智能驯化包含七个核心组成部分：上下文与记忆、工具与行动、编排与循环、状态与持久性、沙箱与计算、可观测性与治理、成本与工作流优化。这些组件共同构成了一个生产级的智能体系统。这一转变将重塑软件竞争格局，模型通用化的未来中，最佳的智能体驾驭者将获胜。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://huggingface.co/blog/local-reachy-mini-conversation" target="_blank" rel="noopener"><span class="item-num">178</span>Reachy Mini 实现完全本地化语音交互</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Reachy Mini 机器人现可通过 `speech-to-speech` 库实现完全本地化的语音交互，无需依赖云端。该方案采用级联流水线架构，对外提供 Realtime API 兼容的 WebSocket 接口。默认组件包括 Silero VAD 用于语音活动检测、Parakeet-TDT 作为语音转文本模型、通义千问（Qwen3-TTS）作为文本转语音模型。大语言模型推荐使用 llama.cpp 运行 Gemma 4。所有数据均在本地处理，保障了隐私且无 API 费用。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/GoogleAI/status/2059381218660270435" target="_blank" rel="noopener"><span class="item-num">179</span>Gemini Omni 视频提示词使用指南</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">05:08</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Google 发布了其多模态模型 Gemini Omni 的视频生成功能使用指南。该模型可通过 Gemini 应用、Google Flow 等平台体验。指南包含五项提示词技巧：利用模型已有的现实世界知识进行简洁描述；精确控制文本在视频中的渲染与排版；使用专业镜头指令（如推拉摇移）像电影摄影师一样调度画面；通过迭代编辑高效修改视频；以及在生成中直接调整角色的动作节奏或情绪。其核心在于通过精准的提示词引导模型生成复杂且可控的视频内容。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/emollick/status/2059363865536668040" target="_blank" rel="noopener"><span class="item-num">180</span>人类与AI分工：教育咨询及文学奖争议</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">03:59</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">我写了一篇新文章，探讨我们需要保留哪些人类特质，以及哪些可以交给AI，其中涉及教育、咨询领域的实验，以及最近关于文学奖的争议。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.oneusefulthing.org/p/choosing-to-stay-human" target="_blank" rel="noopener"><span class="item-num">181</span>选择保持人性</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">03:56</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">社交媒体平台上的帖子内容正变得越来越相似。这种趋同现象可能意味着大量内容正在被AI生成或同质化处理，引发了人们对于内容原创性与人类独特视角的讨论。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.anthropic.com/engineering/how-we-contain-claude" target="_blank" rel="noopener"><span class="item-num">182</span>我们如何对不同产品中的Claude进行隔离控制</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">02:11</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Anthropic通过三重机制控制Claude智能体的部署风险，包括用户误用、模型异常行为和外部攻击。其防护策略聚焦于三个层面：通过沙箱、虚拟机和网络出口控制限制智能体运行环境；利用系统提示词和模型训练引导其行为；以及对MCP服务器、第三方插件等外部内容实施细粒度权限管理。文章以Claude Code、claude.ai和Claude Cowork为例，阐述了不同产品如何设计对应的隔离架构。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://claude.com/blog/using-llms-to-secure-source-code" target="_blank" rel="noopener"><span class="item-num">183</span>使用大语言模型保障源代码安全</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">本文分享了使用 Claude Opus 构建威胁模型、发现代码漏洞并进行验证、分类和修复的最佳实践。其核心流程是一个六步循环：威胁建模、沙箱隔离、漏洞发现、验证、分类和修复。作者指出，漏洞发现现在易于并行化，瓶颈已转移到后续的验证与处理阶段。以他们对开源软件的扫描为例，截至2026年5月22日已披露1，596个漏洞，其中97个已修补。指南建议结合代码库文档和专家访谈来构建准确的威胁模型，以降低误报，提升发现的可利用性。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://claude.com/blog/zero-trust-for-ai-agents" target="_blank" rel="noopener"><span class="item-num">184</span>AI智能体的零信任安全框架</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Anthropic 发布了针对企业部署自主 AI 智能体的安全框架，指出前沿大语言模型正将漏洞利用周期从数月压缩至数小时。部署智能体面临双重风险：基础设施易受 AI 加速攻击，且智能体自身具备自主决策与执行能力。文章提出一个三层零信任架构（基础、高级、优化级）及八阶段实施流程，并概述了提示注入、工具投毒、记忆投毒等特有威胁。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.interconnects.ai/p/some-ideas-for-what-comes-next-may" target="_blank" rel="noopener"><span class="item-num">185</span>未来展望：2026年5月的一些想法</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:39</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">文章展望了截至2026年5月AI领域的动态。内容涉及 Gemini Flash 3.5 的发布、名为 Mythos 的新产品或项目、开源与闭源生态平衡（open-closed balance）的讨论、美国开源力量的显著增长（America&apos;s open-source surge），以及由此引发的新兴权力博弈（emerging power struggles）。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/SenseTime_AI/status/2059288013994406013" target="_blank" rel="noopener"><span class="item-num">186</span>SenseNova-U1全训练代码开源，支持多模态多任务训练</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">22:58</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">OpenSenseNova开源了SenseNova-U1的完整训练代码库，支持其8B密集模型与A3B MoE架构。该代码库使用一个统一的框架，可同时训练多种多模态任务，包括文本到图像生成、图像编辑、交错生成及文本与视觉理解。工程上为大规模训练设计，支持混合并行、流式可恢复数据管线、环境变量驱动配置以及从1×8 GPUs到多节点集群的扩展能力。代码已在GitHub开源，采用Apache-2.0协议。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://runwayml.com/news/project-luxo" target="_blank" rel="noopener"><span class="item-num">187</span>Project Luxo：跨越AI媒体的恐怖谷</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">22:34</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Runway通过Project Luxo研究发现，AI生成视频已跨越&quot;恐怖谷&quot;。他们向创意生态从业者展示了《The Rogue》等AI短片及广告样片，评估显示观众开始关注故事本身，而非技术瑕疵。所有作品均由单人团队制作，耗时从3周到4小时不等。Runway认为，这标志着AI媒体成熟--当技术足够好以至于&quot;隐形&quot;，观众沉浸于故事时，便实现了这一跨越。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.theverge.com/podcast/936445/sundar-pichai-ai-search-google-zero-youtube-web" target="_blank" rel="noopener"><span class="item-num">188</span>Sundar Pichai 谈 AI、搜索的未来及网络的变化</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">22:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Google 与 Alphabet CEO Sundar Pichai 在 Google I/O 后受访，回顾了公司为应对 ChatGPT 而进行的战略重组与高管调整。访谈聚焦于新的 Gemini 模型及其在产品中的整合，包括全新的智能搜索框与 Gemini Spark 智能体平台，旨在让搜索从提供结果转向启动任务。Pichai 讨论了这些变化对开放网络的持续冲击，回应了主持人此前提出的&quot;Google Zero&quot;概念（即来自 Google 的网站流量可能归零），并提及 Google 正利用 YouTube 视频训练模型以改变视频搜索与索引方式。最后，他对 Google DeepMind CEO Demis Hassabis 关于&quot;处于智能奇点起步阶段&quot;的言论表示认同，并分享了对 AGI 时间线的看法。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.ithome.com/0/955/269.htm" target="_blank" rel="noopener"><span class="item-num">189</span>&quot;龙虾之父&quot;Peter 开源 skill-cleaner，为 AI 智能体技能&quot;做体检&quot;</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">13:37</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">&quot;龙虾之父&quot;Peter 开源了 skill-cleaner 工具，用于诊断和优化 AI 智能体的技能提示词。该工具包含5项核心功能，包括技能提示词预算审计、重复技能检测、未使用技能筛查、技能根目录审计和描述精简优化。其脚本采用标准 token 预算核算逻辑，旨在帮助减少冗长描述对 token 预算和上下文窗口的占用。已有用户实践显示，将技能描述从90多词精简至40词以内，能提升智能体选择技能的准确率。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.tomtunguz.com/agent-gravity" target="_blank" rel="noopener"><span class="item-num">190</span>智能体重力：谁在运行你的智能体？</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">在数据时代，数据重力是核心力量；而在智能体时代，智能体重力将扮演同样角色。智能体运行需要巨大算力，主要平台将激烈争夺以将其留在自家生态。平台上的智能体与数据越多，其智能体重力就越强。例如，Databricks在微软平台推出的某个功能，虽未明言此目的，却让用户更容易在Databricks中构建智能体，而非微软自家的Fabric。这可能使用户不知不觉间将高价值的智能体及数据工作负载迁移至该平台。因此，赢得并维持智能体重力，将成为智能体时代的核心竞争主题。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://huggingface.co/blog/agent-glossary" target="_blank" rel="noopener"><span class="item-num">191</span>Harness、Scaffold 与 AI 智能体术语辨析</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">本文旨在厘清 AI 智能体领域中易混淆的关键术语。文章指出，模型（如 Claude、GPT）本身是无记忆、无循环的大语言模型。其行为由&quot;Scaffolding&quot;（行为定义层，如系统提示、工具描述）塑造，而&quot;Harness&quot;（执行层）负责调用模型、处理工具调用与控制循环，是智能体运行的核心。两者结合，模型才能成为智能体。文章以 Claude Code、Codex 为例，说明同一模型搭配不同 Harness 会产生迥异体验，并提出了 Agent = Model + Harness 的常见理解框架。术语尚未统一，本文旨在提供一个实用的心智模型。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/gdb/status/2058598608224858442" target="_blank" rel="noopener"><span class="item-num">192</span>面向 Codex 的自我优化提示词框架</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">01:18</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">这是一个结构化的提示词，用于指导 Codex 自动分析其历史记录以识别并固化重复工作流。该框架要求 Codex 回顾会话、Memories 等数据，找出重复、耗时且有明确复用价值的任务。筛选标准包括至少出现两次、输入稳定、可提升效率等。最终，Codex 应以&quot;技能&quot;、子智能体或自动化工具等最小实用形式创建或扩展现有资产，避免冗余。流程包括生成候选清单、执行创建，并汇报结果与待验证项。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://www.anthropic.com/news/chris-olah-pope-leo-encyclical" target="_blank" rel="noopener"><span class="item-num">193</span>Anthropic联合创始人Chris Olah在教皇通谕发布会上的讲话</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Anthropic联合创始人Chris Olah在梵蒂冈出席教皇Leo XIV关于AI的通谕发布会。他指出，所有前沿AI实验室都面临商业、研究及地缘政治等多重压力，这可能与做正确的事相冲突，因此外部监督至关重要。他强调，AI模型并非像飞机那样被工程化构建，而是基于人类语言和思想&quot;生长&quot;出来的，其内在性质可能复杂难解。他提出三个需审慎思考的问题：如何确保AI发展的全球收益公平分享、如何思考AI时代的人类繁荣，以及AI模型内在性质的本质。他呼吁社会各界，尤其是宗教与民间团体，严肃审视AI发展并引导其向善。</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://x.com/PixVerse_/status/2058564994669727803" target="_blank" rel="noopener"><span class="item-num">194</span>Pixverse角色设计工作流测试</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:05</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">在Pixverse中进行角色设计工作流测试
+使用GPT Image 2.0为Lucas创建视觉形象，使用Seedance 2.0制作动画弹跳表演。
+从静态概念图到电影级动态效果。
+RT + Follow + Reply = 工作流</p>
+    </div>    <div class="item expanded-item">
+      <a class="item-title" href="https://fs.blog/knowledge-project-podcast/greg-brockman" target="_blank" rel="noopener"><span class="item-num">195</span>格雷格·布罗克曼：那段差点让OpenAI覆灭的72小时</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">22:09</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary"></p>
+    </div></div>
+      <div class="pagination"></div>
+    </div>
+  </div>
+  <footer class="footer">
+    <span>来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener">AI HOT</a></span>
+    <span>生成 09:00 &middot; 共 24 条 &middot; 日报</span>
+  </footer>
+</div>
+<div class="footer-glow"></div>
+<script>
+(function() {
+  var h = new Date().getHours();
+  var labels = {'morning':'清晨模式','day':'日间模式','evening':'傍晚模式','night':'夜间模式'};
+  var lightThemes = ['morning','day'];
+  var autoTheme;
+  if (h >= 6 && h < 10)       autoTheme = 'morning';
+  else if (h >= 10 && h < 17) autoTheme = 'day';
+  else if (h >= 17 && h < 21) autoTheme = 'evening';
+  else                         autoTheme = 'night';
+  var current = autoTheme;
+  document.documentElement.setAttribute('data-theme', current);
+  var themeEl = document.getElementById('themeLabel');
+  if (themeEl) {
+    themeEl.textContent = labels[current] || 'AI DAILY';
+    themeEl.addEventListener('click', function() {
+      current = (lightThemes.indexOf(current) >= 0) ? 'night' : 'day';
+      document.documentElement.setAttribute('data-theme', current);
+      themeEl.textContent = labels[current] || 'AI DAILY';
+    });
+  }
+
+  // ---- 版块展开/收起（分页，每页10条） ----
+  var PAGE_SIZE = 10;
+  document.querySelectorAll('.section-label').forEach(function(label) {
+    label.addEventListener('click', function() {
+      var sec = this.parentElement;
+      if (sec.classList.contains('expanded')) {
+        sec.classList.remove('expanded');
+        return;
+      }
+      // 收起其他
+      document.querySelectorAll('.section.expanded').forEach(function(s) { s.classList.remove('expanded'); });
+      sec.classList.add('expanded');
+      // 初始化分页
+      paginateSection(sec, 1);
+    });
+  });
+
+  function paginateSection(sec, page) {
+    var items = sec.querySelectorAll('.expanded-items .item');
+    var total = items.length;
+    var totalPages = Math.ceil(total / PAGE_SIZE);
+    if (totalPages < 2) { page = 1; }
+
+    items.forEach(function(item, i) {
+      var itemPage = Math.floor(i / PAGE_SIZE) + 1;
+      item.classList.toggle('page-hidden', itemPage !== page);
+    });
+
+    // 渲染分页控件
+    var pg = sec.querySelector('.expanded-items .pagination');
+    if (!pg) return;
+    if (totalPages <= 1) { pg.innerHTML = ''; return; }
+
+    var html = '';
+    html += '<button ' + (page <= 1 ? 'disabled' : '') + ' data-pg="' + (page-1) + '">上一页</button>';
+    html += '<span class="page-info">' + page + ' / ' + totalPages + '</span>';
+    html += '<button ' + (page >= totalPages ? 'disabled' : '') + ' data-pg="' + (page+1) + '">下一页</button>';
+    pg.innerHTML = html;
+
+    pg.querySelectorAll('button').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var p = parseInt(this.getAttribute('data-pg'));
+        if (p) {
+          paginateSection(sec, p);
+          // 滚动到顶部
+          var scroll = sec.querySelector('.items-scroll');
+          if (scroll) scroll.scrollTop = 0;
+        }
+      });
+    });
+  }
+
+  // ---- 搜索过滤 ----
+  var searchInput = document.getElementById('searchInput');
+  var searchHint  = document.getElementById('searchHint');
+  var sections = document.querySelectorAll('.section');
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      var q = this.value.trim().toLowerCase();
+      var totalVisible = 0;
+      sections.forEach(function(sec) {
+        var items = sec.querySelectorAll('.item');
+        var secVisible = 0;
+        items.forEach(function(item) {
+          var text = (item.textContent || '').toLowerCase();
+          var match = !q || text.indexOf(q) >= 0;
+          item.classList.toggle('hidden', !match);
+          if (match) secVisible++;
+        });
+        sec.classList.toggle('hidden', secVisible === 0);
+        totalVisible += secVisible;
+      });
+      if (q) {
+        searchHint.textContent = '匹配 ' + totalVisible + ' 条';
+        searchHint.classList.add('show');
+      } else {
+        searchHint.classList.remove('show');
+      }
+    });
+  }
+
+  function tick() {
+    var now = new Date();
+    var clock = document.getElementById('liveClock');
+    if (clock) clock.textContent =
+      (now.getHours()<10?'0':'')+now.getHours()+':'+
+      (now.getMinutes()<10?'0':'')+now.getMinutes()+':'+
+      (now.getSeconds()<10?'0':'')+now.getSeconds();
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
+</body>
+</html>

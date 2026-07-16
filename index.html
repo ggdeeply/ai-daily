@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 · 归档索引</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --accent:#a78bfa;--accent-2:#5eead4;--accent-glow:rgba(167,139,250,0.18);--glow-top:rgba(167,139,250,0.07);--glow-mid:rgba(94,234,212,0.03);--border-high:rgba(167,139,250,0.25);--badge-bg:rgba(167,139,250,0.10);
+  --bg-deep:#07070c;--bg-card:rgba(18,18,26,0.75);--text-primary:#e8e8ed;--text-secondary:#a1a1aa;--text-tertiary:#6b6b76;
+  --border-subtle:rgba(255,255,255,0.06);--border-card:rgba(255,255,255,0.08);--grid-color:rgba(255,255,255,0.015);
+  --noise-opacity:0.028;--tag-bg:rgba(255,255,255,0.04);--hud-line:rgba(255,255,255,0.08);
+}
+[data-theme="day"]{
+  --accent:#2563eb;--accent-2:#60a5fa;--accent-glow:rgba(37,99,235,0.18);--glow-top:rgba(96,165,250,0.05);--glow-mid:rgba(129,140,248,0.02);--border-high:rgba(37,99,235,0.28);--badge-bg:rgba(37,99,235,0.08);
+  --bg-deep:#f8fafb;--bg-card:rgba(255,255,255,0.84);--text-primary:#0f172a;--text-secondary:#475569;--text-tertiary:#94a3b8;
+  --border-subtle:rgba(0,0,0,0.07);--border-card:rgba(0,0,0,0.10);--grid-color:rgba(0,0,0,0.05);--noise-opacity:0.018;
+  --tag-bg:rgba(0,0,0,0.04);--hud-line:rgba(0,0,0,0.08);
+}
+[data-theme="night"]{
+  --accent:#a78bfa;--accent-2:#5eead4;--accent-glow:rgba(167,139,250,0.18);--glow-top:rgba(167,139,250,0.07);--glow-mid:rgba(94,234,212,0.03);--border-high:rgba(167,139,250,0.25);--badge-bg:rgba(167,139,250,0.10);
+  --bg-deep:#07070c;--bg-card:rgba(18,18,26,0.75);--text-primary:#e8e8ed;--text-secondary:#a1a1aa;--text-tertiary:#6b6b76;
+  --border-subtle:rgba(255,255,255,0.06);--border-card:rgba(255,255,255,0.08);--grid-color:rgba(255,255,255,0.015);
+  --noise-opacity:0.028;--tag-bg:rgba(255,255,255,0.04);--hud-line:rgba(255,255,255,0.08);
+}
+body{
+  font-family:'Noto Sans SC',-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
+  background:var(--bg-deep);
+  background-image:radial-gradient(ellipse 70% 55% at 45% -5%,var(--glow-top) 0%,transparent 100%),radial-gradient(ellipse 35% 40% at 75% 85%,var(--glow-mid) 0%,transparent 100%);
+  background-attachment:fixed;transition:background 0.6s ease,background-image 0.8s ease;
+  min-height:100vh;padding:56px 20px 64px;color:var(--text-secondary);line-height:1.7;
+  -webkit-font-smoothing:antialiased;position:relative;
+}
+body::after{
+  content:'';position:fixed;inset:0;opacity:var(--noise-opacity);
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size:200px 200px;pointer-events:none;z-index:0;transition:opacity 0.8s ease;
+}
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:linear-gradient(var(--grid-color) 1px,transparent 1px),linear-gradient(90deg,var(--grid-color) 1px,transparent 1px);
+  background-size:48px 48px;pointer-events:none;z-index:0;transition:background-image 0.8s ease;
+}
+.container{max-width:960px;margin:0 auto;position:relative;z-index:1}
+.header{margin-bottom:48px}
+.header h1{font-family:'Noto Sans SC',sans-serif;font-size:36px;font-weight:700;color:var(--text-primary);letter-spacing:0.02em;margin-bottom:6px}
+.header .sub{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-tertiary);letter-spacing:0.08em}
+.header .sub span{color:var(--accent)}
+.stats-bar{display:flex;gap:20px;margin-bottom:40px;flex-wrap:wrap}
+.stat-card{flex:1;min-width:140px;background:var(--bg-card);border:1px solid var(--border-card);border-radius:12px;padding:18px 22px;backdrop-filter:blur(20px);box-shadow:0 4px 24px rgba(0,0,0,0.3),inset 0 1px 0 var(--shadow-hl)}
+[data-theme="day"] .stat-card{box-shadow:0 4px 24px rgba(0,0,0,0.07),inset 0 1px 0 rgba(255,255,255,0.6)}
+.stat-card .num{font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:600;color:var(--accent);line-height:1.1;transition:color 0.8s ease}
+.stat-card .lbl{font-size:12px;color:var(--text-tertiary);margin-top:4px;transition:color 0.8s ease}
+.search-box{position:relative;margin-bottom:36px}
+.search-box input{width:100%;background:var(--bg-card);border:1px solid var(--border-card);border-radius:10px;padding:12px 44px 12px 16px;color:var(--text-primary);font-family:'JetBrains Mono',monospace;font-size:13px;outline:none;transition:border-color 0.2s,background 0.8s ease,color 0.8s ease}
+.search-box input:focus{border-color:var(--border-high)}
+.search-box input::placeholder{color:var(--text-tertiary)}
+.search-box svg{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--text-tertiary);width:18px;height:18px}
+.summary-section{margin-bottom:40px}
+.summary-section h2{font-size:14px;font-weight:600;color:var(--text-primary);margin-bottom:16px;letter-spacing:0.04em;transition:color 0.8s ease}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 12px;border-radius:100px;background:var(--tag-bg);color:var(--text-secondary);border:1px solid var(--border-subtle);cursor:pointer;transition:all 0.2s}
+.tag:hover{border-color:var(--border-high);color:var(--accent);background:var(--badge-bg)}
+.tag.active{border-color:var(--accent);color:var(--accent);background:var(--badge-bg)}
+.week-group{margin-bottom:32px}
+.week-header{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:0.08em;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border-subtle);display:flex;align-items:center;gap:10px;transition:color 0.8s ease,border-color 0.8s ease}
+.week-header .week-range{color:var(--text-tertiary);font-weight:400}
+.week-header .week-count{font-size:10px;background:var(--badge-bg);color:var(--accent);padding:1px 8px;border-radius:100px;margin-left:auto}
+.day-list{display:flex;flex-direction:column;gap:8px}
+.day-card{display:flex;align-items:center;gap:16px;background:var(--bg-card);border:1px solid var(--border-card);border-radius:10px;padding:14px 20px;cursor:pointer;text-decoration:none;transition:border-color 0.2s,background 0.2s,box-shadow 0.2s;backdrop-filter:blur(18px)}
+[data-theme="day"] .day-card{box-shadow:0 2px 12px rgba(0,0,0,0.04)}
+.day-card:hover{border-color:var(--border-high);box-shadow:0 0 20px rgba(167,139,250,0.06)}
+[data-theme="day"] .day-card:hover{background:rgba(255,255,255,0.95);box-shadow:0 0 20px rgba(37,99,235,0.08)}
+.day-card .day-date{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500;color:var(--text-primary);min-width:85px;white-space:nowrap;transition:color 0.8s ease}
+.day-card .day-wd{font-size:11px;color:var(--text-tertiary);min-width:36px}
+.day-card .day-lead{flex:1;font-size:13px;color:var(--text-secondary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:color 0.8s ease}
+.day-card .day-stats{display:flex;gap:6px;flex-shrink:0}
+.day-card .day-stats .sc{font-family:'JetBrains Mono',monospace;font-size:10px;padding:2px 8px;border-radius:100px;background:var(--badge-bg);color:var(--accent);white-space:nowrap;transition:background 0.8s ease,color 0.8s ease}
+.day-card .day-total{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;color:var(--accent);min-width:36px;text-align:right;transition:color 0.8s ease}
+.day-bar{display:flex;gap:2px;width:80px;flex-shrink:0}
+@media(max-width:780px){.day-bar{display:none}}
+.day-bar .seg{height:4px;border-radius:2px}
+.seg-ai-models{background:#a78bfa}.seg-ai-products{background:#5eead4}.seg-industry{background:#fb923c}.seg-paper{background:#60a5fa}.seg-tip{background:#f472b6}
+.footer{text-align:center;margin-top:56px;padding-top:24px;border-top:1px solid var(--border-subtle)}
+.footer,.footer a{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);text-decoration:none;transition:color 0.8s ease,border-color 0.8s ease}
+.footer a{color:var(--accent)}
+.footer a:hover{text-decoration:underline}
+#themeToggle{cursor:pointer;user-select:none;transition:color 0.8s ease}
+#themeToggle:hover{color:var(--accent-2)!important}
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <h1>AI 日报 · 归档索引</h1>
+    <p class="sub">DAILY ARCHIVE &middot; <span id="rangeLabel"></span> &middot; <span id="themeToggle" title="切换明暗主题">THEME</span></p>
+    <div class="nav" style="margin-top:12px;display:flex;gap:8px">
+      <a href="archive-browse.html" style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);text-decoration:none;padding:4px 12px;border:1px solid var(--border-subtle);border-radius:100px;transition:all 0.18s ease">分类浏览</a>
+    </div>
+  </header>
+  <div class="stats-bar" id="statsBar"></div>
+  <div class="search-box">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" id="searchInput" placeholder="搜索标题、日期或来源域名...">
+  </div>
+  <div class="summary-section" id="tagCloud">
+    <h2>常用来源域名</h2>
+    <div class="tag-cloud" id="tagList"></div>
+  </div>
+  <div id="content"></div>
+  <div class="footer">
+    <span id="latestLink"></span> &middot;
+    Data from <a href="https://aihot.virxact.com" target="_blank">AI HOT</a> &middot;
+    Updated: <span id="updateTime"></span>
+  </div>
+</div>
+<script>
+window.__INDEX_DATA__ = {"dateRange":{"from":"2026-06-23","to":"2026-05-25","totalDays":30},"totalItems":4650,"dailies":[{"fileName":"2026-05\\2026-05-25.html","itemCount":147,"weekday":"星期一","secCounts":{"industry":47,"ai-models":50,"ai-products":50},"date":"2026-05-25","lead":""},{"fileName":"2026-05\\2026-05-26.html","itemCount":177,"weekday":"星期二","secCounts":{"industry":50,"paper":13,"tip":41,"ai-models":23,"ai-products":50},"date":"2026-05-26","lead":""},{"fileName":"2026-05\\2026-05-27.html","itemCount":162,"weekday":"星期三","secCounts":{"industry":49,"paper":11,"tip":37,"ai-models":15,"ai-products":50},"date":"2026-05-27","lead":""},{"fileName":"2026-05\\2026-05-28.html","itemCount":154,"weekday":"星期四","secCounts":{"industry":15,"paper":42,"ai-models":49,"ai-products":48},"date":"2026-05-28","lead":""},{"fileName":"2026-05\\2026-05-29.html","itemCount":171,"weekday":"星期五","secCounts":{"industry":47,"paper":19,"tip":42,"ai-models":13,"ai-products":50},"date":"2026-05-29","lead":""},{"fileName":"2026-05\\2026-05-30.html","itemCount":171,"weekday":"星期六","secCounts":{"industry":39,"paper":19,"tip":50,"ai-models":13,"ai-products":50},"date":"2026-05-30","lead":""},{"fileName":"2026-05\\2026-05-31.html","itemCount":156,"weekday":"星期日","secCounts":{"industry":42,"paper":50,"ai-models":14,"ai-products":50},"date":"2026-05-31","lead":""},{"fileName":"2026-06\\2026-06-01.html","itemCount":143,"weekday":"星期一","secCounts":{"industry":50,"ai-models":50,"ai-products":43},"date":"2026-06-01","lead":""},{"fileName":"2026-06\\2026-06-02.html","itemCount":169,"weekday":"星期二","secCounts":{"industry":50,"paper":50,"ai-models":19,"ai-products":50},"date":"2026-06-02","lead":""},{"fileName":"2026-06\\2026-06-03.html","itemCount":188,"weekday":"星期三","secCounts":{"industry":50,"paper":19,"tip":50,"ai-models":19,"ai-products":50},"date":"2026-06-03","lead":""},{"fileName":"2026-06\\2026-06-04.html","itemCount":176,"weekday":"星期四","secCounts":{"industry":44,"paper":17,"tip":50,"ai-models":15,"ai-products":50},"date":"2026-06-04","lead":""},{"fileName":"2026-06\\2026-06-05.html","itemCount":185,"weekday":"星期五","secCounts":{"industry":43,"paper":25,"tip":50,"ai-models":17,"ai-products":50},"date":"2026-06-05","lead":""},{"fileName":"2026-06\\2026-06-06.html","itemCount":194,"weekday":"星期六","secCounts":{"industry":50,"paper":29,"tip":50,"ai-models":15,"ai-products":50},"date":"2026-06-06","lead":""},{"fileName":"2026-06\\2026-06-07.html","itemCount":148,"weekday":"星期日","secCounts":{"industry":50,"ai-models":50,"ai-products":48},"date":"2026-06-07","lead":""},{"fileName":"2026-06\\2026-06-08.html","itemCount":163,"weekday":"星期一","secCounts":{"industry":48,"paper":50,"ai-models":15,"ai-products":50},"date":"2026-06-08","lead":""},{"fileName":"2026-06\\2026-06-09.html","itemCount":180,"weekday":"星期二","secCounts":{"industry":42,"paper":24,"tip":50,"ai-models":14,"ai-products":50},"date":"2026-06-09","lead":""},{"fileName":"2026-06\\2026-06-10.html","itemCount":165,"weekday":"星期三","secCounts":{"industry":46,"paper":50,"ai-models":19,"ai-products":50},"date":"2026-06-10","lead":""},{"fileName":"2026-06\\2026-06-11.html","itemCount":186,"weekday":"星期四","secCounts":{"industry":44,"paper":24,"tip":50,"ai-models":18,"ai-products":50},"date":"2026-06-11","lead":""},{"fileName":"2026-06\\2026-06-12.html","itemCount":189,"weekday":"星期五","secCounts":{"industry":50,"paper":22,"tip":50,"ai-models":17,"ai-products":50},"date":"2026-06-12","lead":""},{"fileName":"2026-06\\2026-06-13.html","itemCount":184,"weekday":"星期六","secCounts":{"industry":42,"paper":25,"tip":50,"ai-models":17,"ai-products":50},"date":"2026-06-13","lead":""},{"fileName":"2026-06\\2026-06-14.html","itemCount":166,"weekday":"星期日","secCounts":{"industry":47,"paper":50,"ai-models":19,"ai-products":50},"date":"2026-06-14","lead":""},{"fileName":"2026-06\\2026-06-15.html","itemCount":96,"weekday":"星期一","secCounts":{"ai-products":50,"ai-models":46},"date":"2026-06-15","lead":""},{"fileName":"2026-06\\2026-06-16.html","itemCount":149,"weekday":"星期二","secCounts":{"industry":41,"paper":50,"ai-models":15,"ai-products":43},"date":"2026-06-16","lead":""},{"fileName":"2026-06\\2026-06-17.html","itemCount":157,"weekday":"星期三","secCounts":{"industry":33,"paper":13,"tip":50,"ai-models":18,"ai-products":43},"date":"2026-06-17","lead":""},{"fileName":"2026-06\\2026-06-18.html","itemCount":152,"weekday":"星期四","secCounts":{"industry":31,"paper":10,"tip":45,"ai-models":21,"ai-products":45},"date":"2026-06-18","lead":""},{"fileName":"2026-06\\2026-06-19.html","itemCount":156,"weekday":"星期五","secCounts":{"industry":33,"paper":15,"tip":39,"ai-models":22,"ai-products":47},"date":"2026-06-19","lead":""},{"fileName":"2026-06\\2026-06-20.html","itemCount":100,"weekday":"星期六","secCounts":{"industry":35,"ai-models":41,"ai-products":24},"date":"2026-06-20","lead":""},{"fileName":"2026-06\\2026-06-21.html","itemCount":58,"weekday":"星期日","secCounts":{"ai-products":35,"ai-models":23},"date":"2026-06-21","lead":""},{"fileName":"2026-06\\2026-06-22.html","itemCount":94,"weekday":"星期一","secCounts":{"industry":33,"ai-models":38,"ai-products":23},"date":"2026-06-22","lead":""},{"fileName":"2026-06\\2026-06-23.html","itemCount":114,"weekday":"星期二","secCounts":{"industry":22,"paper":14,"tip":30,"ai-models":8,"ai-products":40},"date":"2026-06-23","lead":""}],"topDomains":[{"count":1847,"domain":"x.com"},{"count":465,"domain":"ithome.com"},{"count":196,"domain":"mp.weixin.qq.com"},{"count":184,"domain":"huggingface.co"},{"count":163,"domain":"openai.com"},{"count":146,"domain":"bloomberg.com"},{"count":121,"domain":"arxiv.org"},{"count":111,"domain":"techcrunch.com"},{"count":108,"domain":"openrouter.ai"},{"count":95,"domain":"anthropic.com"},{"count":82,"domain":"theverge.com"},{"count":78,"domain":"claude.com"},{"count":63,"domain":"github.com"},{"count":60,"domain":"tomtunguz.com"},{"count":58,"domain":"garymarcus.substack.com"},{"count":56,"domain":"x.ai"},{"count":49,"domain":"developer.nvidia.com"},{"count":48,"domain":"marktechpost.com"},{"count":40,"domain":"the-decoder.com"},{"count":38,"domain":"developers.googleblog.com"}]};
+</script>
+<script>
+(function(){
+  var D = window.__INDEX_DATA__;
+  var weekGroups = [];
+  var activeDomain = null;
+
+  // Theme
+  (function(){
+    var h = new Date().getHours();
+    var t = (h >= 6 && h < 18) ? 'day' : 'night';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+
+  document.getElementById('themeToggle').addEventListener('click', function(){
+    var cur = document.documentElement.getAttribute('data-theme');
+    var next = (cur === 'night') ? 'day' : 'night';
+    document.documentElement.setAttribute('data-theme', next);
+  });
+
+  // Build week groups
+  var weeks = {};
+  D.dailies.forEach(function(d) {
+    var dt = new Date(d.date + 'T00:00:00+08:00');
+    var dow = dt.getDay();
+    if (dow === 0) dow = 7;
+    var ws = new Date(dt);
+    ws.setDate(ws.getDate() - dow + 1);
+    var wk = ws.toISOString().slice(0,10);
+    if (!weeks[wk]) weeks[wk] = { start: wk, days: [], itemCount: 0 };
+    weeks[wk].days.push(d);
+    weeks[wk].itemCount += d.itemCount;
+  });
+
+  weekGroups = Object.keys(weeks).sort().reverse().map(function(k){ return weeks[k]; });
+
+  // Render
+  var avgDaily = Math.round(D.totalItems / D.dateRange.totalDays);
+  document.getElementById('statsBar').innerHTML =
+    '<div class="stat-card"><div class="num">' + D.dateRange.totalDays + '</div><div class="lbl">日报天数</div></div>' +
+    '<div class="stat-card"><div class="num">' + D.totalItems.toLocaleString() + '</div><div class="lbl">总条目数</div></div>' +
+    '<div class="stat-card"><div class="num">' + weekGroups.length + '</div><div class="lbl">覆盖周数</div></div>' +
+    '<div class="stat-card"><div class="num">' + avgDaily + '</div><div class="lbl">日均条目</div></div>';
+
+  document.getElementById('rangeLabel').textContent = D.dateRange.from + ' ~ ' + D.dateRange.to;
+  document.getElementById('updateTime').textContent = new Date().toISOString().slice(0,16).replace('T',' ');
+
+  // Latest link
+  var latest = D.dailies[D.dailies.length - 1];
+  document.getElementById('latestLink').innerHTML = '<a href="' + latest.fileName + '">最新日报 (' + latest.date + ')</a>';
+
+  // Domain tags
+  var maxCount = D.topDomains.length > 0 ? D.topDomains[0].count : 1;
+  document.getElementById('tagList').innerHTML = D.topDomains.map(function(d) {
+    return '<span class="tag" data-domain="' + d.domain + '" title="' + d.count + ' 条">' + d.domain + ' (' + d.count + ')</span>';
+  }).join('');
+
+  // Tag click
+  document.querySelectorAll('#tagList .tag').forEach(function(t) {
+    t.addEventListener('click', function(){
+      var dom = this.dataset.domain;
+      if (activeDomain === dom) { activeDomain = null; this.classList.remove('active'); }
+      else {
+        activeDomain = dom;
+        document.querySelectorAll('#tagList .tag').forEach(function(x){ x.classList.toggle('active', x.dataset.domain === dom); });
+      }
+      filterCards();
+    });
+  });
+
+  // Day cards
+  function renderCards() {
+    var html = '';
+    weekGroups.forEach(function(wk) {
+      var ed = new Date(wk.start + 'T00:00:00+08:00');
+      ed.setDate(ed.getDate() + 6);
+      var es = ed.toISOString().slice(0,10);
+      html += '<div class="week-group"><div class="week-header">' + wk.start + '<span class="week-range">' + wk.start + ' ~ ' + es + '</span><span class="week-count">' + wk.days.length + ' days &middot; ' + wk.itemCount + ' items</span></div><div class="day-list">';
+      wk.days.slice().sort(function(a,b){ return b.date.localeCompare(a.date); }).forEach(function(d) {
+        var badges = '';
+        var barHtml = '';
+        var cats = ['ai-models','ai-products','industry','paper','tip'];
+        cats.forEach(function(c){
+          var cnt = d.secCounts[c] || 0;
+          if (cnt > 0) badges += '<span class="sc">' + cnt + '</span>';
+          barHtml += '<div class="seg seg-' + c + '" style="flex:' + cnt + '" title="' + c + ': ' + cnt + '"></div>';
+        });
+        html += '<a class="day-card" href="' + d.fileName + '">';
+        html += '<span class="day-date">' + d.date + '</span>';
+        html += '<span class="day-wd">' + d.weekday + '</span>';
+        html += '<span class="day-bar">' + barHtml + '</span>';
+        html += '<span class="day-lead" title="' + (d.lead || '').replace(/"/g,'&quot;') + '">' + (d.lead || '(无导语)') + '</span>';
+        html += '<span class="day-stats">' + badges + '</span>';
+        html += '<span class="day-total">' + d.itemCount + '</span>';
+        html += '</a>';
+      });
+      html += '</div></div>';
+    });
+    document.getElementById('content').innerHTML = html;
+  }
+  renderCards();
+
+  // Filters
+  function filterCards() {
+    var q = document.getElementById('searchInput').value.toLowerCase();
+    document.querySelectorAll('.day-card').forEach(function(card){
+      var show = true;
+      if (activeDomain) {
+        var lead = (card.querySelector('.day-lead') || {}).title || '';
+        if (lead.toLowerCase().indexOf(activeDomain) < 0) show = false;
+      }
+      if (q && card.textContent.toLowerCase().indexOf(q) < 0) show = false;
+      card.style.display = show ? '' : 'none';
+    });
+  }
+  document.getElementById('searchInput').addEventListener('input', filterCards);
+})();
+</script>
+</body>
+</html>
