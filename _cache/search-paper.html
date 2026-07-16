@@ -1,0 +1,557 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="AI 日报 · 2026-07-16">
+<meta property="og:description" content="论文研究（最近 7 天精选）">
+<meta property="og:url" content="https://ggdeeply.github.io/ai-daily/2026-07/2026-07-16.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI HOT 日报">
+<meta itemprop="name" content="AI 日报 · 2026-07-16">
+<meta itemprop="description" content="论文研究（最近 7 天精选）">
+<title>AI 日报 — 2026 - 07 - 16</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script>
+  (function() {
+    var h = new Date().getHours();
+    var t;
+    if (h >= 6 && h < 10)       t = 'morning';
+    else if (h >= 10 && h < 17) t = 'day';
+    else if (h >= 17 && h < 21) t = 'evening';
+    else                         t = 'night';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--accent:#a78bfa;--accent-2:#5eead4;--accent-glow:rgba(167,139,250,0.18);--glow-top:rgba(167,139,250,0.07);--glow-mid:rgba(94,234,212,0.03);--border-high:rgba(167,139,250,0.25);--badge-bg:rgba(167,139,250,0.10);--bg-deep:#07070c;--bg-card:rgba(18,18,26,0.75);--text-primary:#e8e8ed;--text-secondary:#a1a1aa;--text-tertiary:#6b6b76;--border-subtle:rgba(255,255,255,0.06);--border-card:rgba(255,255,255,0.08);--grid-color:rgba(255,255,255,0.015);--noise-opacity:0.028;--shadow-heavy:rgba(0,0,0,0.45);--shadow-hl:rgba(255,255,255,0.02);--tag-bg:rgba(255,255,255,0.04);--hud-line:rgba(255,255,255,0.08);--transition-speed:0.8s}
+[data-theme="morning"]{
+--accent:#d97706;--accent-2:#f59e0b;--accent-glow:rgba(217,119,6,0.20);--glow-top:rgba(245,158,11,0.06);--glow-mid:rgba(251,191,36,0.03);--border-high:rgba(217,119,6,0.35);--badge-bg:rgba(217,119,6,0.10);--bg-deep:#f9f9f6;--bg-card:rgba(255,255,255,0.82);--text-primary:#1c1917;--text-secondary:#57534e;--text-tertiary:#a8a29e;--border-subtle:rgba(0,0,0,0.07);--border-card:rgba(0,0,0,0.10);--grid-color:rgba(0,0,0,0.05);--noise-opacity:0.020;--shadow-heavy:rgba(0,0,0,0.08);--shadow-hl:rgba(0,0,0,0.03);--tag-bg:rgba(0,0,0,0.04);--hud-line:rgba(0,0,0,0.08)}
+[data-theme="day"]{
+--accent:#2563eb;--accent-2:#60a5fa;--accent-glow:rgba(37,99,235,0.18);--glow-top:rgba(96,165,250,0.05);--glow-mid:rgba(129,140,248,0.02);--border-high:rgba(37,99,235,0.28);--badge-bg:rgba(37,99,235,0.08);--bg-deep:#f8fafb;--bg-card:rgba(255,255,255,0.84);--text-primary:#0f172a;--text-secondary:#475569;--text-tertiary:#94a3b8;--border-subtle:rgba(0,0,0,0.07);--border-card:rgba(0,0,0,0.10);--grid-color:rgba(0,0,0,0.05);--noise-opacity:0.018;--shadow-heavy:rgba(0,0,0,0.07);--shadow-hl:rgba(0,0,0,0.03);--tag-bg:rgba(0,0,0,0.04);--hud-line:rgba(0,0,0,0.08)}
+[data-theme="evening"]{
+--accent:#fb923c;--accent-2:#f472b6;--accent-glow:rgba(251,146,60,0.18);--glow-top:rgba(251,146,60,0.08);--glow-mid:rgba(244,114,182,0.04);--border-high:rgba(251,146,60,0.25);--badge-bg:rgba(251,146,60,0.10);--bg-deep:#07070c;--bg-card:rgba(18,18,26,0.75);--text-primary:#e8e8ed;--text-secondary:#a1a1aa;--text-tertiary:#6b6b76;--border-subtle:rgba(255,255,255,0.06);--border-card:rgba(255,255,255,0.08);--grid-color:rgba(255,255,255,0.015);--noise-opacity:0.028;--shadow-heavy:rgba(0,0,0,0.45);--shadow-hl:rgba(255,255,255,0.02);--tag-bg:rgba(255,255,255,0.04);--hud-line:rgba(255,255,255,0.08)}
+[data-theme="night"]{
+--accent:#a78bfa;--accent-2:#5eead4;--accent-glow:rgba(167,139,250,0.18);--glow-top:rgba(167,139,250,0.07);--glow-mid:rgba(94,234,212,0.03);--border-high:rgba(167,139,250,0.25);--badge-bg:rgba(167,139,250,0.10);--bg-deep:#07070c;--bg-card:rgba(18,18,26,0.75);--text-primary:#e8e8ed;--text-secondary:#a1a1aa;--text-tertiary:#6b6b76;--border-subtle:rgba(255,255,255,0.06);--border-card:rgba(255,255,255,0.08);--grid-color:rgba(255,255,255,0.015);--noise-opacity:0.028;--shadow-heavy:rgba(0,0,0,0.45);--shadow-hl:rgba(255,255,255,0.02);--tag-bg:rgba(255,255,255,0.04);--hud-line:rgba(255,255,255,0.08)}
+body{
+font-family:'Noto Sans SC',-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
+background:var(--bg-deep);
+background-image:radial-gradient(ellipse 70% 55% at 45% -5%,var(--glow-top) 0%,transparent 100%),radial-gradient(ellipse 35% 40% at 75% 85%,var(--glow-mid) 0%,transparent 100%);
+background-attachment:fixed;
+transition:background 0.6s ease,background-image var(--transition-speed) ease;
+min-height:100vh;padding:56px 20px 64px;color:var(--text-secondary);line-height:1.7;
+-webkit-font-smoothing:antialiased;position:relative}
+body::after{
+content:'';position:fixed;inset:0;opacity:var(--noise-opacity);
+background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+background-size:200px 200px;pointer-events:none;z-index:0;transition:opacity var(--transition-speed) ease}
+body::before{
+content:'';position:fixed;inset:0;
+background-image:linear-gradient(var(--grid-color) 1px,transparent 1px),linear-gradient(90deg,var(--grid-color) 1px,transparent 1px);
+background-size:48px 48px;pointer-events:none;z-index:0;transition:background-image var(--transition-speed) ease}
+.container{max-width:880px;margin:0 auto;position:relative;z-index:1}
+.header{margin-bottom:48px;position:relative}
+.header-status{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.15em;color:var(--accent);margin-bottom:20px;display:flex;align-items:center;gap:10px;transition:color var(--transition-speed) ease}
+.header-status .dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--accent);box-shadow:0 0 6px var(--accent-glow),0 0 16px var(--accent-glow);animation:pulse-dot 3s ease-in-out infinite;transition:background var(--transition-speed) ease,box-shadow var(--transition-speed) ease}
+@keyframes pulse-dot{0%,100%{opacity:1;box-shadow:0 0 6px var(--accent-glow),0 0 16px var(--accent-glow)}50%{opacity:0.35;box-shadow:0 0 3px var(--accent-glow),0 0 8px var(--accent-glow)}}
+.header-live{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);margin-left:auto}
+#themeLabel{cursor:pointer;user-select:none;transition:color var(--transition-speed) ease}
+#themeLabel:hover{color:var(--accent-2)}
+#refreshBtn{background:none;border:1px solid var(--border-subtle);color:var(--text-tertiary);cursor:pointer;padding:4px 8px;border-radius:5px;display:inline-flex;align-items:center;gap:4px;font-family:'JetBrains Mono',monospace;font-size:9px;transition:border-color 0.2s ease,color 0.2s ease,background 0.2s ease;margin-left:4px}
+#refreshBtn:hover{border-color:var(--border-high);color:var(--accent);background:var(--tag-bg)}
+#refreshBtn svg{width:12px;height:12px}
+#refreshBtn.spinning svg{animation:spin 0.8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);z-index:100;background:var(--bg-card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border-card);border-radius:8px;padding:10px 20px;font-family:'JetBrains Mono','Noto Sans SC',sans-serif;font-size:12px;color:var(--text-primary);box-shadow:0 4px 24px var(--shadow-heavy);opacity:0;transition:opacity 0.35s ease,transform 0.35s ease;pointer-events:none;max-width:560px;text-align:center}
+.toast.show{opacity:1;pointer-events:auto}
+.toast a{color:var(--accent);cursor:pointer;text-decoration:underline}
+.toast.error{border-color:rgba(239,68,68,0.4)}
+.header h1{font-family:'Noto Sans SC',sans-serif;font-size:38px;font-weight:700;color:var(--text-primary);letter-spacing:-0.03em;line-height:1.15;margin-bottom:8px}
+.header .date-line{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);font-weight:500;letter-spacing:0.02em;transition:color var(--transition-speed) ease}
+.header-nav{margin-top:12px;display:flex;gap:8px}
+.header-nav a{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);text-decoration:none;padding:4px 12px;border:1px solid var(--border-subtle);border-radius:100px;transition:all 0.18s ease}
+.header-nav a:hover{border-color:var(--border-high);color:var(--accent);background:var(--badge-bg)}
+.header-nav a svg{width:12px;height:12px;display:inline;vertical-align:middle;margin-right:4px;opacity:0.6}
+.search-box{position:relative;margin-bottom:20px}
+.search-box input{width:100%;padding:10px 16px 10px 38px;background:var(--bg-card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border-card);border-radius:6px;font-family:'Noto Sans SC',sans-serif;font-size:13.5px;color:var(--text-primary);outline:none;transition:border-color 0.25s ease,box-shadow 0.25s ease}
+.search-box input:focus{border-color:var(--border-high);box-shadow:0 0 0 3px var(--accent-glow)}
+.search-box input::placeholder{color:var(--text-tertiary)}
+.search-box svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--text-tertiary);pointer-events:none}
+.search-hint{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);margin-top:4px;text-align:right;opacity:0;transition:opacity 0.2s ease}
+.search-hint.show{opacity:0.7}
+.item.hidden,.section.hidden{display:none}
+.lead{position:relative;padding:20px 24px;margin-bottom:44px;border:1px solid var(--border-card);border-radius:8px;font-size:14px;color:var(--text-tertiary);line-height:1.75;transition:border-color var(--transition-speed) ease;background:var(--bg-card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.lead::before,.lead::after{content:'';position:absolute;width:12px;height:12px;pointer-events:none;transition:border-color var(--transition-speed) ease}
+.lead::before{top:-1px;left:-1px;border-top:2px solid var(--accent);border-left:2px solid var(--accent);border-radius:6px 0 0 0}
+.lead::after{bottom:-1px;right:-1px;border-bottom:2px solid var(--accent);border-right:2px solid var(--accent);border-radius:0 0 6px 0}
+.lead-author{display:block;margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);opacity:0.7;letter-spacing:0.04em}
+.section{--delay:0ms;position:relative;background:var(--bg-card);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid var(--border-card);border-radius:10px;padding:28px 28px 24px;margin-bottom:14px;cursor:pointer;transition:border-color 0.25s ease,box-shadow 0.25s ease,transform 0.25s ease;animation:section-in 0.5s ease both;animation-delay:var(--delay)}
+@keyframes section-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.section:hover{border-color:var(--border-high);box-shadow:0 1px 0 0 var(--shadow-hl),0 8px 32px var(--shadow-heavy),inset 0 1px 0 var(--shadow-hl);transform:translateY(-1px)}
+.section::after{content:'';position:absolute;bottom:-1px;right:-1px;width:8px;height:8px;border-bottom:1.5px solid var(--hud-line);border-right:1.5px solid var(--hud-line);border-radius:0 0 6px 0;pointer-events:none;transition:border-color var(--transition-speed) ease}
+.section-label{font-family:'Noto Sans SC',sans-serif;font-size:13px;font-weight:600;color:var(--accent);letter-spacing:0.06em;margin-bottom:8px;display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none;transition:color var(--transition-speed) ease;position:relative}
+.section-label:hover{color:var(--accent-2)}
+.section-label svg{width:16px;height:16px;flex-shrink:0;opacity:0.85}
+.section-label .count{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;padding:2px 7px;border-radius:100px;background:var(--badge-bg);color:var(--accent);letter-spacing:0;margin-left:auto;transition:background var(--transition-speed) ease,color var(--transition-speed) ease}
+.section-label .cat-link{display:inline-flex;align-items:center;opacity:0.4;transition:opacity 0.18s ease;margin-left:2px}
+.section-label .cat-link:hover{opacity:0.9}
+.section-label .expand-chevron{display:inline-flex;align-items:center;margin-left:4px;transition:transform 0.3s ease}
+.section-label .expand-chevron svg{width:14px;height:14px;opacity:0.6}
+.section.expanded .section-label .expand-chevron{transform:rotate(180deg)}
+.section-hint{font-family:'JetBrains Mono','Noto Sans SC',sans-serif;font-size:10px;color:var(--text-tertiary);margin-bottom:14px;opacity:0.5;transition:opacity 0.2s ease}
+.section-label:hover+.section-hint{opacity:0.8}
+.section.expanded .section-hint{opacity:0.3}
+.section.expanded .section-label{margin-bottom:10px;color:var(--accent-2);font-weight:700}
+.section.expanded .section-label .count{background:var(--accent-glow);color:var(--accent-2)}
+.section-icon{display:inline-flex;align-items:center;flex-shrink:0}
+.section-icon svg{width:16px;height:16px}
+.icon-collapsed{display:inline-flex}
+.icon-expanded{display:none}
+.section.expanded .icon-collapsed{display:none}
+.section.expanded .icon-expanded{display:inline-flex}
+.section .expanded-items{display:none}
+.section.expanded .daily-items{display:none}
+.section.expanded .expanded-items{display:block}
+.expanded-items .items-scroll{max-height:720px;overflow-y:auto;scroll-behavior:smooth}
+.expanded-items .items-scroll::-webkit-scrollbar{width:4px}
+.expanded-items .items-scroll::-webkit-scrollbar-track{background:transparent}
+.expanded-items .items-scroll::-webkit-scrollbar-thumb{background:var(--border-subtle);border-radius:2px}
+.pagination{display:flex;align-items:center;justify-content:center;gap:6px;padding:12px 0 4px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-tertiary)}
+.pagination button{background:var(--tag-bg);border:1px solid var(--border-subtle);color:var(--text-secondary);padding:4px 10px;border-radius:4px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:10px;transition:border-color 0.18s ease,color 0.18s ease}
+.pagination button:hover{border-color:var(--border-high);color:var(--accent)}
+.pagination button:disabled{opacity:0.3;cursor:default}
+.pagination .page-info{padding:0 8px;white-space:nowrap}
+.expanded-items .item.page-hidden{display:none}
+.item{padding:14px 0;border-bottom:1px solid var(--border-subtle);position:relative}
+.item:last-child{border-bottom:none;padding-bottom:0}
+.item:first-child{padding-top:0}
+.item-num{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;color:var(--accent);opacity:0.5;margin-right:6px;transition:color var(--transition-speed) ease}
+.item-title{font-size:15px;font-weight:600;line-height:1.5;color:var(--text-primary);text-decoration:none;cursor:pointer;transition:color 0.18s ease}
+.item-title:hover{color:var(--accent)}
+.item-meta{display:flex;gap:10px;align-items:center;margin-top:7px;flex-wrap:wrap}
+.item-source{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;padding:3px 8px;border-radius:3px;background:var(--badge-bg);color:var(--accent);white-space:nowrap;letter-spacing:0.02em;transition:background var(--transition-speed) ease,color var(--transition-speed) ease}
+.item-time{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-tertiary);white-space:nowrap}
+.item-category{font-size:11px;padding:2px 8px;border-radius:100px;background:var(--tag-bg);color:var(--text-tertiary);white-space:nowrap}
+.item-summary{font-size:13.5px;color:var(--text-secondary);line-height:1.72;margin-top:7px}
+.footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--border-subtle);font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);display:flex;justify-content:space-between;align-items:center;opacity:0.6}
+.footer a{color:var(--accent);text-decoration:none;cursor:pointer;transition:color var(--transition-speed) ease}
+.footer a:hover{text-decoration:underline}
+.footer-glow{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:500px;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0.06;pointer-events:none;z-index:0;transition:background var(--transition-speed) ease}
+@media(prefers-reduced-motion:reduce){.section{animation:none}.header-status .dot{animation:none}*,*::before,*::after{transition-duration:0s!important}}
+@media(max-width:600px){body{padding:32px 14px 48px}.header h1{font-size:28px}.section{padding:20px 18px 18px}}
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <div class="header-status">
+      <span class="dot"></span>
+      <span id="themeLabel">AI DAILY</span>
+      <button id="refreshBtn" title="刷新日报"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg> 刷新</button>
+      <span class="header-live" id="liveClock">--:--:--</span>
+    </div>
+    <h1>AI 日报</h1>
+    <p class="date-line">2026 - 07 - 16 &nbsp;&middot;&nbsp; 星期四</p>
+    <nav class="header-nav">
+      <a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>归档索引</a>
+      <a href="../archive-browse.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>分类浏览</a>
+    </nav>
+  </header>
+  <div class="search-box">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" id="searchInput" placeholder="搜索标题或摘要…" autocomplete="off">
+    <div class="search-hint" id="searchHint"></div>
+  </div>
+  <div class="lead">
+    论文研究（最近 7 天精选）
+    <span class="lead-author">&mdash; 主编 &middot; AI HOT</span>
+  </div>
+  <div class="section" style="--delay: 60ms">
+    <div class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> 论文研究<span class="count">10</span><a class="cat-link" href="../_cache/search-paper.html" title="查看全部分类" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></div>
+    <div class="item">
+      <a class="item-title" href="https://x.com/AnthropicAI/status/2077452646303006927" target="_blank" rel="noopener"><span class="item-num">01</span>Anthropic 研究：AI 智能体模拟中行为偏差</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">07-16 01:58</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">Anthropic 新研究：2026 年夏季的智能体行为偏差。
+
+在我们的敲诈实验一年后，我们又发现了四种当今自主 AI 智能体在模拟中行为不当的方式。
+
+了解更多：https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://www.anthropic.com/research/how-canada-uses-claude" target="_blank" rel="noopener"><span class="item-num">02</span>Anthropic 经济指数：加拿大 Claude 使用情况分析</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">07-14 21:06</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">基于2026年2月Claude.ai对话样本，加拿大占全球流量的2.6%，人均使用量是预期的4.4倍，在总使用量前十国家中仅次于美国。加拿大内部采用率高度集中：安大略省占43.9%对话，不列颠哥伦比亚省人均使用量达预期的1.4倍，而纽芬兰与拉布拉多省仅为0.2倍。省级人均使用量与收入无关，而与专业、科学和技术服务业的就业占比高度相关。各省使用场景稳定：工作占34-40%，课程作业占13-18%，个人用途占44-51%。翻译请求与公共管理就业份额正相关，反映加拿大联邦双语政策；文档翻译是加拿大相对于其他英语国家最独特的使用场景。加拿大整体使用偏向学术和早期职业场景。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://arxiv.org/abs/2607.11643" target="_blank" rel="noopener"><span class="item-num">03</span>小米发布Xiaomi-Robotics-U0：380亿参数多模态自回归模型统一具身合成</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">07-13 22:57</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">小米推出Xiaomi-Robotics-U0，一个380亿参数的多模态自回归模型，用于统一具身合成。该模型将具身生成视为基础图像与视频生成的延伸，联合优化文生图、图像编辑、具身场景生成、具身迁移及具身视频生成。它是首个支持跨多种机器人形态的高质量多视角场景生成模型，并引入结构化可控具身迁移。该模型在单步与序列生成任务上达到SOTA，在具身场景生成与迁移的人类评估中超越GPT-Image-2.0，在World Arena具身视频生成排名第一，并将pi_0.5在真实世界操控任务上的分布外成功率从36.9%提升至63.2%。代码与检查点已开源。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://www.ithome.com/0/975/646.htm" target="_blank" rel="noopener"><span class="item-num">04</span>OpenAI GPT-5.6 Sol Ultra 一小时证明 50 年图论猜想</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">07-12 08:44</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">OpenAI 宣布其 GPT-5.6 Sol Ultra 模型在不到一小时内生成了图论难题&quot;循环双覆盖猜想&quot;的完整证明。该猜想由数学家 George Szekeres 和 Paul Seymour 于 1970 年代提出，悬而未决超过 50 年。模型通过调用 64 个并行子智能体及对抗智能体，在预留的 8 小时计算时间内仅用约 1 小时完成证明。OpenAI 已将证明及提示词以 PDF 形式发布。该证明尚未经同行评审，也未使用 Lean 等形式化工具验证。若通过验证，这将是 LLM 首次独立解决维基百科&quot;未解决数学问题&quot;列表中的难题。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://casp.ac/reports/ai-enabled-terrorism" target="_blank" rel="noopener"><span class="item-num">05</span>博科圣地如何利用前沿AI技术</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">07-11 06:07</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">2025至2026年间对尼日利亚东北部27名前&quot;博科圣地&quot;成员的半结构化访谈揭示了该组织在2024年系统性地利用前沿AI技术。两大派系均使用ChatGPT、Claude、Gemini、Grok、Meta AI和DeepSeek辅助作战与日常运作，AI应用已通过专门小组和内部培训实现制度化。成员成功绕过部分安全限制，将AI用于袭击策划、武器故障排查及爆炸装置设计。相关技术通过跨国圣战网络传播，伊斯兰国特工提供了面对面培训。受访者对AI表现出强烈热情，部分人对大规模杀伤性武器持开放态度，但记录在案的使用仍限于常规手段。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf" target="_blank" rel="noopener"><span class="item-num">06</span>OpenAI 论文：GPT-5.6 Sol Ultra 证明图论&quot;循环双覆盖猜想&quot;</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">07-11 03:59</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">OpenAI 发布论文，称 GPT-5.6 Sol Ultra 证明了图论中悬而未决的&quot;循环双覆盖猜想&quot;。该猜想断言每个无桥无向图都存在一组环，每条边恰好被覆盖两次。论文利用 GPT-5.6 Sol Ultra 完成证明，并借助 Codex 撰写。证明过程首先将问题简化为三次图，利用 8-流定理和 Tutte 的结果将边标记为 F32 的非零元，再转化为每个顶点处每个元素出现零次或两次的二元集标记，最终归结为线性代数论证。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/thexpin/status/2075640168896516139" target="_blank" rel="noopener"><span class="item-num">07</span>宇树G1人形机器人完成首例活体微创手术</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">07-11 01:55</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">一篇新的《自然》论文展示了宇树G1人形机器人执行研究人员所称的首例由人形机器人完成的活体标准微创手术。加州大学圣地亚哥团队使用G1，以常规手术器械完成了对两只活猪的腹腔镜胆囊切除术；第二次手术耗时32分钟。该机器人仍需反复校正，且尚无法满足手术无菌标准，但其成本可能仅为达芬奇系统的约5%。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://mp.weixin.qq.com/s/1eo7rrCAH-OA0TnXwwqJEg" target="_blank" rel="noopener"><span class="item-num">08</span>小红书发布大模型新架构 PIPO</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">07-10 17:59</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">小红书提出 PIPO 架构，通过输入侧压缩器将两个 token 折叠为一个 latent，输出侧 MTP head 将隐藏状态展开为额外 token，实现输入长度减半、每步输出翻倍。基于 Qwen3.5-4B/9B backbone，在 AIME 2025 等基准上最高带来 +7.15 pass@4 提升。部署测评中，TTFT 加速约 1.23×，TPOT 加速约 1.86×。训练采用 SFT 和 On-Policy Distillation 两阶段，将 verifier 校验能力蒸馏进轻量 confidence head。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://arxiv.org/abs/2607.09024" target="_blank" rel="noopener"><span class="item-num">09</span>GenCeption：视频生成模型作为通用视觉学习器</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">07-10 08:00</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">论文提出 GenCeption，利用预训练文本到视频扩散模型作为前馈感知骨干，通过文本指令驱动完成深度估计、表面法线、相机位姿、指代分割和 3D 关键点预测等多种视觉任务。GenCeption 在多个基准上达到 SOTA，匹配或超越 DepthAnything3、SAM3、D4RT、VGGT-Omega 等专用模型。视频生成预训练骨干在同等设置下优于 V-JEPA 和 Video MAE 等替代范式。GenCeption 展现出数据与模型缩放特性，仅用 7 到 500 倍更少的训练数据即可达到 D4RT 和 VGGT-Omega 的同等性能。模型仅用合成人类视频训练，即可泛化到真实场景及动物、机器人等分布外物体类别。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://www.lmsys.org/blog/2026-07-10-rocm-miles-dsv4" target="_blank" rel="noopener"><span class="item-num">10</span>DeepSeek-V4 Flash 强化学习训练登陆 AMD Instinct MI355X GPU，由 Miles 框架支持</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">07-10 00:00</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">DeepSeek-V4 Flash 的强化学习训练现已在 AMD Instinct MI355X GPU 上通过 Miles 框架获得支持，基于 ROCm 软件栈运行。该 2840 亿参数 MoE 模型（每 token 激活 130 亿参数）需 SGLang 进行 rollout 生成、Megatron 进行策略更新，Miles 负责异步循环与权重同步。团队解决了 SGLang 与 Megatron 间模型对齐、量化状态在线更新及多节点并行稳定性三大挑战，最终在四个八 GPU 节点上完成端到端验证：超过 100 个优化器步骤中训练-rollout 对数概率差可控，在线奖励持续提升，离线 AIME-2024 基准分数同步上涨。</p>
+    </div>  </div>
+  <footer class="footer">
+    <span>来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener">AI HOT</a></span>
+    <span>生成 09:50 &middot; 共 10 条 &middot; 精选</span>
+  </footer>
+</div>
+<div class="footer-glow"></div>
+<div class="toast" id="toast"></div>
+<script>
+(function() {
+  var h = new Date().getHours();
+  var labels = {'morning':'清晨模式','day':'日间模式','evening':'傍晚模式','night':'夜间模式'};
+  var lightThemes = ['morning','day'];
+  var autoTheme;
+  if (h >= 6 && h < 10)       autoTheme = 'morning';
+  else if (h >= 10 && h < 17) autoTheme = 'day';
+  else if (h >= 17 && h < 21) autoTheme = 'evening';
+  else                         autoTheme = 'night';
+  var current = autoTheme;
+  document.documentElement.setAttribute('data-theme', current);
+  var themeEl = document.getElementById('themeLabel');
+  if (themeEl) {
+    themeEl.textContent = labels[current] || 'AI DAILY';
+    themeEl.addEventListener('click', function() {
+      current = (lightThemes.indexOf(current) >= 0) ? 'night' : 'day';
+      document.documentElement.setAttribute('data-theme', current);
+      themeEl.textContent = labels[current] || 'AI DAILY';
+    });
+  }
+
+  // ---- 刷新按钮 ----
+  var refreshBtn = document.getElementById('refreshBtn');
+  var toastEl = document.getElementById('toast');
+  var toastTimer = null;
+
+  function showToast(msg, isError) {
+    if (toastTimer) clearTimeout(toastTimer);
+    toastEl.textContent = msg;
+    toastEl.className = 'toast show' + (isError ? ' error' : '');
+    toastTimer = setTimeout(function() { toastEl.className = 'toast'; }, 4000);
+  }
+
+  function rebuildPage(dailyJson, itemsMap) {
+    // itemsMap: { 'ai-products': [...], 'industry': [...], ... }
+    var sections = document.querySelectorAll('.section');
+    sections.forEach(function(sec) {
+      var label = sec.querySelector('.section-label');
+      var labelText = label ? (label.textContent || '').replace(/\d+\+\d+|\d+/, '').trim() : '';
+      // map Chinese label to category slug
+      var slugMap = {
+        '模型发布/更新': 'ai-models',
+        '产品发布/更新': 'ai-products',
+        '行业动态': 'industry',
+        '论文研究': 'paper',
+        '技巧与观点': 'tip'
+      };
+      var slug = slugMap[labelText] || '';
+      var items = itemsMap[slug] || [];
+
+      // Update daily-items (show first 4)
+      var dailyDiv = sec.querySelector('.daily-items');
+      if (dailyDiv && items.length > 0) {
+        var html = '';
+        var max = Math.min(items.length, 4);
+        for (var i = 0; i < max; i++) {
+          var it = items[i];
+          var num = (i + 1 < 10 ? '0' : '') + (i + 1);
+          var src = (it.source && it.source.title) ? it.source.title : '';
+          var time = it.publishedAt ? it.publishedAt.slice(11, 16) : '';
+          var cat = it.category || '';
+          var catNames = {'ai-models':'模型发布','ai-products':'产品发布','industry':'行业动态','paper':'论文研究','tip':'技巧与观点'};
+          html += '<div class="item"><a class="item-title" href="' + (it.url || '#') + '" target="_blank" rel="noopener"><span class="item-num">' + num + '</span>' + (it.title || '') + '</a><div class="item-meta"><span class="item-source">' + src + '</span></div><p class="item-summary">' + (it.summary || '') + '</p></div>';
+        }
+        dailyDiv.innerHTML = html;
+      }
+
+      // Update expanded-items (all items)
+      var expandedDiv = sec.querySelector('.expanded-items .items-scroll');
+      if (expandedDiv) {
+        var fullHtml = '';
+        for (var j = 0; j < items.length; j++) {
+          var it2 = items[j];
+          var num2 = (j + 1 < 10 ? '0' : '') + (j + 1);
+          var src2 = (it2.source && it2.source.title) ? it2.source.title : '';
+          var time2 = it2.publishedAt ? it2.publishedAt.slice(11, 16) : '';
+          var cat2 = it2.category || '';
+          var catNames2 = {'ai-models':'模型发布','ai-products':'产品发布','industry':'行业动态','paper':'论文研究','tip':'技巧与观点'};
+          fullHtml += '<div class="item expanded-item"><a class="item-title" href="' + (it2.url || '#') + '" target="_blank" rel="noopener"><span class="item-num">' + num2 + '</span>' + (it2.title || '') + '</a><div class="item-meta"><span class="item-source">' + src2 + '</span><span class="item-time">' + time2 + '</span><span class="item-category">' + (catNames2[cat2] || cat2) + '</span></div><p class="item-summary">' + (it2.summary || '') + '</p></div>';
+        }
+        expandedDiv.innerHTML = fullHtml;
+      }
+
+      // Update count label
+      var countSpan = label ? label.querySelector('.count') : null;
+      if (countSpan) {
+        var dailyCount = Math.min(items.length, 4);
+        countSpan.textContent = dailyCount + '+' + items.length;
+      }
+
+      // Update section-hint
+      var hint = sec.querySelector('.section-hint');
+      if (hint) {
+        hint.textContent = '点击展开全部 ' + items.length + ' 条';
+        hint.setAttribute('data-total', items.length);
+      }
+
+      // Reset pagination if expanded
+      if (sec.classList.contains('expanded')) {
+        paginateSection(sec, 1);
+      }
+    });
+
+    // Update total count in footer
+    var totalItems = 0;
+    for (var k in itemsMap) { totalItems += itemsMap[k].length; }
+    var footer = document.querySelector('.footer');
+    if (footer) {
+      var now = new Date();
+      var ts = now.getFullYear() + '-' + ('0'+(now.getMonth()+1)).slice(-2) + '-' + ('0'+now.getDate()).slice(-2) + ' ' + ('0'+now.getHours()).slice(-2) + ':' + ('0'+now.getMinutes()).slice(-2);
+      footer.innerHTML = '<span>来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener">AI HOT</a></span><span>刷新于 ' + ts + ' · 共 ' + totalItems + ' 条 · 实时</span>';
+    }
+  }
+
+  if (refreshBtn) {
+    refreshBtn.addEventListener('click', function() {
+      this.classList.add('spinning');
+      showToast('正在获取最新数据…');
+
+      // 优先走本地 CORS 代理（PowerShell 后台运行），失败则尝试直连 API
+      var PROXY = 'http://localhost:8765';
+      var REMOTE = 'https://aihot.virxact.com/api/public';
+
+      function fetchVia(baseUrl) {
+        var cats = ['ai-models','ai-products','industry','paper','tip'];
+        var fetches = [];
+        fetches.push(
+          fetch(baseUrl + '/daily')
+            .then(function(r) { return r.json(); })
+            .catch(function() { return null; })
+        );
+        cats.forEach(function(c) {
+          fetches.push(
+            fetch(baseUrl + '/items?category=' + c + '&take=50')
+              .then(function(r) { return r.json(); })
+              .catch(function() { return null; })
+          );
+        });
+        return Promise.all(fetches);
+      }
+
+      var self = this;
+
+      // 先试代理
+      fetchVia(PROXY).then(function(results) {
+        var allNull = results.every(function(r) { return r === null; });
+        if (allNull) {
+          // 代理不可用，回退到直连 API
+          return fetchVia(REMOTE).then(function(r2) {
+            var allNull2 = r2.every(function(rr) { return rr === null; });
+            if (allNull2) throw new Error('CORS');
+            return r2;
+          });
+        }
+        return results;
+      }).then(function(results) {
+        self.classList.remove('spinning');
+        var cats = ['ai-models','ai-products','industry','paper','tip'];
+        var itemsMap = {};
+        for (var i = 0; i < cats.length; i++) {
+          var data = results[i + 1];
+          if (data && data.items) {
+            itemsMap[cats[i]] = data.items;
+          }
+        }
+        if (Object.keys(itemsMap).length === 0) {
+          showToast('未获取到新数据，请稍后重试', true);
+          return;
+        }
+        rebuildPage(results[0], itemsMap);
+        showToast('✓ 日报已更新 — ' + new Date().toLocaleTimeString('zh-CN', {hour:'2-digit',minute:'2-digit'}));
+      }).catch(function() {
+        self.classList.remove('spinning');
+        showToast('无法连接（CORS 代理未启动，API 也不支持跨域）。请运行 refresh.bat 刷新，或等待每日 09:00 自动更新。', true);
+      });
+    });
+  }
+
+  // ---- 版块展开/收起（分页，每页10条） ----
+  var PAGE_SIZE = 10;
+  document.querySelectorAll('.section-label').forEach(function(label) {
+    label.addEventListener('click', function() {
+      var sec = this.parentElement;
+      var hint = sec.querySelector('.section-hint');
+      var totalText = (hint && hint.getAttribute('data-total')) ? hint.getAttribute('data-total') : '';
+
+      if (sec.classList.contains('expanded')) {
+        sec.classList.remove('expanded');
+        if (hint) hint.textContent = '点击展开全部 ' + totalText + ' 条';
+        return;
+      }
+      // 收起其他并重置提示文字
+      document.querySelectorAll('.section.expanded').forEach(function(s) {
+        s.classList.remove('expanded');
+        var oh = s.querySelector('.section-hint');
+        var ot = (oh && oh.getAttribute('data-total')) ? oh.getAttribute('data-total') : '';
+        if (oh) oh.textContent = '点击展开全部 ' + ot + ' 条';
+      });
+      sec.classList.add('expanded');
+      if (hint) hint.textContent = '点击标题收缩 ▲';
+      // 初始化分页
+      paginateSection(sec, 1);
+    });
+  });
+
+  // 初始化 section-hint 的 data-total 属性
+  document.querySelectorAll('.section-hint').forEach(function(hint) {
+    var match = (hint.textContent || '').match(/(\d+)\s*条/);
+    if (match) hint.setAttribute('data-total', match[1]);
+  });
+
+  function paginateSection(sec, page) {
+    var items = sec.querySelectorAll('.expanded-items .item');
+    var total = items.length;
+    var totalPages = Math.ceil(total / PAGE_SIZE);
+    if (totalPages < 2) { page = 1; }
+
+    items.forEach(function(item, i) {
+      var itemPage = Math.floor(i / PAGE_SIZE) + 1;
+      item.classList.toggle('page-hidden', itemPage !== page);
+    });
+
+    // 渲染分页控件
+    var pg = sec.querySelector('.expanded-items .pagination');
+    if (!pg) return;
+    if (totalPages <= 1) { pg.innerHTML = ''; return; }
+
+    var html = '';
+    html += '<button ' + (page <= 1 ? 'disabled' : '') + ' data-pg="' + (page-1) + '">上一页</button>';
+    html += '<span class="page-info">' + page + ' / ' + totalPages + '</span>';
+    html += '<button ' + (page >= totalPages ? 'disabled' : '') + ' data-pg="' + (page+1) + '">下一页</button>';
+    pg.innerHTML = html;
+
+    pg.querySelectorAll('button').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var p = parseInt(this.getAttribute('data-pg'));
+        if (p) {
+          paginateSection(sec, p);
+          // 滚动到顶部
+          var scroll = sec.querySelector('.items-scroll');
+          if (scroll) scroll.scrollTop = 0;
+        }
+      });
+    });
+  }
+
+  // ---- 搜索过滤 ----
+  var searchInput = document.getElementById('searchInput');
+  var searchHint  = document.getElementById('searchHint');
+  var sections = document.querySelectorAll('.section');
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      var q = this.value.trim().toLowerCase();
+      var totalVisible = 0;
+      sections.forEach(function(sec) {
+        var items = sec.querySelectorAll('.item');
+        var secVisible = 0;
+        items.forEach(function(item) {
+          var text = (item.textContent || '').toLowerCase();
+          var match = !q || text.indexOf(q) >= 0;
+          item.classList.toggle('hidden', !match);
+          if (match) secVisible++;
+        });
+        sec.classList.toggle('hidden', secVisible === 0);
+        totalVisible += secVisible;
+      });
+      if (q) {
+        searchHint.textContent = '匹配 ' + totalVisible + ' 条';
+        searchHint.classList.add('show');
+      } else {
+        searchHint.classList.remove('show');
+      }
+    });
+  }
+
+  function tick() {
+    var now = new Date();
+    var clock = document.getElementById('liveClock');
+    if (clock) clock.textContent =
+      (now.getHours()<10?'0':'')+now.getHours()+':'+
+      (now.getMinutes()<10?'0':'')+now.getMinutes()+':'+
+      (now.getSeconds()<10?'0':'')+now.getSeconds();
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
+</body>
+</html>

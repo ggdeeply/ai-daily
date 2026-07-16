@@ -1,0 +1,693 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="AI 日报 · 2026-07-16">
+<meta property="og:description" content="产品发布（最近 7 天精选）">
+<meta property="og:url" content="https://ggdeeply.github.io/ai-daily/2026-07/2026-07-16.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI HOT 日报">
+<meta itemprop="name" content="AI 日报 · 2026-07-16">
+<meta itemprop="description" content="产品发布（最近 7 天精选）">
+<title>AI 日报 — 2026 - 07 - 16</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script>
+  (function() {
+    var h = new Date().getHours();
+    var t;
+    if (h >= 6 && h < 10)       t = 'morning';
+    else if (h >= 10 && h < 17) t = 'day';
+    else if (h >= 17 && h < 21) t = 'evening';
+    else                         t = 'night';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--accent:#a78bfa;--accent-2:#5eead4;--accent-glow:rgba(167,139,250,0.18);--glow-top:rgba(167,139,250,0.07);--glow-mid:rgba(94,234,212,0.03);--border-high:rgba(167,139,250,0.25);--badge-bg:rgba(167,139,250,0.10);--bg-deep:#07070c;--bg-card:rgba(18,18,26,0.75);--text-primary:#e8e8ed;--text-secondary:#a1a1aa;--text-tertiary:#6b6b76;--border-subtle:rgba(255,255,255,0.06);--border-card:rgba(255,255,255,0.08);--grid-color:rgba(255,255,255,0.015);--noise-opacity:0.028;--shadow-heavy:rgba(0,0,0,0.45);--shadow-hl:rgba(255,255,255,0.02);--tag-bg:rgba(255,255,255,0.04);--hud-line:rgba(255,255,255,0.08);--transition-speed:0.8s}
+[data-theme="morning"]{
+--accent:#d97706;--accent-2:#f59e0b;--accent-glow:rgba(217,119,6,0.20);--glow-top:rgba(245,158,11,0.06);--glow-mid:rgba(251,191,36,0.03);--border-high:rgba(217,119,6,0.35);--badge-bg:rgba(217,119,6,0.10);--bg-deep:#f9f9f6;--bg-card:rgba(255,255,255,0.82);--text-primary:#1c1917;--text-secondary:#57534e;--text-tertiary:#a8a29e;--border-subtle:rgba(0,0,0,0.07);--border-card:rgba(0,0,0,0.10);--grid-color:rgba(0,0,0,0.05);--noise-opacity:0.020;--shadow-heavy:rgba(0,0,0,0.08);--shadow-hl:rgba(0,0,0,0.03);--tag-bg:rgba(0,0,0,0.04);--hud-line:rgba(0,0,0,0.08)}
+[data-theme="day"]{
+--accent:#2563eb;--accent-2:#60a5fa;--accent-glow:rgba(37,99,235,0.18);--glow-top:rgba(96,165,250,0.05);--glow-mid:rgba(129,140,248,0.02);--border-high:rgba(37,99,235,0.28);--badge-bg:rgba(37,99,235,0.08);--bg-deep:#f8fafb;--bg-card:rgba(255,255,255,0.84);--text-primary:#0f172a;--text-secondary:#475569;--text-tertiary:#94a3b8;--border-subtle:rgba(0,0,0,0.07);--border-card:rgba(0,0,0,0.10);--grid-color:rgba(0,0,0,0.05);--noise-opacity:0.018;--shadow-heavy:rgba(0,0,0,0.07);--shadow-hl:rgba(0,0,0,0.03);--tag-bg:rgba(0,0,0,0.04);--hud-line:rgba(0,0,0,0.08)}
+[data-theme="evening"]{
+--accent:#fb923c;--accent-2:#f472b6;--accent-glow:rgba(251,146,60,0.18);--glow-top:rgba(251,146,60,0.08);--glow-mid:rgba(244,114,182,0.04);--border-high:rgba(251,146,60,0.25);--badge-bg:rgba(251,146,60,0.10);--bg-deep:#07070c;--bg-card:rgba(18,18,26,0.75);--text-primary:#e8e8ed;--text-secondary:#a1a1aa;--text-tertiary:#6b6b76;--border-subtle:rgba(255,255,255,0.06);--border-card:rgba(255,255,255,0.08);--grid-color:rgba(255,255,255,0.015);--noise-opacity:0.028;--shadow-heavy:rgba(0,0,0,0.45);--shadow-hl:rgba(255,255,255,0.02);--tag-bg:rgba(255,255,255,0.04);--hud-line:rgba(255,255,255,0.08)}
+[data-theme="night"]{
+--accent:#a78bfa;--accent-2:#5eead4;--accent-glow:rgba(167,139,250,0.18);--glow-top:rgba(167,139,250,0.07);--glow-mid:rgba(94,234,212,0.03);--border-high:rgba(167,139,250,0.25);--badge-bg:rgba(167,139,250,0.10);--bg-deep:#07070c;--bg-card:rgba(18,18,26,0.75);--text-primary:#e8e8ed;--text-secondary:#a1a1aa;--text-tertiary:#6b6b76;--border-subtle:rgba(255,255,255,0.06);--border-card:rgba(255,255,255,0.08);--grid-color:rgba(255,255,255,0.015);--noise-opacity:0.028;--shadow-heavy:rgba(0,0,0,0.45);--shadow-hl:rgba(255,255,255,0.02);--tag-bg:rgba(255,255,255,0.04);--hud-line:rgba(255,255,255,0.08)}
+body{
+font-family:'Noto Sans SC',-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
+background:var(--bg-deep);
+background-image:radial-gradient(ellipse 70% 55% at 45% -5%,var(--glow-top) 0%,transparent 100%),radial-gradient(ellipse 35% 40% at 75% 85%,var(--glow-mid) 0%,transparent 100%);
+background-attachment:fixed;
+transition:background 0.6s ease,background-image var(--transition-speed) ease;
+min-height:100vh;padding:56px 20px 64px;color:var(--text-secondary);line-height:1.7;
+-webkit-font-smoothing:antialiased;position:relative}
+body::after{
+content:'';position:fixed;inset:0;opacity:var(--noise-opacity);
+background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+background-size:200px 200px;pointer-events:none;z-index:0;transition:opacity var(--transition-speed) ease}
+body::before{
+content:'';position:fixed;inset:0;
+background-image:linear-gradient(var(--grid-color) 1px,transparent 1px),linear-gradient(90deg,var(--grid-color) 1px,transparent 1px);
+background-size:48px 48px;pointer-events:none;z-index:0;transition:background-image var(--transition-speed) ease}
+.container{max-width:880px;margin:0 auto;position:relative;z-index:1}
+.header{margin-bottom:48px;position:relative}
+.header-status{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.15em;color:var(--accent);margin-bottom:20px;display:flex;align-items:center;gap:10px;transition:color var(--transition-speed) ease}
+.header-status .dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--accent);box-shadow:0 0 6px var(--accent-glow),0 0 16px var(--accent-glow);animation:pulse-dot 3s ease-in-out infinite;transition:background var(--transition-speed) ease,box-shadow var(--transition-speed) ease}
+@keyframes pulse-dot{0%,100%{opacity:1;box-shadow:0 0 6px var(--accent-glow),0 0 16px var(--accent-glow)}50%{opacity:0.35;box-shadow:0 0 3px var(--accent-glow),0 0 8px var(--accent-glow)}}
+.header-live{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);margin-left:auto}
+#themeLabel{cursor:pointer;user-select:none;transition:color var(--transition-speed) ease}
+#themeLabel:hover{color:var(--accent-2)}
+#refreshBtn{background:none;border:1px solid var(--border-subtle);color:var(--text-tertiary);cursor:pointer;padding:4px 8px;border-radius:5px;display:inline-flex;align-items:center;gap:4px;font-family:'JetBrains Mono',monospace;font-size:9px;transition:border-color 0.2s ease,color 0.2s ease,background 0.2s ease;margin-left:4px}
+#refreshBtn:hover{border-color:var(--border-high);color:var(--accent);background:var(--tag-bg)}
+#refreshBtn svg{width:12px;height:12px}
+#refreshBtn.spinning svg{animation:spin 0.8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);z-index:100;background:var(--bg-card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border-card);border-radius:8px;padding:10px 20px;font-family:'JetBrains Mono','Noto Sans SC',sans-serif;font-size:12px;color:var(--text-primary);box-shadow:0 4px 24px var(--shadow-heavy);opacity:0;transition:opacity 0.35s ease,transform 0.35s ease;pointer-events:none;max-width:560px;text-align:center}
+.toast.show{opacity:1;pointer-events:auto}
+.toast a{color:var(--accent);cursor:pointer;text-decoration:underline}
+.toast.error{border-color:rgba(239,68,68,0.4)}
+.header h1{font-family:'Noto Sans SC',sans-serif;font-size:38px;font-weight:700;color:var(--text-primary);letter-spacing:-0.03em;line-height:1.15;margin-bottom:8px}
+.header .date-line{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);font-weight:500;letter-spacing:0.02em;transition:color var(--transition-speed) ease}
+.header-nav{margin-top:12px;display:flex;gap:8px}
+.header-nav a{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);text-decoration:none;padding:4px 12px;border:1px solid var(--border-subtle);border-radius:100px;transition:all 0.18s ease}
+.header-nav a:hover{border-color:var(--border-high);color:var(--accent);background:var(--badge-bg)}
+.header-nav a svg{width:12px;height:12px;display:inline;vertical-align:middle;margin-right:4px;opacity:0.6}
+.search-box{position:relative;margin-bottom:20px}
+.search-box input{width:100%;padding:10px 16px 10px 38px;background:var(--bg-card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border-card);border-radius:6px;font-family:'Noto Sans SC',sans-serif;font-size:13.5px;color:var(--text-primary);outline:none;transition:border-color 0.25s ease,box-shadow 0.25s ease}
+.search-box input:focus{border-color:var(--border-high);box-shadow:0 0 0 3px var(--accent-glow)}
+.search-box input::placeholder{color:var(--text-tertiary)}
+.search-box svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--text-tertiary);pointer-events:none}
+.search-hint{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);margin-top:4px;text-align:right;opacity:0;transition:opacity 0.2s ease}
+.search-hint.show{opacity:0.7}
+.item.hidden,.section.hidden{display:none}
+.lead{position:relative;padding:20px 24px;margin-bottom:44px;border:1px solid var(--border-card);border-radius:8px;font-size:14px;color:var(--text-tertiary);line-height:1.75;transition:border-color var(--transition-speed) ease;background:var(--bg-card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.lead::before,.lead::after{content:'';position:absolute;width:12px;height:12px;pointer-events:none;transition:border-color var(--transition-speed) ease}
+.lead::before{top:-1px;left:-1px;border-top:2px solid var(--accent);border-left:2px solid var(--accent);border-radius:6px 0 0 0}
+.lead::after{bottom:-1px;right:-1px;border-bottom:2px solid var(--accent);border-right:2px solid var(--accent);border-radius:0 0 6px 0}
+.lead-author{display:block;margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);opacity:0.7;letter-spacing:0.04em}
+.section{--delay:0ms;position:relative;background:var(--bg-card);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid var(--border-card);border-radius:10px;padding:28px 28px 24px;margin-bottom:14px;cursor:pointer;transition:border-color 0.25s ease,box-shadow 0.25s ease,transform 0.25s ease;animation:section-in 0.5s ease both;animation-delay:var(--delay)}
+@keyframes section-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.section:hover{border-color:var(--border-high);box-shadow:0 1px 0 0 var(--shadow-hl),0 8px 32px var(--shadow-heavy),inset 0 1px 0 var(--shadow-hl);transform:translateY(-1px)}
+.section::after{content:'';position:absolute;bottom:-1px;right:-1px;width:8px;height:8px;border-bottom:1.5px solid var(--hud-line);border-right:1.5px solid var(--hud-line);border-radius:0 0 6px 0;pointer-events:none;transition:border-color var(--transition-speed) ease}
+.section-label{font-family:'Noto Sans SC',sans-serif;font-size:13px;font-weight:600;color:var(--accent);letter-spacing:0.06em;margin-bottom:8px;display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none;transition:color var(--transition-speed) ease;position:relative}
+.section-label:hover{color:var(--accent-2)}
+.section-label svg{width:16px;height:16px;flex-shrink:0;opacity:0.85}
+.section-label .count{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;padding:2px 7px;border-radius:100px;background:var(--badge-bg);color:var(--accent);letter-spacing:0;margin-left:auto;transition:background var(--transition-speed) ease,color var(--transition-speed) ease}
+.section-label .cat-link{display:inline-flex;align-items:center;opacity:0.4;transition:opacity 0.18s ease;margin-left:2px}
+.section-label .cat-link:hover{opacity:0.9}
+.section-label .expand-chevron{display:inline-flex;align-items:center;margin-left:4px;transition:transform 0.3s ease}
+.section-label .expand-chevron svg{width:14px;height:14px;opacity:0.6}
+.section.expanded .section-label .expand-chevron{transform:rotate(180deg)}
+.section-hint{font-family:'JetBrains Mono','Noto Sans SC',sans-serif;font-size:10px;color:var(--text-tertiary);margin-bottom:14px;opacity:0.5;transition:opacity 0.2s ease}
+.section-label:hover+.section-hint{opacity:0.8}
+.section.expanded .section-hint{opacity:0.3}
+.section.expanded .section-label{margin-bottom:10px;color:var(--accent-2);font-weight:700}
+.section.expanded .section-label .count{background:var(--accent-glow);color:var(--accent-2)}
+.section-icon{display:inline-flex;align-items:center;flex-shrink:0}
+.section-icon svg{width:16px;height:16px}
+.icon-collapsed{display:inline-flex}
+.icon-expanded{display:none}
+.section.expanded .icon-collapsed{display:none}
+.section.expanded .icon-expanded{display:inline-flex}
+.section .expanded-items{display:none}
+.section.expanded .daily-items{display:none}
+.section.expanded .expanded-items{display:block}
+.expanded-items .items-scroll{max-height:720px;overflow-y:auto;scroll-behavior:smooth}
+.expanded-items .items-scroll::-webkit-scrollbar{width:4px}
+.expanded-items .items-scroll::-webkit-scrollbar-track{background:transparent}
+.expanded-items .items-scroll::-webkit-scrollbar-thumb{background:var(--border-subtle);border-radius:2px}
+.pagination{display:flex;align-items:center;justify-content:center;gap:6px;padding:12px 0 4px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-tertiary)}
+.pagination button{background:var(--tag-bg);border:1px solid var(--border-subtle);color:var(--text-secondary);padding:4px 10px;border-radius:4px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:10px;transition:border-color 0.18s ease,color 0.18s ease}
+.pagination button:hover{border-color:var(--border-high);color:var(--accent)}
+.pagination button:disabled{opacity:0.3;cursor:default}
+.pagination .page-info{padding:0 8px;white-space:nowrap}
+.expanded-items .item.page-hidden{display:none}
+.item{padding:14px 0;border-bottom:1px solid var(--border-subtle);position:relative}
+.item:last-child{border-bottom:none;padding-bottom:0}
+.item:first-child{padding-top:0}
+.item-num{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;color:var(--accent);opacity:0.5;margin-right:6px;transition:color var(--transition-speed) ease}
+.item-title{font-size:15px;font-weight:600;line-height:1.5;color:var(--text-primary);text-decoration:none;cursor:pointer;transition:color 0.18s ease}
+.item-title:hover{color:var(--accent)}
+.item-meta{display:flex;gap:10px;align-items:center;margin-top:7px;flex-wrap:wrap}
+.item-source{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;padding:3px 8px;border-radius:3px;background:var(--badge-bg);color:var(--accent);white-space:nowrap;letter-spacing:0.02em;transition:background var(--transition-speed) ease,color var(--transition-speed) ease}
+.item-time{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-tertiary);white-space:nowrap}
+.item-category{font-size:11px;padding:2px 8px;border-radius:100px;background:var(--tag-bg);color:var(--text-tertiary);white-space:nowrap}
+.item-summary{font-size:13.5px;color:var(--text-secondary);line-height:1.72;margin-top:7px}
+.footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--border-subtle);font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);display:flex;justify-content:space-between;align-items:center;opacity:0.6}
+.footer a{color:var(--accent);text-decoration:none;cursor:pointer;transition:color var(--transition-speed) ease}
+.footer a:hover{text-decoration:underline}
+.footer-glow{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:500px;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0.06;pointer-events:none;z-index:0;transition:background var(--transition-speed) ease}
+@media(prefers-reduced-motion:reduce){.section{animation:none}.header-status .dot{animation:none}*,*::before,*::after{transition-duration:0s!important}}
+@media(max-width:600px){body{padding:32px 14px 48px}.header h1{font-size:28px}.section{padding:20px 18px 18px}}
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <div class="header-status">
+      <span class="dot"></span>
+      <span id="themeLabel">AI DAILY</span>
+      <button id="refreshBtn" title="刷新日报"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg> 刷新</button>
+      <span class="header-live" id="liveClock">--:--:--</span>
+    </div>
+    <h1>AI 日报</h1>
+    <p class="date-line">2026 - 07 - 16 &nbsp;&middot;&nbsp; 星期四</p>
+    <nav class="header-nav">
+      <a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>归档索引</a>
+      <a href="../archive-browse.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>分类浏览</a>
+    </nav>
+  </header>
+  <div class="search-box">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" id="searchInput" placeholder="搜索标题或摘要…" autocomplete="off">
+    <div class="search-hint" id="searchHint"></div>
+  </div>
+  <div class="lead">
+    产品发布（最近 7 天精选）
+    <span class="lead-author">&mdash; 主编 &middot; AI HOT</span>
+  </div>
+  <div class="section" style="--delay: 60ms">
+    <div class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> 产品发布<span class="count">25</span><a class="cat-link" href="../_cache/search-ai-products.html" title="查看全部分类" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></div>
+    <div class="item">
+      <a class="item-title" href="https://mp.weixin.qq.com/s/mQeBO0xC6Z1R0LqZX5TvNg" target="_blank" rel="noopener"><span class="item-num">01</span>MiniMax Code 2.0 桌面端焕新：底层架构全面升级，金融模块即将上线</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">09:36</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">MiniMax Code 2.0 桌面端发布，基于 Pi Agent 框架重构底层架构，显著提升会话启动速度与长程复杂任务的执行稳定性。新版本优化了图表加载与文件预览框选编辑功能，并已与恒生金融数据库、企查查 MCP 打通，金融模块即将上线，支持多源数据实时检索与专业报告生成。桌面端现已开放下载，本月还将上线远程控制、浏览器操控等功能。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://github.com/vshulcz/deja-vu" target="_blank" rel="noopener"><span class="item-num">02</span>开源编程智能体内存方案发布，通过 SSH 同步</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">06:49</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">一个面向编程 AI 智能体的开源内存项目在 GitHub 发布，支持通过 SSH 同步记忆数据。该项目允许智能体跨会话保留上下文，无需依赖特定云服务，用户可自托管。代码已开源，便于开发者集成与定制。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.ai/news/grok-build-open-source" target="_blank" rel="noopener"><span class="item-num">03</span>xAI 开源 Grok Build 编程智能体与终端界面</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">05:07</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">xAI 已将 Grok Build 的源代码在 GitHub 上开源。Grok Build 是 SpaceXAI 的编程智能体与终端用户界面（TUI），开源后用户可自行编译并完全本地运行，指向本地推理引擎并通过 `config.toml` 配置。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/ClaudeDevs/status/2077489907350856038" target="_blank" rel="noopener"><span class="item-num">04</span>Claude Code 新增 MCP 连接器调用功能</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">04:26</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Claude Code 的 artifacts 现在可以调用 MCP 连接器，让你构建能够按需为每位查看者获取信息并执行操作的仪表盘和应用。
+
+适用于 Pro、Max、Team 和 Enterprise 计划。不适用于公开共享的 artifacts。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://core.telegram.org/bots/serverless" target="_blank" rel="noopener"><span class="item-num">05</span>Telegram 无服务器架构</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:37</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Telegram Serverless 允许开发者直接在 Telegram 基础设施上运行 Bot 和 Mini App 的后端代码，无需配置服务器或容器。开发者编写普通 JavaScript 模块，通过 `npx tgcloud push` 单命令部署，代码在靠近 Bot API 和内建数据库的轻量级 V8 隔离沙箱中执行。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://www.ithome.com/0/977/105.htm" target="_blank" rel="noopener"><span class="item-num">06</span>金山办公推出 WPS Comate AI 办公客户端</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">16:39</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">金山办公在2026 AI生产力大会上推出面向员工的AI办公客户端WPS Comate，可连接组织数据与流程。该产品提供AI岗位专家、Skill技能生态、自动化任务等六大模块，并支持云端与本地双任务模式，个人用户可直接下载体验。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/OpenAIDevs/status/2077166520392970529" target="_blank" rel="noopener"><span class="item-num">07</span>Codex 周活超700万，两月更新150+项</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">07:01</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">7M+ 周活跃 Codex 用户。两月内 150+ 项更新。
+
+@romainhuet 为你梳理 Codex 新动态：GPT-5.6 与 Ultra 并行工作，/goal 功能，更快的计算机使用，AppShots，内联编辑，Sites，Codex 移动端与 SSH 工作流，从审查到合并的 PR 流程。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/googleaidevs/status/2077049898059354565" target="_blank" rel="noopener"><span class="item-num">08</span>Google AI 发布 Gemini 3.5 Live Translate，支持 70+ 语言近实时语音到语音翻译</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:17</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Google AI 发布 Gemini 3.5 Live Translate，支持 70+ 语言、近实时延迟的语音到语音翻译。该模型直接处理原始音频流，保留说话者语调、节奏和音高。东南亚超级应用 Grab 正探索将其用于司机与乘客间的跨语言沟通，其用户每月发起超 1000 万次语音通话。开发者可通过 Gemini Live API 集成 LiveKit、Fishjam、Pipecat 或 Vision Agents 构建应用。LiveKit 已实现虚拟会议室多语言即时理解；Software Mansion 结合 MoQ 协议突破流媒体瓶颈；VisionAgents AI 展示了动态多语言切换能力。开发者可在 Google AI Studio 试用并获取 Cookbook 示例代码。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://www.anthropic.com/news/claude-for-teachers" target="_blank" rel="noopener"><span class="item-num">09</span>Anthropic 推出 Claude for Teachers</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:11</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Anthropic 发布 Claude for Teachers，为美国认证的 K-12 教师免费提供高级 Claude 功能、教学技能库及对接全美 50 州学术标准的课程资源。该工具连接 Learning Commons，可调用 OpenSciEd、IM v.360 等课程资源，并集成 ASSISTments、Brisk Teaching、Canva Education 等第三方工具。教师可基于高质量教材规划课程、为不同水平学生差异化教学，还能通过 Claude Code 和 Cowork 自动分析班级数据、安排重复任务。教师数据不用于模型训练，学生信息受 FERPA 合规的 K-12 数据处理附录保护。Anthropic 同时发布与 Teach for America 及美国教师联合会共创的 AI 素养课程。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://www.ithome.com/0/976/538.htm" target="_blank" rel="noopener"><span class="item-num">10</span>高德发布通用世界模型工坊 ABot-WorldStudio，已开放测试</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">15:46</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">阿里巴巴旗下高德发布通用世界模型工坊 ABot-WorldStudio，并开放测试。该产品将交互式视频生成与 3DGS 场景生成统一，用户输入文字或图片即可生成可实时交互、可分享的 AI 世界。工坊内置&quot;时空任意门&quot;，穿越后可跃迁至另一完整 3D 世界。官方实测单次连续推理稳定运行超1小时，无崩溃、无质量衰减。底层模型 ABot-World0 与 ABot-3DWorld0 均可在单张 5090 上本地部署，已全面开源。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://github.com/juggler-ai/juggler" target="_blank" rel="noopener"><span class="item-num">11</span>Juggler：一款开源 GUI 编程智能体，由 JUCE 创建者开发</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">02:28</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Juggler 是一款开源 GUI 编程智能体，提供可视化工作台，支持可检查的工具调用、分支线程和可编辑上下文。会话以树状结构组织，而非线性聊天记录，用户可创建子线程、回溯、比较和编辑。所有关键信息以 Finder 风格 Miller 列展示。Juggler 支持本地、远程或同时运行，桌面应用与浏览器可连接同一会话。模型支持包括 Claude Code、OpenAI、Gemini、Ollama、OpenRouter、Z.AI、Deepseek 等。后端使用 Go 和 Wails，UI 为 HTML/JS。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/thsottiaux/status/2076365965915467978" target="_blank" rel="noopener"><span class="item-num">12</span>Codex与ChatGPT Work多项更新：取消5小时限制</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">01:59</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">早上好。过去48小时里，Codex和ChatGPT Work非常忙碌！三项重要更新：
+
+- 暂时取消所有Plus、Business和Pro计划的5小时使用限制
+- 正在推出变更，使GPT 5.6 Sol整体更高效，这将体现在使用量减少上，从而让你能走得更远。具体影响待量化后公布
+- 我们已达到600万活跃用户，并将在接下来一小时内进行使用量重置
+
+去创造吧。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://github.com/cosmtrek/mindwalk" target="_blank" rel="noopener"><span class="item-num">13</span>Mindwalk：在代码库 3D 地图上回放编码代理会话</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">21:51</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Mindwalk 是一款可视化工具，可将 Claude Code 和 Codex 的会话日志在代码库的 3D 地图上回放。它将仓库绘制成夜间地图，代理搜索、读取和编辑过的文件会发光，未触及区域保持黑暗，让用户一眼看清代理对任务的理解范围。单个 Go 二进制文件即可运行，所有会话数据完全本地处理，不会离开机器。支持树状图/地形图两种视图，文件触达状态分为未访问、已查看、已读取、已编辑四种颜色标记。播放界面包含错误率、文件修改量等摩擦信号面板，以及上下文压缩、子代理启动、用户交互等时间轴标记。支持键盘快捷键控制播放速度、跳转编辑点或错误点。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://www.iroh.computer/blog/mesh-llm" target="_blank" rel="noopener"><span class="item-num">14</span>Mesh LLM：在 iroh 上进行分布式人工智能计算</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">10:23</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Mesh LLM 是一个开源项目，能将用户多台机器上的 GPU 和内存池化，对外暴露兼容 OpenAI 的 API。它通过 iroh 网络库实现点对点连接，无需中央服务器。请求可在本地 GPU 运行、路由到已加载模型的节点，或将大模型按层分区（内部称&quot;Skippy&quot;）流水线式拆分到多台机器。系统内置 40 多个模型，从 5 亿参数到 235B MoE 巨模型均可支持。软件体积约 18 MB，启动后以 `localhost：9337/v1` 提供服务。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.207" target="_blank" rel="noopener"><span class="item-num">15</span>Claude Code v2.1.207 发布</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:52</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Claude Code v2.1.207 发布。Auto 模式在 Bedrock、Vertex AI 和 Foundry 上无需 `CLAUDE_CODE_ENABLE_AUTO_MODE` 即可使用，可通过 `disableAutoMode` 设置关闭。修复了流式响应中包含超长列表、表格、段落或代码块时终端冻结和按键延迟的问题；修复了非交互式运行中远程托管设置被永久记录为已同意而未显示安全同意对话框的问题；修复了自动更新程序每次发布时覆盖 `~/.local/bin/claude` 自定义启动脚本或符号链接的问题。Bedrock、Vertex 和 Claude Platform on AWS 默认切换为 Claude Opus 4.8。Auto 模式不再从 `.claude/settings.local.json` 读取 `autoMode`，改为使用 `~/.claude/settings.json`。修复了 Windows 上 AWS 凭证解析卡住时无限挂起的问题，60 秒超时保护现在生效。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/ClaudeDevs/status/2075635283211772279" target="_blank" rel="noopener"><span class="item-num">16</span>Claude Code桌面版新增应用内浏览器</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">01:36</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Claude Code 桌面版现在有了应用内浏览器。
+
+Claude 可以调出文档、设计稿或任何其他网站。它可以像操作本地开发服务器一样，进行阅读、点击浏览和交互。
+
+该浏览器采用沙盒机制且可配置：你可以自行选择会话是否持久保留。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/perplexity_ai/status/2075599540640714863" target="_blank" rel="noopener"><span class="item-num">17</span>Perplexity 推出跨模型信用额度分析功能</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:14</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">推出 Computer Analytics：你现在可以跨模型跟踪信用额度支出。
+
+该功能现已面向个人和企业用户开放，可在账户设置的 Analytics 下使用。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://mp.weixin.qq.com/s/Haqbjim9YGmRu1XpxG_VvA" target="_blank" rel="noopener"><span class="item-num">18</span>百度搭子在成都AI Day发布四项更新：个人版升级、自媒体套件、企业版及搭子联盟</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">21:58</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">百度搭子在成都百度AI Day上发布四项更新。个人版新增浏览器调用、智能路由（平均任务耗时降20%，Token利用率提升25%）、多端共享记忆及强化PPT生成，并上架&quot;一镜&quot;数字人制作、&quot;灵医&quot;报告解读等Skill。行业首个自媒体专业套件支持选题到复盘全链路。企业版支持团队协作与权限管理。搭子联盟启动，中国联通等已加入。上线三个月，日均提问量增长20倍。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.206" target="_blank" rel="noopener"><span class="item-num">19</span>Claude Code v2.1.206 发布</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">09:45</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Claude Code v2.1.206 发布，主要更新包括：为 `/cd` 命令添加目录路径建议；新增 `/doctor` 检查以建议修剪 CLAUDE.md 文件中模型可从代码库推导的内容；`/commit-push-pr` 现在自动允许 git push 到仓库配置的推送远程仓库；`/login` 支持 Anthropic 运营的公共网关端点；后台智能体在更新后自动升级。修复了过期登录导致所有模型报错、`claude --resume` 和 `--continue` 在启动时无键盘响应、MCP 服务器忽略 `request_timeout_ms` 配置、OAuth MCP 服务器需手动重新认证、`/model` 选择器价格显示错误、桌面会话卡在&quot;运行中&quot;状态、Windows 上键盘输入被忽略等多项问题。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://github.com/JustVugg/colibri" target="_blank" rel="noopener"><span class="item-num">20</span>Show HN： 如何在我的低配置电脑上运行 GLM-5.2</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">06:18</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">colibrì v1.0 引擎以纯 C 实现、零运行时依赖，可在约 25 GB RAM 的消费级电脑上运行 744B 参数的 GLM-5.2 MoE 模型。模型经 int4 量化后磁盘占用约 370 GB，常驻内存仅 9.9 GB，通过流式加载磁盘专家实现推理。冷解码速度约</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://microsoft.github.io/flint-chart" target="_blank" rel="noopener"><span class="item-num">21</span>微软发布Flint：面向AI智能体的可视化语言</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">05:46</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">微软研究院推出Flint，一种可视化中间语言，让AI智能体通过简洁的人类可编辑spec自动生成美观图表。用户只需提供数据、语义类型和图表类型，Flint编译器即可推导坐标轴、配色、布局等底层参数。支持46种图表类型，可渲染到Vega-Lite、ECharts和Chart.js三个后端。项目通过npm安装（TypeScript/JavaScript），并提供MCP服务器用于智能体工作流集成。采用弹性布局模型自动优化图表尺寸与间距，已开源。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/OpenAIDevs/status/2075331020090687666" target="_blank" rel="noopener"><span class="item-num">22</span>ChatGPT Sites将创意变可发布网站</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">05:27</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">将一个想法变成可发布和分享的实时网站
+
+以下是OpenAI团队的一些成员用Sites构建的示例👇
+
+@prd_008 用Sites将一个想法变成了个人专注应用：</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://developers.googleblog.com/litertjs-googles-high-performance-web-ai-inference" target="_blank" rel="noopener"><span class="item-num">23</span>Google 推出 LiteRT.js：高性能 Web AI 推理运行时</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">05:21</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Google 发布 LiteRT.js，这是 LiteRT 跨平台边缘 AI 运行时的最新成员，专为 JavaScript 开发者设计，可直接在浏览器中运行机器学习模型。LiteRT.js 基于 WebGPU 和即将推出的 WebNN 实现 SOTA 推理性能，同时支持回退到 WebAssembly CPU 方案。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://mistral.ai/news/manage-prompts-and-skills-in-studio" target="_blank" rel="noopener"><span class="item-num">24</span>Mistral 推出 Studio，为 AI 提示词和技能提供系统记录</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">22:33</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Mistral 今日推出 Studio，为 AI 提示词和技能提供集中式系统记录。平台将 prompts 和 skills 视为生产资产，支持不可变版本、回滚、明确所有权、分类标签和审计日志，保证变更可追溯。非开发者可直接编辑测试，通过标签将变更推送至生产，保留原有 CI/CD 流程。可观测性让生产输出回溯到对应资产版本，形成闭环治理。现面向 Mistral Studio 客户开放。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://www.anthropic.com/news/reflect-with-claude" target="_blank" rel="noopener"><span class="item-num">25</span>Claude 推出反思功能（Beta）</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">21:40</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Anthropic 为 Claude 推出一项反思功能（Beta），帮助用户追踪使用模式。用户可回顾过去 1、3、6 或 12 个月的活动总结，涵盖关键主题、使用频率和任务类型。功能结合 4D AI Fluency Framework（委托、描述、辨别、勤勉）提供协作分析，支持设定静音时段或定时休息提醒。隐私方面，不涉及无痕对话和健康集成工具，也不提取连接工具中的底层文件。该功能面向 Free、Pro 和 Max 用户，需开启记忆功能，可通过 Claude 网页或桌面应用设置。</p>
+    </div>  </div>
+  <footer class="footer">
+    <span>来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener">AI HOT</a></span>
+    <span>生成 09:50 &middot; 共 25 条 &middot; 精选</span>
+  </footer>
+</div>
+<div class="footer-glow"></div>
+<div class="toast" id="toast"></div>
+<script>
+(function() {
+  var h = new Date().getHours();
+  var labels = {'morning':'清晨模式','day':'日间模式','evening':'傍晚模式','night':'夜间模式'};
+  var lightThemes = ['morning','day'];
+  var autoTheme;
+  if (h >= 6 && h < 10)       autoTheme = 'morning';
+  else if (h >= 10 && h < 17) autoTheme = 'day';
+  else if (h >= 17 && h < 21) autoTheme = 'evening';
+  else                         autoTheme = 'night';
+  var current = autoTheme;
+  document.documentElement.setAttribute('data-theme', current);
+  var themeEl = document.getElementById('themeLabel');
+  if (themeEl) {
+    themeEl.textContent = labels[current] || 'AI DAILY';
+    themeEl.addEventListener('click', function() {
+      current = (lightThemes.indexOf(current) >= 0) ? 'night' : 'day';
+      document.documentElement.setAttribute('data-theme', current);
+      themeEl.textContent = labels[current] || 'AI DAILY';
+    });
+  }
+
+  // ---- 刷新按钮 ----
+  var refreshBtn = document.getElementById('refreshBtn');
+  var toastEl = document.getElementById('toast');
+  var toastTimer = null;
+
+  function showToast(msg, isError) {
+    if (toastTimer) clearTimeout(toastTimer);
+    toastEl.textContent = msg;
+    toastEl.className = 'toast show' + (isError ? ' error' : '');
+    toastTimer = setTimeout(function() { toastEl.className = 'toast'; }, 4000);
+  }
+
+  function rebuildPage(dailyJson, itemsMap) {
+    // itemsMap: { 'ai-products': [...], 'industry': [...], ... }
+    var sections = document.querySelectorAll('.section');
+    sections.forEach(function(sec) {
+      var label = sec.querySelector('.section-label');
+      var labelText = label ? (label.textContent || '').replace(/\d+\+\d+|\d+/, '').trim() : '';
+      // map Chinese label to category slug
+      var slugMap = {
+        '模型发布/更新': 'ai-models',
+        '产品发布/更新': 'ai-products',
+        '行业动态': 'industry',
+        '论文研究': 'paper',
+        '技巧与观点': 'tip'
+      };
+      var slug = slugMap[labelText] || '';
+      var items = itemsMap[slug] || [];
+
+      // Update daily-items (show first 4)
+      var dailyDiv = sec.querySelector('.daily-items');
+      if (dailyDiv && items.length > 0) {
+        var html = '';
+        var max = Math.min(items.length, 4);
+        for (var i = 0; i < max; i++) {
+          var it = items[i];
+          var num = (i + 1 < 10 ? '0' : '') + (i + 1);
+          var src = (it.source && it.source.title) ? it.source.title : '';
+          var time = it.publishedAt ? it.publishedAt.slice(11, 16) : '';
+          var cat = it.category || '';
+          var catNames = {'ai-models':'模型发布','ai-products':'产品发布','industry':'行业动态','paper':'论文研究','tip':'技巧与观点'};
+          html += '<div class="item"><a class="item-title" href="' + (it.url || '#') + '" target="_blank" rel="noopener"><span class="item-num">' + num + '</span>' + (it.title || '') + '</a><div class="item-meta"><span class="item-source">' + src + '</span></div><p class="item-summary">' + (it.summary || '') + '</p></div>';
+        }
+        dailyDiv.innerHTML = html;
+      }
+
+      // Update expanded-items (all items)
+      var expandedDiv = sec.querySelector('.expanded-items .items-scroll');
+      if (expandedDiv) {
+        var fullHtml = '';
+        for (var j = 0; j < items.length; j++) {
+          var it2 = items[j];
+          var num2 = (j + 1 < 10 ? '0' : '') + (j + 1);
+          var src2 = (it2.source && it2.source.title) ? it2.source.title : '';
+          var time2 = it2.publishedAt ? it2.publishedAt.slice(11, 16) : '';
+          var cat2 = it2.category || '';
+          var catNames2 = {'ai-models':'模型发布','ai-products':'产品发布','industry':'行业动态','paper':'论文研究','tip':'技巧与观点'};
+          fullHtml += '<div class="item expanded-item"><a class="item-title" href="' + (it2.url || '#') + '" target="_blank" rel="noopener"><span class="item-num">' + num2 + '</span>' + (it2.title || '') + '</a><div class="item-meta"><span class="item-source">' + src2 + '</span><span class="item-time">' + time2 + '</span><span class="item-category">' + (catNames2[cat2] || cat2) + '</span></div><p class="item-summary">' + (it2.summary || '') + '</p></div>';
+        }
+        expandedDiv.innerHTML = fullHtml;
+      }
+
+      // Update count label
+      var countSpan = label ? label.querySelector('.count') : null;
+      if (countSpan) {
+        var dailyCount = Math.min(items.length, 4);
+        countSpan.textContent = dailyCount + '+' + items.length;
+      }
+
+      // Update section-hint
+      var hint = sec.querySelector('.section-hint');
+      if (hint) {
+        hint.textContent = '点击展开全部 ' + items.length + ' 条';
+        hint.setAttribute('data-total', items.length);
+      }
+
+      // Reset pagination if expanded
+      if (sec.classList.contains('expanded')) {
+        paginateSection(sec, 1);
+      }
+    });
+
+    // Update total count in footer
+    var totalItems = 0;
+    for (var k in itemsMap) { totalItems += itemsMap[k].length; }
+    var footer = document.querySelector('.footer');
+    if (footer) {
+      var now = new Date();
+      var ts = now.getFullYear() + '-' + ('0'+(now.getMonth()+1)).slice(-2) + '-' + ('0'+now.getDate()).slice(-2) + ' ' + ('0'+now.getHours()).slice(-2) + ':' + ('0'+now.getMinutes()).slice(-2);
+      footer.innerHTML = '<span>来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener">AI HOT</a></span><span>刷新于 ' + ts + ' · 共 ' + totalItems + ' 条 · 实时</span>';
+    }
+  }
+
+  if (refreshBtn) {
+    refreshBtn.addEventListener('click', function() {
+      this.classList.add('spinning');
+      showToast('正在获取最新数据…');
+
+      // 优先走本地 CORS 代理（PowerShell 后台运行），失败则尝试直连 API
+      var PROXY = 'http://localhost:8765';
+      var REMOTE = 'https://aihot.virxact.com/api/public';
+
+      function fetchVia(baseUrl) {
+        var cats = ['ai-models','ai-products','industry','paper','tip'];
+        var fetches = [];
+        fetches.push(
+          fetch(baseUrl + '/daily')
+            .then(function(r) { return r.json(); })
+            .catch(function() { return null; })
+        );
+        cats.forEach(function(c) {
+          fetches.push(
+            fetch(baseUrl + '/items?category=' + c + '&take=50')
+              .then(function(r) { return r.json(); })
+              .catch(function() { return null; })
+          );
+        });
+        return Promise.all(fetches);
+      }
+
+      var self = this;
+
+      // 先试代理
+      fetchVia(PROXY).then(function(results) {
+        var allNull = results.every(function(r) { return r === null; });
+        if (allNull) {
+          // 代理不可用，回退到直连 API
+          return fetchVia(REMOTE).then(function(r2) {
+            var allNull2 = r2.every(function(rr) { return rr === null; });
+            if (allNull2) throw new Error('CORS');
+            return r2;
+          });
+        }
+        return results;
+      }).then(function(results) {
+        self.classList.remove('spinning');
+        var cats = ['ai-models','ai-products','industry','paper','tip'];
+        var itemsMap = {};
+        for (var i = 0; i < cats.length; i++) {
+          var data = results[i + 1];
+          if (data && data.items) {
+            itemsMap[cats[i]] = data.items;
+          }
+        }
+        if (Object.keys(itemsMap).length === 0) {
+          showToast('未获取到新数据，请稍后重试', true);
+          return;
+        }
+        rebuildPage(results[0], itemsMap);
+        showToast('✓ 日报已更新 — ' + new Date().toLocaleTimeString('zh-CN', {hour:'2-digit',minute:'2-digit'}));
+      }).catch(function() {
+        self.classList.remove('spinning');
+        showToast('无法连接（CORS 代理未启动，API 也不支持跨域）。请运行 refresh.bat 刷新，或等待每日 09:00 自动更新。', true);
+      });
+    });
+  }
+
+  // ---- 版块展开/收起（分页，每页10条） ----
+  var PAGE_SIZE = 10;
+  document.querySelectorAll('.section-label').forEach(function(label) {
+    label.addEventListener('click', function() {
+      var sec = this.parentElement;
+      var hint = sec.querySelector('.section-hint');
+      var totalText = (hint && hint.getAttribute('data-total')) ? hint.getAttribute('data-total') : '';
+
+      if (sec.classList.contains('expanded')) {
+        sec.classList.remove('expanded');
+        if (hint) hint.textContent = '点击展开全部 ' + totalText + ' 条';
+        return;
+      }
+      // 收起其他并重置提示文字
+      document.querySelectorAll('.section.expanded').forEach(function(s) {
+        s.classList.remove('expanded');
+        var oh = s.querySelector('.section-hint');
+        var ot = (oh && oh.getAttribute('data-total')) ? oh.getAttribute('data-total') : '';
+        if (oh) oh.textContent = '点击展开全部 ' + ot + ' 条';
+      });
+      sec.classList.add('expanded');
+      if (hint) hint.textContent = '点击标题收缩 ▲';
+      // 初始化分页
+      paginateSection(sec, 1);
+    });
+  });
+
+  // 初始化 section-hint 的 data-total 属性
+  document.querySelectorAll('.section-hint').forEach(function(hint) {
+    var match = (hint.textContent || '').match(/(\d+)\s*条/);
+    if (match) hint.setAttribute('data-total', match[1]);
+  });
+
+  function paginateSection(sec, page) {
+    var items = sec.querySelectorAll('.expanded-items .item');
+    var total = items.length;
+    var totalPages = Math.ceil(total / PAGE_SIZE);
+    if (totalPages < 2) { page = 1; }
+
+    items.forEach(function(item, i) {
+      var itemPage = Math.floor(i / PAGE_SIZE) + 1;
+      item.classList.toggle('page-hidden', itemPage !== page);
+    });
+
+    // 渲染分页控件
+    var pg = sec.querySelector('.expanded-items .pagination');
+    if (!pg) return;
+    if (totalPages <= 1) { pg.innerHTML = ''; return; }
+
+    var html = '';
+    html += '<button ' + (page <= 1 ? 'disabled' : '') + ' data-pg="' + (page-1) + '">上一页</button>';
+    html += '<span class="page-info">' + page + ' / ' + totalPages + '</span>';
+    html += '<button ' + (page >= totalPages ? 'disabled' : '') + ' data-pg="' + (page+1) + '">下一页</button>';
+    pg.innerHTML = html;
+
+    pg.querySelectorAll('button').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var p = parseInt(this.getAttribute('data-pg'));
+        if (p) {
+          paginateSection(sec, p);
+          // 滚动到顶部
+          var scroll = sec.querySelector('.items-scroll');
+          if (scroll) scroll.scrollTop = 0;
+        }
+      });
+    });
+  }
+
+  // ---- 搜索过滤 ----
+  var searchInput = document.getElementById('searchInput');
+  var searchHint  = document.getElementById('searchHint');
+  var sections = document.querySelectorAll('.section');
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      var q = this.value.trim().toLowerCase();
+      var totalVisible = 0;
+      sections.forEach(function(sec) {
+        var items = sec.querySelectorAll('.item');
+        var secVisible = 0;
+        items.forEach(function(item) {
+          var text = (item.textContent || '').toLowerCase();
+          var match = !q || text.indexOf(q) >= 0;
+          item.classList.toggle('hidden', !match);
+          if (match) secVisible++;
+        });
+        sec.classList.toggle('hidden', secVisible === 0);
+        totalVisible += secVisible;
+      });
+      if (q) {
+        searchHint.textContent = '匹配 ' + totalVisible + ' 条';
+        searchHint.classList.add('show');
+      } else {
+        searchHint.classList.remove('show');
+      }
+    });
+  }
+
+  function tick() {
+    var now = new Date();
+    var clock = document.getElementById('liveClock');
+    if (clock) clock.textContent =
+      (now.getHours()<10?'0':'')+now.getHours()+':'+
+      (now.getMinutes()<10?'0':'')+now.getMinutes()+':'+
+      (now.getSeconds()<10?'0':'')+now.getSeconds();
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
+</body>
+</html>

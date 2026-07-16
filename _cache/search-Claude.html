@@ -1,0 +1,456 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 — 2026 - 05 - 25</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script>
+  (function() {
+    var h = new Date().getHours();
+    var t;
+    if (h >= 6 && h < 10)       t = 'morning';
+    else if (h >= 10 && h < 17) t = 'day';
+    else if (h >= 17 && h < 21) t = 'evening';
+    else                         t = 'night';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--accent:#a78bfa;--accent-2:#5eead4;--accent-glow:rgba(167,139,250,0.18);--glow-top:rgba(167,139,250,0.07);--glow-mid:rgba(94,234,212,0.03);--border-high:rgba(167,139,250,0.25);--badge-bg:rgba(167,139,250,0.10);--bg-deep:#07070c;--bg-card:rgba(18,18,26,0.75);--text-primary:#e8e8ed;--text-secondary:#a1a1aa;--text-tertiary:#6b6b76;--border-subtle:rgba(255,255,255,0.06);--border-card:rgba(255,255,255,0.08);--grid-color:rgba(255,255,255,0.015);--noise-opacity:0.028;--shadow-heavy:rgba(0,0,0,0.45);--shadow-hl:rgba(255,255,255,0.02);--tag-bg:rgba(255,255,255,0.04);--hud-line:rgba(255,255,255,0.08);--transition-speed:0.8s}
+[data-theme="morning"]{
+--accent:#d97706;--accent-2:#f59e0b;--accent-glow:rgba(217,119,6,0.20);--glow-top:rgba(245,158,11,0.06);--glow-mid:rgba(251,191,36,0.03);--border-high:rgba(217,119,6,0.35);--badge-bg:rgba(217,119,6,0.10);--bg-deep:#f9f9f6;--bg-card:rgba(255,255,255,0.82);--text-primary:#1c1917;--text-secondary:#57534e;--text-tertiary:#a8a29e;--border-subtle:rgba(0,0,0,0.07);--border-card:rgba(0,0,0,0.10);--grid-color:rgba(0,0,0,0.05);--noise-opacity:0.020;--shadow-heavy:rgba(0,0,0,0.08);--shadow-hl:rgba(0,0,0,0.03);--tag-bg:rgba(0,0,0,0.04);--hud-line:rgba(0,0,0,0.08)}
+[data-theme="day"]{
+--accent:#2563eb;--accent-2:#60a5fa;--accent-glow:rgba(37,99,235,0.18);--glow-top:rgba(96,165,250,0.05);--glow-mid:rgba(129,140,248,0.02);--border-high:rgba(37,99,235,0.28);--badge-bg:rgba(37,99,235,0.08);--bg-deep:#f8fafb;--bg-card:rgba(255,255,255,0.84);--text-primary:#0f172a;--text-secondary:#475569;--text-tertiary:#94a3b8;--border-subtle:rgba(0,0,0,0.07);--border-card:rgba(0,0,0,0.10);--grid-color:rgba(0,0,0,0.05);--noise-opacity:0.018;--shadow-heavy:rgba(0,0,0,0.07);--shadow-hl:rgba(0,0,0,0.03);--tag-bg:rgba(0,0,0,0.04);--hud-line:rgba(0,0,0,0.08)}
+[data-theme="evening"]{
+--accent:#fb923c;--accent-2:#f472b6;--accent-glow:rgba(251,146,60,0.18);--glow-top:rgba(251,146,60,0.08);--glow-mid:rgba(244,114,182,0.04);--border-high:rgba(251,146,60,0.25);--badge-bg:rgba(251,146,60,0.10);--bg-deep:#07070c;--bg-card:rgba(18,18,26,0.75);--text-primary:#e8e8ed;--text-secondary:#a1a1aa;--text-tertiary:#6b6b76;--border-subtle:rgba(255,255,255,0.06);--border-card:rgba(255,255,255,0.08);--grid-color:rgba(255,255,255,0.015);--noise-opacity:0.028;--shadow-heavy:rgba(0,0,0,0.45);--shadow-hl:rgba(255,255,255,0.02);--tag-bg:rgba(255,255,255,0.04);--hud-line:rgba(255,255,255,0.08)}
+[data-theme="night"]{
+--accent:#a78bfa;--accent-2:#5eead4;--accent-glow:rgba(167,139,250,0.18);--glow-top:rgba(167,139,250,0.07);--glow-mid:rgba(94,234,212,0.03);--border-high:rgba(167,139,250,0.25);--badge-bg:rgba(167,139,250,0.10);--bg-deep:#07070c;--bg-card:rgba(18,18,26,0.75);--text-primary:#e8e8ed;--text-secondary:#a1a1aa;--text-tertiary:#6b6b76;--border-subtle:rgba(255,255,255,0.06);--border-card:rgba(255,255,255,0.08);--grid-color:rgba(255,255,255,0.015);--noise-opacity:0.028;--shadow-heavy:rgba(0,0,0,0.45);--shadow-hl:rgba(255,255,255,0.02);--tag-bg:rgba(255,255,255,0.04);--hud-line:rgba(255,255,255,0.08)}
+body{
+font-family:'Noto Sans SC',-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
+background:var(--bg-deep);
+background-image:radial-gradient(ellipse 70% 55% at 45% -5%,var(--glow-top) 0%,transparent 100%),radial-gradient(ellipse 35% 40% at 75% 85%,var(--glow-mid) 0%,transparent 100%);
+background-attachment:fixed;
+transition:background 0.6s ease,background-image var(--transition-speed) ease;
+min-height:100vh;padding:56px 20px 64px;color:var(--text-secondary);line-height:1.7;
+-webkit-font-smoothing:antialiased;position:relative}
+body::after{
+content:'';position:fixed;inset:0;opacity:var(--noise-opacity);
+background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+background-size:200px 200px;pointer-events:none;z-index:0;transition:opacity var(--transition-speed) ease}
+body::before{
+content:'';position:fixed;inset:0;
+background-image:linear-gradient(var(--grid-color) 1px,transparent 1px),linear-gradient(90deg,var(--grid-color) 1px,transparent 1px);
+background-size:48px 48px;pointer-events:none;z-index:0;transition:background-image var(--transition-speed) ease}
+.container{max-width:700px;margin:0 auto;position:relative;z-index:1}
+.header{margin-bottom:48px;position:relative}
+.header-status{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.15em;color:var(--accent);margin-bottom:20px;display:flex;align-items:center;gap:10px;transition:color var(--transition-speed) ease}
+.header-status .dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--accent);box-shadow:0 0 6px var(--accent-glow),0 0 16px var(--accent-glow);animation:pulse-dot 3s ease-in-out infinite;transition:background var(--transition-speed) ease,box-shadow var(--transition-speed) ease}
+@keyframes pulse-dot{0%,100%{opacity:1;box-shadow:0 0 6px var(--accent-glow),0 0 16px var(--accent-glow)}50%{opacity:0.35;box-shadow:0 0 3px var(--accent-glow),0 0 8px var(--accent-glow)}}
+.header-live{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);margin-left:auto}
+#themeLabel{cursor:pointer;user-select:none;transition:color var(--transition-speed) ease}
+#themeLabel:hover{color:var(--accent-2)}
+.header h1{font-family:'Noto Sans SC',sans-serif;font-size:38px;font-weight:700;color:var(--text-primary);letter-spacing:-0.03em;line-height:1.15;margin-bottom:8px}
+.header .date-line{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);font-weight:500;letter-spacing:0.02em;transition:color var(--transition-speed) ease}
+.search-box{position:relative;margin-bottom:20px}
+.search-box input{width:100%;padding:10px 16px 10px 38px;background:var(--bg-card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border-card);border-radius:6px;font-family:'Noto Sans SC',sans-serif;font-size:13.5px;color:var(--text-primary);outline:none;transition:border-color 0.25s ease,box-shadow 0.25s ease}
+.search-box input:focus{border-color:var(--border-high);box-shadow:0 0 0 3px var(--accent-glow)}
+.search-box input::placeholder{color:var(--text-tertiary)}
+.search-box svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--text-tertiary);pointer-events:none}
+.search-hint{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);margin-top:4px;text-align:right;opacity:0;transition:opacity 0.2s ease}
+.search-hint.show{opacity:0.7}
+.item.hidden,.section.hidden{display:none}
+.lead{position:relative;padding:20px 24px;margin-bottom:44px;border:1px solid var(--border-card);border-radius:8px;font-size:14px;color:var(--text-tertiary);line-height:1.75;transition:border-color var(--transition-speed) ease;background:var(--bg-card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.lead::before,.lead::after{content:'';position:absolute;width:12px;height:12px;pointer-events:none;transition:border-color var(--transition-speed) ease}
+.lead::before{top:-1px;left:-1px;border-top:2px solid var(--accent);border-left:2px solid var(--accent);border-radius:6px 0 0 0}
+.lead::after{bottom:-1px;right:-1px;border-bottom:2px solid var(--accent);border-right:2px solid var(--accent);border-radius:0 0 6px 0}
+.lead-author{display:block;margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);opacity:0.7;letter-spacing:0.04em}
+.section{--delay:0ms;position:relative;background:var(--bg-card);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid var(--border-card);border-radius:10px;padding:28px 28px 24px;margin-bottom:14px;cursor:pointer;transition:border-color 0.25s ease,box-shadow 0.25s ease,transform 0.25s ease;animation:section-in 0.5s ease both;animation-delay:var(--delay)}
+@keyframes section-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.section:hover{border-color:var(--border-high);box-shadow:0 1px 0 0 var(--shadow-hl),0 8px 32px var(--shadow-heavy),inset 0 1px 0 var(--shadow-hl);transform:translateY(-1px)}
+.section::after{content:'';position:absolute;bottom:-1px;right:-1px;width:8px;height:8px;border-bottom:1.5px solid var(--hud-line);border-right:1.5px solid var(--hud-line);border-radius:0 0 6px 0;pointer-events:none;transition:border-color var(--transition-speed) ease}
+.section-label{font-family:'Noto Sans SC',sans-serif;font-size:13px;font-weight:600;color:var(--accent);letter-spacing:0.06em;margin-bottom:18px;display:flex;align-items:center;gap:8px;transition:color var(--transition-speed) ease}
+.section-label svg{width:16px;height:16px;flex-shrink:0;opacity:0.85}
+.section-label .count{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;padding:2px 7px;border-radius:100px;background:var(--badge-bg);color:var(--accent);letter-spacing:0;margin-left:auto;transition:background var(--transition-speed) ease,color var(--transition-speed) ease}
+.item{padding:14px 0;border-bottom:1px solid var(--border-subtle);position:relative}
+.item:last-child{border-bottom:none;padding-bottom:0}
+.item:first-child{padding-top:0}
+.item-num{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;color:var(--accent);opacity:0.5;margin-right:6px;transition:color var(--transition-speed) ease}
+.item-title{font-size:15px;font-weight:600;line-height:1.5;color:var(--text-primary);text-decoration:none;cursor:pointer;transition:color 0.18s ease}
+.item-title:hover{color:var(--accent)}
+.item-meta{display:flex;gap:10px;align-items:center;margin-top:7px;flex-wrap:wrap}
+.item-source{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;padding:3px 8px;border-radius:3px;background:var(--badge-bg);color:var(--accent);white-space:nowrap;letter-spacing:0.02em;transition:background var(--transition-speed) ease,color var(--transition-speed) ease}
+.item-time{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-tertiary);white-space:nowrap}
+.item-category{font-size:11px;padding:2px 8px;border-radius:100px;background:var(--tag-bg);color:var(--text-tertiary);white-space:nowrap}
+.item-summary{font-size:13.5px;color:var(--text-secondary);line-height:1.72;margin-top:7px}
+.footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--border-subtle);font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-tertiary);display:flex;justify-content:space-between;align-items:center;opacity:0.6}
+.footer a{color:var(--accent);text-decoration:none;cursor:pointer;transition:color var(--transition-speed) ease}
+.footer a:hover{text-decoration:underline}
+.footer-glow{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:500px;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0.06;pointer-events:none;z-index:0;transition:background var(--transition-speed) ease}
+@media(prefers-reduced-motion:reduce){.section{animation:none}.header-status .dot{animation:none}*,*::before,*::after{transition-duration:0s!important}}
+@media(max-width:600px){body{padding:32px 14px 48px}.header h1{font-size:28px}.section{padding:20px 18px 18px}}
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <div class="header-status">
+      <span class="dot"></span>
+      <span id="themeLabel">AI DAILY</span>
+      <span class="header-live" id="liveClock">--:--:--</span>
+    </div>
+    <h1>AI 日报</h1>
+    <p class="date-line">2026 - 05 - 25 &nbsp;&middot;&nbsp; 星期一</p>
+  </header>
+  <div class="search-box">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" id="searchInput" placeholder="搜索标题或摘要…" autocomplete="off">
+    <div class="search-hint" id="searchHint"></div>
+  </div>
+  <div class="lead">
+    搜索：Claude（最近 7 天精选）
+    <span class="lead-author">&mdash; 主编 &middot; AI HOT</span>
+  </div>
+  <div class="section" style="--delay: 60ms">
+    <div class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg> 行业动态<span class="count">5</span></div>
+    <div class="item">
+      <a class="item-title" href="https://x.com/kimmonismus/status/2058584943052161488" target="_blank" rel="noopener"><span class="item-num">01</span>TrapDoor供应链攻击：AI助手成新型攻击面</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:24</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">一场名为&quot;TrapDoor&quot;的协调供应链攻击同时袭击了npm、PyPI和Crates.io，涉及34个恶意包，旨在窃取加密货币、AI和安全开发者的钱包、SSH密钥和云凭证。攻击的新手段是向流行开源项目提交Pull Request，注入被操纵的`CLAUDE.md`和`.cursorrules`配置文件。当开发者克隆仓库并使用Claude Code或Cursor等AI助手时，AI智能体会将这些文件当作可信指令执行，可能在开发者不知情下运行恶意命令。这是首次将AI助手作为攻击面。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://www.anthropic.com/research/glasswing-initial-update" target="_blank" rel="noopener"><span class="item-num">02</span>Project Glasswing：初步更新</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">上月启动的Project Glasswing项目，旨在利用先进AI模型保障关键软件安全。通过约50家合作伙伴使用Claude Mythos Preview模型，已在全球关键系统中发现超过10，000个高危或严重漏洞。多家合作伙伴报告漏洞发现效率提升超过十倍。例如，Cloudflare在关键路径系统发现2，000个漏洞；Mozilla在Firefox 150中发现并修复271个漏洞，数量远超前代模型。项目还扫描了千余个支撑互联网的开源项目，独立验证准确率达90.6%。这标志着AI网络安全能力进入新阶段，漏洞发现速度已远超人工。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://the-decoder.com/anthropic-is-about-to-become-the-first-profitable-ai-lab" target="_blank" rel="noopener"><span class="item-num">03</span>Anthropic即将成为首个盈利的AI实验室</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:15</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">根据《华尔街日报》报道，Anthropic正接近实现其首个盈利季度，预计第二季度营收达109亿美元，运营利润为5.59亿美元。该公司在去年夏季时还预计最早在2028年才能盈利。主要增长动力来自编程工具和Claude的代理功能使用，其需求一度超过了可用的算力容量。这一转变标志着Anthropic可能成为业界首个实现盈利的领先AI研发机构。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://www.ithome.com/0/952/645.htm" target="_blank" rel="noopener"><span class="item-num">04</span>消息称微软内部示警：GitHub 面临生存级风险，AI 编程工具削弱托管必要性</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">10:39</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">微软内部发出警告，称其代码托管平台GitHub正面临&quot;生存级风险&quot;。主要原因是Cursor、Claude Code等AI编程助手兴起，改变了开发者工作流，削弱了持续将代码上传至GitHub的必要性。为统一工具链并控制成本，微软已要求部分团队在2026年6月底前停止试用Claude Code，转而使用自有工具GitHub Copilot CLI。同时，OpenAI曾考虑自建替代平台，也加剧了对GitHub地位的潜在威胁。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://www.anthropic.com/news/anthropic-kpmg" target="_blank" rel="noopener"><span class="item-num">05</span>毕马威与Anthropic建立全球联盟，全面整合Claude AI模型</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">20:57</span>
+        <span class="item-category">行业动态</span>
+      </div>
+      <p class="item-summary">毕马威宣布与Anthropic建立全球联盟，将Claude人工智能模型全面整合至其核心业务与数字平台。此举将向毕马威全球超过27.6万名员工开放Claude访问权限，并率先应用于税务与法律等领域的客户工具开发。双方还将合作开发面向私募股权投资组合公司及网络安全漏洞检测的新产品。毕马威强调此次合作基于其可信AI框架，旨在通过负责任、可治理的AI部署，加速企业数字化转型。</p>
+    </div>  </div>  <div class="section" style="--delay: 120ms">
+    <div class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg> 技巧与观点<span class="count">11</span></div>
+    <div class="item">
+      <a class="item-title" href="https://x.com/bcherny/status/2058519809214607704" target="_blank" rel="noopener"><span class="item-num">06</span>Claude Code自动模式：多任务并行的关键技巧</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">20:05</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">人们常问我，用好Claude Code的最大技巧是什么。
+如今我的头号技巧是：使用自动模式。
+自动模式意味着不再有权限提示。它是实现&quot;多Claude并行&quot;的关键构件：启动一个会话，然后在其运行时，并行处理另一个会话。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/dotey/status/2058084478459826432" target="_blank" rel="noopener"><span class="item-num">07</span>飞书-Claude Code桥接开源项目</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">15:15</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">feishu-claude-code-bridge是一个开源项目，可实现飞书与本机Claude Code CLI的双向连接。用户能从飞书消息中直接指挥Claude Code执行任务，Claude也能读取飞书中的工作上下文并创建、编辑飞书文档。其工作原理是将飞书消息转为Prompt通过命令行调用Claude CLI，并将流式输出实时同步回飞书。该模式可扩展连接Codex等其他本地工具。需注意，2026年6月15日起，Claude订阅计划对`claude -p`模式将独立计费。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/AYi_AInotes/status/2057791192738283669" target="_blank" rel="noopener"><span class="item-num">08</span>Karpathy的CLAUDE.md四条规则让AI编程准确率飙升至94%</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">19:50</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Karpathy发布的CLAUDE.md文件以其简洁高效的AI编程指导原则引爆GitHub，获得超22万星标并登顶趋势榜。该文件仅含65行、4条核心规则，却能将AI编程的准确率从65%显著提升至94%。其核心在于强制开发者&quot;慢下来&quot;，将深度思考、追求简洁、精准修改和目标驱动等原则变为硬性编码准则，旨在对抗开发者习惯性&quot;先写再说&quot;的本能。目前大多数开发者尚未深入研读这一备受关注的效率指南。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://garymarcus.substack.com/p/checking-the-math-behind-openai-and" target="_blank" rel="noopener"><span class="item-num">09</span>核算OpenAI和Anthropic最新动态背后的数学</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">01:32</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">OpenAI与Anthropic近期相继发布重要产品更新。Claude 3.5 Sonnet在多项基准测试中超越GPT-4o，同时宣布API价格下调50%。Anthropic披露其模型训练成本年均增长约3.2倍，而OpenAI被曝已通过企业服务实现单季度超10亿美元营收。两家公司在技术突破与商业化竞赛中，正通过精密的成本核算与性能权衡重塑行业格局。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://www.tomtunguz.com/ai-model-inflation" target="_blank" rel="noopener"><span class="item-num">10</span>不可持续的补贴</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">三大AI厂商定价策略出现显著分化：Google的AI价格年增两倍，但其旗舰模型Gemini 3.1 Pro（输入2美元、输出12美元）仍是市场最低价；OpenAI的GPT-5.5（5美元/30美元）经历短期补贴后再次涨价；Anthropic的Claude Opus 4.7（5美元/25美元）价格保持稳定，且对最强模型有所下调。这些变动标志着行业正从不惜成本的市场份额争夺，转向注重利润与现金流管理的商业理性，以应对持续高昂的资本支出压力。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://claude.com/blog/using-claude-code-the-unreasonable-effectiveness-of-html" target="_blank" rel="noopener"><span class="item-num">11</span>Claude Code的HTML输出：非凡的有效性</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">05:45</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Claude Code团队正从Markdown转向HTML作为主要输出格式。Markdown虽简洁，但在信息密度、阅读性、分享和交互方面存在局限。HTML能支持表格、CSS样式、SVG图表和JavaScript交互，提供更清晰的视觉结构和高信息密度。由于HTML文件可通过浏览器直接打开和分享，便于团队协作审阅。Claude Code利用其广泛的上下文获取能力生成实用的HTML制品，适用于项目规划、文档编写和验证等多种场景，显著提升了AI生成内容的可读性与实用性。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/ClaudeDevs/status/2056835339193561170" target="_blank" rel="noopener"><span class="item-num">12</span>Claude实现真实界面操作的生产实践指南</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">04:32</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">计算机使用功能使Claude成为能够操作真实用户界面的智能体。
+
+新博客文章探讨如何在生产环境中确保其可靠性：包括提高点击准确性、选择思考努力级别、在长会话中保持上下文，以及记录Claude可重放的演示操作：
+
+https：//claude.com/blog/best-practices-for-computer-and-browser-use-with-claude</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://claude.com/blog/how-an-anthropic-sales-leader-uses-claude-cowork-to-run-a-4-000-account-book" target="_blank" rel="noopener"><span class="item-num">13</span>Anthropic销售负责人如何利用Claude Cowork管理4000个客户账户</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Anthropic美国中端市场业务负责人Travis Bryant利用Claude Cowork自动化销售管理工作。该工具帮助他高效完成客户倾向性评分、每日客户简报准备及每周销售预测报告生成，每晚自动处理4000个账户数据，替代了以往跨部门团队需数百小时完成的工作。通过自动化日常任务调度，他每天节省约90分钟，并将数据整合为可交互的销售仪表板，使其能更专注于客户沟通与战略决策。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/rohanpaul_ai/status/2056728566780547168" target="_blank" rel="noopener"><span class="item-num">14</span>AI代理集成新方案：Membrane推出单一技能连接万种API</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">21:27</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">AI代理在实际应用中需为每个外部服务重复构建集成逻辑，成为其发展的主要瓶颈。针对此问题，Membrane推出了一种通用&quot;技能&quot;解决方案。通过该单一技能，Claude Code、ChatGPT、Cursor等主流AI代理能够用一条指令调用超过10万个不同的API，涵盖从Stripe支付服务到NASA火星车数据等各类服务。这极大简化了开发流程，将定制化集成转变为通用的连接能力，降低了使用门槛。同时，Membrane正发起社区挑战，鼓励用户提交小众API以获得演示和免费额度激励，旨在持续扩展其连接生态。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://www.anthropic.com/news/widening-conversation-ai" target="_blank" rel="noopener"><span class="item-num">15</span>拓宽关于前沿AI的对话</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Anthropic为构建负责任的先进AI，正与全球多元群体展开对话。首轮讨论汇集了超过15个宗教、哲学及跨文化传统的学者与伦理学者，旨在为Claude等模型的道德形成与价值观对齐提供多元视角。受&quot;外部良知&quot;概念启发，团队开发并测试了伦理承诺提醒工具，初步实验显示其能有效降低模型不对齐行为。公司计划未来将对话拓展至法律、心理学及公民社会等领域，以共同应对AI对社会结构的重塑。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/ClaudeDevs/status/2056403446056784288" target="_blank" rel="noopener"><span class="item-num">16</span>Claude Code大规模部署最佳实践指南</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:56</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">在大规模运行Claude Code有哪些最佳实践？
+
+关于我们从团队在数百万行单体仓库、数十年历史的遗留系统和分布式微服务中运行的经验总结，新博客文章已发布：
+
+https：//claude.com/blog/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start</p>
+    </div>  </div>  <div class="section" style="--delay: 180ms">
+    <div class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> 产品发布<span class="count">14</span></div>
+    <div class="item">
+      <a class="item-title" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.149" target="_blank" rel="noopener"><span class="item-num">17</span>v2.1.149 更新摘要</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">06:09</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">本次 v2.1.149 更新包含功能增强、企业设置和多项修复。新增 `/usage` 命令的使用量分类显示功能，可区分技能、子代理、插件及每个 MCP 服务器的消耗；`/diff` 详情视图支持键盘滚动；Markdown 输出兼容 GFM 任务列表。企业版新增 `allowAllClaudeAiMcps` 设置以加载云 MCP 连接器。修复了 PowerShell 权限绕过、Git 工作树沙盒写入白名单越界、脚本路径含空格时 `otelHeadersHelper` 静默失败等安全问题。改进了 `/feedback` 报告，包含上下文压缩前的对话内容，便于排查长会话中的早期问题。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/ClaudeDevs/status/2057946803685974482" target="_blank" rel="noopener"><span class="item-num">18</span>Claude自动模式新增Pro计划与模型支持</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">06:08</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">自动模式的两项更新：
+
+· 现已在Pro计划中提供
+· 现已支持Sonnet 4.6，以及Opus 4.7
+
+按下Shift+tab，让Claude运行。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://claude.com/blog/how-our-partners-are-putting-opus-to-work-for-cybersecurity" target="_blank" rel="noopener"><span class="item-num">19</span>合作伙伴如何运用Opus强化网络安全</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">多家企业正利用Claude Opus模型强化网络安全防御。Wiz通过其Red Agent，每周对超过15万个生产资产进行持续渗透测试，发现数千个高风险漏洞且误报率为零。Palo Alto Networks在不到三周内完成了相当于一年的渗透测试工作量。埃森哲将安全测试覆盖率从约10%提升至80%以上，涉及1600个应用和50万+个API，扫描周期从3-5天缩短至1小时内。应用主要围绕三个方向：开展大规模攻击性测试、缩短漏洞发现与修复的间隔，以及将受控AI系统部署到生产环境。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://claude.com/blog/compliance-api-security-partners" target="_blank" rel="noopener"><span class="item-num">20</span>Claude现已支持更多安全合规工具</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">00:00</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Anthropic宣布为Claude企业版及平台新增28项安全与合规工具集成。这些集成均通过Claude Compliance API实现，允许企业安全团队统一获取Claude的对话内容与活动事件，从而将其纳入现有的DLP、SIEM等监控与合规流程。新增合作伙伴包括Cloudflare、CrowdStrike、Microsoft Purview等28家供应商，覆盖数据安全、身份验证等多个关键领域，帮助企业快速将Claude接入现有安全平台，实现跨组织工具的统一治理与可视化监控。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.145" target="_blank" rel="noopener"><span class="item-num">21</span>Claude Code v2.1.145版本更新</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">05:31</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">本次更新为Claude Code工具带来了多项功能增强与问题修复。新功能包括：新增JSON格式的会话列表命令以便脚本化操作，并在OTEL追踪中完善了Agent父子关系。插件浏览界面现可预览详细信息。在稳定性方面，修复了权限提示被绕过的安全问题、MCP参数校验错误、终端窗口调整后的显示冻结，以及非ASCII名称导致的API调用失败等问题。同时改进了Read工具的文件超限处理，并优化了任务列表排序和状态栏信息显示等交互细节，整体提升了工具的易用性与可靠性。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/ClaudeDevs/status/2056740346529468717" target="_blank" rel="noopener"><span class="item-num">22</span>Claude托管代理新增两项安全功能</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">22:14</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">我们为Claude Managed Agents增加了两项安全改进。
+自托管沙箱将代理的执行环境保留在您的基础设施或托管沙箱提供商处。
+MCP隧道让代理能够连接到您安全边界内的服务。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://blog.cloudflare.com/claude-managed-agents" target="_blank" rel="noopener"><span class="item-num">23</span>宣布Claude Managed Agents登陆Cloudflare</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">21:00</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Cloudflare宣布与Anthropic的Claude Managed Agents深度整合，提供快速、隔离的自主代码交付执行环境。该集成使开发者能够在全球范围内扩展代理工作流，同时严格控制私有后端访问权限，并支持灵活自定义代理工具及运行时配置。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://claude.com/blog/claude-managed-agents-updates" target="_blank" rel="noopener"><span class="item-num">24</span>Claude智能体托管平台新增自托管沙箱与MCP隧道功能</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">17:09</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Anthropic为其Claude智能体托管平台推出两项更新：自托管沙箱允许用户在自有基础设施或合作云平台上运行工具，确保敏感数据与服务保留在用户控制范围内；MCP隧道则通过轻量网关，使智能体能安全连接企业私有网络内的数据库与API，无需暴露于公网。目前沙箱功能已进入公测，隧道处于研究预览阶段。这两项更新进一步增强了企业用户对智能体执行环境与内部资源访问的安全管控能力。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/claudeai/status/2056645485696315581" target="_blank" rel="noopener"><span class="item-num">25</span>Claude推出自托管沙箱与MCP隧道功能</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">15:57</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">来自Code with Claude伦敦现场：我们正在Claude Managed Agents中推出自托管沙箱（公测版）和MCP隧道（研究预览版）。
+在您自己的安全边界内运行代理，默认应用您的安全控制。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.144" target="_blank" rel="noopener"><span class="item-num">26</span>Claude AI助手v2.1.144版本更新</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:48</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Claude AI助手发布了v2.1.144版本。此次更新主要新增了对后台会话的`/resume`支持，并将&quot;extra usage&quot;更名为&quot;usage credits&quot;。同时包含了多项重要修复：优化了网络异常处理，解决启动卡顿问题；修复了窗口大小调整和长时间会话导致的终端显示错乱；解决了macOS特定文件夹下的崩溃问题。此外，还改进了模型选择持久化、文件读取、工具调用以及MCP服务器分页工具列表的处理，并减少了在VS Code中的渲染故障。本次更新显著提升了工具的稳定性和用户体验。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/claudeai/status/2056460045756309820" target="_blank" rel="noopener"><span class="item-num">27</span>Claude Design 全面升级创作能力</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">03:40</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">现在你可以用 Claude Design 创作更多内容了。
+我们已将所有套餐的 token 限制翻倍。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/ClaudeDevs/status/2056454359685476491" target="_blank" rel="noopener"><span class="item-num">28</span>Claude Code快速模式默认切换至Opus 4.7</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">03:18</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">Claude Code的快速模式现已默认使用Opus 4.7。
+今天就试试 /fast</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/ClaudeDevs/status/2056434422229123106" target="_blank" rel="noopener"><span class="item-num">29</span>Claude控制台新增提示缓存诊断功能</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">01:59</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">提示缓存诊断现已在Claude控制台上线。
+当请求未命中缓存时，您现在可以准确查看提示的哪一部分发生了变化，以及这消耗了多少令牌。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://huggingface.co/blog/ibm-research/open-agent-leaderboard" target="_blank" rel="noopener"><span class="item-num">30</span>The Open Agent Leaderboard（开放智能体排行榜）</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">22:12</span>
+        <span class="item-category">产品发布</span>
+      </div>
+      <p class="item-summary">IBM Research在Hugging Face平台发布博客文章，公布了&quot;开放智能体排行榜&quot;基准测试框架。该排行榜旨在系统化评估不同智能体（Agent）在多项任务中的综合表现，涵盖语言理解、工具调用、多步推理等能力。通过公开透明的评测标准与数据集，该框架为开发者对比各类智能体模型（如LLaMA、Claude等）的性能提供了统一基准，旨在推动智能体技术的标准化评估与协同发展。</p>
+    </div>  </div>
+  <footer class="footer">
+    <span>来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener">AI HOT</a></span>
+    <span>生成 11:53 &middot; 共 30 条 &middot; 精选</span>
+  </footer>
+</div>
+<div class="footer-glow"></div>
+<script>
+(function() {
+  var h = new Date().getHours();
+  var labels = {'morning':'清晨模式','day':'日间模式','evening':'傍晚模式','night':'夜间模式'};
+  var lightThemes = ['morning','day'];
+  var autoTheme;
+  if (h >= 6 && h < 10)       autoTheme = 'morning';
+  else if (h >= 10 && h < 17) autoTheme = 'day';
+  else if (h >= 17 && h < 21) autoTheme = 'evening';
+  else                         autoTheme = 'night';
+  var current = autoTheme;
+  document.documentElement.setAttribute('data-theme', current);
+  var themeEl = document.getElementById('themeLabel');
+  if (themeEl) {
+    themeEl.textContent = labels[current] || 'AI DAILY';
+    themeEl.addEventListener('click', function() {
+      current = (lightThemes.indexOf(current) >= 0) ? 'night' : 'day';
+      document.documentElement.setAttribute('data-theme', current);
+      themeEl.textContent = labels[current] || 'AI DAILY';
+    });
+  }
+
+  // ---- 搜索过滤 ----
+  var searchInput = document.getElementById('searchInput');
+  var searchHint  = document.getElementById('searchHint');
+  var sections = document.querySelectorAll('.section');
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      var q = this.value.trim().toLowerCase();
+      var totalVisible = 0;
+      sections.forEach(function(sec) {
+        var items = sec.querySelectorAll('.item');
+        var secVisible = 0;
+        items.forEach(function(item) {
+          var text = (item.textContent || '').toLowerCase();
+          var match = !q || text.indexOf(q) >= 0;
+          item.classList.toggle('hidden', !match);
+          if (match) secVisible++;
+        });
+        sec.classList.toggle('hidden', secVisible === 0);
+        totalVisible += secVisible;
+      });
+      if (q) {
+        searchHint.textContent = '匹配 ' + totalVisible + ' 条';
+        searchHint.classList.add('show');
+      } else {
+        searchHint.classList.remove('show');
+      }
+    });
+  }
+
+  function tick() {
+    var now = new Date();
+    var clock = document.getElementById('liveClock');
+    if (clock) clock.textContent =
+      (now.getHours()<10?'0':'')+now.getHours()+':'+
+      (now.getMinutes()<10?'0':'')+now.getMinutes()+':'+
+      (now.getSeconds()<10?'0':'')+now.getSeconds();
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
+</body>
+</html>
