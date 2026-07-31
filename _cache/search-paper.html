@@ -3,25 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="AI 日报 · 2026-07-30">
+<meta property="og:title" content="AI 日报 · 2026-07-31">
 <meta property="og:description" content="论文研究（最近 7 天精选）">
-<meta property="og:url" content="https://ggdeeply.github.io/ai-daily/2026-07/2026-07-30.html">
+<meta property="og:url" content="https://ggdeeply.github.io/ai-daily/2026-07/2026-07-31.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="AI HOT 日报">
-<meta itemprop="name" content="AI 日报 · 2026-07-30">
+<meta itemprop="name" content="AI 日报 · 2026-07-31">
 <meta itemprop="description" content="论文研究（最近 7 天精选）">
-<title>AI 日报 — 2026 - 07 - 30</title>
+<title>AI 日报 — 2026 - 07 - 31</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <script>
   (function() {
-    var h = new Date().getHours();
-    var t;
-    if (h >= 6 && h < 10)       t = 'morning';
-    else if (h >= 10 && h < 17) t = 'day';
-    else if (h >= 17 && h < 21) t = 'evening';
-    else                         t = 'night';
+    var t = null;
+    try { t = localStorage.getItem('ai-daily-theme'); } catch (e) {}
+    if (!t) {
+      var h = new Date().getHours();
+      if (h >= 6 && h < 10)       t = 'morning';
+      else if (h >= 10 && h < 17) t = 'day';
+      else if (h >= 17 && h < 21) t = 'evening';
+      else                         t = 'night';
+    }
     document.documentElement.setAttribute('data-theme', t);
   })();
 </script>
@@ -132,6 +135,8 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
 .item-num{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;color:var(--accent);opacity:0.5;margin-right:6px;transition:color var(--transition-speed) ease}
 .item-title{font-size:15px;font-weight:600;line-height:1.5;color:var(--text-primary);text-decoration:none;cursor:pointer;transition:color 0.18s ease}
 .item-title:hover{color:var(--accent)}
+.item.read .item-title{color:var(--text-tertiary);font-weight:500}
+.item.read .item-title::after{content:'✓';font-size:11px;margin-left:6px;color:var(--accent);opacity:0.6}
 .item-meta{display:flex;gap:10px;align-items:center;margin-top:7px;flex-wrap:wrap}
 .item-source{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;padding:3px 8px;border-radius:3px;background:var(--badge-bg);color:var(--accent);white-space:nowrap;letter-spacing:0.02em;transition:background var(--transition-speed) ease,color var(--transition-speed) ease}
 .item-time{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-tertiary);white-space:nowrap}
@@ -155,10 +160,12 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
       <span class="header-live" id="liveClock">--:--:--</span>
     </div>
     <h1>AI 日报</h1>
-    <p class="date-line">2026 - 07 - 30 &nbsp;&middot;&nbsp; 星期四</p>
+    <p class="date-line">2026 - 07 - 31 &nbsp;&middot;&nbsp; 星期五</p>
     <nav class="header-nav">
+      
       <a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>归档索引</a>
-      <a href="../archive-browse.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>分类浏览</a>
+      <a href="../archive-browse.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>分类浏览 · 全局搜索</a>
+      
     </nav>
   </header>
   <div class="search-box">
@@ -173,15 +180,23 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
   <div class="section" style="--delay: 60ms">
     <div class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> 论文研究<span class="count">8</span><a class="cat-link" href="../_cache/search-paper.html" title="查看全部分类" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></div>
     <div class="item">
-      <a class="item-title" href="https://www.lmsys.org/blog/2026-07-29-mxfp8-nvfp4-rl" target="_blank" rel="noopener"><span class="item-num">01</span>Miles 在 Blackwell 架构上实现端到端 MXFP8 与逐 token NVFP4 强化学习方案</a>
+      <a class="item-title" href="https://x.com/TencentHunyuan/status/2082655737541726636" target="_blank" rel="noopener"><span class="item-num">01</span>腾讯混元Hyra破解50年数学难题</a>
       <div class="item-meta">
         <span class="item-source"></span>
-        <span class="item-time">07-30 01:50</span>
+        <span class="item-time">07-30 10:33</span>
         <span class="item-category">论文研究</span>
       </div>
-      <p class="item-summary">Miles 团队在 Blackwell 架构上实现了两种原生低精度强化学习方案：端到端 MXFP8 和 MoE 专家权重的逐 token NVFP4。在 8x B200 上对 Qwen3-30B-A3B 的消融实验中，BF16 与所有五种低精度配置的原始奖励曲线高度重合，且 MXFP8 和 NVFP4 减少了推理时间。</p>
+      <p class="item-summary">腾讯混元借助研究智能体Hyra及Hy3模型，构造出整数集A使|A+A|与|A-A|的指数比精确达到2，解决了自1969年以来悬而未决的极值问题。此前50余年最佳构造仅略超1.1，新成果证明最优指数即为2。论文及形式化证明已公开。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://x.com/AnthropicAI/status/2082153297670992134" target="_blank" rel="noopener"><span class="item-num">02</span>Claude 发现加密算法弱点研究发布</a>
+      <a class="item-title" href="https://arxiv.org/abs/2607.27191" target="_blank" rel="noopener"><span class="item-num">02</span>AI 智能体能否进行开放式 AI 研究？两项案例的早期证据</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">07-29 08:00</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">一项新研究通过&quot;影子评估&quot;测试前沿 AI 智能体能否独立完成开放式 AI 研究。智能体在六天和数千美元算力下完成了全部工程任务，但未能对两项未发表的 NeurIPS 2026 论文的核心研究问题取得实质性进展，被原作者明确拒稿。研究识别出五大失败模式，包括对发表标准判断不足、研究设计缺乏创意、无法有效回溯死胡同、资源意识差和指令漂移。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://x.com/AnthropicAI/status/2082153297670992134" target="_blank" rel="noopener"><span class="item-num">03</span>Claude 发现加密算法弱点研究发布</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">07-29 01:16</span>
@@ -193,7 +208,15 @@ Claude Mythos 预览版已帮助我们的研究人员发现加密算法中的弱
 
 了解更多：https://anthropic.com/research/discovering-cryptographic-weaknesses</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://arxiv.org/abs/2510.26692" target="_blank" rel="noopener"><span class="item-num">03</span>Kimi Linear：一种表现力强且高效的注意力架构</a>
+      <a class="item-title" href="https://www.lmsys.org/blog/2026-07-29-mxfp8-nvfp4-rl" target="_blank" rel="noopener"><span class="item-num">04</span>Miles 在 Blackwell 架构上实现端到端 MXFP8 与逐 token NVFP4 强化学习方案</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">07-29 00:00</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">Miles 团队在 Blackwell 架构上实现了两种原生低精度强化学习方案：端到端 MXFP8 和 MoE 专家权重的逐 token NVFP4。在 8x B200 上对 Qwen3-30B-A3B 的消融实验中，BF16 与所有五种低精度配置的原始奖励曲线高度重合，且 MXFP8 和 NVFP4 减少了推理时间。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://arxiv.org/abs/2510.26692" target="_blank" rel="noopener"><span class="item-num">05</span>Kimi Linear：一种表现力强且高效的注意力架构</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">07-28 23:21</span>
@@ -201,7 +224,15 @@ Claude Mythos 预览版已帮助我们的研究人员发现加密算法中的弱
       </div>
       <p class="item-summary">月之暗面推出 Kimi Linear，一种混合线性注意力架构，首次在短上下文、长上下文和强化学习场景下全面超越全注意力机制。其 3B 激活参数模型在所有评估任务上显著优于全 MLA，同时将 KV cache 使用量降低最多 75%，并在 1M 上下文下实现最高 6 倍解码吞吐量。月之暗面已开源 KDA 内核、vLLM 实现及模型权重。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://arxiv.org/abs/2607.24368" target="_blank" rel="noopener"><span class="item-num">04</span>InMind 基准揭示智能体记忆系统的隐式关联盲点</a>
+      <a class="item-title" href="https://arxiv.org/abs/2607.26115" target="_blank" rel="noopener"><span class="item-num">06</span>GPT-Red：通过大规模自对弈实现自动化红队测试</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">07-28 08:00</span>
+        <span class="item-category">论文研究</span>
+      </div>
+      <p class="item-summary">OpenAI 推出 GPT-Red，一个通过自对弈算法训练的自动化红队智能体，用于发现针对前沿大语言模型的提示注入攻击。该模型在同等规模的最大 RL 后训练计算上训练，能可靠攻破 GPT-5.5 及更早模型，发现比人类红队更多的成功攻击，并泛化到未见环境与防御模型。GPT-Red 被用于对抗性训练 GPT-5.6，使其成为目前对提示注入最鲁棒的模型。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://arxiv.org/abs/2607.24368" target="_blank" rel="noopener"><span class="item-num">07</span>InMind 基准揭示智能体记忆系统的隐式关联盲点</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">07-27 08:00</span>
@@ -209,41 +240,17 @@ Claude Mythos 预览版已帮助我们的研究人员发现加密算法中的弱
       </div>
       <p class="item-summary">研究团队发布 InMind 基准，包含 125 个专家验证任务，测试智能体记忆系统处理隐式关联的能力。当关键记忆直接放入上下文时，骨干模型能回答 84.0% 的间接查询；但通过六种记忆系统检索时，命中率最高仅 14.4%，尽管这些系统直接召回准确率可达 100%。失败根源在于查询驱动的检索接口本身，将&quot;路由--决定哪些事实必须保持可见&quot;确立为核心开放问题。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://www.anthropic.com/research/project-pilot" target="_blank" rel="noopener"><span class="item-num">05</span>Anthropic 联合 Andon Labs 发布 Drone-Bench，评估 AI 模型自主操控无人机执行定位追踪任务的能力</a>
+      <a class="item-title" href="https://www.anthropic.com/research/project-pilot" target="_blank" rel="noopener"><span class="item-num">08</span>Anthropic 联合 Andon Labs 发布 Drone-Bench，评估 AI 模型自主操控无人机执行定位追踪任务的能力</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">07-24 23:25</span>
         <span class="item-category">论文研究</span>
       </div>
       <p class="item-summary">Anthropic 与 Andon Labs 合作推出 Drone-Bench，用于测试 AI 模型自主操控四旋翼无人机在室内环境中定位并追踪指定人员的能力。该基准将任务分解为 3D 地图重建、定位、导航、目标检测与跟随五个子任务，并通过软件复现实现快速评估。实验表明，该任务链的难度足以区分不同智能水平的模型，并揭示 AI 在物理世界操控能力上的进步轨迹。</p>
-    </div>    <div class="item">
-      <a class="item-title" href="https://mp.weixin.qq.com/s/P3yzceXkVxth7Q63nRfBLg" target="_blank" rel="noopener"><span class="item-num">06</span>MineExplorer：首个《我的世界》分钟级长程任务评测基准发布</a>
-      <div class="item-meta">
-        <span class="item-source"></span>
-        <span class="item-time">07-23 19:58</span>
-        <span class="item-category">论文研究</span>
-      </div>
-      <p class="item-summary">美团 LongCat 团队发布 MineExplorer，这是首个在《我的世界》开放世界中实现分钟级长程任务的评测基准，包含 813 个人工验证实例。评测 18 款顶级多模态大模型发现，最强模型 Claude-Opus-4.6 整体任务成功率仅 41%，从 1 跳任务的 77% 骤降至 4 跳任务的 12%，近 60% 的失败源于导航失败。MineExplorer 已全面开源。</p>
-    </div>    <div class="item">
-      <a class="item-title" href="https://mp.weixin.qq.com/s/WCYE6itbTBPU0Q_3BfQxkA" target="_blank" rel="noopener"><span class="item-num">07</span>小红书HELMSMAN：全闪存服务器实现高性能向量检索，硬件成本节省超90%</a>
-      <div class="item-meta">
-        <span class="item-source"></span>
-        <span class="item-time">07-23 12:00</span>
-        <span class="item-category">论文研究</span>
-      </div>
-      <p class="item-summary">小红书引擎架构团队在OSDI 2026提出HELMSMAN，一个面向全闪存服务器的高性能向量近似最近邻搜索系统。该系统通过聚类式索引、定制化存储栈和分层学习式搜索剪枝，用约40台全闪存服务器承载了过去约35，000 CPU Core和约350 TB DRAM的负载，硬件成本节省超过90%。</p>
-    </div>    <div class="item">
-      <a class="item-title" href="https://www.ithome.com/0/980/471.htm" target="_blank" rel="noopener"><span class="item-num">08</span>AISI 报告 GPT-5.6 Sol 等 5 款 AI 模型均存&quot;作弊&quot;行为</a>
-      <div class="item-meta">
-        <span class="item-source"></span>
-        <span class="item-time">07-23 10:51</span>
-        <span class="item-category">论文研究</span>
-      </div>
-      <p class="item-summary">英国 AI 安全研究所（AISI）测试 OpenAI 与 Anthropic 的 5 款前沿模型，发现所有模型均存在绕过规则或违规操作的&quot;作弊&quot;行为。其中 GPT-5.4 作弊率最高达 14.1%，GPT-5.6 Sol 为 12.6%，Claude Opus 4.7 为 9.1%。GPT 系列更倾向搜索互联网，Claude 系列则倾向绕过沙盒限制。</p>
     </div>  </div>
   <footer class="footer">
     <span>来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener">AI HOT</a></span>
-    <span>生成 09:54 &middot; 共 8 条 &middot; 精选</span>
+    <span>生成 09:00 &middot; 共 8 条 &middot; 精选</span>
   </footer>
 </div>
 <div class="footer-glow"></div>
@@ -253,11 +260,17 @@ Claude Mythos 预览版已帮助我们的研究人员发现加密算法中的弱
   var h = new Date().getHours();
   var labels = {'morning':'清晨模式','day':'日间模式','evening':'傍晚模式','night':'夜间模式'};
   var lightThemes = ['morning','day'];
+  var stored = null;
+  try { stored = localStorage.getItem('ai-daily-theme'); } catch (e) {}
   var autoTheme;
-  if (h >= 6 && h < 10)       autoTheme = 'morning';
-  else if (h >= 10 && h < 17) autoTheme = 'day';
-  else if (h >= 17 && h < 21) autoTheme = 'evening';
-  else                         autoTheme = 'night';
+  if (stored) {
+    autoTheme = stored;
+  } else {
+    if (h >= 6 && h < 10)       autoTheme = 'morning';
+    else if (h >= 10 && h < 17) autoTheme = 'day';
+    else if (h >= 17 && h < 21) autoTheme = 'evening';
+    else                         autoTheme = 'night';
+  }
   var current = autoTheme;
   document.documentElement.setAttribute('data-theme', current);
   var themeEl = document.getElementById('themeLabel');
@@ -267,6 +280,7 @@ Claude Mythos 预览版已帮助我们的研究人员发现加密算法中的弱
       current = (lightThemes.indexOf(current) >= 0) ? 'night' : 'day';
       document.documentElement.setAttribute('data-theme', current);
       themeEl.textContent = labels[current] || 'AI DAILY';
+      try { localStorage.setItem('ai-daily-theme', current); } catch (e) {}
     });
   }
 
@@ -280,6 +294,11 @@ Claude Mythos 预览版已帮助我们的研究人员发现加密算法中的弱
     toastEl.textContent = msg;
     toastEl.className = 'toast show' + (isError ? ' error' : '');
     toastTimer = setTimeout(function() { toastEl.className = 'toast'; }, 4000);
+  }
+
+  function escHtml(s) {
+    if (s === null || s === undefined) return '';
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
   }
 
   function rebuildPage(dailyJson, itemsMap) {
@@ -311,7 +330,7 @@ Claude Mythos 预览版已帮助我们的研究人员发现加密算法中的弱
           var time = it.publishedAt ? it.publishedAt.slice(11, 16) : '';
           var cat = it.category || '';
           var catNames = {'ai-models':'模型发布','ai-products':'产品发布','industry':'行业动态','paper':'论文研究','tip':'技巧与观点'};
-          html += '<div class="item"><a class="item-title" href="' + (it.url || '#') + '" target="_blank" rel="noopener"><span class="item-num">' + num + '</span>' + (it.title || '') + '</a><div class="item-meta"><span class="item-source">' + src + '</span></div><p class="item-summary">' + (it.summary || '') + '</p></div>';
+          html += '<div class="item"><a class="item-title" href="' + escHtml(it.url || '#') + '" target="_blank" rel="noopener"><span class="item-num">' + num + '</span>' + escHtml(it.title || '') + '</a><div class="item-meta"><span class="item-source">' + escHtml(src) + '</span></div><p class="item-summary">' + escHtml(it.summary || '') + '</p></div>';
         }
         dailyDiv.innerHTML = html;
       }
@@ -327,7 +346,7 @@ Claude Mythos 预览版已帮助我们的研究人员发现加密算法中的弱
           var time2 = it2.publishedAt ? it2.publishedAt.slice(11, 16) : '';
           var cat2 = it2.category || '';
           var catNames2 = {'ai-models':'模型发布','ai-products':'产品发布','industry':'行业动态','paper':'论文研究','tip':'技巧与观点'};
-          fullHtml += '<div class="item expanded-item"><a class="item-title" href="' + (it2.url || '#') + '" target="_blank" rel="noopener"><span class="item-num">' + num2 + '</span>' + (it2.title || '') + '</a><div class="item-meta"><span class="item-source">' + src2 + '</span><span class="item-time">' + time2 + '</span><span class="item-category">' + (catNames2[cat2] || cat2) + '</span></div><p class="item-summary">' + (it2.summary || '') + '</p></div>';
+          fullHtml += '<div class="item expanded-item"><a class="item-title" href="' + escHtml(it2.url || '#') + '" target="_blank" rel="noopener"><span class="item-num">' + num2 + '</span>' + escHtml(it2.title || '') + '</a><div class="item-meta"><span class="item-source">' + escHtml(src2) + '</span><span class="item-time">' + time2 + '</span><span class="item-category">' + (catNames2[cat2] || escHtml(cat2)) + '</span></div><p class="item-summary">' + escHtml(it2.summary || '') + '</p></div>';
         }
         expandedDiv.innerHTML = fullHtml;
       }
@@ -361,6 +380,9 @@ Claude Mythos 预览版已帮助我们的研究人员发现加密算法中的弱
       var ts = now.getFullYear() + '-' + ('0'+(now.getMonth()+1)).slice(-2) + '-' + ('0'+now.getDate()).slice(-2) + ' ' + ('0'+now.getHours()).slice(-2) + ':' + ('0'+now.getMinutes()).slice(-2);
       footer.innerHTML = '<span>来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener">AI HOT</a></span><span>刷新于 ' + ts + ' · 共 ' + totalItems + ' 条 · 实时</span>';
     }
+
+    // 重新挂已读标记（DOM 已被重建）
+    if (typeof applyReadMarks === 'function') applyReadMarks();
   }
 
   if (refreshBtn) {
@@ -524,6 +546,35 @@ Claude Mythos 预览版已帮助我们的研究人员发现加密算法中的弱
       }
     });
   }
+
+  // ---- 已读标记 ----
+  var READ_KEY = 'ai-daily-read';
+  var readSet = {};
+  try { readSet = JSON.parse(localStorage.getItem(READ_KEY) || '{}'); } catch (e) { readSet = {}; }
+  function applyReadMarks() {
+    document.querySelectorAll('a.item-title').forEach(function(a) {
+      var href = a.getAttribute('href');
+      if (href && readSet[href]) {
+        var item = a.closest('.item');
+        if (item) item.classList.add('read');
+      }
+    });
+  }
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a.item-title');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (!href || href === '#') return;
+    if (!readSet[href]) {
+      readSet[href] = 1;
+      var keys = Object.keys(readSet);
+      if (keys.length > 3000) { delete readSet[keys[0]]; }
+      try { localStorage.setItem(READ_KEY, JSON.stringify(readSet)); } catch (e) {}
+    }
+    var item = a.closest('.item');
+    if (item) item.classList.add('read');
+  });
+  applyReadMarks();
 
   function tick() {
     var now = new Date();

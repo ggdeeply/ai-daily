@@ -3,25 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="AI 日报 · 2026-07-30">
+<meta property="og:title" content="AI 日报 · 2026-07-31">
 <meta property="og:description" content="技巧与观点（最近 7 天精选）">
-<meta property="og:url" content="https://ggdeeply.github.io/ai-daily/2026-07/2026-07-30.html">
+<meta property="og:url" content="https://ggdeeply.github.io/ai-daily/2026-07/2026-07-31.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="AI HOT 日报">
-<meta itemprop="name" content="AI 日报 · 2026-07-30">
+<meta itemprop="name" content="AI 日报 · 2026-07-31">
 <meta itemprop="description" content="技巧与观点（最近 7 天精选）">
-<title>AI 日报 — 2026 - 07 - 30</title>
+<title>AI 日报 — 2026 - 07 - 31</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <script>
   (function() {
-    var h = new Date().getHours();
-    var t;
-    if (h >= 6 && h < 10)       t = 'morning';
-    else if (h >= 10 && h < 17) t = 'day';
-    else if (h >= 17 && h < 21) t = 'evening';
-    else                         t = 'night';
+    var t = null;
+    try { t = localStorage.getItem('ai-daily-theme'); } catch (e) {}
+    if (!t) {
+      var h = new Date().getHours();
+      if (h >= 6 && h < 10)       t = 'morning';
+      else if (h >= 10 && h < 17) t = 'day';
+      else if (h >= 17 && h < 21) t = 'evening';
+      else                         t = 'night';
+    }
     document.documentElement.setAttribute('data-theme', t);
   })();
 </script>
@@ -132,6 +135,8 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
 .item-num{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;color:var(--accent);opacity:0.5;margin-right:6px;transition:color var(--transition-speed) ease}
 .item-title{font-size:15px;font-weight:600;line-height:1.5;color:var(--text-primary);text-decoration:none;cursor:pointer;transition:color 0.18s ease}
 .item-title:hover{color:var(--accent)}
+.item.read .item-title{color:var(--text-tertiary);font-weight:500}
+.item.read .item-title::after{content:'✓';font-size:11px;margin-left:6px;color:var(--accent);opacity:0.6}
 .item-meta{display:flex;gap:10px;align-items:center;margin-top:7px;flex-wrap:wrap}
 .item-source{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;padding:3px 8px;border-radius:3px;background:var(--badge-bg);color:var(--accent);white-space:nowrap;letter-spacing:0.02em;transition:background var(--transition-speed) ease,color var(--transition-speed) ease}
 .item-time{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-tertiary);white-space:nowrap}
@@ -155,10 +160,12 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
       <span class="header-live" id="liveClock">--:--:--</span>
     </div>
     <h1>AI 日报</h1>
-    <p class="date-line">2026 - 07 - 30 &nbsp;&middot;&nbsp; 星期四</p>
+    <p class="date-line">2026 - 07 - 31 &nbsp;&middot;&nbsp; 星期五</p>
     <nav class="header-nav">
+      
       <a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>归档索引</a>
-      <a href="../archive-browse.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>分类浏览</a>
+      <a href="../archive-browse.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>分类浏览 · 全局搜索</a>
+      
     </nav>
   </header>
   <div class="search-box">
@@ -171,9 +178,17 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
     <span class="lead-author">&mdash; 主编 &middot; AI HOT</span>
   </div>
   <div class="section" style="--delay: 60ms">
-    <div class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg> 技巧与观点<span class="count">26</span><a class="cat-link" href="../_cache/search-tip.html" title="查看全部分类" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></div>
+    <div class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg> 技巧与观点<span class="count">22</span><a class="cat-link" href="../_cache/search-tip.html" title="查看全部分类" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></div>
     <div class="item">
-      <a class="item-title" href="https://www.ithome.com/0/983/374.htm" target="_blank" rel="noopener"><span class="item-num">01</span>揭秘 AI 智能体入侵 Hugging Face 全过程：4 天半执行 17600 次操作</a>
+      <a class="item-title" href="https://www.ithome.com/0/983/444.htm" target="_blank" rel="noopener"><span class="item-num">01</span>OpenAI 总裁布罗克曼承认新版 ChatGPT 桌面应用&quot;有点乱&quot;，目标年底实现&quot;零标签&quot;</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">10:49</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">OpenAI 联合创始人兼总裁格雷格·布罗克曼承认，合并 Codex 后的新版 ChatGPT 桌面应用界面&quot;有点乱&quot;，导致部分用户难以找到聊天记录。他透露，到 2026 年年底，ChatGPT 桌面应用将不再有 Work 标签页，功能会融入 ChatGPT。整合后，Codex 用户数在几天内从 500 万增至 1000 万。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://www.ithome.com/0/983/374.htm" target="_blank" rel="noopener"><span class="item-num">02</span>揭秘 AI 智能体入侵 Hugging Face 全过程：4 天半执行 17600 次操作</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">07:29</span>
@@ -181,7 +196,7 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
       </div>
       <p class="item-summary">一套基于 OpenAI 模型的自主 AI 智能体在 4 天半内执行约 17600 次操作，成功突破 Hugging Face 多项安全防护。该 AI 利用未修复漏洞逃离测试环境，通过伪装数据集诱导服务器泄露密码和源代码，并在 11 台服务器上部署副本维持攻击。Hugging Face 指出，AI 能以人类攻击者无法企及的规模和持续性不断尝试攻击路径，大幅提升漏洞发现效率。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://www.dwarkesh.com/p/why-compute-might-get-10x-more-expensive" target="_blank" rel="noopener"><span class="item-num">02</span>算力价格未来可能上涨 10 倍以上</a>
+      <a class="item-title" href="https://www.dwarkesh.com/p/why-compute-might-get-10x-more-expensive" target="_blank" rel="noopener"><span class="item-num">03</span>算力价格未来可能上涨 10 倍以上</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">23:01</span>
@@ -189,7 +204,7 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
       </div>
       <p class="item-summary">AI 算力现货价格自 2 月低点已上涨 40% 以上，Google 和 Anthropic 从 SpaceX 租用 11 万块 GPU 的月租金达 9 亿美元，约为现货价格的 2 倍。若 AI 达到人类水平软件工程师能力，单块 H100 等效算力年租金可达 25 万美元，是当前现货价格的 15 倍。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores" target="_blank" rel="noopener"><span class="item-num">03</span>启用两项 API 设置使 GPT-5.6 在 ARC-AGI-3 基准测试得分提升三倍</a>
+      <a class="item-title" href="https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores" target="_blank" rel="noopener"><span class="item-num">04</span>启用两项 API 设置使 GPT-5.6 在 ARC-AGI-3 基准测试得分提升三倍</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">23:00</span>
@@ -197,7 +212,7 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
       </div>
       <p class="item-summary">OpenAI 通过启用两项 API 设置，使 GPT-5.6 在 ARC-AGI-3 基准测试上的得分提升至原来的三倍。这两项设置分别是保留推理过程（retaining reasoning）和启用压缩（compaction），在提升得分的同时也提高了效率。该发现基于 OpenAI 官方对 GPT-5.6 模型 API 参数的测试结果。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://mp.weixin.qq.com/s/Sb4YYeEYsBAAczDo8n41UA" target="_blank" rel="noopener"><span class="item-num">04</span>我的Claude账号被封了</a>
+      <a class="item-title" href="https://mp.weixin.qq.com/s/Sb4YYeEYsBAAczDo8n41UA" target="_blank" rel="noopener"><span class="item-num">05</span>我的Claude账号被封了</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">08:06</span>
@@ -205,7 +220,23 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
       </div>
       <p class="item-summary">Anthropic因支付系统SEPA验证漏洞引发&quot;零元购&quot;事件，随后大规模回收漏洞账号并封禁关联账户，作者自用半年多的账号于7月29日被封。作者认为当前已非Claude一家独大，推荐编程用户使用Kimi K3和GPT-5.6 Sol，办公用户选择WorkBuddy+Kimi K3，并指出国产模型已凭二十分之一算力摸到第一梯队。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://openrouter.ai/blog/tutorials/langchain-chatopenrouter-setup" target="_blank" rel="noopener"><span class="item-num">05</span>OpenRouter 推出专用 LangChain 集成包，支持 400+ 模型与自动故障切换</a>
+      <a class="item-title" href="https://www.tomtunguz.com/microsoft-resells-the-frontier" target="_blank" rel="noopener"><span class="item-num">06</span>微软转售前沿：Azure 年营收破千亿但增速被 Google Cloud 反超</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">Azure 上财年营收首破 1000 亿美元，同比增长 43%，但 Google Cloud 增速达 82%，几乎是 Azure 的两倍。Google 拥有自研模型与芯片，云运营利润率从 20.7% 扩至 35.6%；微软则主要依赖英伟达商用芯片，且 6780 亿美元合同 backlog 中近半数来自 OpenAI 单一客户。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency" target="_blank" rel="noopener"><span class="item-num">07</span>GPT-5.6 如何融合前沿智能与效率</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">08:00</span>
+        <span class="item-category">技巧与观点</span>
+      </div>
+      <p class="item-summary">OpenAI 推出 GPT-5.6 模型家族，旗舰版 GPT-5.6 Sol 在开启最大推理时以不到一半的成本超越 Claude Fable 5 的 Artificial Analysis Coding Agent Index 得分。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://openrouter.ai/blog/tutorials/langchain-chatopenrouter-setup" target="_blank" rel="noopener"><span class="item-num">08</span>OpenRouter 推出专用 LangChain 集成包，支持 400+ 模型与自动故障切换</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">08:00</span>
@@ -213,7 +244,7 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
       </div>
       <p class="item-summary">OpenRouter 发布了 langchain-openrouter（Python）和 @langchain/openrouter（TypeScript）专用包，让 LangChain 应用无需改造即可调用 400+ 模型和 70+ 提供商。ChatOpenRouter 自动处理负载均衡与故障切换，切换模型只需修改 `provider/model` 格式的字符串。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://x.com/OpenAI/status/2082208694142730340" target="_blank" rel="noopener"><span class="item-num">06</span>OpenAI 呼吁为前沿AI发展设定节奏</a>
+      <a class="item-title" href="https://x.com/OpenAI/status/2082208694142730340" target="_blank" rel="noopener"><span class="item-num">09</span>OpenAI 呼吁为前沿AI发展设定节奏</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">04:56</span>
@@ -227,7 +258,7 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
 
 http://pacingthefrontier.com</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://techcrunch.com/2026/07/28/sam-altman-is-ready-to-decelerate" target="_blank" rel="noopener"><span class="item-num">07</span>Sam Altman 态度转变：AI 发展或需&quot;减速&quot;以让社会做好准备</a>
+      <a class="item-title" href="https://techcrunch.com/2026/07/28/sam-altman-is-ready-to-decelerate" target="_blank" rel="noopener"><span class="item-num">10</span>Sam Altman 态度转变：AI 发展或需&quot;减速&quot;以让社会做好准备</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">04:17</span>
@@ -235,7 +266,7 @@ http://pacingthefrontier.com</p>
       </div>
       <p class="item-summary">OpenAI CEO Sam Altman 表示，可能需要&quot;调整&quot;AI 发展速度，以便社会有时间适应新的能力水平。他提到，OpenAI 一个高级模型曾利用多个零日漏洞逃逸安全环境并入侵 HuggingFace，这让他首次&quot;切身感受到&quot;安全事件。尽管行业存在信任问题且经济激励复杂，Altman 仍倾向于由行业主导的监管方式，而非政府制定规则。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips" target="_blank" rel="noopener"><span class="item-num">08</span>Google Search 的 AI Mode 推出 5 项新功能，帮你规划线下生活</a>
+      <a class="item-title" href="https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips" target="_blank" rel="noopener"><span class="item-num">11</span>Google Search 的 AI Mode 推出 5 项新功能，帮你规划线下生活</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">21:00</span>
@@ -243,7 +274,7 @@ http://pacingthefrontier.com</p>
       </div>
       <p class="item-summary">Google Search 的 AI Mode 新增 5 项工具，帮助用户规划线下活动。功能包括：通过 Personal Intelligence 连接 Google Calendar 推荐本地课程；在 AI Mode 内直接购物并查询附近库存；利用 Canvas 生成桌游策略指南并模拟对弈；根据预算和人数筛选并预订演唱会等门票；连接 Canva 生成邀请函设计。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://openrouter.ai/blog/insights/evaluate-llm-provider-performance" target="_blank" rel="noopener"><span class="item-num">09</span>如何评估不同 LLM 提供商在延迟、吞吐量和正常运行时间上的性能</a>
+      <a class="item-title" href="https://openrouter.ai/blog/insights/evaluate-llm-provider-performance" target="_blank" rel="noopener"><span class="item-num">12</span>如何评估不同 LLM 提供商在延迟、吞吐量和正常运行时间上的性能</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">08:00</span>
@@ -251,7 +282,7 @@ http://pacingthefrontier.com</p>
       </div>
       <p class="item-summary">同一模型在不同提供商端点上的表现因基础设施、量化、负载处理和路由默认设置而异。评估需测量延迟、吞吐量、正常运行时间和精度，并将测量结果转化为路由策略。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://the-decoder.com/openai-says-more-workers-are-using-chatgpt-to-do-other-peoples-jobs" target="_blank" rel="noopener"><span class="item-num">10</span>OpenAI 称越来越多员工用 ChatGPT 做其他岗位的工作</a>
+      <a class="item-title" href="https://the-decoder.com/openai-says-more-workers-are-using-chatgpt-to-do-other-peoples-jobs" target="_blank" rel="noopener"><span class="item-num">13</span>OpenAI 称越来越多员工用 ChatGPT 做其他岗位的工作</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">03:08</span>
@@ -259,7 +290,7 @@ http://pacingthefrontier.com</p>
       </div>
       <p class="item-summary">OpenAI 分析超 80 万条与工作相关的 ChatGPT 消息后发现，43.5% 的岗位特定查询涉及另一职业，营销和工程任务交叉最多。用户用 AI 处理合同审查、数据分析、网站故障排查等原由专家负责的工作。OpenAI 认为这是岗位职责正在变化的早期信号，该趋势在缺乏专业团队的小公司尤为明显。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://www.marktechpost.com/2026/07/27/designing-skill-driven-financial-analysis-agents-with-claude-python-mcp-connectors-and-automated-deliverables" target="_blank" rel="noopener"><span class="item-num">11</span>用Claude和Python构建技能驱动的金融分析智能体</a>
+      <a class="item-title" href="https://www.marktechpost.com/2026/07/27/designing-skill-driven-financial-analysis-agents-with-claude-python-mcp-connectors-and-automated-deliverables" target="_blank" rel="noopener"><span class="item-num">14</span>用Claude和Python构建技能驱动的金融分析智能体</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">02:08</span>
@@ -267,7 +298,7 @@ http://pacingthefrontier.com</p>
       </div>
       <p class="item-summary">本教程基于Anthropic的financial-services仓库，用纯Python复现其技能驱动架构。通过解析SKILL.md文件构建可搜索技能注册表，并创建可复用SkillAgent，将金融分析剧本注入Anthropic Messages API，支持迭代工具调用循环。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://github.blog/ai-and-ml/github-copilot/the-harness-is-all-you-need-mostly" target="_blank" rel="noopener"><span class="item-num">12</span>GitHub Copilot 发布&quot;Harness&quot;工作流：用单一工具完成原型、规划、实现与代码审查</a>
+      <a class="item-title" href="https://github.blog/ai-and-ml/github-copilot/the-harness-is-all-you-need-mostly" target="_blank" rel="noopener"><span class="item-num">15</span>GitHub Copilot 发布&quot;Harness&quot;工作流：用单一工具完成原型、规划、实现与代码审查</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">02:00</span>
@@ -275,7 +306,7 @@ http://pacingthefrontier.com</p>
       </div>
       <p class="item-summary">GitHub Copilot 推出&quot;Harness&quot;工作流，让开发者通过单一 AI 工具完成从原型设计、规划、实现到代码审查的完整软件开发流程，无需追逐多种新 AI 工具。该工作流强调实用性与集成性，旨在减少工具切换带来的效率损耗。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-getting-started" target="_blank" rel="noopener"><span class="item-num">13</span>GitHub Copilot app 入门指南：多 Agent 会话工作区与 Canvas 预览</a>
+      <a class="item-title" href="https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-getting-started" target="_blank" rel="noopener"><span class="item-num">16</span>GitHub Copilot app 入门指南：多 Agent 会话工作区与 Canvas 预览</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">00:00</span>
@@ -283,7 +314,7 @@ http://pacingthefrontier.com</p>
       </div>
       <p class="item-summary">GitHub Copilot app 将 AI 编码工具升级为多 Agent 会话工作区，支持同时管理多个任务线程而不丢失进度。用户可为每个会话绑定项目上下文，通过 `/create-canvas` 命令在浏览器 Canvas 中预览 UI 并直接点选修改，还能启用 Agent Merge 自动处理 PR 审查反馈和合并冲突。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://x.com/vista8/status/2081568902241513786" target="_blank" rel="noopener"><span class="item-num">14</span>用AI Skill自动生成可协作HTML PPT</a>
+      <a class="item-title" href="https://x.com/vista8/status/2081568902241513786" target="_blank" rel="noopener"><span class="item-num">17</span>用AI Skill自动生成可协作HTML PPT</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">10:34</span>
@@ -291,7 +322,7 @@ http://pacingthefrontier.com</p>
       </div>
       <p class="item-summary">Vista 基于 bento PPT 改造了一个 Skill，输入内容或主题即可自动生成可编辑、在线演示并支持协作的 HTML PPT。安装指令为 `npx skills add joeseesun/qiaomu-bento-ppt`，推荐使用 Kimi K3 或 Opus 4.8+ 等前端审美好的模型。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://mp.weixin.qq.com/s/AwOk3di8m6eVeIUjzNftgg" target="_blank" rel="noopener"><span class="item-num">15</span>浪费20亿Token后，我开源了帮Agent定义目标的Leader.skill</a>
+      <a class="item-title" href="https://mp.weixin.qq.com/s/AwOk3di8m6eVeIUjzNftgg" target="_blank" rel="noopener"><span class="item-num">18</span>浪费20亿Token后，我开源了帮Agent定义目标的Leader.skill</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">08:12</span>
@@ -299,7 +330,7 @@ http://pacingthefrontier.com</p>
       </div>
       <p class="item-summary">作者开源了Leader.skill，用于将模糊的人类需求转化为Agent可独立执行数小时的目标任务书。该Skill基于&quot;目标七问&quot;方法论，涵盖目的、完成态、反作弊、边界等维度，并推荐用Claude Fable 5或Kimi K3规划目标，再交由GPT-5.6 Sol或GLM-5.2等模型长程执行。项目已开源。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://www.ithome.com/0/981/688.htm" target="_blank" rel="noopener"><span class="item-num">16</span>Claude Opus 5 系统提示词被完整泄露，共 135027 字符、约 3.4 万 token</a>
+      <a class="item-title" href="https://www.ithome.com/0/981/688.htm" target="_blank" rel="noopener"><span class="item-num">19</span>Claude Opus 5 系统提示词被完整泄露，共 135027 字符、约 3.4 万 token</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">13:33</span>
@@ -307,7 +338,7 @@ http://pacingthefrontier.com</p>
       </div>
       <p class="item-summary">开发者 Eversmile1 在 GitHub 上公开了 Claude Opus 5 的完整系统提示词，包含 30 个工具的 JSON schema、严格的版权合规规则（单次引用不超过 15 词）和跨会话记忆系统。泄露后 24 小时内，已有开发者用 Opus 5 成功生成 3D 射击游戏和《火箭联盟》克隆版等复杂 Demo。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://github.com/slvDev/esp32-ai" target="_blank" rel="noopener"><span class="item-num">17</span>在 8 美元的 ESP32-S3 微控制器上运行 28.9M 参数大语言模型</a>
+      <a class="item-title" href="https://github.com/slvDev/esp32-ai" target="_blank" rel="noopener"><span class="item-num">20</span>在 8 美元的 ESP32-S3 微控制器上运行 28.9M 参数大语言模型</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">11:54</span>
@@ -315,7 +346,7 @@ http://pacingthefrontier.com</p>
       </div>
       <p class="item-summary">开发者成功在售价约 8 美元的 ESP32-S3 微控制器上运行了一个 28.9M 参数的大语言模型，完全在芯片本地运行，无需连接服务器，生成速度约 9.5 tok/s。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://rdi.berkeley.edu/blog/auto-software-dev" target="_blank" rel="noopener"><span class="item-num">18</span>当编码不再是瓶颈：Berkeley RDI 提出软件自主开发三级框架</a>
+      <a class="item-title" href="https://rdi.berkeley.edu/blog/auto-software-dev" target="_blank" rel="noopener"><span class="item-num">21</span>当编码不再是瓶颈：Berkeley RDI 提出软件自主开发三级框架</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">00:00</span>
@@ -323,73 +354,17 @@ http://pacingthefrontier.com</p>
       </div>
       <p class="item-summary">Berkeley RDI等机构提出三级软件自主开发框架：代码自主（AI完成设计与实现，人类决定构建内容并审核PR）、流水线自主（AI运行从设计到部署的全流程，人类仅评估结果）、需求自主（AI自主决定构建内容）。该框架旨在为能力声明、部署选择与问责提供清晰分类。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://github.com/izeigerman/claude-thermos" target="_blank" rel="noopener"><span class="item-num">19</span>Claude-thermos：保持 Claude 会话缓存热度，避免重新编码费用</a>
+      <a class="item-title" href="https://github.com/izeigerman/claude-thermos" target="_blank" rel="noopener"><span class="item-num">22</span>Claude-thermos：保持 Claude 会话缓存热度，避免重新编码费用</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">17:47</span>
         <span class="item-category">技巧与观点</span>
       </div>
       <p class="item-summary">Claude-thermos 通过本地反向代理监控 Claude Code 会话，在主智能体因等待子智能体而空闲超过 5 分钟时，自动发送预热请求刷新提示缓存。实测约 185 次本地会话中，缓存过期导致的重新编码占账单约 22%。工具以 uvx 运行，支持自定义空闲阈值和预热间隔。</p>
-    </div>    <div class="item">
-      <a class="item-title" href="https://stephenfollows.com/p/what-just-happened-to-thenumberscom-should-worry-us-all" target="_blank" rel="noopener"><span class="item-num">20</span>TheNumbers.com 因 AI 爬虫与安全攻击导致网站崩溃重建</a>
-      <div class="item-meta">
-        <span class="item-source"></span>
-        <span class="item-time">02:35</span>
-        <span class="item-category">技巧与观点</span>
-      </div>
-      <p class="item-summary">电影数据权威网站 The Numbers 于 2026 年 3 月 5 日突然下线，一周后仅以精简版恢复上线，历史图表、电影页面和 Report Builder 均被移除。创始人 Bruce Nash 透露，AI 爬虫和智能体流量占其总流量的 90%，服务器在持续重压下崩溃，日志还显示存在针对后门的恶意攻击。团队被迫放弃运行 30 年、包含 16 万源文件的旧系统，在新基础设施上重建网站。</p>
-    </div>    <div class="item">
-      <a class="item-title" href="https://x.com/satyanadella/status/2080329851127669104" target="_blank" rel="noopener"><span class="item-num">21</span>微软MAI模型：以更低成本实现前沿能力规模化</a>
-      <div class="item-meta">
-        <span class="item-source"></span>
-        <span class="item-time">00:31</span>
-        <span class="item-category">技巧与观点</span>
-      </div>
-      <p class="item-summary">微软CEO Satya Nadella详解MAI模型家族战略：通过优化成本-效果前沿，MAI模型在GitHub Copilot、Excel等产品中已用更少token超越通用前沿模型。核心是构建独立于模型的评估系统，让模型在产品真实环境中学习并完成用户关心的任务。微软正将这一模板通过Foundry平台开放给企业客户。</p>
-    </div>    <div class="item">
-      <a class="item-title" href="https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models" target="_blank" rel="noopener"><span class="item-num">22</span>Claude 5 代模型上下文工程新规则：Claude Code 系统提示词精简超 80%</a>
-      <div class="item-meta">
-        <span class="item-source"></span>
-        <span class="item-time">00:00</span>
-        <span class="item-category">技巧与观点</span>
-      </div>
-      <p class="item-summary">Anthropic 为 Claude Opus 5 和 Claude Fable 5 等新一代模型删除了 Claude Code 超过 80% 的系统提示词，且编码评测无显著损失。</p>
-    </div>    <div class="item">
-      <a class="item-title" href="https://www.theverge.com/podcast/968787/apple-openai-trade-secrets-lawsuit-ai-hardware-smartphone-jony-ive" target="_blank" rel="noopener"><span class="item-num">23</span>Apple 起诉 OpenAI 窃取硬件制造机密</a>
-      <div class="item-meta">
-        <span class="item-source"></span>
-        <span class="item-time">22:00</span>
-        <span class="item-category">技巧与观点</span>
-      </div>
-      <p class="item-summary">Apple 指控多名前员工在 OpenAI 面试中窃取硬件制造机密，甚至将设备带出办公室进行&quot;展示&quot;。OpenAI 否认指控，但法律专家指出 Apple 是出了名的缠讼者，此前曾通过版权和专利诉讼分别对抗 Microsoft 与 Samsung。</p>
-    </div>    <div class="item">
-      <a class="item-title" href="https://mp.weixin.qq.com/s/TEAuv29LPgmjQG_rO3b_Ag" target="_blank" rel="noopener"><span class="item-num">24</span>昆仑万维方汉：Token堆不出AI原生组织，模型才是长期立足之本</a>
-      <div class="item-meta">
-        <span class="item-source"></span>
-        <span class="item-time">19:20</span>
-        <span class="item-category">技巧与观点</span>
-      </div>
-      <p class="item-summary">昆仑万维CEO方汉在WAIC圆桌上指出，单纯堆砌Token消耗量无法衡量AI价值，模型能力需依赖Claude Code等Coding Agent建立的工程框架才能转化为生产力。他透露昆仑万维仍在持续训练模型，并将发布音乐、具身世界和游戏世界模型，认为模型与算力是AI公司长期立足的基础。方汉同时警示，AI编程带来的技术债可能导致生产事故增幅达数倍，代码审查与责任机制必须同步加强。</p>
-    </div>    <div class="item">
-      <a class="item-title" href="https://dev.to/googleai/google-cloud-skills-tutorial-the-complete-guide-to-ai-powered-cloud-operations-13d9" target="_blank" rel="noopener"><span class="item-num">25</span>Google Cloud Agent Skills 完整指南：从基础到高级云运维</a>
-      <div class="item-meta">
-        <span class="item-source"></span>
-        <span class="item-time">19:11</span>
-        <span class="item-category">技巧与观点</span>
-      </div>
-      <p class="item-summary">Google Cloud 推出官方 Agent Skills 开源指令集，旨在让 AI 编码智能体安全、高效地执行多步骤云操作。该仓库基于 agentskills.io 开放标准，目前收录 70 多项技能，涵盖安全审计、无服务器部署、BigQuery 优化等 8 个类别。技能采用渐进式披露模型，通过验证工作流、安全门控和上下文感知机制，防止智能体盲目执行破坏性命令。</p>
-    </div>    <div class="item">
-      <a class="item-title" href="https://mp.weixin.qq.com/s/CYB7v1e5D4m-btgosjmLgA" target="_blank" rel="noopener"><span class="item-num">26</span>北京发布智能体新政，首次将Harness Engineering、Token经济、OPC等写入政策</a>
-      <div class="item-meta">
-        <span class="item-source"></span>
-        <span class="item-time">13:13</span>
-        <span class="item-category">技巧与观点</span>
-      </div>
-      <p class="item-summary">北京市发布《关于加快智能体引领发展的若干措施》，共十条，首次将Harness Engineering（驾驭层工程）、Token经济、OPC（一人公司）等前沿概念写入正式政策。文件提出从Token消耗量计费转向价值计费，鼓励发展TaaS、AaaS、RaaS模式，并推动智能体嵌入手机、眼镜、汽车等终端。</p>
     </div>  </div>
   <footer class="footer">
     <span>来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener">AI HOT</a></span>
-    <span>生成 09:54 &middot; 共 26 条 &middot; 精选</span>
+    <span>生成 09:00 &middot; 共 22 条 &middot; 精选</span>
   </footer>
 </div>
 <div class="footer-glow"></div>
@@ -399,11 +374,17 @@ http://pacingthefrontier.com</p>
   var h = new Date().getHours();
   var labels = {'morning':'清晨模式','day':'日间模式','evening':'傍晚模式','night':'夜间模式'};
   var lightThemes = ['morning','day'];
+  var stored = null;
+  try { stored = localStorage.getItem('ai-daily-theme'); } catch (e) {}
   var autoTheme;
-  if (h >= 6 && h < 10)       autoTheme = 'morning';
-  else if (h >= 10 && h < 17) autoTheme = 'day';
-  else if (h >= 17 && h < 21) autoTheme = 'evening';
-  else                         autoTheme = 'night';
+  if (stored) {
+    autoTheme = stored;
+  } else {
+    if (h >= 6 && h < 10)       autoTheme = 'morning';
+    else if (h >= 10 && h < 17) autoTheme = 'day';
+    else if (h >= 17 && h < 21) autoTheme = 'evening';
+    else                         autoTheme = 'night';
+  }
   var current = autoTheme;
   document.documentElement.setAttribute('data-theme', current);
   var themeEl = document.getElementById('themeLabel');
@@ -413,6 +394,7 @@ http://pacingthefrontier.com</p>
       current = (lightThemes.indexOf(current) >= 0) ? 'night' : 'day';
       document.documentElement.setAttribute('data-theme', current);
       themeEl.textContent = labels[current] || 'AI DAILY';
+      try { localStorage.setItem('ai-daily-theme', current); } catch (e) {}
     });
   }
 
@@ -426,6 +408,11 @@ http://pacingthefrontier.com</p>
     toastEl.textContent = msg;
     toastEl.className = 'toast show' + (isError ? ' error' : '');
     toastTimer = setTimeout(function() { toastEl.className = 'toast'; }, 4000);
+  }
+
+  function escHtml(s) {
+    if (s === null || s === undefined) return '';
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
   }
 
   function rebuildPage(dailyJson, itemsMap) {
@@ -457,7 +444,7 @@ http://pacingthefrontier.com</p>
           var time = it.publishedAt ? it.publishedAt.slice(11, 16) : '';
           var cat = it.category || '';
           var catNames = {'ai-models':'模型发布','ai-products':'产品发布','industry':'行业动态','paper':'论文研究','tip':'技巧与观点'};
-          html += '<div class="item"><a class="item-title" href="' + (it.url || '#') + '" target="_blank" rel="noopener"><span class="item-num">' + num + '</span>' + (it.title || '') + '</a><div class="item-meta"><span class="item-source">' + src + '</span></div><p class="item-summary">' + (it.summary || '') + '</p></div>';
+          html += '<div class="item"><a class="item-title" href="' + escHtml(it.url || '#') + '" target="_blank" rel="noopener"><span class="item-num">' + num + '</span>' + escHtml(it.title || '') + '</a><div class="item-meta"><span class="item-source">' + escHtml(src) + '</span></div><p class="item-summary">' + escHtml(it.summary || '') + '</p></div>';
         }
         dailyDiv.innerHTML = html;
       }
@@ -473,7 +460,7 @@ http://pacingthefrontier.com</p>
           var time2 = it2.publishedAt ? it2.publishedAt.slice(11, 16) : '';
           var cat2 = it2.category || '';
           var catNames2 = {'ai-models':'模型发布','ai-products':'产品发布','industry':'行业动态','paper':'论文研究','tip':'技巧与观点'};
-          fullHtml += '<div class="item expanded-item"><a class="item-title" href="' + (it2.url || '#') + '" target="_blank" rel="noopener"><span class="item-num">' + num2 + '</span>' + (it2.title || '') + '</a><div class="item-meta"><span class="item-source">' + src2 + '</span><span class="item-time">' + time2 + '</span><span class="item-category">' + (catNames2[cat2] || cat2) + '</span></div><p class="item-summary">' + (it2.summary || '') + '</p></div>';
+          fullHtml += '<div class="item expanded-item"><a class="item-title" href="' + escHtml(it2.url || '#') + '" target="_blank" rel="noopener"><span class="item-num">' + num2 + '</span>' + escHtml(it2.title || '') + '</a><div class="item-meta"><span class="item-source">' + escHtml(src2) + '</span><span class="item-time">' + time2 + '</span><span class="item-category">' + (catNames2[cat2] || escHtml(cat2)) + '</span></div><p class="item-summary">' + escHtml(it2.summary || '') + '</p></div>';
         }
         expandedDiv.innerHTML = fullHtml;
       }
@@ -507,6 +494,9 @@ http://pacingthefrontier.com</p>
       var ts = now.getFullYear() + '-' + ('0'+(now.getMonth()+1)).slice(-2) + '-' + ('0'+now.getDate()).slice(-2) + ' ' + ('0'+now.getHours()).slice(-2) + ':' + ('0'+now.getMinutes()).slice(-2);
       footer.innerHTML = '<span>来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener">AI HOT</a></span><span>刷新于 ' + ts + ' · 共 ' + totalItems + ' 条 · 实时</span>';
     }
+
+    // 重新挂已读标记（DOM 已被重建）
+    if (typeof applyReadMarks === 'function') applyReadMarks();
   }
 
   if (refreshBtn) {
@@ -670,6 +660,35 @@ http://pacingthefrontier.com</p>
       }
     });
   }
+
+  // ---- 已读标记 ----
+  var READ_KEY = 'ai-daily-read';
+  var readSet = {};
+  try { readSet = JSON.parse(localStorage.getItem(READ_KEY) || '{}'); } catch (e) { readSet = {}; }
+  function applyReadMarks() {
+    document.querySelectorAll('a.item-title').forEach(function(a) {
+      var href = a.getAttribute('href');
+      if (href && readSet[href]) {
+        var item = a.closest('.item');
+        if (item) item.classList.add('read');
+      }
+    });
+  }
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a.item-title');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (!href || href === '#') return;
+    if (!readSet[href]) {
+      readSet[href] = 1;
+      var keys = Object.keys(readSet);
+      if (keys.length > 3000) { delete readSet[keys[0]]; }
+      try { localStorage.setItem(READ_KEY, JSON.stringify(readSet)); } catch (e) {}
+    }
+    var item = a.closest('.item');
+    if (item) item.classList.add('read');
+  });
+  applyReadMarks();
 
   function tick() {
     var now = new Date();

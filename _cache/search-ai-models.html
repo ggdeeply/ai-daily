@@ -3,25 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="AI 日报 · 2026-07-30">
+<meta property="og:title" content="AI 日报 · 2026-07-31">
 <meta property="og:description" content="模型发布（最近 7 天精选）">
-<meta property="og:url" content="https://ggdeeply.github.io/ai-daily/2026-07/2026-07-30.html">
+<meta property="og:url" content="https://ggdeeply.github.io/ai-daily/2026-07/2026-07-31.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="AI HOT 日报">
-<meta itemprop="name" content="AI 日报 · 2026-07-30">
+<meta itemprop="name" content="AI 日报 · 2026-07-31">
 <meta itemprop="description" content="模型发布（最近 7 天精选）">
-<title>AI 日报 — 2026 - 07 - 30</title>
+<title>AI 日报 — 2026 - 07 - 31</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <script>
   (function() {
-    var h = new Date().getHours();
-    var t;
-    if (h >= 6 && h < 10)       t = 'morning';
-    else if (h >= 10 && h < 17) t = 'day';
-    else if (h >= 17 && h < 21) t = 'evening';
-    else                         t = 'night';
+    var t = null;
+    try { t = localStorage.getItem('ai-daily-theme'); } catch (e) {}
+    if (!t) {
+      var h = new Date().getHours();
+      if (h >= 6 && h < 10)       t = 'morning';
+      else if (h >= 10 && h < 17) t = 'day';
+      else if (h >= 17 && h < 21) t = 'evening';
+      else                         t = 'night';
+    }
     document.documentElement.setAttribute('data-theme', t);
   })();
 </script>
@@ -132,6 +135,8 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
 .item-num{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;color:var(--accent);opacity:0.5;margin-right:6px;transition:color var(--transition-speed) ease}
 .item-title{font-size:15px;font-weight:600;line-height:1.5;color:var(--text-primary);text-decoration:none;cursor:pointer;transition:color 0.18s ease}
 .item-title:hover{color:var(--accent)}
+.item.read .item-title{color:var(--text-tertiary);font-weight:500}
+.item.read .item-title::after{content:'✓';font-size:11px;margin-left:6px;color:var(--accent);opacity:0.6}
 .item-meta{display:flex;gap:10px;align-items:center;margin-top:7px;flex-wrap:wrap}
 .item-source{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;padding:3px 8px;border-radius:3px;background:var(--badge-bg);color:var(--accent);white-space:nowrap;letter-spacing:0.02em;transition:background var(--transition-speed) ease,color var(--transition-speed) ease}
 .item-time{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-tertiary);white-space:nowrap}
@@ -155,10 +160,12 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
       <span class="header-live" id="liveClock">--:--:--</span>
     </div>
     <h1>AI 日报</h1>
-    <p class="date-line">2026 - 07 - 30 &nbsp;&middot;&nbsp; 星期四</p>
+    <p class="date-line">2026 - 07 - 31 &nbsp;&middot;&nbsp; 星期五</p>
     <nav class="header-nav">
+      
       <a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>归档索引</a>
-      <a href="../archive-browse.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>分类浏览</a>
+      <a href="../archive-browse.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>分类浏览 · 全局搜索</a>
+      
     </nav>
   </header>
   <div class="search-box">
@@ -171,9 +178,35 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
     <span class="lead-author">&mdash; 主编 &middot; AI HOT</span>
   </div>
   <div class="section" style="--delay: 60ms">
-    <div class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> 模型发布<span class="count">13</span><a class="cat-link" href="../_cache/search-ai-models.html" title="查看全部分类" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></div>
+    <div class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> 模型发布<span class="count">10</span><a class="cat-link" href="../_cache/search-ai-models.html" title="查看全部分类" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></div>
     <div class="item">
-      <a class="item-title" href="https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control" target="_blank" rel="noopener"><span class="item-num">01</span>Google DeepMind 在 Flow Music 中推出 Lyria 3.5，提升音乐性、歌词、人声与创作控制</a>
+      <a class="item-title" href="https://x.com/GoogleDeepMind/status/2082844162928381956" target="_blank" rel="noopener"><span class="item-num">01</span>Google DeepMind 发布 Gemini Robotics 2 物理 AI</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:02</span>
+        <span class="item-category">模型发布</span>
+      </div>
+      <p class="item-summary">One brain. For any robot. 🤖
+
+我们正在推出 Gemini Robotics 2：我们的下一代物理 AI，为仿人机器人带来全身智能、高级灵巧性、多机器人团队协作等能力。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration" target="_blank" rel="noopener"><span class="item-num">02</span>Gemini Robotics ER 2：用视频理解、任务编排与多机器人协作赋能机器人</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">23:00</span>
+        <span class="item-category">模型发布</span>
+      </div>
+      <p class="item-summary">Google DeepMind 推出 Gemini Robotics ER 2，一个基于 Gemini 的机器人基础模型。该模型在视频理解、工具编排和多机器人协作方面实现阶跃式提升，使机器人能够推理、协作并解决真实世界任务。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6" target="_blank" rel="noopener"><span class="item-num">03</span>GPT-5.6 如何推进性价比前沿</a>
+      <div class="item-meta">
+        <span class="item-source"></span>
+        <span class="item-time">18:00</span>
+        <span class="item-category">模型发布</span>
+      </div>
+      <p class="item-summary">OpenAI 为 GPT-5.6 的 Luna 和 Terra 版本推出更低定价，以更高效的模型帮助企业大规模部署 AI 工作流。</p>
+    </div>    <div class="item">
+      <a class="item-title" href="https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control" target="_blank" rel="noopener"><span class="item-num">04</span>Google DeepMind 在 Flow Music 中推出 Lyria 3.5，提升音乐性、歌词、人声与创作控制</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">00:02</span>
@@ -181,15 +214,7 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
       </div>
       <p class="item-summary">Google DeepMind 今日在 Google Flow Music 中发布新一代音乐生成模型 Lyria 3.5，带来音乐性、歌词质量、人声表现力与创作控制的多项提升。新模型能生成更自然复杂的旋律结构，歌词对提示词的遵循度和结构意识更强，人声更逼真且富有情感，同时支持更便捷地控制输出节奏与时长。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency" target="_blank" rel="noopener"><span class="item-num">02</span>OpenAI 发布 GPT-5.6 模型家族：Sol、Terra 与 Luna</a>
-      <div class="item-meta">
-        <span class="item-source"></span>
-        <span class="item-time">08:00</span>
-        <span class="item-category">模型发布</span>
-      </div>
-      <p class="item-summary">OpenAI 发布 GPT-5.6 模型家族，旗舰款 Sol 开启最大推理时在 Artificial Analysis Coding Agent Index 上超越 Claude Fable 5，成本不到后者一半。Terra 智能持平 GPT-5.5 但价格减半，Luna 定价比 Sol 低 80%。该系列通过负载均衡、推测解码等全栈优化实现更高 token 效率。</p>
-    </div>    <div class="item">
-      <a class="item-title" href="https://x.com/OpenAIDevs/status/2082201169443905798" target="_blank" rel="noopener"><span class="item-num">03</span>OpenAI 推出两款新转录模型 API</a>
+      <a class="item-title" href="https://x.com/OpenAIDevs/status/2082201169443905798" target="_blank" rel="noopener"><span class="item-num">05</span>OpenAI 推出两款新转录模型 API</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">04:26</span>
@@ -202,7 +227,7 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
 
 两种模型都能更好地理解上下文，并在跨口音和语言的实际音频上提供更准确的转录，包括短句、数字、专业术语以及背景噪音较大的语音。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://www.marktechpost.com/2026/07/28/microsoft-ai-releases-mai-cyber-1-flash-a-5b-active-parameter-cyber-model-that-pushes-mdash-to-95-95-on-cybergym" target="_blank" rel="noopener"><span class="item-num">04</span>Microsoft 发布 MAI-Cyber-1-Flash：5B 活跃参数的网络安全模型，驱动 MDASH 在 CyberGym 上达到 95.95%</a>
+      <a class="item-title" href="https://www.marktechpost.com/2026/07/28/microsoft-ai-releases-mai-cyber-1-flash-a-5b-active-parameter-cyber-model-that-pushes-mdash-to-95-95-on-cybergym" target="_blank" rel="noopener"><span class="item-num">06</span>Microsoft 发布 MAI-Cyber-1-Flash：5B 活跃参数的网络安全模型，驱动 MDASH 在 CyberGym 上达到 95.95%</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">16:33</span>
@@ -210,7 +235,7 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
       </div>
       <p class="item-summary">Microsoft 发布 MAI-Cyber-1-Flash，一款 137B 总参数（5B 活跃参数）、256k 上下文窗口的稀疏 MoE 网络安全模型，是 MAI-Code-1-Flash 的微调版本。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://usefeyn.com/blog/feynobg" target="_blank" rel="noopener"><span class="item-num">05</span>FeyNoBg 发布：开源自动背景去除模型，在四项基准上达到 SOTA</a>
+      <a class="item-title" href="https://usefeyn.com/blog/feynobg" target="_blank" rel="noopener"><span class="item-num">07</span>FeyNoBg 发布：开源自动背景去除模型，在四项基准上达到 SOTA</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">12:57</span>
@@ -218,7 +243,7 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
       </div>
       <p class="item-summary">Feyn Labs 推出 FeyNoBg，一个用于自动背景去除的 SOTA 模型。它在八个基准测试中的四项上取得最佳 S-measure 分数，其余四项与领先者差距在 2% 以内。该模型基于 BiRefNet 架构，参数量从 222M 扩展至 263M，同时开源了训练库 NoBg，模型和代码分别可在 Hugging Face 和 GitHub 获取。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://mp.weixin.qq.com/s/IW9BdyA3hLvuuiX_aMCJEQ" target="_blank" rel="noopener"><span class="item-num">06</span>Kimi K3 开放日：模型权重、技术报告和关键 Infra 技术同步开放</a>
+      <a class="item-title" href="https://mp.weixin.qq.com/s/IW9BdyA3hLvuuiX_aMCJEQ" target="_blank" rel="noopener"><span class="item-num">08</span>Kimi K3 开放日：模型权重、技术报告和关键 Infra 技术同步开放</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">23:34</span>
@@ -226,7 +251,7 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
       </div>
       <p class="item-summary">月之暗面发布 2.8 万亿参数的混合专家模型 Kimi K3，支持原生视觉理解和 100 万 token 上下文窗口。其规模化效率较 Kimi K2.5 提升 2.5 倍，并同步开源模型权重、技术报告及 MoonEP、FlashKDA、AgentEnv 三项 Infra 技术。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://updates.midjourney.com/version-8-2" target="_blank" rel="noopener"><span class="item-num">07</span>Midjourney V8.2 发布：专注美学提升与个性化理解</a>
+      <a class="item-title" href="https://updates.midjourney.com/version-8-2" target="_blank" rel="noopener"><span class="item-num">09</span>Midjourney V8.2 发布：专注美学提升与个性化理解</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">06:18</span>
@@ -234,57 +259,17 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
       </div>
       <p class="item-summary">Midjourney 今日推出 V8.2 图像模型，重点提升美学质量、图像创意与个性化表现。低质量图像出现频率将显著降低，个性化功能能更精准理解用户审美偏好。V8.2 的个性化配置文件拥有更大、更优的图像选择池，建议用户尝试新旧配置文件体验最新版本。</p>
     </div>    <div class="item">
-      <a class="item-title" href="https://bfl.ai/blog/flux-3-mimic" target="_blank" rel="noopener"><span class="item-num">08</span>FLUX 3 x mimic：新一代视频动作模型</a>
+      <a class="item-title" href="https://bfl.ai/blog/flux-3-mimic" target="_blank" rel="noopener"><span class="item-num">10</span>FLUX 3 x mimic：新一代视频动作模型</a>
       <div class="item-meta">
         <span class="item-source"></span>
         <span class="item-time">19:55</span>
         <span class="item-category">模型发布</span>
       </div>
       <p class="item-summary">Black Forest Labs 发布多模态基础模型 FLUX 3，联合训练图像、视频和音频，其中视频预测占训练算力的 95% 以上。该模型与机器人公司 mimic 合作推出 FLUX-mimic，已在奥迪生产线上测试部署。加入动作预测后，视频生成质量最初下降最多 10%，但经 3500 步训练后恢复原有水平。</p>
-    </div>    <div class="item">
-      <a class="item-title" href="https://developer.ant-ling.com/zh-CN/blogs/ling-3.0-flash-release" target="_blank" rel="noopener"><span class="item-num">09</span>蚂蚁百灵发布 Ling-3.0-flash：124B 总参数、5.1B 激活参数，智能密度超越 1T 级旗舰</a>
-      <div class="item-meta">
-        <span class="item-source"></span>
-        <span class="item-time">00:00</span>
-        <span class="item-category">模型发布</span>
-      </div>
-      <p class="item-summary">蚂蚁百灵正式发布新一代原生混合推理模型 Ling-3.0-flash，总参数 124B、激活参数仅 5.1B。该模型以极致智能密度对标并超越上一代 1T 级旗舰思考模型 Ring-2.6-1T。</p>
-    </div>    <div class="item">
-      <a class="item-title" href="https://www.anthropic.com/news/claude-opus-5" target="_blank" rel="noopener"><span class="item-num">10</span>Anthropic 发布 Claude Opus 5</a>
-      <div class="item-meta">
-        <span class="item-source"></span>
-        <span class="item-time">00:00</span>
-        <span class="item-category">模型发布</span>
-      </div>
-      <p class="item-summary">Anthropic 发布 Claude Opus 5，其智能水平接近 Claude Fable 5，但价格减半。该模型在 Frontier-Bench v0.1 上性能超过 Opus 4.8 两倍以上，在 ARC-AGI 3 上得分是次优模型的三倍。Opus 5 即日起成为 Claude Max 的默认模型和 Claude Pro 的最强模型。</p>
-    </div>    <div class="item">
-      <a class="item-title" href="https://x.com/Alibaba_Qwen/status/2080270065547809133" target="_blank" rel="noopener"><span class="item-num">11</span>通义千问发布Qwen-Audio-3.0-TTS，登顶TTS排行榜</a>
-      <div class="item-meta">
-        <span class="item-source"></span>
-        <span class="item-time">20:33</span>
-        <span class="item-category">模型发布</span>
-      </div>
-      <p class="item-summary">阿里通义千问推出最新文本转语音模型Qwen-Audio-3.0-TTS，提供Flash（实时交互）和Plus（高质量生成）两个版本。新功能包括细粒度内联标签控制（如【whisper】、【angry】）、自然语言风格控制、支持16种语言，以及一次生成长达3分钟的长文本。该模型目前在Artificial Analysis TTS排行榜上排名第一。</p>
-    </div>    <div class="item">
-      <a class="item-title" href="https://dev.to/googleai/gemini-36-flash-35-flash-lite-developer-guide-268i" target="_blank" rel="noopener"><span class="item-num">12</span>Gemini 3.6 Flash 与 3.5 Flash-Lite 正式版发布</a>
-      <div class="item-meta">
-        <span class="item-source"></span>
-        <span class="item-time">17:25</span>
-        <span class="item-category">模型发布</span>
-      </div>
-      <p class="item-summary">Google 发布 Gemini 3.6 Flash 和 Gemini 3.5 Flash-Lite 正式版。3.6 Flash 在复杂智能体和多模态任务上性能更强，输出 token 价格降至 $7.50/1M，支持 1M token 上下文窗口和 Computer Use 工具。</p>
-    </div>    <div class="item">
-      <a class="item-title" href="https://github.com/cactus-compute/cactus-hybrid" target="_blank" rel="noopener"><span class="item-num">13</span>Cactus 发布 Gemma 4 E2B Hybrid：可在设备端为每个回答输出置信度分数，低分时自动路由至更大模型</a>
-      <div class="item-meta">
-        <span class="item-source"></span>
-        <span class="item-time">13:47</span>
-        <span class="item-category">模型发布</span>
-      </div>
-      <p class="item-summary">Cactus 推出基于 Gemma 4 的混合模型&quot;Cactus Hybrid&quot;，在模型检查点内嵌入置信度探针，为每个生成答案输出 0-1 之间的结构化置信度分数。高置信度时在设备端直接回答，低分时可自动路由至更大模型。该探针在零音频训练数据下，于四个音频基准上达到 0.79-0.88 AUROC，远超 token 熵基线（均值 0.549），且 MIT 协议开源。</p>
     </div>  </div>
   <footer class="footer">
     <span>来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener">AI HOT</a></span>
-    <span>生成 09:54 &middot; 共 13 条 &middot; 精选</span>
+    <span>生成 09:00 &middot; 共 10 条 &middot; 精选</span>
   </footer>
 </div>
 <div class="footer-glow"></div>
@@ -294,11 +279,17 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
   var h = new Date().getHours();
   var labels = {'morning':'清晨模式','day':'日间模式','evening':'傍晚模式','night':'夜间模式'};
   var lightThemes = ['morning','day'];
+  var stored = null;
+  try { stored = localStorage.getItem('ai-daily-theme'); } catch (e) {}
   var autoTheme;
-  if (h >= 6 && h < 10)       autoTheme = 'morning';
-  else if (h >= 10 && h < 17) autoTheme = 'day';
-  else if (h >= 17 && h < 21) autoTheme = 'evening';
-  else                         autoTheme = 'night';
+  if (stored) {
+    autoTheme = stored;
+  } else {
+    if (h >= 6 && h < 10)       autoTheme = 'morning';
+    else if (h >= 10 && h < 17) autoTheme = 'day';
+    else if (h >= 17 && h < 21) autoTheme = 'evening';
+    else                         autoTheme = 'night';
+  }
   var current = autoTheme;
   document.documentElement.setAttribute('data-theme', current);
   var themeEl = document.getElementById('themeLabel');
@@ -308,6 +299,7 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
       current = (lightThemes.indexOf(current) >= 0) ? 'night' : 'day';
       document.documentElement.setAttribute('data-theme', current);
       themeEl.textContent = labels[current] || 'AI DAILY';
+      try { localStorage.setItem('ai-daily-theme', current); } catch (e) {}
     });
   }
 
@@ -321,6 +313,11 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
     toastEl.textContent = msg;
     toastEl.className = 'toast show' + (isError ? ' error' : '');
     toastTimer = setTimeout(function() { toastEl.className = 'toast'; }, 4000);
+  }
+
+  function escHtml(s) {
+    if (s === null || s === undefined) return '';
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
   }
 
   function rebuildPage(dailyJson, itemsMap) {
@@ -352,7 +349,7 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
           var time = it.publishedAt ? it.publishedAt.slice(11, 16) : '';
           var cat = it.category || '';
           var catNames = {'ai-models':'模型发布','ai-products':'产品发布','industry':'行业动态','paper':'论文研究','tip':'技巧与观点'};
-          html += '<div class="item"><a class="item-title" href="' + (it.url || '#') + '" target="_blank" rel="noopener"><span class="item-num">' + num + '</span>' + (it.title || '') + '</a><div class="item-meta"><span class="item-source">' + src + '</span></div><p class="item-summary">' + (it.summary || '') + '</p></div>';
+          html += '<div class="item"><a class="item-title" href="' + escHtml(it.url || '#') + '" target="_blank" rel="noopener"><span class="item-num">' + num + '</span>' + escHtml(it.title || '') + '</a><div class="item-meta"><span class="item-source">' + escHtml(src) + '</span></div><p class="item-summary">' + escHtml(it.summary || '') + '</p></div>';
         }
         dailyDiv.innerHTML = html;
       }
@@ -368,7 +365,7 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
           var time2 = it2.publishedAt ? it2.publishedAt.slice(11, 16) : '';
           var cat2 = it2.category || '';
           var catNames2 = {'ai-models':'模型发布','ai-products':'产品发布','industry':'行业动态','paper':'论文研究','tip':'技巧与观点'};
-          fullHtml += '<div class="item expanded-item"><a class="item-title" href="' + (it2.url || '#') + '" target="_blank" rel="noopener"><span class="item-num">' + num2 + '</span>' + (it2.title || '') + '</a><div class="item-meta"><span class="item-source">' + src2 + '</span><span class="item-time">' + time2 + '</span><span class="item-category">' + (catNames2[cat2] || cat2) + '</span></div><p class="item-summary">' + (it2.summary || '') + '</p></div>';
+          fullHtml += '<div class="item expanded-item"><a class="item-title" href="' + escHtml(it2.url || '#') + '" target="_blank" rel="noopener"><span class="item-num">' + num2 + '</span>' + escHtml(it2.title || '') + '</a><div class="item-meta"><span class="item-source">' + escHtml(src2) + '</span><span class="item-time">' + time2 + '</span><span class="item-category">' + (catNames2[cat2] || escHtml(cat2)) + '</span></div><p class="item-summary">' + escHtml(it2.summary || '') + '</p></div>';
         }
         expandedDiv.innerHTML = fullHtml;
       }
@@ -402,6 +399,9 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
       var ts = now.getFullYear() + '-' + ('0'+(now.getMonth()+1)).slice(-2) + '-' + ('0'+now.getDate()).slice(-2) + ' ' + ('0'+now.getHours()).slice(-2) + ':' + ('0'+now.getMinutes()).slice(-2);
       footer.innerHTML = '<span>来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener">AI HOT</a></span><span>刷新于 ' + ts + ' · 共 ' + totalItems + ' 条 · 实时</span>';
     }
+
+    // 重新挂已读标记（DOM 已被重建）
+    if (typeof applyReadMarks === 'function') applyReadMarks();
   }
 
   if (refreshBtn) {
@@ -565,6 +565,35 @@ background-size:48px 48px;pointer-events:none;z-index:0;transition:background-im
       }
     });
   }
+
+  // ---- 已读标记 ----
+  var READ_KEY = 'ai-daily-read';
+  var readSet = {};
+  try { readSet = JSON.parse(localStorage.getItem(READ_KEY) || '{}'); } catch (e) { readSet = {}; }
+  function applyReadMarks() {
+    document.querySelectorAll('a.item-title').forEach(function(a) {
+      var href = a.getAttribute('href');
+      if (href && readSet[href]) {
+        var item = a.closest('.item');
+        if (item) item.classList.add('read');
+      }
+    });
+  }
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a.item-title');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (!href || href === '#') return;
+    if (!readSet[href]) {
+      readSet[href] = 1;
+      var keys = Object.keys(readSet);
+      if (keys.length > 3000) { delete readSet[keys[0]]; }
+      try { localStorage.setItem(READ_KEY, JSON.stringify(readSet)); } catch (e) {}
+    }
+    var item = a.closest('.item');
+    if (item) item.classList.add('read');
+  });
+  applyReadMarks();
 
   function tick() {
     var now = new Date();
