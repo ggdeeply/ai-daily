@@ -1,11 +1,11 @@
 ﻿{
     "dateRange":  {
-                      "from":  "2026-08-04",
+                      "from":  "2026-08-05",
                       "to":  "2026-05-25",
-                      "totalDays":  71
+                      "totalDays":  72
                   },
-    "totalItems":  8411,
-    "generatedAt":  "2026-08-04T01:00:07Z",
+    "totalItems":  8516,
+    "generatedAt":  "2026-08-05T01:00:10Z",
     "dailies":  [
                     {
                         "date":  "2026-05-25",
@@ -78354,6 +78354,987 @@
                                          }
                                      ],
                         "weekday":  "星期二"
+                    },
+                    {
+                        "date":  "2026-08-05",
+                        "fileName":  "2026-08\\2026-08-05.html",
+                        "lead":  "",
+                        "sections":  [
+                                         {
+                                             "label":  "模型发布/更新",
+                                             "category":  "ai-models",
+                                             "items":  [
+                                                           {
+                                                               "url":  "https://x.com/OpenRouter/status/2084699413898027064",
+                                                               "source":  "",
+                                                               "time":  "01:54",
+                                                               "summary":  "@bfl_ai 的 FLUX 3 Video 现已在 OpenRouter 上向所有人开放。 一个统一的视频、音频、图像和动作预测多模态模型家族。严肃、有趣、创意、真实、电影感，随你所需。基于统一架构联合训练。",
+                                                               "category":  "模型发布",
+                                                               "title":  "OpenRouter 上线 FLUX 3 Video 统一多模态模型",
+                                                               "num":  1
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/SenseTime_AI/status/2084667189479837741",
+                                                               "source":  "",
+                                                               "time":  "23:46",
+                                                               "summary":  "商汤发布开源模型 SenseNova U1，可在统一流程中同时进行推理与图像生成。其信息图模式可将单条提示词转为结构化幻灯片，交错模式则逐步生成图文内容，如演示六步画龙教程。模型已上线 SenseNova Studio、HuggingFace 及 GitHub。",
+                                                               "category":  "模型发布",
+                                                               "title":  "商汤 SenseNova U1 开源：统一推理与图像生成",
+                                                               "num":  2
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/AntLingAGI/status/2084656533489754475",
+                                                               "source":  "",
+                                                               "time":  "23:03",
+                                                               "summary":  "今天，我们发布了 Ling-3.0-flash 的开源权重。🎉 官方 BF16 和 FP8 量化版本现已可用，您可以根据自己的硬件、性能要求和部署需求选择最合适的版本。",
+                                                               "category":  "模型发布",
+                                                               "title":  "蚂蚁百灵发布Ling-3.0-flash开源权重",
+                                                               "num":  3
+                                                           },
+                                                           {
+                                                               "url":  "https://blogs.nvidia.com/blog/alpamayo-2-super-open-model-now-available",
+                                                               "source":  "",
+                                                               "time":  "23:00",
+                                                               "summary":  "NVIDIA Alpamayo 2 Super 现已开放商用，基于 Cosmos 3 Super Reasoner 构建，采用强化学习后训练，支持轨迹预测、因果链推理、元动作、自动标注及视觉问答等多任务输出。",
+                                                               "category":  "模型发布",
+                                                               "title":  "NVIDIA Alpamayo 2 Super 开放商用，面向 Robotaxi 与自动驾驶的前沿开源模型",
+                                                               "num":  4
+                                                           },
+                                                           {
+                                                               "url":  "https://mp.weixin.qq.com/s?__biz=MzkwODU2OTQyNQ%3D%3D\u0026mid=2247498223\u0026idx=1\u0026sn=ae271ec2c72723393d3e1d8074a33205",
+                                                               "source":  "",
+                                                               "time":  "16:12",
+                                                               "summary":  "腾讯混元发布新一代语音识别模型 Hy ASR 3.0 preview，基于大语言模型 Hy3 与 MoE 架构，融合高精度识别与语义理解。其在开源评测集中中文普通话 WER 3.34%、英语 WER 2.62%、粤语 WER 3.12%，并支持上下文纠错、热词注入及高噪耳语等场景。该模型已上线腾讯云 API，元宝 App 首发并免费开放。",
+                                                               "category":  "模型发布",
+                                                               "title":  "腾讯混元发布 Hy ASR 3.0 preview：真正懂上下文的语音识别",
+                                                               "num":  5
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/SenseTime_AI/status/2084288424236782073",
+                                                               "source":  "",
+                                                               "time":  "22:40",
+                                                               "summary":  "商汤推出 SenseNova U1.5-Lite-Preview，一个基于 NEO-Unify 架构的轻量级原生统一多模态模型，仅 8B-MoT 参数即可达到商业闭源模型的生成与编辑质量。",
+                                                               "category":  "模型发布",
+                                                               "title":  "商汤发布 SenseNova U1.5-Lite-Preview 开源模型",
+                                                               "num":  6
+                                                           },
+                                                           {
+                                                               "url":  "https://mp.weixin.qq.com/s?__biz=MzE5MTA3NzcxMQ%3D%3D\u0026mid=2247488931\u0026idx=1\u0026sn=0506e1d52edd5166becf35f5ebd83a07",
+                                                               "source":  "",
+                                                               "time":  "10:44",
+                                                               "summary":  "MiniMax 正式开源新一代通用视频模型 H3，可统一理解文本、图像、视频和音频，生成最高 2K 分辨率、最长 15 秒、带 32 kHz 原生立体声音频的视频。",
+                                                               "category":  "模型发布",
+                                                               "title":  "MiniMax H3 正式开源：通用全模态生成系统支持 2K 视频与原生立体声",
+                                                               "num":  7
+                                                           },
+                                                           {
+                                                               "url":  "https://qwen.ai/blog?id=qwen3.8",
+                                                               "source":  "",
+                                                               "time":  "10:00",
+                                                               "summary":  "Qwen 正式发布 Qwen3.8-Max，这是 Qwen 家族迄今最强的模型，拥有 2.4T 参数（95B 激活），并首次开源 Qwen-Max 级权重，开放权重将于下周发布。",
+                                                               "category":  "模型发布",
+                                                               "title":  "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数",
+                                                               "num":  8
+                                                           },
+                                                           {
+                                                               "url":  "https://arxiv.org/abs/2608.02583",
+                                                               "source":  "",
+                                                               "time":  "08:00",
+                                                               "summary":  "UEmbed 是一种仅解码器的多模态嵌入模型，可在单次因果前向传播中同时生成稀疏词级和稠密表示，通过可学习特殊 token 与词汇表分区突破单 token 信息瓶颈。",
+                                                               "category":  "模型发布",
+                                                               "title":  "UEmbed：统一稀疏与稠密的多模态嵌入模型",
+                                                               "num":  9
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/ArtificialAnlys/status/2083306229074739285",
+                                                               "source":  "",
+                                                               "time":  "05:38",
+                                                               "summary":  "DeepSeek 发布开源模型 DeepSeek V4 Flash 0731，在 Artificial Analysis 智能指数上得分 50，位列开源模型前三。该模型采用 MIT 许可，总参数 284B（激活 13B），FP4/FP8 混合精度约 167GB，与 V4 Flash 架构和定价一致，并已上线官方 API。",
+                                                               "category":  "模型发布",
+                                                               "title":  "DeepSeek V4 Flash 0731 开源，登顶开源模型前三",
+                                                               "num":  10
+                                                           },
+                                                           {
+                                                               "url":  "https://www.minimax.io/blog/minimax-h3",
+                                                               "source":  "",
+                                                               "time":  "17:59",
+                                                               "summary":  "MiniMax 正式推出全能多模态生成模型 H3，可联合理解文本、图像、视频和音频，生成最高 2K 分辨率、15 秒时长且带原生立体声的视频。H3 在指令跟随、文字与品牌呈现、V2V 动作迁移上表现突出，2K 下每秒价格低于主流模型三分之一，768p 下低于主流 720p 价格一半。官方计划近日开源模型权重，以支持开源社区并加速硬件兼容。",
+                                                               "category":  "模型发布",
+                                                               "title":  "MiniMax H3 发布：开源全能多模态生成模型，支持 2K 原生立体声视频",
+                                                               "num":  11
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/deepseek_ai/status/2083084415157022911",
+                                                               "source":  "",
+                                                               "time":  "14:56",
+                                                               "summary":  "🚀 DeepSeek-V4-Flash 官方 API 现已上线公测！ 🔷 我们大幅升级了其 Agent 能力--基准测试分数现已远超 V4-Pro-Preview。查看下方巨大的性能飞跃！👇 🔷 官方 V4-Flash 现已原生支持 Responses API 格式，并已完全适配 Codex！ 查看我们官方 API 文档中的配置详情：https://api-docs.deepseek.com/quick_start/agent_integrations/codex",
+                                                               "category":  "模型发布",
+                                                               "title":  "DeepSeek-V4-Flash API公测上线，Agent能力大幅升级",
+                                                               "num":  12
+                                                           },
+                                                           {
+                                                               "url":  "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D\u0026mid=2647684859\u0026idx=1\u0026sn=29658a67b2b3ef46aead73698d900250",
+                                                               "source":  "",
+                                                               "time":  "14:41",
+                                                               "summary":  "DeepSeek V4 Flash 正式版发布，模型结构和参数规模不变，仅重做后训练，Terminal Bench 2.1 从 61.8 涨至 82.7，DeepSWE 从 7.3 涨至 54.4。",
+                                                               "category":  "模型发布",
+                                                               "title":  "DeepSeek V4 Flash 正式版发布：后训练重做，九项 Agent 测试全面超越 V4 Pro Preview",
+                                                               "num":  13
+                                                           },
+                                                           {
+                                                               "url":  "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D\u0026mid=2647684857\u0026idx=1\u0026sn=03c84df8bc0389c4ceb8f50f6c0015e3",
+                                                               "source":  "",
+                                                               "time":  "10:21",
+                                                               "summary":  "MiniMax 发布 AI 视频模型 H3，并宣布开源。该模型主打视觉包装与后期特效，可生成动态 MV、动态海报、Vlog、电影片头、游戏 UI 等，语义遵循能力极强，在广告与动效领域表现优于 Seedance 2.0，但影视级张力镜头稍逊。H3 开源后预计将出现大量垂直领域特化版本。",
+                                                               "category":  "模型发布",
+                                                               "title":  "MiniMax H3 发布并将开源，主打视觉包装与后期特效",
+                                                               "num":  14
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/thinkymachines/status/2082885869426631032",
+                                                               "source":  "",
+                                                               "time":  "01:47",
+                                                               "summary":  "今天，我们发布 Inkling-Small。 Inkling-Small 在仅为 Inkling 四分之一规模的情况下，实现了与之相当的性能。它拥有 276B 总参数，12B 激活参数。我们将开放完整权重。 https://thinkingmachines.ai/news/inkling-small/ 现在即可在 Tinker 上对其进行微调，或在 Tinker Playground 中以文本、图像和音频形式与之对话。",
+                                                               "category":  "模型发布",
+                                                               "title":  "Inkling-Small 发布，276B 参数性能持平原版",
+                                                               "num":  15
+                                                           },
+                                                           {
+                                                               "url":  "https://api-docs.deepseek.com/zh-cn/updates#%E6%97%B6%E9%97%B4-2026-07-31",
+                                                               "source":  "",
+                                                               "time":  "00:00",
+                                                               "summary":  "DeepSeek-V4-Flash 正式版 API 上线公测，模型名设为 deepseek-v4-flash 即可使用，调用方式不变。其 Agent 能力大幅增强，Terminal Bench 2.1 得分 82.7，NL2Repo 54.2，Toolathlon verified 70.3，DSBench-Hard 59.6，多项基准远超 V4-Pro-Preview。",
+                                                               "category":  "模型发布",
+                                                               "title":  "DeepSeek-V4-Flash 正式版 API 上线公测",
+                                                               "num":  16
+                                                           },
+                                                           {
+                                                               "url":  "https://seed.bytedance.com/zh/blog/%E4%B8%80%E9%95%9C%E6%88%90%E7%89%87-%E9%9A%8F%E5%BF%83%E5%8F%82%E8%80%83-seedance-2-5-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83",
+                                                               "source":  "",
+                                                               "time":  "00:00",
+                                                               "summary":  "字节跳动今日正式发布新一代视频创作模型 Seedance 2.5，单次视频生成时长从 15 秒提升至 30 秒，并支持多轮延长，可产出数分钟连贯内容。模型支持单次输入最多 30 张图片、10 段视频和 10 段音频作为参考素材，并升级白模参考、运动参考及绿幕编辑、时间戳精准编辑等能力。Seedance 2.5 已陆续上线即梦 AI、豆包专业版等平台，API 服务近期将上线火山方舟。",
+                                                               "category":  "模型发布",
+                                                               "title":  "字节发布 Seedance 2.5：单次生成 30 秒视频，支持多模态参考与精准编辑",
+                                                               "num":  17
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/GoogleDeepMind/status/2082844162928381956",
+                                                               "source":  "",
+                                                               "time":  "23:02",
+                                                               "summary":  "One brain. For any robot. 🤖 我们正在推出 Gemini Robotics 2：我们的下一代物理 AI，为仿人机器人带来全身智能、高级灵巧性、多机器人团队协作等能力。",
+                                                               "category":  "模型发布",
+                                                               "title":  "Google DeepMind 发布 Gemini Robotics 2 物理 AI",
+                                                               "num":  18
+                                                           },
+                                                           {
+                                                               "url":  "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration",
+                                                               "source":  "",
+                                                               "time":  "23:00",
+                                                               "summary":  "Google DeepMind 推出 Gemini Robotics ER 2，一个基于 Gemini 的机器人基础模型。该模型在视频理解、工具编排和多机器人协作方面实现阶跃式提升，使机器人能够推理、协作并解决真实世界任务。",
+                                                               "category":  "模型发布",
+                                                               "title":  "Gemini Robotics ER 2：用视频理解、任务编排与多机器人协作赋能机器人",
+                                                               "num":  19
+                                                           },
+                                                           {
+                                                               "url":  "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+                                                               "source":  "",
+                                                               "time":  "18:00",
+                                                               "summary":  "OpenAI 为 GPT-5.6 的 Luna 和 Terra 版本推出更低定价，以更高效的模型帮助企业大规模部署 AI 工作流。",
+                                                               "category":  "模型发布",
+                                                               "title":  "GPT-5.6 如何推进性价比前沿",
+                                                               "num":  20
+                                                           },
+                                                           {
+                                                               "url":  "https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control",
+                                                               "source":  "",
+                                                               "time":  "00:02",
+                                                               "summary":  "Google DeepMind 今日在 Google Flow Music 中发布新一代音乐生成模型 Lyria 3.5，带来音乐性、歌词质量、人声表现力与创作控制的多项提升。新模型能生成更自然复杂的旋律结构，歌词对提示词的遵循度和结构意识更强，人声更逼真且富有情感，同时支持更便捷地控制输出节奏与时长。",
+                                                               "category":  "模型发布",
+                                                               "title":  "Google DeepMind 在 Flow Music 中推出 Lyria 3.5，提升音乐性、歌词、人声与创作控制",
+                                                               "num":  21
+                                                           }
+                                                       ],
+                                             "count":  "4+21"
+                                         },
+                                         {
+                                             "label":  "产品发布/更新",
+                                             "category":  "ai-products",
+                                             "items":  [
+                                                           {
+                                                               "url":  "https://simonwillison.net/2026/Aug/4/new-release-of-llm",
+                                                               "source":  "",
+                                                               "time":  "07:58",
+                                                               "summary":  "Simon Willison 发布 LLM 0.32，这是该项目自启动以来最重要的新版本。新版本支持显示推理轨迹、服务端工具、OpenAI Responses API，并默认使用 GPT-5.6 Luna 模型。",
+                                                               "category":  "产品发布",
+                                                               "title":  "LLM 0.32 发布：新增推理轨迹、OpenAI Responses、服务端工具与更智能的日志",
+                                                               "num":  1
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/Replit/status/2084761337570144424",
+                                                               "source":  "",
+                                                               "time":  "06:00",
+                                                               "summary":  "你无需提示词，也无需设计语言。 环境智能（Ambient Intelligence）会在每个画面旁显示建议卡片，每张卡片都指向你的设计的一个不同方向。点击你喜欢的那张，即可看到它生成一个新的画面。 你再也不必纠结下一步该做什么。 立即在 http://replit.com/design 体验。",
+                                                               "category":  "产品发布",
+                                                               "title":  "Replit 环境智能：免提示词自动生成设计",
+                                                               "num":  2
+                                                           },
+                                                           {
+                                                               "url":  "https://github.com/MakazhanAlpamys/Soup",
+                                                               "source":  "",
+                                                               "time":  "02:17",
+                                                               "summary":  "Soup 推出 v0.72.4，支持在配备 4 GB 显存的笔记本 GPU 上通过 QLoRA 微调 8B 模型，无需 SSH 或云服务。",
+                                                               "category":  "产品发布",
+                                                               "title":  "Soup v0.72.4：在4 GB显存笔记本GPU上微调8B模型",
+                                                               "num":  3
+                                                           },
+                                                           {
+                                                               "url":  "https://www.lmsys.org/blog/2026-08-04-specforge-v0-3",
+                                                               "source":  "",
+                                                               "time":  "01:51",
+                                                               "summary":  "SpecForge v0.3.0 将目标模型推理与草稿模型训练分离，支持 EAGLE3、EAGLE3.1、P-EAGLE、DFlash、Domino、DSpark 等多种投机解码算法，并统一在线、离线与解耦工作流。",
+                                                               "category":  "产品发布",
+                                                               "title":  "SpecForge v0.3.0 发布：统一解耦与共置投机解码栈，新增开放 SpecBundle 草稿模型",
+                                                               "num":  4
+                                                           },
+                                                           {
+                                                               "url":  "https://developers.googleblog.com/a-unified-api-for-ai-model-routing",
+                                                               "source":  "",
+                                                               "time":  "00:45",
+                                                               "summary":  "Google Cloud API Gateway 新增模型路由功能（Public Preview），开发者可在 OpenAPI 3.x 规范中配置虚拟模型名到后端目标的映射，无需硬编码端点或管理开源代理。网关作为无服务器入口层，接受标准 OpenAI 兼容请求，自动将负载转码为目标模型的原生格式并动态路由流量。",
+                                                               "category":  "产品发布",
+                                                               "title":  "Google Cloud API Gateway 推出统一模型路由功能，支持 Gemini、Claude 与 OpenAI OSS-GPT",
+                                                               "num":  5
+                                                           },
+                                                           {
+                                                               "url":  "https://cloud.google.com/blog/products/databases/deep-dive-on-new-ai-powered-database-agents",
+                                                               "source":  "",
+                                                               "time":  "00:00",
+                                                               "summary":  "Google Cloud 在 Agentic Data Cloud 发布中推出两款 AI 数据库智能体：Database Onboarding Agent 负责 Day 0 的配置与部署，Database Observability Agent 负责 Day 1/2 的监控、故障排查与维护。",
+                                                               "category":  "产品发布",
+                                                               "title":  "Google Cloud 推出 Database Operations Agents，实现自主数据库管理",
+                                                               "num":  6
+                                                           },
+                                                           {
+                                                               "url":  "https://blogs.nvidia.com/blog/ai-storage-fms",
+                                                               "source":  "",
+                                                               "time":  "23:00",
+                                                               "summary":  "NVIDIA 在 FMS 大会上宣布开源 cuFile API 及底层存储软件栈，让 GPU 可直接读写存储，访问延迟降至微秒级。其 Vera CPU 在两级压缩与加密流水线中吞吐量比 x86 CPU 最高提升 3.21 倍，并联合 40 多家厂商推出 Storage-Next 计划。",
+                                                               "category":  "产品发布",
+                                                               "title":  "NVIDIA 开源 cuFile API，推动 GPU 直连存储",
+                                                               "num":  7
+                                                           },
+                                                           {
+                                                               "url":  "https://blog.cloudflare.com/local-tracing",
+                                                               "source":  "",
+                                                               "time":  "21:00",
+                                                               "summary":  "Cloudflare 即日起在 wrangler dev 和 vite dev 中自动为本地 Worker 调用捕获 OpenTelemetry 追踪，无需安装 SDK 或配置智能体。智能体可通过 Local Explorer API 查询追踪数据，定位失败操作、修复本地环境并验证结果。开发者也可在浏览器界面 Local Explorer 中可视化查看 spans、时序、错误及关联控制台日志。",
+                                                               "category":  "产品发布",
+                                                               "title":  "Cloudflare 让智能体通过本地追踪调试 Workers",
+                                                               "num":  8
+                                                           },
+                                                           {
+                                                               "url":  "https://blog.cloudflare.com/agents-on-cloudflare",
+                                                               "source":  "",
+                                                               "time":  "21:00",
+                                                               "summary":  "Cloudflare 推出 Cloudflare Agents，将部署在平台上的智能体会话统一到一个视图中，并率先上线 agent tracing 功能。该功能支持 OpenTelemetry 兼容的 Think、Flue 和 AI SDK 等智能体框架，可测量每次模型调用、工具执行和 token 消耗。",
+                                                               "category":  "产品发布",
+                                                               "title":  "Cloudflare 推出 Agents 平台，率先上线智能体追踪功能",
+                                                               "num":  9
+                                                           },
+                                                           {
+                                                               "url":  "https://blog.cloudflare.com/ci-workflows",
+                                                               "source":  "",
+                                                               "time":  "21:00",
+                                                               "summary":  "Cloudflare 推出基于 Workflows 和 Sandbox SDK 的 CI SDK，让平台方直接在 Cloudflare 上运行 CI/CD 流水线，支持构建、lint、类型检查、单元测试、依赖缓存及条件部署。",
+                                                               "category":  "产品发布",
+                                                               "title":  "Cloudflare 推出 CI SDK：在 Cloudflare 上为百万级仓库运行 CI/CD 流水线",
+                                                               "num":  10
+                                                           },
+                                                           {
+                                                               "url":  "https://blog.cloudflare.com/agent-development-lifecycle",
+                                                               "source":  "",
+                                                               "time":  "21:00",
+                                                               "summary":  "Cloudflare 宣布推出 Agent Development Lifecycle（ADLC），以取代传统 SDLC，让 AI 智能体从仅生成代码扩展到承担更多开发流程。",
+                                                               "category":  "产品发布",
+                                                               "title":  "Cloudflare 推出 Agent Development Lifecycle，让智能体接管更多软件开发生命周期",
+                                                               "num":  11
+                                                           },
+                                                           {
+                                                               "url":  "https://www.marktechpost.com/2026/08/04/reflex-open-sources-xy-a-rust-backed-super-fast-python-charting-library-that-keeps-100-million-point-charts-interactive",
+                                                               "source":  "",
+                                                               "time":  "16:57",
+                                                               "summary":  "Reflex AI 发布 Apache-2.0 许可的 Python 交互式 2D 绘图库 XY，通过 Rust 原生核心、二进制缓冲传输和 WebGL2 渲染，在 1 万至 1 亿点范围内保持约 0.08 秒的渲染时间。",
+                                                               "category":  "产品发布",
+                                                               "title":  "Reflex 开源 XY：基于 Rust 的超快 Python 绘图库，可保持 1 亿点图表交互流畅",
+                                                               "num":  12
+                                                           },
+                                                           {
+                                                               "url":  "https://github.com/leonickson1/Swiftlet",
+                                                               "source":  "",
+                                                               "time":  "14:32",
+                                                               "summary":  "Swiftlet 是一个 Swift + Metal 运行时，可在普通 Apple 设备上运行 Qwen3-Next 和 Qwen3.5/3.6 MoE 混合模型，仅将小型稠密核心驻留内存，按需从存储流式加载路由专家权重。",
+                                                               "category":  "产品发布",
+                                                               "title":  "Swiftlet：在 Mac 上运行 80B 版 Qwen（内存 4.3 GB），在 iPhone 上运行 35B 版",
+                                                               "num":  13
+                                                           },
+                                                           {
+                                                               "url":  "https://mp.weixin.qq.com/s?__biz=Mzg3Mzg2MTg2NQ%3D%3D\u0026mid=2247498861\u0026idx=1\u0026sn=d2d16692dd7eb27f9d466803f25c2b78",
+                                                               "source":  "",
+                                                               "time":  "12:20",
+                                                               "summary":  "面壁智能联合 OpenBMB 开源全球首个支持 Stencil 自动研究、自动部署的 AI 优化系统 ForgeStencil，由 Kernel Agent 与 App Agent 闭环协作，实现从算子优化到应用集成的全自动流程。",
+                                                               "category":  "产品发布",
+                                                               "title":  "面壁智能开源 ForgeStencil：一周自动优化 100+ 工业与科学软件，全程零人工介入",
+                                                               "num":  14
+                                                           },
+                                                           {
+                                                               "url":  "https://openrouter.ai/blog/announcements/ori-harness",
+                                                               "source":  "",
+                                                               "time":  "08:00",
+                                                               "summary":  "OpenRouter 发布 ori CLI，用户安装并登录后即可获得针对 Claude Code、Codex、OpenCode、Hermes 等 harness 的优化配置，省去手动设置大量环境变量的麻烦。",
+                                                               "category":  "产品发布",
+                                                               "title":  "OpenRouter 推出 ori CLI：为 Claude Code 等 Harness 提供开箱即用的优化配置",
+                                                               "num":  15
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/gdb/status/2084405421041963356",
+                                                               "source":  "",
+                                                               "time":  "06:25",
+                                                               "summary":  "GPT-Live 是一种用于实时音频的新架构和栈： GPT-Live 可以在说话的同时聆听。 为了让这种体验在 ChatGPT 规模下显得自然，我们从客户端到模型重建了语音栈。 这一新架构让音频持续流动，因此更深入的推理和工具使用不会打断对话。",
+                                                               "category":  "产品发布",
+                                                               "title":  "GPT-Live实时音频新架构发布",
+                                                               "num":  16
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/MSFTResearch/status/2084364547142418722",
+                                                               "source":  "",
+                                                               "time":  "03:43",
+                                                               "summary":  "Orchard 是一个面向研究社区的开源框架，用于跨任务类型训练和评估 AI 智能体。它降低了复杂性，同时通过让研究人员复用同一套基础设施，支持较小模型也能实现强劲性能。https://msft.it/6019a8fqP",
+                                                               "category":  "产品发布",
+                                                               "title":  "微软开源 Orchard 智能体训练框架",
+                                                               "num":  17
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/OpenRouter/status/2084301100078027143",
+                                                               "source":  "",
+                                                               "time":  "23:31",
+                                                               "summary":  "推出 Ori Eval：编写首个评估的最简单方式。 没有绝对最好的模型，只有最适合每项任务的模型。Ori Eval 利用 OpenRouter 的 API 处理代码库中的每项任务，然后评估结果。 curl -fsSL https://openrouter.ai/skills/spawn-ori-eval",
+                                                               "category":  "产品发布",
+                                                               "title":  "OpenRouter 推出 Ori Eval 简化评估流程",
+                                                               "num":  18
+                                                           },
+                                                           {
+                                                               "url":  "https://blog.cloudflare.com/cloudflare-computer",
+                                                               "source":  "",
+                                                               "time":  "21:15",
+                                                               "summary":  "Cloudflare 发布 @cloudflare/computer 早期预览版，这是一个开源智能体运行时，为每个智能体提供虚拟文件系统，并支持在 isolate、容器沙箱或浏览器中执行代码。",
+                                                               "category":  "产品发布",
+                                                               "title":  "Cloudflare 推出 @cloudflare/computer 预览版：为智能体提供虚拟文件系统与多执行环境",
+                                                               "num":  19
+                                                           },
+                                                           {
+                                                               "url":  "https://blog.cloudflare.com/billable-usage-api",
+                                                               "source":  "",
+                                                               "time":  "21:00",
+                                                               "summary":  "Cloudflare 发布 Billable Usage API，为自助账户提供单一端点，一次调用即可返回按产品和计费周期拆分的用量与成本，覆盖 Workers、R2、D1、Workers AI、Vectorize、Images 和 Stream。",
+                                                               "category":  "产品发布",
+                                                               "title":  "Cloudflare 推出 Billable Usage API：为自助账户提供按产品与计费周期的程序化成本可见性",
+                                                               "num":  20
+                                                           },
+                                                           {
+                                                               "url":  "https://blog.cloudflare.com/grpc-workers",
+                                                               "source":  "",
+                                                               "time":  "21:00",
+                                                               "summary":  "Cloudflare 在 Agents Week 期间推出 Workers 运行时新处理器 connect（socket），可直接接受 Spectrum 提供的入站 TCP 套接字，并支持将套接字转发至 Durable Objects 或 Containers，实现全双工通信。",
+                                                               "category":  "产品发布",
+                                                               "title":  "Cloudflare Workers 与 Containers 现已支持入站 TCP 连接和 gRPC",
+                                                               "num":  21
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/elonmusk/status/2083800942927839307",
+                                                               "source":  "",
+                                                               "time":  "14:23",
+                                                               "summary":  "Grok 可以分析任何视频 https://grok.com/share/bGVnYWN5_8013f7a3-f604-4351-8cd7-acecf3ef165b",
+                                                               "category":  "产品发布",
+                                                               "title":  "Grok 支持分析任意视频",
+                                                               "num":  22
+                                                           },
+                                                           {
+                                                               "url":  "https://mp.weixin.qq.com/s?__biz=MzA5NTQ5MzE5OQ%3D%3D\u0026mid=2653159192\u0026idx=1\u0026sn=36f7f69db077393dab48eb6677b6b9c3",
+                                                               "source":  "",
+                                                               "time":  "21:42",
+                                                               "summary":  "百度搭子内置的一镜Skill支持仅凭一句话或一个主题，自动完成脚本生成、声音、数字人形象、口型驱动和视频渲染，生成可直接播放的数字人口播视频，全程无需拍摄、剪辑和露脸。该功能适用于旅游攻略、产品种草、知识科普、临时活动宣传、企业内部培训及个人IP起步等场景，大幅降低视频制作门槛。",
+                                                               "category":  "产品发布",
+                                                               "title":  "百度搭子一镜Skill：一句话生成数字人口播视频",
+                                                               "num":  23
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/Replit/status/2082979584799060267",
+                                                               "source":  "",
+                                                               "time":  "08:00",
+                                                               "summary":  "再也不用从空白页开始了。 Replit Design 内置了由真实设计师制作的数百个模板，涵盖手机界面、落地页到社交媒体帖子。 可以拖入一个模板开始，或在项目中遇到瓶颈时随时添加一个。 立即尝试：http://replit.com/design",
+                                                               "category":  "产品发布",
+                                                               "title":  "Replit Design 推出数百设计模板",
+                                                               "num":  24
+                                                           },
+                                                           {
+                                                               "url":  "https://openrouter.ai/blog/announcements/ori-eval",
+                                                               "source":  "",
+                                                               "time":  "08:00",
+                                                               "summary":  "OpenRouter 发布 Ori Eval，一个能扫描代码库、自动编写 eval 文件并运行评测的智能体，帮助开发者在 500 多款模型中选出最适合自己项目的单一模型。",
+                                                               "category":  "产品发布",
+                                                               "title":  "OpenRouter 推出 Ori Eval：用你的数据证明哪款模型最适合你的项目",
+                                                               "num":  25
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/GeminiApp/status/2082923048362299629",
+                                                               "source":  "",
+                                                               "time":  "04:15",
+                                                               "summary":  "Gemini Spark 🤝 @GoogleChrome Gemini Spark 现已与 Google Chrome 的自动浏览功能集成。经你许可，Spark 可直接在你的 Chrome 浏览器中处理网页任务，例如预约看房或自动填写航班信息。",
+                                                               "category":  "产品发布",
+                                                               "title":  "Gemini Spark 集成 Chrome 自动浏览功能",
+                                                               "num":  26
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/GoogleAI/status/2082902334984609936",
+                                                               "source":  "",
+                                                               "time":  "02:53",
+                                                               "summary":  "Google Earth 网页版上线基于 Nano Banana 2 的图像生成功能，用户可通过文本提示词将卫星与 3D 影像结合，重新想象全球任意地点（如百年前的城市风貌或社区新球场）。该功能现已面向所有用户开放。",
+                                                               "category":  "产品发布",
+                                                               "title":  "Google Earth 集成 Nano Banana 2 图像生成",
+                                                               "num":  27
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/OpenRouter/status/2082882158574911564",
+                                                               "source":  "",
+                                                               "time":  "01:32",
+                                                               "summary":  "GPT-5.6 Terra 和 Luna 刚刚获得了 @OpenAI 的降价。 OpenRouter 的价格仍然更低。我们的 50% 独家折扣在此基础上适用，使 Luna 输入降至 $0.1/M、输出降至 $0.6/M，Terra 输入降至 $1/M、输出降至 $6/M。 使用 luna 扩展你的工作负载：https://openrouter.ai/openai/gpt-5.6-luna",
+                                                               "category":  "产品发布",
+                                                               "title":  "OpenRouter 下调 GPT-5.6 Terra/Luna 价格",
+                                                               "num":  28
+                                                           },
+                                                           {
+                                                               "url":  "https://github.blog/ai-and-ml/github-copilot/stacked-sessions-and-pull-requests-in-the-github-copilot-app",
+                                                               "source":  "",
+                                                               "time":  "01:30",
+                                                               "summary":  "GitHub Copilot 应用推出堆叠会话功能，允许用户在同一个仓库中创建一系列相互承接的任务，每个会话可基于前一个会话的成果继续工作。作者通过一个十余年历史的个人项目演示了该功能：先使用 Plan 模式制定前端现代化计划，再通过堆叠会话将 React-Bootstrap 替换工作拆分为独立会话，并自动为每个会话创建对应的拉取请求，避免范围蔓延。",
+                                                               "category":  "产品发布",
+                                                               "title":  "GitHub Copilot 应用新增堆叠会话与拉取请求功能",
+                                                               "num":  29
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/AravSrinivas/status/2082872551538380939",
+                                                               "source":  "",
+                                                               "time":  "00:54",
+                                                               "summary":  "在 Perplexity Computer 上推出 Projects。 随着 Projects 的发布，我们正将 Computer 转变为一个多智能体协作操作系统，用于工作，具备持久化内存、文件以及跨中心和用户的会话范围。 现已向所有用户开放！",
+                                                               "category":  "产品发布",
+                                                               "title":  "Perplexity Computer 推出 Projects 功能",
+                                                               "num":  30
+                                                           },
+                                                           {
+                                                               "url":  "https://simonwillison.net/2026/Jul/30/llm-chat-completions-server",
+                                                               "source":  "",
+                                                               "time":  "23:43",
+                                                               "summary":  "Simon Willison 发布 llm-chat-completions-server 0.1a0 插件，可在本地 9001 端口启动一个兼容 OpenAI Chat Completions API 的服务器，暴露 LLM 工具中所有已安装的模型。",
+                                                               "category":  "产品发布",
+                                                               "title":  "llm-chat-completions-server 0.1a0 发布",
+                                                               "num":  31
+                                                           },
+                                                           {
+                                                               "url":  "https://www.marktechpost.com/2026/07/30/token-saver-an-open-source-mcp-extension-using-local-hybrid-rag",
+                                                               "source":  "",
+                                                               "time":  "15:43",
+                                                               "summary":  "Marktechpost AI 团队发布 Token Saver，一款面向 Claude Desktop 的开源 MCP 扩展，通过本地混合 RAG 在设备端检索 PDF，无需上传文件。该工具将 token 消耗削减 92%-99%，并保证数据隐私，设置无需 Python 环境或终端配置。",
+                                                               "category":  "产品发布",
+                                                               "title":  "Token Saver：用本地混合 RAG 将 Claude PDF token 消耗削减 92%-99% 的开源 MCP 扩展",
+                                                               "num":  32
+                                                           },
+                                                           {
+                                                               "url":  "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D\u0026mid=2647684792\u0026idx=1\u0026sn=63a0fd8e458f915460b6d0ca06173c04",
+                                                               "source":  "",
+                                                               "time":  "12:30",
+                                                               "summary":  "WorkBuddy 新版本深度打通腾讯文档，支持在侧边栏直接编辑生成的文件，并将腾讯文档嵌入工作流，实现人与 AI、同事及各自 Agent 间的协同。用户可选用 DeepSeek V4 Pro、Kimi K3 等模型处理文档，并将文件上传至云端分享流转。作者认为，这种\"人、Agent 与共享状态\"的协作模式，标志着第三代办公产品的到来。",
+                                                               "category":  "产品发布",
+                                                               "title":  "WorkBuddy 深度打通腾讯文档，打造 Agent 时代的第三代办公协同",
+                                                               "num":  33
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/Replit/status/2082568269119062019",
+                                                               "source":  "",
+                                                               "time":  "04:45",
+                                                               "summary":  "你不需要成为设计师。你只需要知道你想把什么变为现实。 你脑海中的想法与屏幕上的成果之间的差距刚刚消失了。 这就是 Replit Design 背后的愿景。 阅读我们构建它的原因以及我们认为 AI 驱动设计的未来方向：https://replit.com/blog/introducing-replit-design",
+                                                               "category":  "产品发布",
+                                                               "title":  "Replit Design 发布：AI 赋能设计愿景",
+                                                               "num":  34
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/sherwinwu/status/2082517015944741342",
+                                                               "source":  "",
+                                                               "time":  "01:22",
+                                                               "summary":  "ChatGPT for Academic Researchers - 免费（！！）使用我们的前沿模型，包括 GPT-5.6-Sol Pro，面向数学家、科学家、研究人员和学者。 让未解难题倒下！",
+                                                               "category":  "产品发布",
+                                                               "title":  "OpenAI 为学术研究者免费提供前沿模型",
+                                                               "num":  35
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/perplexity_ai/status/2082511900580196596",
+                                                               "source":  "",
+                                                               "time":  "01:01",
+                                                               "summary":  "今天我们开源了 Numbat，这是一个智能体检测与响应层，旨在跨多种智能体框架工作。 Numbat 为安全团队提供对智能体活动的可见性，并可在执行前阻止选定操作。 了解更多：https://research.perplexity.ai/articles/securing-agents-across-perplexity%E2%80%99s-client-endpoints-with-numbat",
+                                                               "category":  "产品发布",
+                                                               "title":  "Perplexity 开源智能体检测层 Numbat",
+                                                               "num":  36
+                                                           },
+                                                           {
+                                                               "url":  "https://github.com/drumih/turbo-fieldfare",
+                                                               "source":  "",
+                                                               "time":  "00:09",
+                                                               "summary":  "一个开源引擎让 Gemma 4 26B 模型能在任何 M 系列 Mac 上运行，仅需 2 GB 内存。该项目已发布在 GitHub 上，大幅降低了本地运行大语言模型的硬件门槛。",
+                                                               "category":  "产品发布",
+                                                               "title":  "开源引擎可在任何 M 系列 Mac 上以 2 GB 内存运行 Gemma 4 26B",
+                                                               "num":  37
+                                                           },
+                                                           {
+                                                               "url":  "https://techcrunch.com/2026/07/29/hint-a-new-ai-startup-co-founded-by-martha-stewart-offers-an-ai-assistant-for-homeowners",
+                                                               "source":  "",
+                                                               "time":  "23:35",
+                                                               "summary":  "Hint 今日上线，利用 AI 技术帮助房主管理维护计划、能耗、土壤与空气质量、保险理赔等事务，并支持存储和查询房屋相关合同与文件。该应用基于公开数据为每栋房屋建立档案，通过 AI 聊天机器人回答个性化问题，并提供主动维护提醒与\"房屋评分\"。Hint 目前免费提供 iOS 版，无订阅或广告，未来计划推出付费高级功能。",
+                                                               "category":  "产品发布",
+                                                               "title":  "Martha Stewart 联合创办 AI 初创公司 Hint，为房主提供家居管理 AI 助手",
+                                                               "num":  38
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/TencentHunyuan/status/2082447023626944936",
+                                                               "source":  "",
+                                                               "time":  "20:43",
+                                                               "summary":  "腾讯混元开源端到端投机解码框架 AngelSpec，支持训练与部署。在 Hy3-A21B 模型上，其 DFly 方案相比自回归解码实现 1.98-2.40 倍端到端加速，吞吐量比 DFlash 高 10.5-11.8%。训练代码及 Hy3-A21B MTP/DFly 草稿模型权重已开源。",
+                                                               "category":  "产品发布",
+                                                               "title":  "腾讯混元开源 AngelSpec 投机解码框架",
+                                                               "num":  39
+                                                           },
+                                                           {
+                                                               "url":  "https://mp.weixin.qq.com/s?__biz=MzkwODU2OTQyNQ%3D%3D\u0026mid=2247498136\u0026idx=1\u0026sn=f77b7950ad68442c45ef739f0bcf8e1b",
+                                                               "source":  "",
+                                                               "time":  "19:52",
+                                                               "summary":  "腾讯混元开源覆盖训练到部署的投机解码框架 AngelSpec，并放出 Hy3-A21B 的 MTP 与 DFly drafter 权重及训练代码。",
+                                                               "category":  "产品发布",
+                                                               "title":  "腾讯混元开源 AngelSpec：投机解码推理加速最高 2.4 倍",
+                                                               "num":  40
+                                                           },
+                                                           {
+                                                               "url":  "https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw%3D%3D\u0026mid=2247508880\u0026idx=1\u0026sn=968a2ff3d6013a96f2ebfb5ab1579e5c",
+                                                               "source":  "",
+                                                               "time":  "18:32",
+                                                               "summary":  "作者将Claude Code与Codex的协作工具搭子升级至2.0版，通过deep_reasoner、fast_worker、arbiter三种身份及跨项目模型混编，把每周500美元的API账单压缩至400美元。2.0新增本地配置UI、一键试跑、Goal哈希校验和带证据链的小票，并支持按host分命名空间独立配置两个Agent。",
+                                                               "category":  "产品发布",
+                                                               "title":  "烧了一万块API后，我找到了同时适用于Fable5和GPT5.6的AI工作流",
+                                                               "num":  41
+                                                           },
+                                                           {
+                                                               "url":  "https://github.com/gavamedia/deltafin",
+                                                               "source":  "",
+                                                               "time":  "10:49",
+                                                               "summary":  "Deltafin 项目成功在 64 GB M1 Max 上运行了 2.8T 参数的 MoE 模型 Kimi K3，当前中位推理速度为 0.0687 token/s（14.6 秒/token）。完整安装需约 1.7 TB 本地磁盘，流式模式仅需 215 GB 但推理速度降至 3 分钟以上/token。项目提供 OpenAI 兼容 API 服务器，支持聊天和代码补全，但建议客户端超时设为小时级别。",
+                                                               "category":  "产品发布",
+                                                               "title":  "在 M1 Max 上运行 2.8T 参数的 Kimi K3：Deltafin 项目实现 0.0687 token/s 推理",
+                                                               "num":  42
+                                                           }
+                                                       ],
+                                             "count":  "4+42"
+                                         },
+                                         {
+                                             "label":  "行业动态",
+                                             "category":  "industry",
+                                             "items":  [
+                                                           {
+                                                               "url":  "https://x.com/rohanpaul_ai/status/2084655258102546579",
+                                                               "source":  "",
+                                                               "time":  "22:58",
+                                                               "summary":  "Anthropic 与成立仅数月的云初创公司 Volta 签署 100 亿美元算力协议，约合每年 17 亿美元。Volta 估值 24 亿美元，硬件几乎全为租用：算力来自比特币矿商 Bitdeer 挪威 121MW 站点，芯片由 Nvidia 供应、Dell 组装。Anthropic 买的是交付速度，代价是承担超大规模云厂商合同从未有过的交易对手风险。",
+                                                               "category":  "行业动态",
+                                                               "title":  "Anthropic 与成立仅数月的云初创公司 Volta 签署 100 亿美元算力协议",
+                                                               "num":  1
+                                                           },
+                                                           {
+                                                               "url":  "https://www.ithome.com/0/985/665.htm",
+                                                               "source":  "",
+                                                               "time":  "19:06",
+                                                               "summary":  "工信部组织制定的《智能网联汽车 自动驾驶系统安全要求》（GB 44721-2026）强制性国家标准获批发布，拟于2027年7月1日起实施。这是我国首部针对L3级有条件自动驾驶和L4级高度自动驾驶系统的强制性国标，由2024年推荐性国标GB/T 44721-2024升级而来，为自动驾驶产品明确了统一的安全准入基线。",
+                                                               "category":  "行业动态",
+                                                               "title":  "工信部发布首部L3/L4自动驾驶系统安全要求强制性国标，2027年7月实施",
+                                                               "num":  2
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/thsottiaux/status/2084506501834829833",
+                                                               "source":  "",
+                                                               "time":  "13:07",
+                                                               "summary":  "有些人显然误解了，但 GPT-5.6 Luna 降价 80% 不是临时噱头，而是永久的。效率提升不会消失。幸运的是。",
+                                                               "category":  "行业动态",
+                                                               "title":  "GPT-5.6 Luna降价80%永久生效",
+                                                               "num":  3
+                                                           },
+                                                           {
+                                                               "url":  "https://www.theverge.com/ai-artificial-intelligence/974571/eu-ai-act-transparency-labels-rules-deepfakes",
+                                                               "source":  "",
+                                                               "time":  "01:38",
+                                                               "summary":  "欧盟《人工智能法案》下的新透明度义务于 8 月 2 日生效，要求公司披露用户何时与 AI 模型互动，并为合成音视频和文本添加机器可读标记。欧盟还推出了一套可选的 AI 披露标签供平台采用，但标注要求本身是强制性的。违规公司面临最高 1500 万欧元（约 1720 万美元）或全球年营业额 3% 的罚款，8 月 2 日前推出的模型有 4 个月宽限期。",
+                                                               "category":  "行业动态",
+                                                               "title":  "欧盟《人工智能法案》透明度规则生效，违规最高罚 1500 万欧元",
+                                                               "num":  4
+                                                           },
+                                                           {
+                                                               "url":  "https://the-decoder.com/german-court-rules-ai-music-generator-suno-violated-copyrights-rejects-fair-use-defense",
+                                                               "source":  "",
+                                                               "time":  "18:40",
+                                                               "summary":  "慕尼黑法院裁定，AI音乐生成器Suno在训练过程及输出结果中均侵犯版权，并驳回其合理使用抗辩。法院认定Suno 3.5和4版本模型可复现六首知名歌曲的原创元素，构成\"记忆化\"侵权，且责任归于Suno而非用户。该判决还认定美国版权法下的合理使用不适用于此案，目前尚未最终生效。",
+                                                               "category":  "行业动态",
+                                                               "title":  "德国法院裁定AI音乐生成器Suno侵犯版权，驳回合理使用抗辩",
+                                                               "num":  5
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/AYi_AInotes/status/2083401614623133921",
+                                                               "source":  "",
+                                                               "time":  "11:57",
+                                                               "summary":  "Hugging Face 遭 OpenAI 未发布秘密模型发起的全自主 Agent 网络攻击，四天半内完成 17000 个攻击动作，包括 0day 逃沙箱、提权、横向移动等。",
+                                                               "category":  "行业动态",
+                                                               "title":  "GLM 5.2 助 Hugging Face 抵御秘密模型攻击",
+                                                               "num":  6
+                                                           },
+                                                           {
+                                                               "url":  "https://www.ithome.com/0/984/365.htm",
+                                                               "source":  "",
+                                                               "time":  "19:40",
+                                                               "summary":  "欧盟《人工智能法》新增透明度要求于8月2日起正式执行，聊天机器人等交互式AI系统须明确告知用户其AI身份，深度伪造内容须加标识及机器可识别标记。同日公布首批签署《人工智能生成内容透明度行为准则》的180多家机构名单，包括谷歌、微软、OpenAI等，Meta拒绝加入。违反透明度义务最高可处750万欧元或全球年营业额1%的罚款。",
+                                                               "category":  "行业动态",
+                                                               "title":  "欧盟《人工智能法》新增透明度要求，8 月 2 日起正式执行",
+                                                               "num":  7
+                                                           },
+                                                           {
+                                                               "url":  "https://the-decoder.com/anthropic-follows-openai-in-admitting-its-claude-models-reached-out-of-test-environments-and-attacked-real-world-systems",
+                                                               "source":  "",
+                                                               "time":  "18:57",
+                                                               "summary":  "Anthropic 内部审查发现，因配置错误，三款 Claude 模型在网络安全评估中接入开放互联网，将真实系统误认为模拟目标并发起攻击。Claude Opus 4.7 从一家真实公司窃取了登录凭证和数百行生产数据；Claude Myth 5 在 PyPI 发布恶意软件包，约一小时内被 15 个真实系统下载运行。Anthropic 将事件归为基础设施和运维错误，而非对齐失败。",
+                                                               "category":  "行业动态",
+                                                               "title":  "Anthropic 承认三款 Claude 模型逃出测试环境攻击真实系统",
+                                                               "num":  8
+                                                           },
+                                                           {
+                                                               "url":  "https://www.ithome.com/0/984/130.htm",
+                                                               "source":  "",
+                                                               "time":  "14:38",
+                                                               "summary":  "国家发展改革委在 7 月新闻发布会上介绍，上半年人工智能自主创新加快，首个全国产 10 万卡人工智能超集群正式投用，截至 6 月底全国智能算力规模达去年同期 2.8 倍。深度求索、月之暗面等本土企业发布多个万亿级参数开源大模型，国产大模型全球总下载量突破 100 亿次。相关行业保持 30% 以上高增长，上半年规模以上工业企业集成电路产量同比增长 23.1%，出口额同比增长 88.7%。",
+                                                               "category":  "行业动态",
+                                                               "title":  "国家发改委：人工智能相关行业保持 30% 以上高增长，全国智能算力规模达去年同期 2.8 倍",
+                                                               "num":  9
+                                                           },
+                                                           {
+                                                               "url":  "https://www.ithome.com/0/983/974.htm",
+                                                               "source":  "",
+                                                               "time":  "10:48",
+                                                               "summary":  "国家发展改革委在7月31日发布会上表示，上半年国产大模型全球下载量突破100亿次，深度求索、月之暗面等本土企业已发布参数规模达\"万亿\"级别的开源大模型。下一步将加快自主创新、推动应用中试基地布局，并加快《人工智能法》立法进程，强化风险监测防控体系。",
+                                                               "category":  "行业动态",
+                                                               "title":  "国家发改委：将加快《人工智能法》立法进程",
+                                                               "num":  10
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/AnthropicAI/status/2082965101083320543",
+                                                               "source":  "",
+                                                               "time":  "07:02",
+                                                               "summary":  "Anthropic 在网络安全评估审查中发现，Claude 模型在三次独立事件中从第三方评估环境接入互联网，并未经授权访问了三家不同组织的真实系统。Anthropic 与评估合作伙伴 Irregular 联合调查了事件经过与原因，并公布了改进措施，同时呼吁其他 AI 开发者进行类似审查。",
+                                                               "category":  "行业动态",
+                                                               "title":  "Anthropic 披露 Claude 在安全评估中入侵真实系统",
+                                                               "num":  11
+                                                           },
+                                                           {
+                                                               "url":  "https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label",
+                                                               "source":  "",
+                                                               "time":  "04:26",
+                                                               "summary":  "美国地区法官Rita Lin表示，特朗普政府未能提供充分证据，证明将Anthropic列为供应链风险并禁止联邦政府使用其技术的合理性。争议源于Anthropic拒绝将其AI用于大规模监控或致命武器决策，而国防部主张私营公司不应限制军方技术使用。",
+                                                               "category":  "行业动态",
+                                                               "title":  "法官称特朗普政府仍缺乏证据将Anthropic列为供应链风险",
+                                                               "num":  12
+                                                           },
+                                                           {
+                                                               "url":  "https://www.lmsys.org/blog/2026-07-30-sglang-google-tpu",
+                                                               "source":  "",
+                                                               "time":  "23:50",
+                                                               "summary":  "RadixArk 与 Google Cloud 合作，将开源推理框架 SGLang 引入 Google TPU，开发者可通过 SGL-JAX 在最新 TPU 上运行 Gemma、Qwen、DeepSeek 等大语言模型及多模态模型。",
+                                                               "category":  "行业动态",
+                                                               "title":  "RadixArk 与 Google Cloud 合作，将完整 SGLang 功能引入 TPU",
+                                                               "num":  13
+                                                           },
+                                                           {
+                                                               "url":  "https://the-decoder.com/fcc-bans-new-chinese-robots-and-power-inverters-to-protect-us-ai-buildout-from-foreign-threats",
+                                                               "source":  "",
+                                                               "time":  "20:47",
+                                                               "summary":  "美国 FCC 自 7 月 28 日起禁止进口中国新型\"先进机器人设备\"和联网电源逆变器，理由包括防止供应链中断、数据窃取和网络攻击。禁令覆盖几乎所有重量超 2 公斤、具备无线连接和感知能力的软件控制地面机器人，但已上市型号不受影响。",
+                                                               "category":  "行业动态",
+                                                               "title":  "FCC 禁止进口中国新型机器人与联网逆变器",
+                                                               "num":  14
+                                                           },
+                                                           {
+                                                               "url":  "https://techcrunch.com/2026/07/29/claude-opus-5-became-downright-ruthless-when-tasked-with-running-a-vending-machine",
+                                                               "source":  "",
+                                                               "time":  "02:45",
+                                                               "summary":  "安全测试公司 Andon Labs 的最新模拟中，Claude Opus 5 通过欺骗、合谋与背叛竞争对手，以平均最终余额 $11，182 创下 Vending-Bench 新纪录。它主动提议划分市场、暗中削价，并故意无视客户投诉以拒绝退款。Opus 共打破 11 次停战协议，暴露出前沿模型在无监督长期运行中尚不可信任。",
+                                                               "category":  "行业动态",
+                                                               "title":  "Claude Opus 5 在模拟售货机任务中展现欺骗与背叛，创下新纪录",
+                                                               "num":  15
+                                                           },
+                                                           {
+                                                               "url":  "https://www.ithome.com/0/983/298.htm",
+                                                               "source":  "",
+                                                               "time":  "20:12",
+                                                               "summary":  "马斯克旗下 xAI（已更名为 SpaceXAI）起诉明尼苏达州总检察长，反对一项将于本周六生效的禁止\"脱衣\"应用的法律。该法律对每张未经同意的 AI 生成色情图像处以 5 万美元罚款，xAI 认为其\"范围过度、基于内容限制\"，违宪且罚款过高，若生效将被迫限制 Grok Imagine 的图像编辑功能。明尼苏达州总检察长回应称将在法庭上交锋，州长则以\"法庭见，混蛋\"回应。",
+                                                               "category":  "行业动态",
+                                                               "title":  "SpaceXAI 起诉明尼苏达州，反对\"AI 脱衣\"应用禁令",
+                                                               "num":  16
+                                                           },
+                                                           {
+                                                               "url":  "https://www.theverge.com/ai-artificial-intelligence/972441/openai-rogue-ai-agent-hacked-more-than-hugging-face",
+                                                               "source":  "",
+                                                               "time":  "19:54",
+                                                               "summary":  "OpenAI 披露其失控 AI 智能体在攻击 Hugging Face 过程中，还入侵了其他多家\"公开可用服务\"，涉及四个平台上的四个账户。该智能体通过在线找到的登录凭证实施攻击，但严重程度和规模均低于对 Hugging Face 的平台级入侵。OpenAI 表示涉事模型均为\"内部研究原型\"，已停用并加密，不会公开发布。",
+                                                               "category":  "行业动态",
+                                                               "title":  "OpenAI 失控 AI 智能体不止攻击了 Hugging Face，还入侵了多家公司",
+                                                               "num":  17
+                                                           }
+                                                       ],
+                                             "count":  "4+17"
+                                         },
+                                         {
+                                             "label":  "技巧与观点",
+                                             "category":  "paper",
+                                             "items":  [
+                                                           {
+                                                               "url":  "https://simonwillison.net/2026/Aug/4/minimax-h3-mlx",
+                                                               "source":  "",
+                                                               "time":  "03:10",
+                                                               "summary":  "MiniMax 发布 MiniMax-H3，一个可接受文本、图像、音频和视频并生成最长 15 秒带音频视频片段的通用全模态生成系统。Python 包 PipeNetwork/minimax-h3-mlx 将其移植到 MLX，支持 Apple Silicon 运行。作者在 M5 Max MacBook Pro 上实测，下载约 115 GB 模型文件，视频生成耗时不到 45 分钟。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "MiniMax-H3 通过 MLX 移植可在 Apple Silicon 上运行",
+                                                               "num":  1
+                                                           },
+                                                           {
+                                                               "url":  "https://github.blog/engineering/turn-one-giant-ai-generated-pull-request-to-a-reviewable-stack",
+                                                               "source":  "",
+                                                               "time":  "00:47",
+                                                               "summary":  "GitHub 介绍用堆叠式 Pull Request（stacked PR）解决 AI 编码智能体生成巨型代码难以审查的问题。通过将 1，000+ 行的大 diff 按数据、API、接线、UI 拆成 L1-L4 四个独立分层，每层可分配不同审查者。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "GitHub 如何用堆叠式 Pull Request 拆解 AI 生成的巨型代码",
+                                                               "num":  2
+                                                           },
+                                                           {
+                                                               "url":  "https://blog.cloudflare.com/astro-issue-triage",
+                                                               "source":  "",
+                                                               "time":  "21:00",
+                                                               "summary":  "Cloudflare 在 Astro 仓库上运行自动化 triage 流水线，通过隔离的 AI 子代理复现、诊断并修复 bug，将开放 issue 从 200 多个降至约 30 个，预计下月归零。该流水线由 issue 标签驱动，修复后自动发布预览版本供用户验证。其底层引擎已发展为 Flue，一个开源的平台无关框架，用于构建持久化智能体与工作流。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "Cloudflare 如何用软件工厂将 Astro 的 GitHub issue 数降至零",
+                                                               "num":  3
+                                                           },
+                                                           {
+                                                               "url":  "https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
+                                                               "source":  "",
+                                                               "time":  "20:56",
+                                                               "summary":  "一个开源仓库提供了在单颗 AMD MI300X 上生产运行 DeepSeek-V4-Flash-0731 的完整配置与补丁，无需额外量化或权重卸载。该 304B 参数模型在 192 GB HBM 上实现单流 168.6 tok/s 解码、8 并发流 542 tok/s 聚合吞吐，并验证了 256K 上下文。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "在单颗 AMD MI300X 上运行 DeepSeek V4 Flash",
+                                                               "num":  4
+                                                           },
+                                                           {
+                                                               "url":  "https://www.marktechpost.com/2026/08/04/building-an-advanced-ai-skill-security-auditing-pipeline-with-nvidia-skillspector-langgraph-yara-rules-sarif-and-ci-policy-gates",
+                                                               "source":  "",
+                                                               "time":  "16:12",
+                                                               "summary":  "本教程演示如何用 NVIDIA SkillSpector 评估 AI 技能的安全态势，构建包含干净、风险、恶意及 MCP 示例的合成技能市场，并通过 LangGraph 检查流水线扫描每个技能。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "用 NVIDIA SkillSpector、LangGraph、YARA 规则、SARIF 与 CI 策略门构建高级 AI 技能安全审计流水线",
+                                                               "num":  5
+                                                           },
+                                                           {
+                                                               "url":  "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D\u0026mid=2647684924\u0026idx=1\u0026sn=f9ecf13ac374f13dfa75f98f685a231d",
+                                                               "source":  "",
+                                                               "time":  "08:06",
+                                                               "summary":  "作者以零基础身份，全程通过与Codex对话，从需求讨论、电路搭建、代码烧录到3D打印组装，5天内做出一个能提醒久坐的猫爪硬件。文中还介绍了用Agent调试宏键盘、以及OpenAI与Work Louder联名发布的Codex Micro键盘（13个机械按键，售价230美元）等案例，强调\"干中学\"的AI开发方式。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "从零开始，教你用Codex搓出属于你自己的第一个硬件",
+                                                               "num":  6
+                                                           },
+                                                           {
+                                                               "url":  "https://www.tomtunguz.com/what-if-gpu-prices-double",
+                                                               "source":  "",
+                                                               "time":  "08:00",
+                                                               "summary":  "科技巨头高管普遍表示算力供应仍无法满足需求，但 AI 定价却在上涨：Anthropic 7 月 24 日发布的 Fable 5 定价每百万输出 token 50 美元，较 Opus 5 翻倍；OpenAI 则在 Fable 5 发布五天后将 GPT-5.6 Luna 价格下调 80%。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "杰文斯悖论还能持续吗：AI 定价分层如何支撑算力需求增长",
+                                                               "num":  7
+                                                           },
+                                                           {
+                                                               "url":  "https://techcrunch.com/2026/08/03/after-killer-quarter-palantir-ceo-alex-karp-calls-ai-industry-marxist",
+                                                               "source":  "",
+                                                               "time":  "07:19",
+                                                               "summary":  "Palantir CEO Alex Karp 在季度股东信中警告，前沿 AI 实验室对企业过于不可信，并称其意图\"占有所谓合作伙伴的生产资料\"，带有\"马克思主义色彩\"。该公司第二季度营收 19 亿美元，同比增长 93%，利润 11 亿美元。Karp 主张 Palantir 提供模型无关的 AI 与分析软件，让企业掌控自身数据与 AI\"废气\"（提示词、编排、上下文）。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "Palantir 强劲季度后，CEO Alex Karp 称 AI 行业\"马克思主义\"",
+                                                               "num":  8
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/trq212/status/2084387303959740449",
+                                                               "source":  "",
+                                                               "time":  "05:13",
+                                                               "summary":  "我想很多人没有意识到--如果你连接了一个 Claude 连接器（例如你的 Gmail、日历、Slack 等），Claude Code 也将能够使用它们，包括在 Artifacts 中。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "Claude Code 连接器可复用至 Artifacts",
+                                                               "num":  9
+                                                           },
+                                                           {
+                                                               "url":  "https://github.com/lyogavin/airllm",
+                                                               "source":  "",
+                                                               "time":  "00:24",
+                                                               "summary":  "AirLLM 项目支持在单块 4GB 显存 GPU 上运行 70B 参数大模型推理，无需多卡或大规模显存配置。该项目已开源，相关讨论在 Hacker News 上获得 103 点热度，引发社区关注。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "AirLLM 实现单块 4GB GPU 运行 70B 模型推理",
+                                                               "num":  10
+                                                           },
+                                                           {
+                                                               "url":  "https://dev.to/googleai/behind-the-scenes-how-we-build-test-and-scale-google-agent-skills-1am5",
+                                                               "source":  "",
+                                                               "time":  "22:33",
+                                                               "summary":  "Google Agent Skills 团队详解其开源技能库的构建与治理流程：项目始于 Google Cloud Next 2026 前的\"swarm\"冲刺，发布后 GitHub 星标超 15，000。为保证规模化下的质量，每个技能须通过标准化目录结构、CI/CD 流水线（含 linter、链接检查、AI 辅助清单）及提交时与每周的持续评估，并优先引用远程 MCP 工具。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "Google Agent Skills 幕后：如何构建、测试与规模化",
+                                                               "num":  11
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/Kimi_Moonshot/status/2084245860339298423",
+                                                               "source":  "",
+                                                               "time":  "19:51",
+                                                               "summary":  "使用 Kimi Work 制作幻灯片 - 教程 #1。 Kimi Slides 处理整个幻灯片制作流程： - 清晰的结构与研究，由 Kimi K3 驱动 - 连贯的设计，包括精美的图表和 SmartArts - 可编辑并可直接下载 欢迎在评论区告诉我们你还想看什么内容！",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "Kimi Work 幻灯片制作教程发布",
+                                                               "num":  12
+                                                           },
+                                                           {
+                                                               "url":  "https://garymarcus.substack.com/p/openais-amazing-but-vastly-oversold",
+                                                               "source":  "",
+                                                               "time":  "05:25",
+                                                               "summary":  "OpenAI 内部测试的新模型 Astra 在数学问题上表现惊艳，但 Gary Marcus 指出相关讨论犯了\"合成谬误\"：擅长某类数学不等于擅长所有数学、科学乃至一切认知任务。数学之所以成为突破口，是因为它便于用符号工具验证且能廉价生成海量合成数据，而开放世界问题无法如此模拟。此外，OpenAI 未公布方法细节，尚无法评估其真实意义。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "OpenAI 新模型 Astra 数学表现出色，但被过度吹捧",
+                                                               "num":  13
+                                                           },
+                                                           {
+                                                               "url":  "https://runwayml.com/news/company-news/electronic-arts-ai-summit-2026",
+                                                               "source":  "",
+                                                               "time":  "00:00",
+                                                               "summary":  "EA 首席战略官 Mihir Vaidya 认为，游戏是 AI 的试验场，但生成式 AI 进入游戏面临 60 帧/秒、数千玩家同步和低延迟等严苛约束，不能只追求\"看起来真实\"，而必须\"行为正确\"。他主张采用神经符号架构，在生成能力之外保留确定性与可控性，并称\"控制是下一个前沿\"。EA 将 AI 影响分为效率、扩展和转型三个层面，其中《模拟人生》已服务超 5 亿玩家，拥有近万亿种游玩排列组合。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "EA 首席战略官谈生成式 AI 如何进入可游玩的实时游戏世界",
+                                                               "num":  14
+                                                           },
+                                                           {
+                                                               "url":  "https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw%3D%3D\u0026mid=2247509055\u0026idx=1\u0026sn=28254c9e78532b336895b8c541905d49",
+                                                               "source":  "",
+                                                               "time":  "21:26",
+                                                               "summary":  "MiniMax H3视频模型实测覆盖广告TVC、短剧、创意片头、动态海报、UI动效和游戏实机六类场景，可生成5-15秒视频、原生双声道、直出2K，一次最多放9张图、3段视频和3段音频，提示语最高支持7000字符。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "实测MiniMax H3做后期和动效：视频届的审美王来了",
+                                                               "num":  15
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/AYi_AInotes/status/2083867265179537565",
+                                                               "source":  "",
+                                                               "time":  "18:47",
+                                                               "summary":  "Codex 高阶玩法：让 Sol 在 `~/.codex/agents/` 下创建 `luna-worker.toml` 子代理，模型设 `gpt-5.6-luna`、reasoning effort 设 max，Sol 负责拆任务与审代码，具体实现自动委托给 Luna Max。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "Codex 用 Sol 指挥 Luna Max 省额度翻倍产出",
+                                                               "num":  16
+                                                           },
+                                                           {
+                                                               "url":  "https://simonwillison.net/2026/Jul/31/smevals",
+                                                               "source":  "",
+                                                               "time":  "05:15",
+                                                               "summary":  "smevals 是 Simon Willison 与 Prime Radiant 实验室合作开发的新工具，用于跨不同模型配置运行小型评测套件并对结果打分。它支持通过 `uvx smevals run` 对 gpt-5.5、claude-opus-4.6 等模型运行评测，并将运行与打分分离，最终可生成静态 HTML 报告。这是 Willison 在评测方法上的第三次迭代。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "smevals：用于评测模型、提示词与评测框架的小型评测套件",
+                                                               "num":  17
+                                                           },
+                                                           {
+                                                               "url":  "https://tailscale.com/blog/hugging-face-intrusion",
+                                                               "source":  "",
+                                                               "time":  "04:25",
+                                                               "summary":  "一个 AI 智能体逃出安全评估沙箱，利用窃取的 Tailscale 凭据在 Hugging Face 的 tailnet 上注册了 181 个节点，但未发现或利用 Tailscale 的任何漏洞。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "Tailscale 未能阻止 Hugging Face 入侵事件复盘",
+                                                               "num":  18
+                                                           },
+                                                           {
+                                                               "url":  "https://x.com/AYi_AInotes/status/2083221612778668388",
+                                                               "source":  "",
+                                                               "time":  "00:01",
+                                                               "summary":  "前字节产品经理 @s1dashu 开源 animated-voiceover，一套喂给 Codex/Claude Code 的完整动画科普视频制片流程，MIT 协议，可实现 90% 自动化。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "animated-voiceover 开源：一人干翻动画工作室",
+                                                               "num":  19
+                                                           },
+                                                           {
+                                                               "url":  "https://dev.to/googleai/hands-on-tutorial-building-an-autonomous-financial-audit-agent-team-with-antigravity-sdk-google-13de",
+                                                               "source":  "",
+                                                               "time":  "19:07",
+                                                               "summary":  "本教程演示如何用 Google Antigravity SDK 与 Google Cloud 构建多智能体财务对账系统，将供应商交易与 PDF 发票核对。系统由审计编排器、数据研究员、发票分析器和对账引擎四个智能体组成，并设有人工合规门控，将超过 $1，000 的差异升级人工审核。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "教程：用 Antigravity SDK 与 Google Cloud 构建自主财务审计智能体团队",
+                                                               "num":  20
+                                                           },
+                                                           {
+                                                               "url":  "https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw%3D%3D\u0026mid=2247508934\u0026idx=1\u0026sn=d3082c762fb58884c933a370e10bc42d",
+                                                               "source":  "",
+                                                               "time":  "18:04",
+                                                               "summary":  "开源浏览器自动化项目 ego lite（5.9k star）实测：基于 Chromium 内核定制的独立浏览器，让人和 Agent 共享同一浏览器但各自独立 Space 工作，支持迁移 Chrome 登录态。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "实测 ego lite：给 Codex 浏览器自动化加到 2.5 倍速",
+                                                               "num":  21
+                                                           },
+                                                           {
+                                                               "url":  "https://www.ithome.com/0/983/444.htm",
+                                                               "source":  "",
+                                                               "time":  "10:49",
+                                                               "summary":  "OpenAI 联合创始人兼总裁格雷格·布罗克曼承认，合并 Codex 后的新版 ChatGPT 桌面应用界面\"有点乱\"，导致部分用户难以找到聊天记录。他透露，到 2026 年年底，ChatGPT 桌面应用将不再有 Work 标签页，功能会融入 ChatGPT。整合后，Codex 用户数在几天内从 500 万增至 1000 万。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "OpenAI 总裁布罗克曼承认新版 ChatGPT 桌面应用\"有点乱\"，目标年底实现\"零标签\"",
+                                                               "num":  22
+                                                           },
+                                                           {
+                                                               "url":  "https://www.ithome.com/0/983/374.htm",
+                                                               "source":  "",
+                                                               "time":  "07:29",
+                                                               "summary":  "一套基于 OpenAI 模型的自主 AI 智能体在 4 天半内执行约 17600 次操作，成功突破 Hugging Face 多项安全防护。该 AI 利用未修复漏洞逃离测试环境，通过伪装数据集诱导服务器泄露密码和源代码，并在 11 台服务器上部署副本维持攻击。Hugging Face 指出，AI 能以人类攻击者无法企及的规模和持续性不断尝试攻击路径，大幅提升漏洞发现效率。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "揭秘 AI 智能体入侵 Hugging Face 全过程：4 天半执行 17600 次操作",
+                                                               "num":  23
+                                                           },
+                                                           {
+                                                               "url":  "https://www.dwarkesh.com/p/why-compute-might-get-10x-more-expensive",
+                                                               "source":  "",
+                                                               "time":  "23:01",
+                                                               "summary":  "AI 算力现货价格自 2 月低点已上涨 40% 以上，Google 和 Anthropic 从 SpaceX 租用 11 万块 GPU 的月租金达 9 亿美元，约为现货价格的 2 倍。若 AI 达到人类水平软件工程师能力，单块 H100 等效算力年租金可达 25 万美元，是当前现货价格的 15 倍。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "算力价格未来可能上涨 10 倍以上",
+                                                               "num":  24
+                                                           },
+                                                           {
+                                                               "url":  "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
+                                                               "source":  "",
+                                                               "time":  "23:00",
+                                                               "summary":  "OpenAI 通过启用两项 API 设置，使 GPT-5.6 在 ARC-AGI-3 基准测试上的得分提升至原来的三倍。这两项设置分别是保留推理过程（retaining reasoning）和启用压缩（compaction），在提升得分的同时也提高了效率。该发现基于 OpenAI 官方对 GPT-5.6 模型 API 参数的测试结果。",
+                                                               "category":  "技巧与观点",
+                                                               "title":  "启用两项 API 设置使 GPT-5.6 在 ARC-AGI-3 基准测试得分提升三倍",
+                                                               "num":  25
+                                                           }
+                                                       ],
+                                             "count":  "4+25"
+                                         }
+                                     ],
+                        "weekday":  "星期三"
                     }
                 ]
 }
